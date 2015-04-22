@@ -14,7 +14,7 @@
       <!-- @generated monitorrepository -->
       <factory
             uri="http://palladiosimulator.org/MonitorRepository/1.0"
-            class="org.palladiosimulator.monitorrepository.provider.MonitorrepositoryItemProviderAdapterFactory"
+            class="org.palladiosimulator.monitorrepository.provider.MonitorRepositoryItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

@@ -13,8 +13,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.monitorrepository.Monitor;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryFactory;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryPackage;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryFactory;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 
 import de.uka.ipd.sdq.pcm.core.entity.provider.EntityItemProvider;
 
@@ -62,7 +62,7 @@ public class MonitorItemProvider extends EntityItemProvider {
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Monitor_measuringPoint_feature"),
                 this.getString("_UI_PropertyDescriptor_description", "_UI_Monitor_measuringPoint_feature",
-                        "_UI_Monitor_type"), MonitorrepositoryPackage.Literals.MONITOR__MEASURING_POINT, true, false,
+                        "_UI_Monitor_type"), MonitorRepositoryPackage.Literals.MONITOR__MEASURING_POINT, true, false,
                 true, null, null, null));
     }
 
@@ -79,7 +79,7 @@ public class MonitorItemProvider extends EntityItemProvider {
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
         if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            this.childrenFeatures.add(MonitorrepositoryPackage.Literals.MONITOR__MEASUREMENT_SPECIFICATIONS);
+            this.childrenFeatures.add(MonitorRepositoryPackage.Literals.MONITOR__MEASUREMENT_SPECIFICATIONS);
         }
         return this.childrenFeatures;
     }
@@ -132,7 +132,7 @@ public class MonitorItemProvider extends EntityItemProvider {
         this.updateChildren(notification);
 
         switch (notification.getFeatureID(Monitor.class)) {
-        case MonitorrepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS:
+        case MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
@@ -150,8 +150,8 @@ public class MonitorItemProvider extends EntityItemProvider {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(this.createChildParameter(
-                MonitorrepositoryPackage.Literals.MONITOR__MEASUREMENT_SPECIFICATIONS,
-                MonitorrepositoryFactory.eINSTANCE.createMeasurementSpecification()));
+                MonitorRepositoryPackage.Literals.MONITOR__MEASUREMENT_SPECIFICATIONS,
+                MonitorRepositoryFactory.eINSTANCE.createMeasurementSpecification()));
     }
 
     /**

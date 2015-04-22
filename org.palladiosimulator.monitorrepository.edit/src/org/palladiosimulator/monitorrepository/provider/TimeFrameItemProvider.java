@@ -11,7 +11,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryPackage;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 import org.palladiosimulator.monitorrepository.TimeFrame;
 
 /**
@@ -59,7 +59,7 @@ public class TimeFrameItemProvider extends TemporalCharacterizationItemProvider 
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_TimeFrame_start_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_TimeFrame_start_feature", "_UI_TimeFrame_type"),
-                        MonitorrepositoryPackage.Literals.TIME_FRAME__START, true, false, false,
+                        MonitorRepositoryPackage.Literals.TIME_FRAME__START, true, false, false,
                         ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
@@ -74,7 +74,7 @@ public class TimeFrameItemProvider extends TemporalCharacterizationItemProvider 
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_TimeFrame_stop_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_TimeFrame_stop_feature", "_UI_TimeFrame_type"),
-                        MonitorrepositoryPackage.Literals.TIME_FRAME__STOP, true, false, false,
+                        MonitorRepositoryPackage.Literals.TIME_FRAME__STOP, true, false, false,
                         ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
@@ -112,8 +112,8 @@ public class TimeFrameItemProvider extends TemporalCharacterizationItemProvider 
         this.updateChildren(notification);
 
         switch (notification.getFeatureID(TimeFrame.class)) {
-        case MonitorrepositoryPackage.TIME_FRAME__START:
-        case MonitorrepositoryPackage.TIME_FRAME__STOP:
+        case MonitorRepositoryPackage.TIME_FRAME__START:
+        case MonitorRepositoryPackage.TIME_FRAME__STOP:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }

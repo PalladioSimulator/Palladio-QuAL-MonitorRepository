@@ -14,8 +14,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.monitorrepository.MeasurementSpecification;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryFactory;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryPackage;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryFactory;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 
 import de.uka.ipd.sdq.identifier.provider.IdentifierItemProvider;
 
@@ -68,7 +68,7 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
                         "_UI_PropertyDescriptor_description",
                         "_UI_MeasurementSpecification_statisticalCharacterization_feature",
                         "_UI_MeasurementSpecification_type"),
-                MonitorrepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION, true, false,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION, true, false,
                 false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
@@ -84,7 +84,7 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
                 this.getString("_UI_MeasurementSpecification_metricDescription_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_MeasurementSpecification_metricDescription_feature",
                         "_UI_MeasurementSpecification_type"),
-                MonitorrepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION, true, false, true,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION, true, false, true,
                 null, null, null));
     }
 
@@ -100,7 +100,7 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
                 this.getString("_UI_MeasurementSpecification_name_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_MeasurementSpecification_name_feature",
                         "_UI_MeasurementSpecification_type"),
-                MonitorrepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__NAME, true, false, false,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__NAME, true, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
@@ -118,7 +118,7 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
         if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures
-            .add(MonitorrepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION);
+            .add(MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION);
         }
         return this.childrenFeatures;
     }
@@ -171,11 +171,11 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
         this.updateChildren(notification);
 
         switch (notification.getFeatureID(MeasurementSpecification.class)) {
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION:
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
@@ -193,16 +193,16 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(this.createChildParameter(
-                MonitorrepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION,
-                MonitorrepositoryFactory.eINSTANCE.createIntervall()));
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION,
+                MonitorRepositoryFactory.eINSTANCE.createIntervall()));
 
         newChildDescriptors.add(this.createChildParameter(
-                MonitorrepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION,
-                MonitorrepositoryFactory.eINSTANCE.createDelayedIntervall()));
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION,
+                MonitorRepositoryFactory.eINSTANCE.createDelayedIntervall()));
 
         newChildDescriptors.add(this.createChildParameter(
-                MonitorrepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION,
-                MonitorrepositoryFactory.eINSTANCE.createTimeFrame()));
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION,
+                MonitorRepositoryFactory.eINSTANCE.createTimeFrame()));
     }
 
     /**

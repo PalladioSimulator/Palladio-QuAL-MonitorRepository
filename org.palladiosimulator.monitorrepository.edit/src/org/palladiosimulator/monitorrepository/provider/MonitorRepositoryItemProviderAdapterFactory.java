@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.palladiosimulator.monitorrepository.util.MonitorrepositoryAdapterFactory;
+import org.palladiosimulator.monitorrepository.util.MonitorRepositoryAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers. The
@@ -30,7 +30,7 @@ import org.palladiosimulator.monitorrepository.util.MonitorrepositoryAdapterFact
  *
  * @generated
  */
-public class MonitorrepositoryItemProviderAdapterFactory extends MonitorrepositoryAdapterFactory implements
+public class MonitorRepositoryItemProviderAdapterFactory extends MonitorRepositoryAdapterFactory implements
         ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
@@ -61,7 +61,7 @@ public class MonitorrepositoryItemProviderAdapterFactory extends Monitorreposito
      *
      * @generated
      */
-    public MonitorrepositoryItemProviderAdapterFactory() {
+    public MonitorRepositoryItemProviderAdapterFactory() {
         this.supportedTypes.add(IEditingDomainItemProvider.class);
         this.supportedTypes.add(IStructuredItemContentProvider.class);
         this.supportedTypes.add(ITreeItemContentProvider.class);

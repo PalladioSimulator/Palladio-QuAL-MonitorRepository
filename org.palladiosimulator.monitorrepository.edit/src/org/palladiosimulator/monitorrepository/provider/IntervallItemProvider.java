@@ -12,7 +12,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.monitorrepository.Intervall;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryPackage;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.monitorrepository.Intervall}
@@ -58,7 +58,7 @@ public class IntervallItemProvider extends TemporalCharacterizationItemProvider 
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Intervall_intervall_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Intervall_intervall_feature", "_UI_Intervall_type"),
-                        MonitorrepositoryPackage.Literals.INTERVALL__INTERVALL, true, false, false,
+                        MonitorRepositoryPackage.Literals.INTERVALL__INTERVALL, true, false, false,
                         ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
@@ -96,7 +96,7 @@ public class IntervallItemProvider extends TemporalCharacterizationItemProvider 
         this.updateChildren(notification);
 
         switch (notification.getFeatureID(Intervall.class)) {
-        case MonitorrepositoryPackage.INTERVALL__INTERVALL:
+        case MonitorRepositoryPackage.INTERVALL__INTERVALL:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }

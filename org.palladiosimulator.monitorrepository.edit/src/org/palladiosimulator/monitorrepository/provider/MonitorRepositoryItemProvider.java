@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.monitorrepository.MonitorRepository;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryFactory;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryPackage;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryFactory;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 
 import de.uka.ipd.sdq.pcm.core.entity.provider.EntityItemProvider;
 
@@ -63,7 +63,7 @@ public class MonitorRepositoryItemProvider extends EntityItemProvider {
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
         if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            this.childrenFeatures.add(MonitorrepositoryPackage.Literals.MONITOR_REPOSITORY__MONITORS);
+            this.childrenFeatures.add(MonitorRepositoryPackage.Literals.MONITOR_REPOSITORY__MONITORS);
         }
         return this.childrenFeatures;
     }
@@ -116,7 +116,7 @@ public class MonitorRepositoryItemProvider extends EntityItemProvider {
         this.updateChildren(notification);
 
         switch (notification.getFeatureID(MonitorRepository.class)) {
-        case MonitorrepositoryPackage.MONITOR_REPOSITORY__MONITORS:
+        case MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
@@ -134,8 +134,8 @@ public class MonitorRepositoryItemProvider extends EntityItemProvider {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(this.createChildParameter(
-                MonitorrepositoryPackage.Literals.MONITOR_REPOSITORY__MONITORS,
-                MonitorrepositoryFactory.eINSTANCE.createMonitor()));
+                MonitorRepositoryPackage.Literals.MONITOR_REPOSITORY__MONITORS,
+                MonitorRepositoryFactory.eINSTANCE.createMonitor()));
     }
 
     /**

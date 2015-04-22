@@ -12,7 +12,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.monitorrepository.DelayedIntervall;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryPackage;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 
 /**
  * This is the item provider adapter for a
@@ -59,7 +59,7 @@ public class DelayedIntervallItemProvider extends IntervallItemProvider {
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_DelayedIntervall_delay_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_DelayedIntervall_delay_feature",
-                        "_UI_DelayedIntervall_type"), MonitorrepositoryPackage.Literals.DELAYED_INTERVALL__DELAY, true,
+                        "_UI_DelayedIntervall_type"), MonitorRepositoryPackage.Literals.DELAYED_INTERVALL__DELAY, true,
                 false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
@@ -97,7 +97,7 @@ public class DelayedIntervallItemProvider extends IntervallItemProvider {
         this.updateChildren(notification);
 
         switch (notification.getFeatureID(DelayedIntervall.class)) {
-        case MonitorrepositoryPackage.DELAYED_INTERVALL__DELAY:
+        case MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
