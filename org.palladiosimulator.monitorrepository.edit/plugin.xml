@@ -13,8 +13,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated monitorrepository -->
       <factory
-            uri="http://palladiosimulator.org/SimuLizar/MonitorRepository/1.0"
-            class="org.palladiosimulator.simulizar.monitorrepository.provider.MonitorrepositoryItemProviderAdapterFactory"
+            uri="http://palladiosimulator.org/MonitorRepository/1.0"
+            class="org.palladiosimulator.monitorrepository.provider.MonitorrepositoryItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
