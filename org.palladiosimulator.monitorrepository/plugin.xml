@@ -13,8 +13,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated monitorrepository -->
       <package
-            uri="http://palladiosimulator.org/SimuLizar/MonitorRepository/1.0"
-            class="org.palladiosimulator.simulizar.monitorrepository.MonitorrepositoryPackage"
+            uri="http://palladiosimulator.org/MonitorRepository/1.0"
+            class="org.palladiosimulator.monitorrepository.MonitorrepositoryPackage"
             genModel="model/monitorrepository.genmodel"/>
    </extension>
 
@@ -22,6 +22,6 @@
       <!-- @generated monitorrepository -->
       <parser
             type="monitorrepository"
-            class="org.palladiosimulator.simulizar.monitorrepository.util.MonitorrepositoryResourceFactoryImpl"/>
+            class="org.palladiosimulator.monitorrepository.util.MonitorrepositoryResourceFactoryImpl"/>
    </extension>
 </plugin>
