@@ -3,7 +3,7 @@
 package org.palladiosimulator.monitorrepository.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryPackage;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 import org.palladiosimulator.monitorrepository.TemporalCharacterization;
 
 import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
@@ -33,7 +33,7 @@ public abstract class TemporalCharacterizationImpl extends IdentifierImpl implem
      */
     @Override
     protected EClass eStaticClass() {
-        return MonitorrepositoryPackage.Literals.TEMPORAL_CHARACTERIZATION;
+        return MonitorRepositoryPackage.Literals.TEMPORAL_CHARACTERIZATION;
     }
 
 } // TemporalCharacterizationImpl

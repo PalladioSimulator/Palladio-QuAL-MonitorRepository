@@ -8,10 +8,10 @@ import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
 /**
  * <!-- begin-user-doc --> The <b>Resource </b> associated with the package. <!-- end-user-doc -->
  *
- * @see org.palladiosimulator.monitorrepository.util.MonitorrepositoryResourceFactoryImpl
+ * @see org.palladiosimulator.monitorrepository.util.MonitorRepositoryResourceFactoryImpl
  * @generated
  */
-public class MonitorrepositoryResourceImpl extends XMLResourceImpl {
+public class MonitorRepositoryResourceImpl extends XMLResourceImpl {
     /**
      * Creates an instance of the resource. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -19,8 +19,8 @@ public class MonitorrepositoryResourceImpl extends XMLResourceImpl {
      *            the URI of the new resource.
      * @generated
      */
-    public MonitorrepositoryResourceImpl(final URI uri) {
+    public MonitorRepositoryResourceImpl(final URI uri) {
         super(uri);
     }
 
-} // MonitorrepositoryResourceImpl
+} // MonitorRepositoryResourceImpl

@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.palladiosimulator.monitorrepository.Monitor;
 import org.palladiosimulator.monitorrepository.MonitorRepository;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryPackage;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 
 import de.uka.ipd.sdq.pcm.core.entity.impl.EntityImpl;
 
@@ -56,7 +56,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
      */
     @Override
     protected EClass eStaticClass() {
-        return MonitorrepositoryPackage.Literals.MONITOR_REPOSITORY;
+        return MonitorRepositoryPackage.Literals.MONITOR_REPOSITORY;
     }
 
     /**
@@ -68,8 +68,8 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
     public EList<Monitor> getMonitors() {
         if (this.monitors == null) {
             this.monitors = new EObjectContainmentWithInverseEList<Monitor>(Monitor.class, this,
-                    MonitorrepositoryPackage.MONITOR_REPOSITORY__MONITORS,
-                    MonitorrepositoryPackage.MONITOR__MONITOR_REPOSITORY);
+                    MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS,
+                    MonitorRepositoryPackage.MONITOR__MONITOR_REPOSITORY);
         }
         return this.monitors;
     }
@@ -84,7 +84,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
     public NotificationChain eInverseAdd(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
         switch (featureID) {
-        case MonitorrepositoryPackage.MONITOR_REPOSITORY__MONITORS:
+        case MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS:
             return ((InternalEList<InternalEObject>) (InternalEList<?>) this.getMonitors()).basicAdd(otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -99,7 +99,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
         switch (featureID) {
-        case MonitorrepositoryPackage.MONITOR_REPOSITORY__MONITORS:
+        case MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS:
             return ((InternalEList<?>) this.getMonitors()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -113,7 +113,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-        case MonitorrepositoryPackage.MONITOR_REPOSITORY__MONITORS:
+        case MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS:
             return this.getMonitors();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -128,7 +128,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
     @Override
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-        case MonitorrepositoryPackage.MONITOR_REPOSITORY__MONITORS:
+        case MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS:
             this.getMonitors().clear();
             this.getMonitors().addAll((Collection<? extends Monitor>) newValue);
             return;
@@ -144,7 +144,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
     @Override
     public void eUnset(final int featureID) {
         switch (featureID) {
-        case MonitorrepositoryPackage.MONITOR_REPOSITORY__MONITORS:
+        case MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS:
             this.getMonitors().clear();
             return;
         }
@@ -159,7 +159,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
-        case MonitorrepositoryPackage.MONITOR_REPOSITORY__MONITORS:
+        case MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS:
             return this.monitors != null && !this.monitors.isEmpty();
         }
         return super.eIsSet(featureID);

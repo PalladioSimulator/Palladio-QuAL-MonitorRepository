@@ -11,28 +11,22 @@ import de.uka.ipd.sdq.identifier.Identifier;
  * <!-- begin-user-doc --> A representation of the model object '
  * <em><b>Measurement Specification</b></em>'. <!-- end-user-doc -->
  *
- * <!-- begin-model-doc --> A measurement specification for a pcm element including the performance
- * metric and the statistical charaterization. <!-- end-model-doc -->
+ * <!-- begin-model-doc -->
+ * A measurement specification for a pcm element including the performance metric and the statistical charaterization.
+ * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- * <li>
- * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getTemporalRestriction
- * <em>Temporal Restriction</em>}</li>
- * <li>
- * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getStatisticalCharacterization
- * <em>Statistical Characterization</em>}</li>
- * <li>{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMetricDescription
- * <em>Metric Description</em>}</li>
- * <li>{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMonitor <em>
- * Monitor</em>}</li>
- * <li>{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getName <em>Name
- * </em>}</li>
+ *   <li>{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getTemporalRestriction <em>Temporal Restriction</em>}</li>
+ *   <li>{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getStatisticalCharacterization <em>Statistical Characterization</em>}</li>
+ *   <li>{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMetricDescription <em>Metric Description</em>}</li>
+ *   <li>{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMonitor <em>Monitor</em>}</li>
+ *   <li>{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.palladiosimulator.monitorrepository.MonitorrepositoryPackage#getMeasurementSpecification()
+ * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification()
  * @model
  * @generated
  */
@@ -55,13 +49,10 @@ public interface MeasurementSpecification extends EObject, Identifier {
     TemporalCharacterization getTemporalRestriction();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getTemporalRestriction
-     * <em>Temporal Restriction</em>}' containment reference. <!-- begin-user-doc --> <!--
+     * Sets the value of the '{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getTemporalRestriction <em>Temporal Restriction</em>}' containment reference.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
-     * @param value
-     *            the new value of the '<em>Temporal Restriction</em>' containment reference.
+     * @param value the new value of the '<em>Temporal Restriction</em>' containment reference.
      * @see #getTemporalRestriction()
      * @generated
      */
@@ -102,48 +93,43 @@ public interface MeasurementSpecification extends EObject, Identifier {
     void setStatisticalCharacterization(StatisticalCharacterizationEnum value);
 
     /**
-     * Returns the value of the '<em><b>Metric Description</b></em>' reference. <!-- begin-user-doc
+     * Returns the value of the '<em><b>Metric Description</b></em>' reference.
+     * <!-- begin-user-doc
      * -->
      * <p>
      * If the meaning of the '<em>Metric Description</em>' reference isn't clear, there really
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
      * @return the value of the '<em>Metric Description</em>' reference.
      * @see #setMetricDescription(MetricDescription)
-     * @see org.palladiosimulator.monitorrepository.MonitorrepositoryPackage#getMeasurementSpecification_MetricDescription()
+     * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification_MetricDescription()
      * @model required="true"
      * @generated
      */
     MetricDescription getMetricDescription();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMetricDescription
-     * <em>Metric Description</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @param value
-     *            the new value of the '<em>Metric Description</em>' reference.
+     * Sets the value of the '{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMetricDescription <em>Metric Description</em>}' reference.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param value the new value of the '<em>Metric Description</em>' reference.
      * @see #getMetricDescription()
      * @generated
      */
     void setMetricDescription(MetricDescription value);
 
     /**
-     * Returns the value of the '<em><b>Monitor</b></em>' container reference. It is bidirectional
-     * and its opposite is '
-     * {@link org.palladiosimulator.monitorrepository.Monitor#getMeasurementSpecifications
-     * <em>Measurement Specifications</em>}'. <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Monitor</b></em>' container reference.
+     * It is bidirectional and its opposite is '{@link org.palladiosimulator.monitorrepository.Monitor#getMeasurementSpecifications <em>Measurement Specifications</em>}'.
+     * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Monitor</em>' container reference isn't clear, there really should
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
      * @return the value of the '<em>Monitor</em>' container reference.
      * @see #setMonitor(Monitor)
-     * @see org.palladiosimulator.monitorrepository.MonitorrepositoryPackage#getMeasurementSpecification_Monitor()
+     * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification_Monitor()
      * @see org.palladiosimulator.monitorrepository.Monitor#getMeasurementSpecifications
      * @model opposite="measurementSpecifications" required="true" transient="false"
      * @generated
@@ -151,42 +137,36 @@ public interface MeasurementSpecification extends EObject, Identifier {
     Monitor getMonitor();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMonitor
-     * <em>Monitor</em>}' container reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @param value
-     *            the new value of the '<em>Monitor</em>' container reference.
+     * Sets the value of the '{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMonitor <em>Monitor</em>}' container reference.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param value the new value of the '<em>Monitor</em>' container reference.
      * @see #getMonitor()
      * @generated
      */
     void setMonitor(Monitor value);
 
     /**
-     * Returns the value of the '<em><b>Name</b></em>' attribute. The default value is
-     * <code>""</code>. <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Name</b></em>' attribute.
+     * The default value is <code>""</code>.
+     * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     *
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.palladiosimulator.monitorrepository.MonitorrepositoryPackage#getMeasurementSpecification_Name()
-     * @model default="" volatile="true" derived="true" annotation=
-     *        "http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if self.temporalRestriction->notEmpty() then self.monitor.entityName + \': \' + self.statisticalCharacterization.toString() + \' of \' + self.temporalRestriction.oclAsType(ecore::EObject).eClass().name else self.monitor.entityName + \': \' + self.statisticalCharacterization.toString() endif'"
+     * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification_Name()
+     * @model default="" volatile="true" derived="true"
+     *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if self.temporalRestriction->notEmpty() then self.monitor.entityName + \': \' + self.statisticalCharacterization.toString() + \' of \' + self.temporalRestriction.oclAsType(ecore::EObject).eClass().name else self.monitor.entityName + \': \' + self.statisticalCharacterization.toString() endif'"
      * @generated
      */
     String getName();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getName
-     * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @param value
-     *            the new value of the '<em>Name</em>' attribute.
+     * Sets the value of the '{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getName <em>Name</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param value the new value of the '<em>Name</em>' attribute.
      * @see #getName()
      * @generated
      */

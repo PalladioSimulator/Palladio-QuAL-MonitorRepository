@@ -6,7 +6,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.palladiosimulator.monitorrepository.Intervall;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryPackage;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Intervall</b></em>'. <!--
@@ -58,7 +58,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
      */
     @Override
     protected EClass eStaticClass() {
-        return MonitorrepositoryPackage.Literals.INTERVALL;
+        return MonitorRepositoryPackage.Literals.INTERVALL;
     }
 
     /**
@@ -81,7 +81,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
         final double oldIntervall = this.intervall;
         this.intervall = newIntervall;
         if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, MonitorrepositoryPackage.INTERVALL__INTERVALL,
+            this.eNotify(new ENotificationImpl(this, Notification.SET, MonitorRepositoryPackage.INTERVALL__INTERVALL,
                     oldIntervall, this.intervall));
         }
     }
@@ -94,7 +94,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-        case MonitorrepositoryPackage.INTERVALL__INTERVALL:
+        case MonitorRepositoryPackage.INTERVALL__INTERVALL:
             return this.getIntervall();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -108,7 +108,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
     @Override
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-        case MonitorrepositoryPackage.INTERVALL__INTERVALL:
+        case MonitorRepositoryPackage.INTERVALL__INTERVALL:
             this.setIntervall((Double) newValue);
             return;
         }
@@ -123,7 +123,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
     @Override
     public void eUnset(final int featureID) {
         switch (featureID) {
-        case MonitorrepositoryPackage.INTERVALL__INTERVALL:
+        case MonitorRepositoryPackage.INTERVALL__INTERVALL:
             this.setIntervall(INTERVALL_EDEFAULT);
             return;
         }
@@ -138,7 +138,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
-        case MonitorrepositoryPackage.INTERVALL__INTERVALL:
+        case MonitorRepositoryPackage.INTERVALL__INTERVALL:
             return this.intervall != INTERVALL_EDEFAULT;
         }
         return super.eIsSet(featureID);

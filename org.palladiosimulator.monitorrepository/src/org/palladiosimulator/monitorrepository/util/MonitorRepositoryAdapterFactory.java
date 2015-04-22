@@ -11,7 +11,7 @@ import org.palladiosimulator.monitorrepository.Intervall;
 import org.palladiosimulator.monitorrepository.MeasurementSpecification;
 import org.palladiosimulator.monitorrepository.Monitor;
 import org.palladiosimulator.monitorrepository.MonitorRepository;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryPackage;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 import org.palladiosimulator.monitorrepository.TemporalCharacterization;
 import org.palladiosimulator.monitorrepository.TimeFrame;
 
@@ -23,25 +23,25 @@ import de.uka.ipd.sdq.pcm.core.entity.NamedElement;
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
  *
- * @see org.palladiosimulator.monitorrepository.MonitorrepositoryPackage
+ * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage
  * @generated
  */
-public class MonitorrepositoryAdapterFactory extends AdapterFactoryImpl {
+public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
     /**
      * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected static MonitorrepositoryPackage modelPackage;
+    protected static MonitorRepositoryPackage modelPackage;
 
     /**
      * Creates an instance of the adapter factory. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    public MonitorrepositoryAdapterFactory() {
+    public MonitorRepositoryAdapterFactory() {
         if (modelPackage == null) {
-            modelPackage = MonitorrepositoryPackage.eINSTANCE;
+            modelPackage = MonitorRepositoryPackage.eINSTANCE;
         }
     }
 
@@ -70,60 +70,60 @@ public class MonitorrepositoryAdapterFactory extends AdapterFactoryImpl {
      *
      * @generated
      */
-    protected MonitorrepositorySwitch<Adapter> modelSwitch = new MonitorrepositorySwitch<Adapter>() {
+    protected MonitorRepositorySwitch<Adapter> modelSwitch = new MonitorRepositorySwitch<Adapter>() {
         @Override
         public Adapter caseMonitorRepository(final MonitorRepository object) {
-            return MonitorrepositoryAdapterFactory.this.createMonitorRepositoryAdapter();
+            return MonitorRepositoryAdapterFactory.this.createMonitorRepositoryAdapter();
         }
 
         @Override
         public Adapter caseMonitor(final Monitor object) {
-            return MonitorrepositoryAdapterFactory.this.createMonitorAdapter();
+            return MonitorRepositoryAdapterFactory.this.createMonitorAdapter();
         }
 
         @Override
         public Adapter caseMeasurementSpecification(final MeasurementSpecification object) {
-            return MonitorrepositoryAdapterFactory.this.createMeasurementSpecificationAdapter();
+            return MonitorRepositoryAdapterFactory.this.createMeasurementSpecificationAdapter();
         }
 
         @Override
         public Adapter caseTemporalCharacterization(final TemporalCharacterization object) {
-            return MonitorrepositoryAdapterFactory.this.createTemporalCharacterizationAdapter();
+            return MonitorRepositoryAdapterFactory.this.createTemporalCharacterizationAdapter();
         }
 
         @Override
         public Adapter caseIntervall(final Intervall object) {
-            return MonitorrepositoryAdapterFactory.this.createIntervallAdapter();
+            return MonitorRepositoryAdapterFactory.this.createIntervallAdapter();
         }
 
         @Override
         public Adapter caseDelayedIntervall(final DelayedIntervall object) {
-            return MonitorrepositoryAdapterFactory.this.createDelayedIntervallAdapter();
+            return MonitorRepositoryAdapterFactory.this.createDelayedIntervallAdapter();
         }
 
         @Override
         public Adapter caseTimeFrame(final TimeFrame object) {
-            return MonitorrepositoryAdapterFactory.this.createTimeFrameAdapter();
+            return MonitorRepositoryAdapterFactory.this.createTimeFrameAdapter();
         }
 
         @Override
         public Adapter caseIdentifier(final Identifier object) {
-            return MonitorrepositoryAdapterFactory.this.createIdentifierAdapter();
+            return MonitorRepositoryAdapterFactory.this.createIdentifierAdapter();
         }
 
         @Override
         public Adapter caseNamedElement(final NamedElement object) {
-            return MonitorrepositoryAdapterFactory.this.createNamedElementAdapter();
+            return MonitorRepositoryAdapterFactory.this.createNamedElementAdapter();
         }
 
         @Override
         public Adapter caseEntity(final Entity object) {
-            return MonitorrepositoryAdapterFactory.this.createEntityAdapter();
+            return MonitorRepositoryAdapterFactory.this.createEntityAdapter();
         }
 
         @Override
         public Adapter defaultCase(final EObject object) {
-            return MonitorrepositoryAdapterFactory.this.createEObjectAdapter();
+            return MonitorRepositoryAdapterFactory.this.createEObjectAdapter();
         }
     };
 
@@ -299,4 +299,4 @@ public class MonitorrepositoryAdapterFactory extends AdapterFactoryImpl {
         return null;
     }
 
-} // MonitorrepositoryAdapterFactory
+} // MonitorRepositoryAdapterFactory

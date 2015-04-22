@@ -10,7 +10,7 @@ import org.palladiosimulator.monitorrepository.Intervall;
 import org.palladiosimulator.monitorrepository.MeasurementSpecification;
 import org.palladiosimulator.monitorrepository.Monitor;
 import org.palladiosimulator.monitorrepository.MonitorRepository;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryPackage;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 import org.palladiosimulator.monitorrepository.TemporalCharacterization;
 import org.palladiosimulator.monitorrepository.TimeFrame;
 
@@ -25,25 +25,25 @@ import de.uka.ipd.sdq.pcm.core.entity.NamedElement;
  * inheritance hierarchy until a non-null result is returned, which is the result of the switch.
  * <!-- end-user-doc -->
  *
- * @see org.palladiosimulator.monitorrepository.MonitorrepositoryPackage
+ * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage
  * @generated
  */
-public class MonitorrepositorySwitch<T> extends Switch<T> {
+public class MonitorRepositorySwitch<T> extends Switch<T> {
     /**
      * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected static MonitorrepositoryPackage modelPackage;
+    protected static MonitorRepositoryPackage modelPackage;
 
     /**
      * Creates an instance of the switch. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    public MonitorrepositorySwitch() {
+    public MonitorRepositorySwitch() {
         if (modelPackage == null) {
-            modelPackage = MonitorrepositoryPackage.eINSTANCE;
+            modelPackage = MonitorRepositoryPackage.eINSTANCE;
         }
     }
 
@@ -70,7 +70,7 @@ public class MonitorrepositorySwitch<T> extends Switch<T> {
     @Override
     protected T doSwitch(final int classifierID, final EObject theEObject) {
         switch (classifierID) {
-        case MonitorrepositoryPackage.MONITOR_REPOSITORY: {
+        case MonitorRepositoryPackage.MONITOR_REPOSITORY: {
             final MonitorRepository monitorRepository = (MonitorRepository) theEObject;
             T result = this.caseMonitorRepository(monitorRepository);
             if (result == null) {
@@ -87,7 +87,7 @@ public class MonitorrepositorySwitch<T> extends Switch<T> {
             }
             return result;
         }
-        case MonitorrepositoryPackage.MONITOR: {
+        case MonitorRepositoryPackage.MONITOR: {
             final Monitor monitor = (Monitor) theEObject;
             T result = this.caseMonitor(monitor);
             if (result == null) {
@@ -104,7 +104,7 @@ public class MonitorrepositorySwitch<T> extends Switch<T> {
             }
             return result;
         }
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION: {
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION: {
             final MeasurementSpecification measurementSpecification = (MeasurementSpecification) theEObject;
             T result = this.caseMeasurementSpecification(measurementSpecification);
             if (result == null) {
@@ -115,7 +115,7 @@ public class MonitorrepositorySwitch<T> extends Switch<T> {
             }
             return result;
         }
-        case MonitorrepositoryPackage.TEMPORAL_CHARACTERIZATION: {
+        case MonitorRepositoryPackage.TEMPORAL_CHARACTERIZATION: {
             final TemporalCharacterization temporalCharacterization = (TemporalCharacterization) theEObject;
             T result = this.caseTemporalCharacterization(temporalCharacterization);
             if (result == null) {
@@ -126,7 +126,7 @@ public class MonitorrepositorySwitch<T> extends Switch<T> {
             }
             return result;
         }
-        case MonitorrepositoryPackage.INTERVALL: {
+        case MonitorRepositoryPackage.INTERVALL: {
             final Intervall intervall = (Intervall) theEObject;
             T result = this.caseIntervall(intervall);
             if (result == null) {
@@ -140,7 +140,7 @@ public class MonitorrepositorySwitch<T> extends Switch<T> {
             }
             return result;
         }
-        case MonitorrepositoryPackage.DELAYED_INTERVALL: {
+        case MonitorRepositoryPackage.DELAYED_INTERVALL: {
             final DelayedIntervall delayedIntervall = (DelayedIntervall) theEObject;
             T result = this.caseDelayedIntervall(delayedIntervall);
             if (result == null) {
@@ -157,7 +157,7 @@ public class MonitorrepositorySwitch<T> extends Switch<T> {
             }
             return result;
         }
-        case MonitorrepositoryPackage.TIME_FRAME: {
+        case MonitorRepositoryPackage.TIME_FRAME: {
             final TimeFrame timeFrame = (TimeFrame) theEObject;
             T result = this.caseTimeFrame(timeFrame);
             if (result == null) {
@@ -345,4 +345,4 @@ public class MonitorrepositorySwitch<T> extends Switch<T> {
         return null;
     }
 
-} // MonitorrepositorySwitch
+} // MonitorRepositorySwitch

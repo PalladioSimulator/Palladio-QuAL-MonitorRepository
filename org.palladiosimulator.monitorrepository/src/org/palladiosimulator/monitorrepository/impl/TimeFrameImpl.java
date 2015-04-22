@@ -5,7 +5,7 @@ package org.palladiosimulator.monitorrepository.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryPackage;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 import org.palladiosimulator.monitorrepository.TimeFrame;
 
 /**
@@ -78,7 +78,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
      */
     @Override
     protected EClass eStaticClass() {
-        return MonitorrepositoryPackage.Literals.TIME_FRAME;
+        return MonitorRepositoryPackage.Literals.TIME_FRAME;
     }
 
     /**
@@ -101,7 +101,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
         final double oldStart = this.start;
         this.start = newStart;
         if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, MonitorrepositoryPackage.TIME_FRAME__START,
+            this.eNotify(new ENotificationImpl(this, Notification.SET, MonitorRepositoryPackage.TIME_FRAME__START,
                     oldStart, this.start));
         }
     }
@@ -126,7 +126,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
         final double oldStop = this.stop;
         this.stop = newStop;
         if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, MonitorrepositoryPackage.TIME_FRAME__STOP,
+            this.eNotify(new ENotificationImpl(this, Notification.SET, MonitorRepositoryPackage.TIME_FRAME__STOP,
                     oldStop, this.stop));
         }
     }
@@ -139,9 +139,9 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-        case MonitorrepositoryPackage.TIME_FRAME__START:
+        case MonitorRepositoryPackage.TIME_FRAME__START:
             return this.getStart();
-        case MonitorrepositoryPackage.TIME_FRAME__STOP:
+        case MonitorRepositoryPackage.TIME_FRAME__STOP:
             return this.getStop();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -155,10 +155,10 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
     @Override
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-        case MonitorrepositoryPackage.TIME_FRAME__START:
+        case MonitorRepositoryPackage.TIME_FRAME__START:
             this.setStart((Double) newValue);
             return;
-        case MonitorrepositoryPackage.TIME_FRAME__STOP:
+        case MonitorRepositoryPackage.TIME_FRAME__STOP:
             this.setStop((Double) newValue);
             return;
         }
@@ -173,10 +173,10 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
     @Override
     public void eUnset(final int featureID) {
         switch (featureID) {
-        case MonitorrepositoryPackage.TIME_FRAME__START:
+        case MonitorRepositoryPackage.TIME_FRAME__START:
             this.setStart(START_EDEFAULT);
             return;
-        case MonitorrepositoryPackage.TIME_FRAME__STOP:
+        case MonitorRepositoryPackage.TIME_FRAME__STOP:
             this.setStop(STOP_EDEFAULT);
             return;
         }
@@ -191,9 +191,9 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
-        case MonitorrepositoryPackage.TIME_FRAME__START:
+        case MonitorRepositoryPackage.TIME_FRAME__START:
             return this.start != START_EDEFAULT;
-        case MonitorrepositoryPackage.TIME_FRAME__STOP:
+        case MonitorRepositoryPackage.TIME_FRAME__STOP:
             return this.stop != STOP_EDEFAULT;
         }
         return super.eIsSet(featureID);

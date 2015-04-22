@@ -6,7 +6,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.palladiosimulator.monitorrepository.DelayedIntervall;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryPackage;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Delayed Intervall</b></em>
@@ -58,7 +58,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
      */
     @Override
     protected EClass eStaticClass() {
-        return MonitorrepositoryPackage.Literals.DELAYED_INTERVALL;
+        return MonitorRepositoryPackage.Literals.DELAYED_INTERVALL;
     }
 
     /**
@@ -82,7 +82,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
         this.delay = newDelay;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MonitorrepositoryPackage.DELAYED_INTERVALL__DELAY, oldDelay, this.delay));
+                    MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY, oldDelay, this.delay));
         }
     }
 
@@ -94,7 +94,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-        case MonitorrepositoryPackage.DELAYED_INTERVALL__DELAY:
+        case MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY:
             return this.getDelay();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -108,7 +108,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
     @Override
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-        case MonitorrepositoryPackage.DELAYED_INTERVALL__DELAY:
+        case MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY:
             this.setDelay((Double) newValue);
             return;
         }
@@ -123,7 +123,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
     @Override
     public void eUnset(final int featureID) {
         switch (featureID) {
-        case MonitorrepositoryPackage.DELAYED_INTERVALL__DELAY:
+        case MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY:
             this.setDelay(DELAY_EDEFAULT);
             return;
         }
@@ -138,7 +138,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
-        case MonitorrepositoryPackage.DELAYED_INTERVALL__DELAY:
+        case MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY:
             return this.delay != DELAY_EDEFAULT;
         }
         return super.eIsSet(featureID);

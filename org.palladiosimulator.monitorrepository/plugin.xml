@@ -14,7 +14,7 @@
       <!-- @generated monitorrepository -->
       <package
             uri="http://palladiosimulator.org/MonitorRepository/1.0"
-            class="org.palladiosimulator.monitorrepository.MonitorrepositoryPackage"
+            class="org.palladiosimulator.monitorrepository.MonitorRepositoryPackage"
             genModel="model/monitorrepository.genmodel"/>
    </extension>
 
@@ -22,6 +22,6 @@
       <!-- @generated monitorrepository -->
       <parser
             type="monitorrepository"
-            class="org.palladiosimulator.monitorrepository.util.MonitorrepositoryResourceFactoryImpl"/>
+            class="org.palladiosimulator.monitorrepository.util.MonitorRepositoryResourceFactoryImpl"/>
    </extension>
 </plugin>

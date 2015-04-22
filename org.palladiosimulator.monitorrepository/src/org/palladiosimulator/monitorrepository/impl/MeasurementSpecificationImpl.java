@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.palladiosimulator.metricspec.MetricDescription;
 import org.palladiosimulator.monitorrepository.MeasurementSpecification;
 import org.palladiosimulator.monitorrepository.Monitor;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryPackage;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 import org.palladiosimulator.monitorrepository.StatisticalCharacterizationEnum;
 import org.palladiosimulator.monitorrepository.TemporalCharacterization;
 
@@ -93,7 +93,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
      * @generated
      * @ordered
      */
-    protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal) MonitorrepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__NAME)
+    protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal) MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__NAME)
             .getSettingDelegate();
 
     /**
@@ -112,7 +112,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
      */
     @Override
     protected EClass eStaticClass() {
-        return MonitorrepositoryPackage.Literals.MEASUREMENT_SPECIFICATION;
+        return MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION;
     }
 
     /**
@@ -136,7 +136,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
         this.temporalRestriction = newTemporalRestriction;
         if (this.eNotificationRequired()) {
             final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION, oldTemporalRestriction,
+                    MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION, oldTemporalRestriction,
                     newTemporalRestriction);
             if (msgs == null) {
                 msgs = notification;
@@ -158,11 +158,11 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
             NotificationChain msgs = null;
             if (this.temporalRestriction != null) {
                 msgs = ((InternalEObject) this.temporalRestriction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION, null, msgs);
+                        - MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION, null, msgs);
             }
             if (newTemporalRestriction != null) {
                 msgs = ((InternalEObject) newTemporalRestriction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION, null, msgs);
+                        - MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION, null, msgs);
             }
             msgs = this.basicSetTemporalRestriction(newTemporalRestriction, msgs);
             if (msgs != null) {
@@ -170,7 +170,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
             }
         } else if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION, newTemporalRestriction,
+                    MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION, newTemporalRestriction,
                     newTemporalRestriction));
         }
     }
@@ -197,7 +197,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
                 : newStatisticalCharacterization;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION,
+                    MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION,
                     oldStatisticalCharacterization, this.statisticalCharacterization));
         }
     }
@@ -215,7 +215,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
             if (this.metricDescription != oldMetricDescription) {
                 if (this.eNotificationRequired()) {
                     this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION,
+                            MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION,
                             oldMetricDescription, this.metricDescription));
                 }
             }
@@ -243,7 +243,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
         this.metricDescription = newMetricDescription;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION, oldMetricDescription,
+                    MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION, oldMetricDescription,
                     this.metricDescription));
         }
     }
@@ -255,7 +255,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
      */
     @Override
     public Monitor getMonitor() {
-        if (this.eContainerFeatureID() != MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR) {
+        if (this.eContainerFeatureID() != MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR) {
             return null;
         }
         return (Monitor) this.eInternalContainer();
@@ -268,7 +268,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
      */
     public NotificationChain basicSetMonitor(final Monitor newMonitor, NotificationChain msgs) {
         msgs = this.eBasicSetContainer((InternalEObject) newMonitor,
-                MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR, msgs);
+                MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR, msgs);
         return msgs;
     }
 
@@ -280,7 +280,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
     @Override
     public void setMonitor(final Monitor newMonitor) {
         if (newMonitor != this.eInternalContainer()
-                || (this.eContainerFeatureID() != MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR && newMonitor != null)) {
+                || (this.eContainerFeatureID() != MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR && newMonitor != null)) {
             if (EcoreUtil.isAncestor(this, newMonitor)) {
                 throw new IllegalArgumentException("Recursive containment not allowed for " + this.toString());
             }
@@ -290,7 +290,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
             }
             if (newMonitor != null) {
                 msgs = ((InternalEObject) newMonitor).eInverseAdd(this,
-                        MonitorrepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS, Monitor.class, msgs);
+                        MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS, Monitor.class, msgs);
             }
             msgs = this.basicSetMonitor(newMonitor, msgs);
             if (msgs != null) {
@@ -298,7 +298,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
             }
         } else if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR, newMonitor, newMonitor));
+                    MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR, newMonitor, newMonitor));
         }
     }
 
@@ -330,7 +330,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
     @Override
     public NotificationChain eInverseAdd(final InternalEObject otherEnd, final int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
             if (this.eInternalContainer() != null) {
                 msgs = this.eBasicRemoveFromContainer(msgs);
             }
@@ -348,9 +348,9 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
         switch (featureID) {
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
             return this.basicSetTemporalRestriction(null, msgs);
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
             return this.basicSetMonitor(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -364,9 +364,9 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
     @Override
     public NotificationChain eBasicRemoveFromContainerFeature(final NotificationChain msgs) {
         switch (this.eContainerFeatureID()) {
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
             return this.eInternalContainer().eInverseRemove(this,
-                    MonitorrepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS, Monitor.class, msgs);
+                    MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS, Monitor.class, msgs);
         }
         return super.eBasicRemoveFromContainerFeature(msgs);
     }
@@ -379,18 +379,18 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
             return this.getTemporalRestriction();
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION:
             return this.getStatisticalCharacterization();
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION:
             if (resolve) {
                 return this.getMetricDescription();
             }
             return this.basicGetMetricDescription();
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
             return this.getMonitor();
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
             return this.getName();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -404,19 +404,19 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
     @Override
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
             this.setTemporalRestriction((TemporalCharacterization) newValue);
             return;
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION:
             this.setStatisticalCharacterization((StatisticalCharacterizationEnum) newValue);
             return;
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION:
             this.setMetricDescription((MetricDescription) newValue);
             return;
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
             this.setMonitor((Monitor) newValue);
             return;
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
             this.setName((String) newValue);
             return;
         }
@@ -431,19 +431,19 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
     @Override
     public void eUnset(final int featureID) {
         switch (featureID) {
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
             this.setTemporalRestriction((TemporalCharacterization) null);
             return;
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION:
             this.setStatisticalCharacterization(STATISTICAL_CHARACTERIZATION_EDEFAULT);
             return;
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION:
             this.setMetricDescription((MetricDescription) null);
             return;
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
             this.setMonitor((Monitor) null);
             return;
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
             this.NAME__ESETTING_DELEGATE.dynamicUnset(this, null, 0);
             return;
         }
@@ -458,15 +458,15 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
             return this.temporalRestriction != null;
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION:
             return this.statisticalCharacterization != STATISTICAL_CHARACTERIZATION_EDEFAULT;
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION:
             return this.metricDescription != null;
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
             return this.getMonitor() != null;
-        case MonitorrepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
             return this.NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
         }
         return super.eIsSet(featureID);

@@ -10,16 +10,16 @@ import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
  * <!-- begin-user-doc --> The <b>Resource Factory</b> associated with the package. <!--
  * end-user-doc -->
  *
- * @see org.palladiosimulator.monitorrepository.util.MonitorrepositoryResourceImpl
+ * @see org.palladiosimulator.monitorrepository.util.MonitorRepositoryResourceImpl
  * @generated
  */
-public class MonitorrepositoryResourceFactoryImpl extends ResourceFactoryImpl {
+public class MonitorRepositoryResourceFactoryImpl extends ResourceFactoryImpl {
     /**
      * Creates an instance of the resource factory. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    public MonitorrepositoryResourceFactoryImpl() {
+    public MonitorRepositoryResourceFactoryImpl() {
         super();
     }
 
@@ -30,8 +30,8 @@ public class MonitorrepositoryResourceFactoryImpl extends ResourceFactoryImpl {
      */
     @Override
     public Resource createResource(final URI uri) {
-        final Resource result = new MonitorrepositoryResourceImpl(uri);
+        final Resource result = new MonitorRepositoryResourceImpl(uri);
         return result;
     }
 
-} // MonitorrepositoryResourceFactoryImpl
+} // MonitorRepositoryResourceFactoryImpl
