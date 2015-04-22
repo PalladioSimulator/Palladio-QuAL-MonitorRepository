@@ -9,7 +9,6 @@
   <rm:locator pattern="^org\.palladiosimulator\.commons.*" searchPathRef="SDQ_Commons" failOnError="false"/>
   <rm:locator pattern="^org\.jscience.*" searchPathRef="thirdparty" failOnError="false"/> 
   <rm:locator pattern="^org\.palladiosimulator\.edp2.*" searchPathRef="edp2" failOnError="false"/>
-  <rm:locator pattern="^org\.palladiosimulator\.servicelevelobjective.*" searchPathRef="ServiceLevelObjectives" failOnError="false"/>
   <rm:locator searchPathRef="pcm" failOnError="false" />  
   <rm:locator searchPathRef="luna" failOnError="true" pattern="^org\.eclipse\..*" />
   <rm:locator searchPathRef="orbit" failOnError="false" />
@@ -23,6 +22,15 @@
       </rm:uri>
     </rm:provider>
     </rm:searchPath>
+    
+      <rm:searchPath name="localresources">
+    <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="local">
+      <rm:uri format="file:///{0}/{1}/">
+        <bc:propertyRef key="workspace.root"/>
+        <bc:propertyRef key="buckminster.component"/>
+      </rm:uri>
+    </rm:provider>
+  </rm:searchPath>
     
   <rm:searchPath name="edp2">
     <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
@@ -47,32 +55,7 @@
       <rm:uri format="http://sdqweb.ipd.kit.edu/eclipse/thirdpartywrapper/nightly/"/>
     </rm:provider>
   </rm:searchPath>
-  
-  <rm:searchPath name="localresources">
-    <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="local">
-      <rm:uri format="file:///{0}/{1}/">
-        <bc:propertyRef key="workspace.root"/>
-        <bc:propertyRef key="buckminster.component"/>
-      </rm:uri>
-    </rm:provider>
-  </rm:searchPath>
-  
-  <rm:searchPath name="StoryDiagrams">
-    <rm:provider componentTypes="osgi.bundle,eclipse.feature,buckminster" readerType="p2" source="false" mutable="false">
-      <rm:property key="buckminster.source" value="false"/>
-      <rm:property key="buckminster.mutable" value="false"/>
-      <rm:uri format="http://sdqweb.ipd.kit.edu/eclipse/storydiagraminterpreter/nightly/"/>
-    </rm:provider>
-  </rm:searchPath>
-  
-  <rm:searchPath name="ServiceLevelObjectives">
-    <rm:provider componentTypes="osgi.bundle,eclipse.feature,buckminster" readerType="p2" source="false" mutable="false">
-      <rm:property key="buckminster.source" value="false"/>
-      <rm:property key="buckminster.mutable" value="false"/>
-      <rm:uri format="http://sdqweb.ipd.kit.edu/eclipse/servicelevelobjectives/nightly/"/>
-    </rm:provider>
-  </rm:searchPath>
-  
+   
     <rm:searchPath name="SimuLizar">
     <rm:provider componentTypes="osgi.bundle,eclipse.feature,buckminster" readerType="p2" source="false" mutable="false">
       <rm:property key="buckminster.source" value="false"/>
