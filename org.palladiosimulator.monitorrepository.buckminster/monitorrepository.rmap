@@ -22,7 +22,8 @@
         <bc:propertyRef key="buckminster.component"/>
       </rm:uri>
     </rm:provider>
-  
+    </rm:searchPath>
+    
   <rm:searchPath name="edp2">
     <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
       <rm:property key="buckminster.source" value="false"/>
