@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rm:rmap xmlns:bc="http://www.eclipse.org/buckminster/Common-1.0" xmlns:rm="http://www.eclipse.org/buckminster/RMap-1.0">
 
+  <rm:locator searchPathRef="MonitorRepository" failOnError="false"/>
   <rm:locator searchPathRef="simulizarsvn" failOnError="true" pattern="^org\.palladiosimulator\.simulizar.*" />
   
   <rm:locator pattern="^de\.uka\.ipd\.sdq\..*" searchPathRef="SDQ_Commons" failOnError="false"/>
@@ -11,7 +12,16 @@
   <rm:locator pattern="^org\.palladiosimulator\.servicelevelobjective.*" searchPathRef="ServiceLevelObjectives" failOnError="false"/>
   <rm:locator searchPathRef="pcm" failOnError="false" />  
   <rm:locator searchPathRef="luna" failOnError="true" pattern="^org\.eclipse\..*" />
-  <rm:locator searchPathRef="orbit" failOnError="false" />  
+  <rm:locator searchPathRef="orbit" failOnError="false" />
+  
+  <rm:searchPath name="MonitorRepository">
+    <rm:provider componentTypes="eclipse.feature,osgi.bundle" readerType="svn">
+      <rm:property key="buckminster.source" value="true"/>
+      <rm:property key="buckminster.mutable" value="true"/>
+      <rm:uri format="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/MonitorRepository/trunk/{0}">
+        <bc:propertyRef key="buckminster.component"/>
+      </rm:uri>
+    </rm:provider>
   
   <rm:searchPath name="edp2">
     <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
