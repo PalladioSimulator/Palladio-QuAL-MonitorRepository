@@ -16,9 +16,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="org.palladiosimulator.simulizar.monitorrepository.presentation.MonitorrepositoryModelWizardID"
+            id="org.palladiosimulator.monitorrepository.presentation.MonitorrepositoryModelWizardID"
             name="%_UI_MonitorrepositoryModelWizard_label"
-            class="org.palladiosimulator.simulizar.monitorrepository.presentation.MonitorrepositoryModelWizard"
+            class="org.palladiosimulator.monitorrepository.presentation.MonitorrepositoryModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/MonitorrepositoryModelFile.gif">
          <description>%_UI_MonitorrepositoryModelWizard_description</description>
@@ -29,12 +29,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated monitorrepository -->
       <editor
-            id="org.palladiosimulator.simulizar.monitorrepository.presentation.MonitorrepositoryEditorID"
+            id="org.palladiosimulator.monitorrepository.presentation.MonitorrepositoryEditorID"
             name="%_UI_MonitorrepositoryEditor_label"
             icon="icons/full/obj16/MonitorrepositoryModelFile.gif"
             extensions="monitorrepository"
-            class="org.palladiosimulator.simulizar.monitorrepository.presentation.MonitorrepositoryEditor"
-            contributorClass="org.palladiosimulator.simulizar.monitorrepository.presentation.MonitorrepositoryActionBarContributor">
+            class="org.palladiosimulator.monitorrepository.presentation.MonitorrepositoryEditor"
+            contributorClass="org.palladiosimulator.monitorrepository.presentation.MonitorrepositoryActionBarContributor">
       </editor>
    </extension>
 </plugin>
