@@ -119,7 +119,7 @@ import org.eclipse.ui.views.properties.PropertySheetPage;
 import org.palladiosimulator.edp2.models.ExperimentData.provider.ExperimentDataItemProviderAdapterFactory;
 import org.palladiosimulator.edp2.models.measuringpoint.provider.MeasuringpointItemProviderAdapterFactory;
 import org.palladiosimulator.metricspec.provider.MetricSpecItemProviderAdapterFactory;
-import org.palladiosimulator.monitorrepository.provider.MonitorrepositoryItemProviderAdapterFactory;
+import org.palladiosimulator.monitorrepository.provider.MonitorRepositoryItemProviderAdapterFactory;
 
 import de.uka.ipd.sdq.identifier.provider.IdentifierItemProviderAdapterFactory;
 import de.uka.ipd.sdq.pcm.allocation.provider.AllocationItemProviderAdapterFactory;
@@ -147,17 +147,17 @@ import de.uka.ipd.sdq.stoex.provider.StoexItemProviderAdapterFactory;
 import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
 
 /**
- * This is an example of a Monitorrepository model editor. <!-- begin-user-doc --> <!-- end-user-doc
+ * This is an example of a MonitorRepository model editor. <!-- begin-user-doc --> <!-- end-user-doc
  * -->
- *
+ * 
  * @generated
  */
-public class MonitorrepositoryEditor extends MultiPageEditorPart implements IEditingDomainProvider, ISelectionProvider,
+public class MonitorRepositoryEditor extends MultiPageEditorPart implements IEditingDomainProvider, ISelectionProvider,
 IMenuListener, IViewerProvider, IGotoMarker {
     /**
      * This keeps track of the editing domain that is used to track all changes to the model. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected AdapterFactoryEditingDomain editingDomain;
@@ -232,7 +232,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
     /**
      * This shows how a table view works. A table can be used as a list with icons. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected TableViewer tableViewer;
@@ -294,27 +294,27 @@ IMenuListener, IViewerProvider, IGotoMarker {
     /**
      * This listens for when the outline becomes active <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     *
+     * 
      * @generated
      */
     protected IPartListener partListener = new IPartListener() {
         @Override
         public void partActivated(final IWorkbenchPart p) {
             if (p instanceof ContentOutline) {
-                if (((ContentOutline) p).getCurrentPage() == MonitorrepositoryEditor.this.contentOutlinePage) {
-                    MonitorrepositoryEditor.this.getActionBarContributor()
-                            .setActiveEditor(MonitorrepositoryEditor.this);
+                if (((ContentOutline) p).getCurrentPage() == MonitorRepositoryEditor.this.contentOutlinePage) {
+                    MonitorRepositoryEditor.this.getActionBarContributor()
+                            .setActiveEditor(MonitorRepositoryEditor.this);
 
-                    MonitorrepositoryEditor.this.setCurrentViewer(MonitorrepositoryEditor.this.contentOutlineViewer);
+                    MonitorRepositoryEditor.this.setCurrentViewer(MonitorRepositoryEditor.this.contentOutlineViewer);
                 }
             } else if (p instanceof PropertySheet) {
-                if (MonitorrepositoryEditor.this.propertySheetPages.contains(((PropertySheet) p).getCurrentPage())) {
-                    MonitorrepositoryEditor.this.getActionBarContributor()
-                            .setActiveEditor(MonitorrepositoryEditor.this);
-                    MonitorrepositoryEditor.this.handleActivate();
+                if (MonitorRepositoryEditor.this.propertySheetPages.contains(((PropertySheet) p).getCurrentPage())) {
+                    MonitorRepositoryEditor.this.getActionBarContributor()
+                            .setActiveEditor(MonitorRepositoryEditor.this);
+                    MonitorRepositoryEditor.this.handleActivate();
                 }
-            } else if (p == MonitorrepositoryEditor.this) {
-                MonitorrepositoryEditor.this.handleActivate();
+            } else if (p == MonitorRepositoryEditor.this) {
+                MonitorRepositoryEditor.this.handleActivate();
             }
         }
 
@@ -381,7 +381,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
     /**
      * Adapter used to update the problem indication when resources are demanded loaded. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected EContentAdapter problemIndicationAdapter = new EContentAdapter() {
@@ -393,18 +393,18 @@ IMenuListener, IViewerProvider, IGotoMarker {
                 case Resource.RESOURCE__ERRORS:
                 case Resource.RESOURCE__WARNINGS: {
                     final Resource resource = (Resource) notification.getNotifier();
-                    final Diagnostic diagnostic = MonitorrepositoryEditor.this.analyzeResourceProblems(resource, null);
+                    final Diagnostic diagnostic = MonitorRepositoryEditor.this.analyzeResourceProblems(resource, null);
                     if (diagnostic.getSeverity() != Diagnostic.OK) {
-                        MonitorrepositoryEditor.this.resourceToDiagnosticMap.put(resource, diagnostic);
+                        MonitorRepositoryEditor.this.resourceToDiagnosticMap.put(resource, diagnostic);
                     } else {
-                        MonitorrepositoryEditor.this.resourceToDiagnosticMap.remove(resource);
+                        MonitorRepositoryEditor.this.resourceToDiagnosticMap.remove(resource);
                     }
 
-                    if (MonitorrepositoryEditor.this.updateProblemIndication) {
-                        MonitorrepositoryEditor.this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
+                    if (MonitorRepositoryEditor.this.updateProblemIndication) {
+                        MonitorRepositoryEditor.this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
                             @Override
                             public void run() {
-                                MonitorrepositoryEditor.this.updateProblemIndication();
+                                MonitorRepositoryEditor.this.updateProblemIndication();
                             }
                         });
                     }
@@ -424,12 +424,12 @@ IMenuListener, IViewerProvider, IGotoMarker {
         @Override
         protected void unsetTarget(final Resource target) {
             this.basicUnsetTarget(target);
-            MonitorrepositoryEditor.this.resourceToDiagnosticMap.remove(target);
-            if (MonitorrepositoryEditor.this.updateProblemIndication) {
-                MonitorrepositoryEditor.this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
+            MonitorRepositoryEditor.this.resourceToDiagnosticMap.remove(target);
+            if (MonitorRepositoryEditor.this.updateProblemIndication) {
+                MonitorRepositoryEditor.this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
                     @Override
                     public void run() {
-                        MonitorrepositoryEditor.this.updateProblemIndication();
+                        MonitorRepositoryEditor.this.updateProblemIndication();
                     }
                 });
             }
@@ -447,7 +447,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
             final IResourceDelta delta = event.getDelta();
             try {
                 class ResourceDeltaVisitor implements IResourceDeltaVisitor {
-                    protected ResourceSet resourceSet = MonitorrepositoryEditor.this.editingDomain.getResourceSet();
+                    protected ResourceSet resourceSet = MonitorRepositoryEditor.this.editingDomain.getResourceSet();
                     protected Collection<Resource> changedResources = new ArrayList<Resource>();
                     protected Collection<Resource> removedResources = new ArrayList<Resource>();
 
@@ -461,7 +461,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
                                 if (resource != null) {
                                     if (delta.getKind() == IResourceDelta.REMOVED) {
                                         this.removedResources.add(resource);
-                                    } else if (!MonitorrepositoryEditor.this.savedResources.remove(resource)) {
+                                    } else if (!MonitorRepositoryEditor.this.savedResources.remove(resource)) {
                                         this.changedResources.add(resource);
                                     }
                                 }
@@ -485,25 +485,25 @@ IMenuListener, IViewerProvider, IGotoMarker {
                 delta.accept(visitor);
 
                 if (!visitor.getRemovedResources().isEmpty()) {
-                    MonitorrepositoryEditor.this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
+                    MonitorRepositoryEditor.this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
                         @Override
                         public void run() {
-                            MonitorrepositoryEditor.this.removedResources.addAll(visitor.getRemovedResources());
-                            if (!MonitorrepositoryEditor.this.isDirty()) {
-                                MonitorrepositoryEditor.this.getSite().getPage()
-                                        .closeEditor(MonitorrepositoryEditor.this, false);
+                            MonitorRepositoryEditor.this.removedResources.addAll(visitor.getRemovedResources());
+                            if (!MonitorRepositoryEditor.this.isDirty()) {
+                                MonitorRepositoryEditor.this.getSite().getPage()
+                                        .closeEditor(MonitorRepositoryEditor.this, false);
                             }
                         }
                     });
                 }
 
                 if (!visitor.getChangedResources().isEmpty()) {
-                    MonitorrepositoryEditor.this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
+                    MonitorRepositoryEditor.this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
                         @Override
                         public void run() {
-                            MonitorrepositoryEditor.this.changedResources.addAll(visitor.getChangedResources());
-                            if (MonitorrepositoryEditor.this.getSite().getPage().getActiveEditor() == MonitorrepositoryEditor.this) {
-                                MonitorrepositoryEditor.this.handleActivate();
+                            MonitorRepositoryEditor.this.changedResources.addAll(visitor.getChangedResources());
+                            if (MonitorRepositoryEditor.this.getSite().getPage().getActiveEditor() == MonitorRepositoryEditor.this) {
+                                MonitorRepositoryEditor.this.handleActivate();
                             }
                         }
                     });
@@ -533,7 +533,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
 
         if (!this.removedResources.isEmpty()) {
             if (this.handleDirtyConflict()) {
-                this.getSite().getPage().closeEditor(MonitorrepositoryEditor.this, false);
+                this.getSite().getPage().closeEditor(MonitorRepositoryEditor.this, false);
             } else {
                 this.removedResources.clear();
                 this.changedResources.clear();
@@ -650,7 +650,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
      * 
      * @generated
      */
-    public MonitorrepositoryEditor() {
+    public MonitorRepositoryEditor() {
         super();
         this.initializeEditingDomain();
     }
@@ -667,7 +667,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
         this.adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
         this.adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-        this.adapterFactory.addAdapterFactory(new MonitorrepositoryItemProviderAdapterFactory());
+        this.adapterFactory.addAdapterFactory(new MonitorRepositoryItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new IdentifierItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new MetricSpecItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new PcmItemProviderAdapterFactory());
@@ -709,18 +709,18 @@ IMenuListener, IViewerProvider, IGotoMarker {
         commandStack.addCommandStackListener(new CommandStackListener() {
             @Override
             public void commandStackChanged(final EventObject event) {
-                MonitorrepositoryEditor.this.getContainer().getDisplay().asyncExec(new Runnable() {
+                MonitorRepositoryEditor.this.getContainer().getDisplay().asyncExec(new Runnable() {
                     @Override
                     public void run() {
-                        MonitorrepositoryEditor.this.firePropertyChange(IEditorPart.PROP_DIRTY);
+                        MonitorRepositoryEditor.this.firePropertyChange(IEditorPart.PROP_DIRTY);
 
                         // Try to select the affected objects.
                         //
                         final Command mostRecentCommand = ((CommandStack) event.getSource()).getMostRecentCommand();
                         if (mostRecentCommand != null) {
-                            MonitorrepositoryEditor.this.setSelectionToViewer(mostRecentCommand.getAffectedObjects());
+                            MonitorRepositoryEditor.this.setSelectionToViewer(mostRecentCommand.getAffectedObjects());
                         }
-                        for (final Iterator<PropertySheetPage> i = MonitorrepositoryEditor.this.propertySheetPages
+                        for (final Iterator<PropertySheetPage> i = MonitorRepositoryEditor.this.propertySheetPages
                                 .iterator(); i.hasNext();) {
                             final PropertySheetPage propertySheetPage = i.next();
                             if (propertySheetPage.getControl().isDisposed()) {
@@ -767,8 +767,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
                 public void run() {
                     // Try to select the items in the current content viewer of the editor.
                     //
-                    if (MonitorrepositoryEditor.this.currentViewer != null) {
-                        MonitorrepositoryEditor.this.currentViewer.setSelection(
+                    if (MonitorRepositoryEditor.this.currentViewer != null) {
+                        MonitorRepositoryEditor.this.currentViewer.setSelection(
                                 new StructuredSelection(theSelection.toArray()), true);
                     }
                 }
@@ -882,7 +882,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
                     //
                     @Override
                     public void selectionChanged(final SelectionChangedEvent selectionChangedEvent) {
-                        MonitorrepositoryEditor.this.setSelection(selectionChangedEvent.getSelection());
+                        MonitorRepositoryEditor.this.setSelection(selectionChangedEvent.getSelection());
                     }
                 };
             }
@@ -913,7 +913,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
     /**
      * This returns the viewer as required by the {@link IViewerProvider} interface. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -1008,7 +1008,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
             // Create a page for the selection tree view.
             //
             {
-                final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), MonitorrepositoryEditor.this) {
+                final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), MonitorRepositoryEditor.this) {
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         final Tree tree = new Tree(composite, SWT.MULTI);
@@ -1019,7 +1019,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
                     @Override
                     public void requestActivation() {
                         super.requestActivation();
-                        MonitorrepositoryEditor.this.setCurrentViewerPane(this);
+                        MonitorRepositoryEditor.this.setCurrentViewerPane(this);
                     }
                 };
                 viewerPane.createControl(this.getContainer());
@@ -1043,7 +1043,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
             // Create a page for the parent tree view.
             //
             {
-                final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), MonitorrepositoryEditor.this) {
+                final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), MonitorRepositoryEditor.this) {
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         final Tree tree = new Tree(composite, SWT.MULTI);
@@ -1054,7 +1054,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
                     @Override
                     public void requestActivation() {
                         super.requestActivation();
-                        MonitorrepositoryEditor.this.setCurrentViewerPane(this);
+                        MonitorRepositoryEditor.this.setCurrentViewerPane(this);
                     }
                 };
                 viewerPane.createControl(this.getContainer());
@@ -1072,7 +1072,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
             // This is the page for the list viewer
             //
             {
-                final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), MonitorrepositoryEditor.this) {
+                final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), MonitorRepositoryEditor.this) {
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         return new ListViewer(composite);
@@ -1081,7 +1081,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
                     @Override
                     public void requestActivation() {
                         super.requestActivation();
-                        MonitorrepositoryEditor.this.setCurrentViewerPane(this);
+                        MonitorRepositoryEditor.this.setCurrentViewerPane(this);
                     }
                 };
                 viewerPane.createControl(this.getContainer());
@@ -1097,7 +1097,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
             // This is the page for the tree viewer
             //
             {
-                final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), MonitorrepositoryEditor.this) {
+                final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), MonitorRepositoryEditor.this) {
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         return new TreeViewer(composite);
@@ -1106,7 +1106,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
                     @Override
                     public void requestActivation() {
                         super.requestActivation();
-                        MonitorrepositoryEditor.this.setCurrentViewerPane(this);
+                        MonitorRepositoryEditor.this.setCurrentViewerPane(this);
                     }
                 };
                 viewerPane.createControl(this.getContainer());
@@ -1124,7 +1124,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
             // This is the page for the table viewer.
             //
             {
-                final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), MonitorrepositoryEditor.this) {
+                final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), MonitorRepositoryEditor.this) {
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         return new TableViewer(composite);
@@ -1133,7 +1133,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
                     @Override
                     public void requestActivation() {
                         super.requestActivation();
-                        MonitorrepositoryEditor.this.setCurrentViewerPane(this);
+                        MonitorRepositoryEditor.this.setCurrentViewerPane(this);
                     }
                 };
                 viewerPane.createControl(this.getContainer());
@@ -1167,7 +1167,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
             // This is the page for the table tree viewer.
             //
             {
-                final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), MonitorrepositoryEditor.this) {
+                final ViewerPane viewerPane = new ViewerPane(this.getSite().getPage(), MonitorRepositoryEditor.this) {
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         return new TreeViewer(composite);
@@ -1176,7 +1176,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
                     @Override
                     public void requestActivation() {
                         super.requestActivation();
-                        MonitorrepositoryEditor.this.setCurrentViewerPane(this);
+                        MonitorRepositoryEditor.this.setCurrentViewerPane(this);
                     }
                 };
                 viewerPane.createControl(this.getContainer());
@@ -1210,7 +1210,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
             this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
                 @Override
                 public void run() {
-                    MonitorrepositoryEditor.this.setActivePage(0);
+                    MonitorRepositoryEditor.this.setActivePage(0);
                 }
             });
         }
@@ -1225,7 +1225,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
             public void controlResized(final ControlEvent event) {
                 if (!this.guard) {
                     this.guard = true;
-                    MonitorrepositoryEditor.this.hideTabs();
+                    MonitorRepositoryEditor.this.hideTabs();
                     this.guard = false;
                 }
             }
@@ -1234,7 +1234,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
         this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
             @Override
             public void run() {
-                MonitorrepositoryEditor.this.updateProblemIndication();
+                MonitorRepositoryEditor.this.updateProblemIndication();
             }
         });
     }
@@ -1321,29 +1321,29 @@ IMenuListener, IViewerProvider, IGotoMarker {
                 @Override
                 public void createControl(final Composite parent) {
                     super.createControl(parent);
-                    MonitorrepositoryEditor.this.contentOutlineViewer = this.getTreeViewer();
-                    MonitorrepositoryEditor.this.contentOutlineViewer.addSelectionChangedListener(this);
+                    MonitorRepositoryEditor.this.contentOutlineViewer = this.getTreeViewer();
+                    MonitorRepositoryEditor.this.contentOutlineViewer.addSelectionChangedListener(this);
 
                     // Set up the tree viewer.
                     //
-                    MonitorrepositoryEditor.this.contentOutlineViewer
+                    MonitorRepositoryEditor.this.contentOutlineViewer
                             .setContentProvider(new AdapterFactoryContentProvider(
-                                    MonitorrepositoryEditor.this.adapterFactory));
-                    MonitorrepositoryEditor.this.contentOutlineViewer.setLabelProvider(new AdapterFactoryLabelProvider(
-                            MonitorrepositoryEditor.this.adapterFactory));
-                    MonitorrepositoryEditor.this.contentOutlineViewer
-                            .setInput(MonitorrepositoryEditor.this.editingDomain.getResourceSet());
+                                    MonitorRepositoryEditor.this.adapterFactory));
+                    MonitorRepositoryEditor.this.contentOutlineViewer.setLabelProvider(new AdapterFactoryLabelProvider(
+                            MonitorRepositoryEditor.this.adapterFactory));
+                    MonitorRepositoryEditor.this.contentOutlineViewer
+                            .setInput(MonitorRepositoryEditor.this.editingDomain.getResourceSet());
 
                     // Make sure our popups work.
                     //
-                    MonitorrepositoryEditor.this
-                            .createContextMenuFor(MonitorrepositoryEditor.this.contentOutlineViewer);
+                    MonitorRepositoryEditor.this
+                            .createContextMenuFor(MonitorRepositoryEditor.this.contentOutlineViewer);
 
-                    if (!MonitorrepositoryEditor.this.editingDomain.getResourceSet().getResources().isEmpty()) {
+                    if (!MonitorRepositoryEditor.this.editingDomain.getResourceSet().getResources().isEmpty()) {
                         // Select the root object in the view.
                         //
-                        MonitorrepositoryEditor.this.contentOutlineViewer.setSelection(new StructuredSelection(
-                                MonitorrepositoryEditor.this.editingDomain.getResourceSet().getResources().get(0)),
+                        MonitorRepositoryEditor.this.contentOutlineViewer.setSelection(new StructuredSelection(
+                                MonitorRepositoryEditor.this.editingDomain.getResourceSet().getResources().get(0)),
                                 true);
                     }
                 }
@@ -1352,13 +1352,13 @@ IMenuListener, IViewerProvider, IGotoMarker {
                 public void makeContributions(final IMenuManager menuManager, final IToolBarManager toolBarManager,
                         final IStatusLineManager statusLineManager) {
                     super.makeContributions(menuManager, toolBarManager, statusLineManager);
-                    MonitorrepositoryEditor.this.contentOutlineStatusLineManager = statusLineManager;
+                    MonitorRepositoryEditor.this.contentOutlineStatusLineManager = statusLineManager;
                 }
 
                 @Override
                 public void setActionBars(final IActionBars actionBars) {
                     super.setActionBars(actionBars);
-                    MonitorrepositoryEditor.this.getActionBarContributor().shareGlobalActions(this, actionBars);
+                    MonitorRepositoryEditor.this.getActionBarContributor().shareGlobalActions(this, actionBars);
                 }
             }
 
@@ -1371,7 +1371,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
                 //
                 @Override
                 public void selectionChanged(final SelectionChangedEvent event) {
-                    MonitorrepositoryEditor.this.handleContentOutlineSelection(event.getSelection());
+                    MonitorRepositoryEditor.this.handleContentOutlineSelection(event.getSelection());
                 }
             });
         }
@@ -1389,14 +1389,14 @@ IMenuListener, IViewerProvider, IGotoMarker {
         final PropertySheetPage propertySheetPage = new ExtendedPropertySheetPage(this.editingDomain) {
             @Override
             public void setSelectionToViewer(final List<?> selection) {
-                MonitorrepositoryEditor.this.setSelectionToViewer(selection);
-                MonitorrepositoryEditor.this.setFocus();
+                MonitorRepositoryEditor.this.setSelectionToViewer(selection);
+                MonitorRepositoryEditor.this.setFocus();
             }
 
             @Override
             public void setActionBars(final IActionBars actionBars) {
                 super.setActionBars(actionBars);
-                MonitorrepositoryEditor.this.getActionBarContributor().shareGlobalActions(this, actionBars);
+                MonitorRepositoryEditor.this.getActionBarContributor().shareGlobalActions(this, actionBars);
             }
         };
         propertySheetPage.setPropertySourceProvider(new AdapterFactoryContentProvider(this.adapterFactory));
@@ -1408,7 +1408,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
     /**
      * This deals with how we want selection in the outliner to affect the other views. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public void handleContentOutlineSelection(final ISelection selection) {
@@ -1447,7 +1447,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
     /**
      * This is for implementing {@link IEditorPart} and simply tests the command stack. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -1458,7 +1458,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
     /**
      * This is for implementing {@link IEditorPart} and simply saves the model file. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -1480,19 +1480,19 @@ IMenuListener, IViewerProvider, IGotoMarker {
                 // Save the resources to the file system.
                 //
                 boolean first = true;
-                for (final Resource resource : MonitorrepositoryEditor.this.editingDomain.getResourceSet()
+                for (final Resource resource : MonitorRepositoryEditor.this.editingDomain.getResourceSet()
                         .getResources()) {
-                    if ((first || !resource.getContents().isEmpty() || MonitorrepositoryEditor.this
-                            .isPersisted(resource)) && !MonitorrepositoryEditor.this.editingDomain.isReadOnly(resource)) {
+                    if ((first || !resource.getContents().isEmpty() || MonitorRepositoryEditor.this
+                            .isPersisted(resource)) && !MonitorRepositoryEditor.this.editingDomain.isReadOnly(resource)) {
                         try {
                             final long timeStamp = resource.getTimeStamp();
                             resource.save(saveOptions);
                             if (resource.getTimeStamp() != timeStamp) {
-                                MonitorrepositoryEditor.this.savedResources.add(resource);
+                                MonitorRepositoryEditor.this.savedResources.add(resource);
                             }
                         } catch (final Exception exception) {
-                            MonitorrepositoryEditor.this.resourceToDiagnosticMap.put(resource,
-                                    MonitorrepositoryEditor.this.analyzeResourceProblems(resource, exception));
+                            MonitorRepositoryEditor.this.resourceToDiagnosticMap.put(resource,
+                                    MonitorRepositoryEditor.this.analyzeResourceProblems(resource, exception));
                         }
                         first = false;
                     }

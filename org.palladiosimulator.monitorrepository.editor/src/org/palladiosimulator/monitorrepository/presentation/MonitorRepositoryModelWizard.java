@@ -54,24 +54,24 @@ import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryFactory;
-import org.palladiosimulator.monitorrepository.MonitorrepositoryPackage;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryFactory;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 import org.palladiosimulator.monitorrepository.provider.MonitorrepositoryEditPlugin;
 
 /**
  * This is a simple wizard for creating a new model file. <!-- begin-user-doc --> <!-- end-user-doc
  * -->
- *
+ * 
  * @generated
  */
-public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
+public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
     /**
      * The supported extensions for created files. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
      */
     public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays
-            .asList(MonitorrepositoryEditorPlugin.INSTANCE.getString("_UI_MonitorrepositoryEditorFilenameExtensions")
+            .asList(MonitorrepositoryEditorPlugin.INSTANCE.getString("_UI_MonitorRepositoryEditorFilenameExtensions")
                     .split("\\s*,\\s*")));
 
     /**
@@ -81,41 +81,41 @@ public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
      * @generated
      */
     public static final String FORMATTED_FILE_EXTENSIONS = MonitorrepositoryEditorPlugin.INSTANCE.getString(
-            "_UI_MonitorrepositoryEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+            "_UI_MonitorRepositoryEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
     /**
      * This caches an instance of the model package. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
      */
-    protected MonitorrepositoryPackage monitorrepositoryPackage = MonitorrepositoryPackage.eINSTANCE;
+    protected MonitorRepositoryPackage monitorRepositoryPackage = MonitorRepositoryPackage.eINSTANCE;
 
     /**
      * This caches an instance of the model factory. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
      */
-    protected MonitorrepositoryFactory monitorrepositoryFactory = this.monitorrepositoryPackage
-            .getMonitorrepositoryFactory();
+    protected MonitorRepositoryFactory monitorRepositoryFactory = this.monitorRepositoryPackage
+            .getMonitorRepositoryFactory();
 
     /**
      * This is the file creation page. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
      */
-    protected MonitorrepositoryModelWizardNewFileCreationPage newFileCreationPage;
+    protected MonitorRepositoryModelWizardNewFileCreationPage newFileCreationPage;
 
     /**
      * This is the initial object creation page. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
      */
-    protected MonitorrepositoryModelWizardInitialObjectCreationPage initialObjectCreationPage;
+    protected MonitorRepositoryModelWizardInitialObjectCreationPage initialObjectCreationPage;
 
     /**
      * Remember the selection during initialization for populating the default container. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected IStructuredSelection selection;
@@ -146,7 +146,7 @@ public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
         this.selection = selection;
         this.setWindowTitle(MonitorrepositoryEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
         this.setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE
-                .getImageDescriptor(MonitorrepositoryEditorPlugin.INSTANCE.getImage("full/wizban/NewMonitorrepository")));
+                .getImageDescriptor(MonitorrepositoryEditorPlugin.INSTANCE.getImage("full/wizban/NewMonitorRepository")));
     }
 
     /**
@@ -158,7 +158,7 @@ public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
     protected Collection<String> getInitialObjectNames() {
         if (this.initialObjectNames == null) {
             this.initialObjectNames = new ArrayList<String>();
-            for (final EClassifier eClassifier : this.monitorrepositoryPackage.getEClassifiers()) {
+            for (final EClassifier eClassifier : this.monitorRepositoryPackage.getEClassifiers()) {
                 if (eClassifier instanceof EClass) {
                     final EClass eClass = (EClass) eClassifier;
                     if (!eClass.isAbstract()) {
@@ -177,9 +177,9 @@ public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
      * @generated
      */
     protected EObject createInitialModel() {
-        final EClass eClass = (EClass) this.monitorrepositoryPackage.getEClassifier(this.initialObjectCreationPage
+        final EClass eClass = (EClass) this.monitorRepositoryPackage.getEClassifier(this.initialObjectCreationPage
                 .getInitialObjectName());
-        final EObject rootObject = this.monitorrepositoryFactory.create(eClass);
+        final EObject rootObject = this.monitorRepositoryFactory.create(eClass);
         return rootObject;
     }
 
@@ -215,7 +215,7 @@ public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
 
                         // Add the initial model object to the contents.
                         //
-                        final EObject rootObject = MonitorrepositoryModelWizard.this.createInitialModel();
+                        final EObject rootObject = MonitorRepositoryModelWizard.this.createInitialModel();
                         if (rootObject != null) {
                             resource.getContents().add(rootObject);
                         }
@@ -224,7 +224,7 @@ public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
                         //
                         final Map<Object, Object> options = new HashMap<Object, Object>();
                         options.put(XMLResource.OPTION_ENCODING,
-                                MonitorrepositoryModelWizard.this.initialObjectCreationPage.getEncoding());
+                                MonitorRepositoryModelWizard.this.initialObjectCreationPage.getEncoding());
                         resource.save(options);
                     } catch (final Exception exception) {
                         MonitorrepositoryEditorPlugin.INSTANCE.log(exception);
@@ -275,13 +275,13 @@ public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
      * 
      * @generated
      */
-    public class MonitorrepositoryModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
+    public class MonitorRepositoryModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
         /**
          * Pass in the selection. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @generated
          */
-        public MonitorrepositoryModelWizardNewFileCreationPage(final String pageId, final IStructuredSelection selection) {
+        public MonitorRepositoryModelWizardNewFileCreationPage(final String pageId, final IStructuredSelection selection) {
             super(pageId, selection);
         }
 
@@ -324,7 +324,7 @@ public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
      * 
      * @generated
      */
-    public class MonitorrepositoryModelWizardInitialObjectCreationPage extends WizardPage {
+    public class MonitorRepositoryModelWizardInitialObjectCreationPage extends WizardPage {
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
@@ -349,7 +349,7 @@ public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
          * 
          * @generated
          */
-        public MonitorrepositoryModelWizardInitialObjectCreationPage(final String pageId) {
+        public MonitorRepositoryModelWizardInitialObjectCreationPage(final String pageId) {
             super(pageId);
         }
 
@@ -391,7 +391,7 @@ public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
                 this.initialObjectField.setLayoutData(data);
             }
 
-            for (final String objectName : MonitorrepositoryModelWizard.this.getInitialObjectNames()) {
+            for (final String objectName : MonitorRepositoryModelWizard.this.getInitialObjectNames()) {
                 this.initialObjectField.add(this.getLabel(objectName));
             }
 
@@ -435,8 +435,8 @@ public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
         protected ModifyListener validator = new ModifyListener() {
             @Override
             public void modifyText(final ModifyEvent e) {
-                MonitorrepositoryModelWizardInitialObjectCreationPage.this
-                        .setPageComplete(MonitorrepositoryModelWizardInitialObjectCreationPage.this.validatePage());
+                MonitorRepositoryModelWizardInitialObjectCreationPage.this
+                        .setPageComplete(MonitorRepositoryModelWizardInitialObjectCreationPage.this.validatePage());
             }
         };
 
@@ -476,7 +476,7 @@ public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
         public String getInitialObjectName() {
             final String label = this.initialObjectField.getText();
 
-            for (final String name : MonitorrepositoryModelWizard.this.getInitialObjectNames()) {
+            for (final String name : MonitorRepositoryModelWizard.this.getInitialObjectNames()) {
                 if (this.getLabel(name).equals(label)) {
                     return name;
                 }
@@ -496,7 +496,7 @@ public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
         /**
          * Returns the label for the specified type name. <!-- begin-user-doc --> <!-- end-user-doc
          * -->
-         *
+         * 
          * @generated
          */
         protected String getLabel(final String typeName) {
@@ -536,13 +536,13 @@ public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
     public void addPages() {
         // Create a page, set the title, and the initial model file name.
         //
-        this.newFileCreationPage = new MonitorrepositoryModelWizardNewFileCreationPage("Whatever", this.selection);
+        this.newFileCreationPage = new MonitorRepositoryModelWizardNewFileCreationPage("Whatever", this.selection);
         this.newFileCreationPage.setTitle(MonitorrepositoryEditorPlugin.INSTANCE
-                .getString("_UI_MonitorrepositoryModelWizard_label"));
+                .getString("_UI_MonitorRepositoryModelWizard_label"));
         this.newFileCreationPage.setDescription(MonitorrepositoryEditorPlugin.INSTANCE
-                .getString("_UI_MonitorrepositoryModelWizard_description"));
+                .getString("_UI_MonitorRepositoryModelWizard_description"));
         this.newFileCreationPage.setFileName(MonitorrepositoryEditorPlugin.INSTANCE
-                .getString("_UI_MonitorrepositoryEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
+                .getString("_UI_MonitorRepositoryEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
         this.addPage(this.newFileCreationPage);
 
         // Try and get the resource selection to determine a current directory for the file dialog.
@@ -569,7 +569,7 @@ public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
                     // Make up a unique new name here.
                     //
                     final String defaultModelBaseFilename = MonitorrepositoryEditorPlugin.INSTANCE
-                            .getString("_UI_MonitorrepositoryEditorFilenameDefaultBase");
+                            .getString("_UI_MonitorRepositoryEditorFilenameDefaultBase");
                     final String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
                     String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
                     for (int i = 1; ((IContainer) selectedResource).findMember(modelFilename) != null; ++i) {
@@ -579,9 +579,9 @@ public class MonitorrepositoryModelWizard extends Wizard implements INewWizard {
                 }
             }
         }
-        this.initialObjectCreationPage = new MonitorrepositoryModelWizardInitialObjectCreationPage("Whatever2");
+        this.initialObjectCreationPage = new MonitorRepositoryModelWizardInitialObjectCreationPage("Whatever2");
         this.initialObjectCreationPage.setTitle(MonitorrepositoryEditorPlugin.INSTANCE
-                .getString("_UI_MonitorrepositoryModelWizard_label"));
+                .getString("_UI_MonitorRepositoryModelWizard_label"));
         this.initialObjectCreationPage.setDescription(MonitorrepositoryEditorPlugin.INSTANCE
                 .getString("_UI_Wizard_initial_object_description"));
         this.addPage(this.initialObjectCreationPage);

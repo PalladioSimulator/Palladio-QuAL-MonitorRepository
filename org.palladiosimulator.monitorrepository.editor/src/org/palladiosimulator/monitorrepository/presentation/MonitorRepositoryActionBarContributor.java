@@ -35,12 +35,12 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
 /**
- * This is the action bar contributor for the Monitorrepository model editor. <!-- begin-user-doc
+ * This is the action bar contributor for the MonitorRepository model editor. <!-- begin-user-doc
  * --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class MonitorrepositoryActionBarContributor extends EditingDomainActionBarContributor implements
+public class MonitorRepositoryActionBarContributor extends EditingDomainActionBarContributor implements
 ISelectionChangedListener {
     /**
      * This keeps track of the active editor. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -52,7 +52,7 @@ ISelectionChangedListener {
     /**
      * This keeps track of the current selection provider. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     *
+     * 
      * @generated
      */
     protected ISelectionProvider selectionProvider;
@@ -67,7 +67,7 @@ ISelectionChangedListener {
         @Override
         public void run() {
             try {
-                MonitorrepositoryActionBarContributor.this.getPage().showView("org.eclipse.ui.views.PropertySheet");
+                MonitorRepositoryActionBarContributor.this.getPage().showView("org.eclipse.ui.views.PropertySheet");
             } catch (final PartInitException exception) {
                 MonitorrepositoryEditorPlugin.INSTANCE.log(exception);
             }
@@ -85,13 +85,13 @@ ISelectionChangedListener {
             MonitorrepositoryEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
         @Override
         public boolean isEnabled() {
-            return MonitorrepositoryActionBarContributor.this.activeEditorPart instanceof IViewerProvider;
+            return MonitorRepositoryActionBarContributor.this.activeEditorPart instanceof IViewerProvider;
         }
 
         @Override
         public void run() {
-            if (MonitorrepositoryActionBarContributor.this.activeEditorPart instanceof IViewerProvider) {
-                final Viewer viewer = ((IViewerProvider) MonitorrepositoryActionBarContributor.this.activeEditorPart)
+            if (MonitorRepositoryActionBarContributor.this.activeEditorPart instanceof IViewerProvider) {
+                final Viewer viewer = ((IViewerProvider) MonitorRepositoryActionBarContributor.this.activeEditorPart)
                         .getViewer();
                 if (viewer != null) {
                     viewer.refresh();
@@ -104,7 +104,7 @@ ISelectionChangedListener {
      * This will contain one {@link org.eclipse.emf.edit.ui.action.CreateChildAction} corresponding
      * to each descriptor generated for the current selection by the item provider. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected Collection<IAction> createChildActions;
@@ -139,7 +139,7 @@ ISelectionChangedListener {
      * 
      * @generated
      */
-    public MonitorrepositoryActionBarContributor() {
+    public MonitorRepositoryActionBarContributor() {
         super(ADDITIONS_LAST_STYLE);
         this.loadResourceAction = new LoadResourceAction();
         this.validateAction = new ValidateAction();
@@ -169,7 +169,7 @@ ISelectionChangedListener {
         super.contributeToMenu(menuManager);
 
         final IMenuManager submenuManager = new MenuManager(
-                MonitorrepositoryEditorPlugin.INSTANCE.getString("_UI_MonitorrepositoryEditor_menu"),
+                MonitorrepositoryEditorPlugin.INSTANCE.getString("_UI_MonitorRepositoryEditor_menu"),
                 "org.palladiosimulator.monitorrepositoryMenuID");
         menuManager.insertAfter("additions", submenuManager);
         submenuManager.add(new Separator("settings"));
@@ -237,7 +237,7 @@ ISelectionChangedListener {
      * {@link org.eclipse.jface.viewers.SelectionChangedEvent}s by querying for the children and
      * siblings that can be added to the selected object and updating the menus accordingly. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -373,7 +373,7 @@ ISelectionChangedListener {
     /**
      * This populates the pop-up menu before it appears. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -411,7 +411,7 @@ ISelectionChangedListener {
     /**
      * This ensures that a delete action will clean up all references to deleted objects. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

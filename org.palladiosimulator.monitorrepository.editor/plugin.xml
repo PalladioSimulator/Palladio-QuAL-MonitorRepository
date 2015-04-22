@@ -16,12 +16,12 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="org.palladiosimulator.monitorrepository.presentation.MonitorrepositoryModelWizardID"
-            name="%_UI_MonitorrepositoryModelWizard_label"
-            class="org.palladiosimulator.monitorrepository.presentation.MonitorrepositoryModelWizard"
+            id="org.palladiosimulator.monitorrepository.presentation.MonitorRepositoryModelWizardID"
+            name="%_UI_MonitorRepositoryModelWizard_label"
+            class="org.palladiosimulator.monitorrepository.presentation.MonitorRepositoryModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/MonitorrepositoryModelFile.gif">
-         <description>%_UI_MonitorrepositoryModelWizard_description</description>
+            icon="icons/full/obj16/MonitorRepositoryModelFile.gif">
+         <description>%_UI_MonitorRepositoryModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
@@ -29,12 +29,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated monitorrepository -->
       <editor
-            id="org.palladiosimulator.monitorrepository.presentation.MonitorrepositoryEditorID"
-            name="%_UI_MonitorrepositoryEditor_label"
-            icon="icons/full/obj16/MonitorrepositoryModelFile.gif"
+            id="org.palladiosimulator.monitorrepository.presentation.MonitorRepositoryEditorID"
+            name="%_UI_MonitorRepositoryEditor_label"
+            icon="icons/full/obj16/MonitorRepositoryModelFile.gif"
             extensions="monitorrepository"
-            class="org.palladiosimulator.monitorrepository.presentation.MonitorrepositoryEditor"
-            contributorClass="org.palladiosimulator.monitorrepository.presentation.MonitorrepositoryActionBarContributor">
+            class="org.palladiosimulator.monitorrepository.presentation.MonitorRepositoryEditor"
+            contributorClass="org.palladiosimulator.monitorrepository.presentation.MonitorRepositoryActionBarContributor">
       </editor>
    </extension>
 </plugin>
