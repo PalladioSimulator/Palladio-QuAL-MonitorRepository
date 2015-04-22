@@ -8,8 +8,7 @@ Bundle-Activator: org.palladiosimulator.monitorrepository.provider.Monitorreposi
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: org.palladiosimulator.simulizar.monitorrepository.provider,
- org.palladiosimulator.monitorrepository.provider
+Export-Package: org.palladiosimulator.monitorrepository.provider
 Require-Bundle: org.eclipse.core.runtime;bundle-version="3.10.0",
  org.palladiosimulator.monitorrepository;bundle-version="2.0.0";visibility:=reexport,
  org.eclipse.emf.edit;bundle-version="2.10.0";visibility:=reexport,
