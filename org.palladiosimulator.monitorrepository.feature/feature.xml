@@ -21,33 +21,6 @@
       <update label="MonitorRepository Update Site" url="http://sdqweb.ipd.kit.edu/eclipse/monitorrepository/nightly/"/>
    </url>
 
-   <requires>
-      <import plugin="org.eclipse.core.runtime" version="3.10.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecore" version="2.10.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecore.xmi" version="2.10.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.identifier" version="2.1.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.metricspec" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.pcm" version="3.6.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.probfunction" version="2.1.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.stoex" version="2.2.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.units" version="2.1.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.edp2" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.monitorrepository" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.edit" version="2.10.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecore.edit" version="2.9.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.identifier.edit" version="2.1.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.metricspec.edit" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.pcm.edit" version="3.6.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.probfunction.edit" version="2.1.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.stoex.edit" version="2.2.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.units.edit" version="2.1.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.edp2.edit" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.core.resources" version="3.9.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.monitorrepository.edit" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.edit.ui" version="2.10.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.ui.ide" version="3.10.0" match="greaterOrEqual"/>
-   </requires>
-
    <plugin
          id="org.palladiosimulator.monitorrepository"
          download-size="0"
