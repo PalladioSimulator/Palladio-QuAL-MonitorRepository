@@ -22,6 +22,7 @@ import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
  * @generated
  */
 public class DelayedIntervallImpl extends IntervallImpl implements DelayedIntervall {
+
     /**
      * The default value of the '{@link #getDelay() <em>Delay</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->

@@ -21,6 +21,7 @@ import org.palladiosimulator.monitorrepository.TimeFrame;
  * @generated
  */
 public class TimeFrameItemProvider extends TemporalCharacterizationItemProvider {
+
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->

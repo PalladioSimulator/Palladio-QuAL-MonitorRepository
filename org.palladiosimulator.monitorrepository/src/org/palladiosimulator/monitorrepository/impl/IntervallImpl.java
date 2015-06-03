@@ -22,6 +22,7 @@ import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
  * @generated
  */
 public class IntervallImpl extends TemporalCharacterizationImpl implements Intervall {
+
     /**
      * The default value of the '{@link #getIntervall() <em>Intervall</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->

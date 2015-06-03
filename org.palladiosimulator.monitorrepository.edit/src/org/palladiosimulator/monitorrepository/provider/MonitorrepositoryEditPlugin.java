@@ -4,7 +4,11 @@ package org.palladiosimulator.monitorrepository.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
+import org.modelversioning.emfprofile.provider.EMFProfileEditPlugin;
+import org.modelversioning.emfprofileapplication.provider.EMFProfileApplicationEditPlugin;
 import org.palladiosimulator.edp2.models.ExperimentData.provider.EDP2EditPlugin;
+import org.palladiosimulator.mdsdprofiles.provider.MdsdprofilesEditPlugin;
 import org.palladiosimulator.metricspec.provider.MetricSpecEditPlugin;
 
 import de.uka.ipd.sdq.identifier.provider.IdentifierEditPlugin;
@@ -20,6 +24,7 @@ import de.uka.ipd.sdq.units.provider.UnitsEditPlugin;
  * @generated
  */
 public final class MonitorrepositoryEditPlugin extends EMFPlugin {
+
     /**
      * Keep track of the singleton. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -42,7 +47,9 @@ public final class MonitorrepositoryEditPlugin extends EMFPlugin {
     public MonitorrepositoryEditPlugin() {
         super(new ResourceLocator[] { IdentifierEditPlugin.INSTANCE, MetricSpecEditPlugin.INSTANCE,
                 PalladioComponentModelEditPlugin.INSTANCE, ProbabilityFunctionEditPlugin.INSTANCE,
-                StoexEditPlugin.INSTANCE, UnitsEditPlugin.INSTANCE, EDP2EditPlugin.INSTANCE, });
+                StoexEditPlugin.INSTANCE, UnitsEditPlugin.INSTANCE, EDP2EditPlugin.INSTANCE,
+                MdsdprofilesEditPlugin.INSTANCE, EMFProfileEditPlugin.INSTANCE,
+                EMFProfileApplicationEditPlugin.INSTANCE, EcoreEditPlugin.INSTANCE, });
     }
 
     /**
@@ -75,6 +82,7 @@ public final class MonitorrepositoryEditPlugin extends EMFPlugin {
      * @generated
      */
     public static class Implementation extends EclipsePlugin {
+
         /**
          * Creates an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
          *

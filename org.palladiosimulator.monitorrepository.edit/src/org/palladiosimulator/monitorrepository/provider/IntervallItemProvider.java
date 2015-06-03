@@ -21,6 +21,7 @@ import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
  * @generated
  */
 public class IntervallItemProvider extends TemporalCharacterizationItemProvider {
+
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->

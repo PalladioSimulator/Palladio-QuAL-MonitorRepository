@@ -22,6 +22,7 @@ import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
  * @generated
  */
 public class DelayedIntervallItemProvider extends IntervallItemProvider {
+
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->

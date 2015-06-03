@@ -6,6 +6,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.palladiosimulator.mdsdprofiles.StereotypableElement;
 import org.palladiosimulator.monitorrepository.DelayedIntervall;
 import org.palladiosimulator.monitorrepository.Intervall;
 import org.palladiosimulator.monitorrepository.MeasurementSpecification;
@@ -27,6 +28,7 @@ import de.uka.ipd.sdq.pcm.core.entity.NamedElement;
  * @generated
  */
 public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
+
     /**
      * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -71,6 +73,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     protected MonitorRepositorySwitch<Adapter> modelSwitch = new MonitorRepositorySwitch<Adapter>() {
+
         @Override
         public Adapter caseMonitorRepository(final MonitorRepository object) {
             return MonitorRepositoryAdapterFactory.this.createMonitorRepositoryAdapter();
@@ -104,6 +107,11 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
         @Override
         public Adapter caseTimeFrame(final TimeFrame object) {
             return MonitorRepositoryAdapterFactory.this.createTimeFrameAdapter();
+        }
+
+        @Override
+        public Adapter caseStereotypableElement(final StereotypableElement object) {
+            return MonitorRepositoryAdapterFactory.this.createStereotypableElementAdapter();
         }
 
         @Override
@@ -242,6 +250,21 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createTimeFrameAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '
+     * {@link org.palladiosimulator.mdsdprofiles.StereotypableElement
+     * <em>Stereotypable Element</em>}'. <!-- begin-user-doc --> This default implementation returns
+     * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
+     * catch all the cases anyway. <!-- end-user-doc -->
+     *
+     * @return the new adapter.
+     * @see org.palladiosimulator.mdsdprofiles.StereotypableElement
+     * @generated
+     */
+    public Adapter createStereotypableElementAdapter() {
         return null;
     }
 

@@ -6,43 +6,46 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
-import org.palladiosimulator.monitorrepository.*;
+import org.palladiosimulator.monitorrepository.DelayedIntervall;
+import org.palladiosimulator.monitorrepository.Intervall;
+import org.palladiosimulator.monitorrepository.MeasurementSpecification;
+import org.palladiosimulator.monitorrepository.Monitor;
+import org.palladiosimulator.monitorrepository.MonitorRepository;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryFactory;
+import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
+import org.palladiosimulator.monitorrepository.StatisticalCharacterizationEnum;
+import org.palladiosimulator.monitorrepository.TimeFrame;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model <b>Factory</b>.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
+ *
  * @generated
  */
 public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements MonitorRepositoryFactory {
+
     /**
-     * Creates the default factory implementation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     public static MonitorRepositoryFactory init() {
         try {
-            MonitorRepositoryFactory theMonitorRepositoryFactory = (MonitorRepositoryFactory) EPackage.Registry.INSTANCE
+            final MonitorRepositoryFactory theMonitorRepositoryFactory = (MonitorRepositoryFactory) EPackage.Registry.INSTANCE
                     .getEFactory(MonitorRepositoryPackage.eNS_URI);
             if (theMonitorRepositoryFactory != null) {
                 return theMonitorRepositoryFactory;
             }
-        } catch (Exception exception) {
+        } catch (final Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
         return new MonitorRepositoryFactoryImpl();
     }
 
     /**
-     * Creates an instance of the factory.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     public MonitorRepositoryFactoryImpl() {
@@ -50,155 +53,163 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public EObject create(EClass eClass) {
+    public EObject create(final EClass eClass) {
         switch (eClass.getClassifierID()) {
         case MonitorRepositoryPackage.MONITOR_REPOSITORY:
-            return createMonitorRepository();
+            return this.createMonitorRepository();
         case MonitorRepositoryPackage.MONITOR:
-            return createMonitor();
+            return this.createMonitor();
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION:
-            return createMeasurementSpecification();
+            return this.createMeasurementSpecification();
         case MonitorRepositoryPackage.INTERVALL:
-            return createIntervall();
+            return this.createIntervall();
         case MonitorRepositoryPackage.DELAYED_INTERVALL:
-            return createDelayedIntervall();
+            return this.createDelayedIntervall();
         case MonitorRepositoryPackage.TIME_FRAME:
-            return createTimeFrame();
+            return this.createTimeFrame();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public Object createFromString(EDataType eDataType, String initialValue) {
+    public Object createFromString(final EDataType eDataType, final String initialValue) {
         switch (eDataType.getClassifierID()) {
         case MonitorRepositoryPackage.STATISTICAL_CHARACTERIZATION_ENUM:
-            return createStatisticalCharacterizationEnumFromString(eDataType, initialValue);
+            return this.createStatisticalCharacterizationEnumFromString(eDataType, initialValue);
         default:
             throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public String convertToString(EDataType eDataType, Object instanceValue) {
+    public String convertToString(final EDataType eDataType, final Object instanceValue) {
         switch (eDataType.getClassifierID()) {
         case MonitorRepositoryPackage.STATISTICAL_CHARACTERIZATION_ENUM:
-            return convertStatisticalCharacterizationEnumToString(eDataType, instanceValue);
+            return this.convertStatisticalCharacterizationEnumToString(eDataType, instanceValue);
         default:
             throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
+    @Override
     public MonitorRepository createMonitorRepository() {
-        MonitorRepositoryImpl monitorRepository = new MonitorRepositoryImpl();
+        final MonitorRepositoryImpl monitorRepository = new MonitorRepositoryImpl();
         return monitorRepository;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
+    @Override
     public Monitor createMonitor() {
-        MonitorImpl monitor = new MonitorImpl();
+        final MonitorImpl monitor = new MonitorImpl();
         return monitor;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
+    @Override
     public MeasurementSpecification createMeasurementSpecification() {
-        MeasurementSpecificationImpl measurementSpecification = new MeasurementSpecificationImpl();
+        final MeasurementSpecificationImpl measurementSpecification = new MeasurementSpecificationImpl();
         return measurementSpecification;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
+    @Override
     public Intervall createIntervall() {
-        IntervallImpl intervall = new IntervallImpl();
+        final IntervallImpl intervall = new IntervallImpl();
         return intervall;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
+    @Override
     public DelayedIntervall createDelayedIntervall() {
-        DelayedIntervallImpl delayedIntervall = new DelayedIntervallImpl();
+        final DelayedIntervallImpl delayedIntervall = new DelayedIntervallImpl();
         return delayedIntervall;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
+    @Override
     public TimeFrame createTimeFrame() {
-        TimeFrameImpl timeFrame = new TimeFrameImpl();
+        final TimeFrameImpl timeFrame = new TimeFrameImpl();
         return timeFrame;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
-    public StatisticalCharacterizationEnum createStatisticalCharacterizationEnumFromString(EDataType eDataType,
-            String initialValue) {
-        StatisticalCharacterizationEnum result = StatisticalCharacterizationEnum.get(initialValue);
-        if (result == null)
+    public StatisticalCharacterizationEnum createStatisticalCharacterizationEnumFromString(final EDataType eDataType,
+            final String initialValue) {
+        final StatisticalCharacterizationEnum result = StatisticalCharacterizationEnum.get(initialValue);
+        if (result == null) {
             throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '"
                     + eDataType.getName() + "'");
+        }
         return result;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
-    public String convertStatisticalCharacterizationEnumToString(EDataType eDataType, Object instanceValue) {
+    public String convertStatisticalCharacterizationEnumToString(final EDataType eDataType, final Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
+    @Override
     public MonitorRepositoryPackage getMonitorRepositoryPackage() {
-        return (MonitorRepositoryPackage) getEPackage();
+        return (MonitorRepositoryPackage) this.getEPackage();
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @deprecated
      * @generated
      */
@@ -207,4 +218,4 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
         return MonitorRepositoryPackage.eINSTANCE;
     }
 
-} //MonitorRepositoryFactoryImpl
+} // MonitorRepositoryFactoryImpl

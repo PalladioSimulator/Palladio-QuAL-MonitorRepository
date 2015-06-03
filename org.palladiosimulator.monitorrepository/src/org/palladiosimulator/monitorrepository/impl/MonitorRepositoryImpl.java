@@ -30,6 +30,7 @@ import de.uka.ipd.sdq.pcm.core.entity.impl.EntityImpl;
  * @generated
  */
 public class MonitorRepositoryImpl extends EntityImpl implements MonitorRepository {
+
     /**
      * The cached value of the '{@link #getMonitors() <em>Monitors</em>}' containment reference
      * list. <!-- begin-user-doc --> <!-- end-user-doc -->

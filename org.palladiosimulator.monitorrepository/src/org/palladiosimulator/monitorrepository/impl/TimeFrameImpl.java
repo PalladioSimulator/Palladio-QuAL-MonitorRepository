@@ -22,6 +22,7 @@ import org.palladiosimulator.monitorrepository.TimeFrame;
  * @generated
  */
 public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeFrame {
+
     /**
      * The default value of the '{@link #getStart() <em>Start</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->

@@ -39,6 +39,7 @@ import de.uka.ipd.sdq.pcm.core.entity.impl.EntityImpl;
  * @generated
  */
 public class MonitorImpl extends EntityImpl implements Monitor {
+
     /**
      * The cached value of the '{@link #getMeasurementSpecifications()
      * <em>Measurement Specifications</em>}' containment reference list. <!-- begin-user-doc -->

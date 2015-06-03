@@ -3,7 +3,6 @@
 package org.palladiosimulator.monitorrepository;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.edp2.models.measuringpoint.MeasuringPoint;
 
 import de.uka.ipd.sdq.pcm.core.entity.Entity;
@@ -12,16 +11,18 @@ import de.uka.ipd.sdq.pcm.core.entity.Entity;
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Monitor</b></em>'. <!--
  * end-user-doc -->
  *
- * <!-- begin-model-doc -->
- * A performance measurement for a pcm element (type level).
- * <!-- end-model-doc -->
+ * <!-- begin-model-doc --> A performance measurement for a pcm element (type level). <!--
+ * end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.palladiosimulator.monitorrepository.Monitor#getMeasurementSpecifications <em>Measurement Specifications</em>}</li>
- *   <li>{@link org.palladiosimulator.monitorrepository.Monitor#getMeasuringPoint <em>Measuring Point</em>}</li>
- *   <li>{@link org.palladiosimulator.monitorrepository.Monitor#getMonitorRepository <em>Monitor Repository</em>}</li>
+ * <li>{@link org.palladiosimulator.monitorrepository.Monitor#getMeasurementSpecifications <em>
+ * Measurement Specifications</em>}</li>
+ * <li>{@link org.palladiosimulator.monitorrepository.Monitor#getMeasuringPoint <em>Measuring Point
+ * </em>}</li>
+ * <li>{@link org.palladiosimulator.monitorrepository.Monitor#getMonitorRepository <em>Monitor
+ * Repository</em>}</li>
  * </ul>
  * </p>
  *
@@ -29,17 +30,21 @@ import de.uka.ipd.sdq.pcm.core.entity.Entity;
  * @model
  * @generated
  */
-public interface Monitor extends EObject, Entity {
+public interface Monitor extends Entity {
+
     /**
-     * Returns the value of the '<em><b>Measurement Specifications</b></em>' containment reference list.
-     * The list contents are of type {@link org.palladiosimulator.monitorrepository.MeasurementSpecification}.
-     * It is bidirectional and its opposite is '{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMonitor <em>Monitor</em>}'.
-     * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Measurement Specifications</b></em>' containment reference
+     * list. The list contents are of type
+     * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification}. It is bidirectional
+     * and its opposite is '
+     * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMonitor
+     * <em>Monitor</em>}'. <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Measurement Specifications</em>' containment reference list isn't
      * clear, there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     *
      * @return the value of the '<em>Measurement Specifications</em>' containment reference list.
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMonitor_MeasurementSpecifications()
      * @see org.palladiosimulator.monitorrepository.MeasurementSpecification#getMonitor
@@ -49,13 +54,13 @@ public interface Monitor extends EObject, Entity {
     EList<MeasurementSpecification> getMeasurementSpecifications();
 
     /**
-     * Returns the value of the '<em><b>Measuring Point</b></em>' reference.
-     * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Measuring Point</b></em>' reference. <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Measuring Point</em>' reference isn't clear, there really should
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     *
      * @return the value of the '<em>Measuring Point</em>' reference.
      * @see #setMeasuringPoint(MeasuringPoint)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMonitor_MeasuringPoint()
@@ -65,23 +70,28 @@ public interface Monitor extends EObject, Entity {
     MeasuringPoint getMeasuringPoint();
 
     /**
-     * Sets the value of the '{@link org.palladiosimulator.monitorrepository.Monitor#getMeasuringPoint <em>Measuring Point</em>}' reference.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @param value the new value of the '<em>Measuring Point</em>' reference.
+     * Sets the value of the '
+     * {@link org.palladiosimulator.monitorrepository.Monitor#getMeasuringPoint
+     * <em>Measuring Point</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @param value
+     *            the new value of the '<em>Measuring Point</em>' reference.
      * @see #getMeasuringPoint()
      * @generated
      */
     void setMeasuringPoint(MeasuringPoint value);
 
     /**
-     * Returns the value of the '<em><b>Monitor Repository</b></em>' container reference.
-     * It is bidirectional and its opposite is '{@link org.palladiosimulator.monitorrepository.MonitorRepository#getMonitors <em>Monitors</em>}'.
-     * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Monitor Repository</b></em>' container reference. It is
+     * bidirectional and its opposite is '
+     * {@link org.palladiosimulator.monitorrepository.MonitorRepository#getMonitors
+     * <em>Monitors</em>}'. <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Monitor Repository</em>' container reference isn't clear, there
      * really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     *
      * @return the value of the '<em>Monitor Repository</em>' container reference.
      * @see #setMonitorRepository(MonitorRepository)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMonitor_MonitorRepository()

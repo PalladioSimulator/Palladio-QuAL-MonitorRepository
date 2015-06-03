@@ -42,6 +42,7 @@ import org.eclipse.ui.PartInitException;
  */
 public class MonitorRepositoryActionBarContributor extends EditingDomainActionBarContributor implements
 ISelectionChangedListener {
+
     /**
      * This keeps track of the active editor. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
@@ -64,6 +65,7 @@ ISelectionChangedListener {
      */
     protected IAction showPropertiesViewAction = new Action(
             MonitorrepositoryEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+
         @Override
         public void run() {
             try {
@@ -83,6 +85,7 @@ ISelectionChangedListener {
      */
     protected IAction refreshViewerAction = new Action(
             MonitorrepositoryEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+
         @Override
         public boolean isEnabled() {
             return MonitorRepositoryActionBarContributor.this.activeEditorPart instanceof IViewerProvider;
@@ -192,6 +195,7 @@ ISelectionChangedListener {
         // Force an update because Eclipse hides empty menus now.
         //
         submenuManager.addMenuListener(new IMenuListener() {
+
             @Override
             public void menuAboutToShow(final IMenuManager menuManager) {
                 menuManager.updateAll(true);

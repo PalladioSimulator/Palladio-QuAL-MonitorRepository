@@ -65,6 +65,7 @@ import org.palladiosimulator.monitorrepository.provider.MonitorrepositoryEditPlu
  * @generated
  */
 public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
+
     /**
      * The supported extensions for created files. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
@@ -198,6 +199,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
             // Do the work within an operation.
             //
             final WorkspaceModifyOperation operation = new WorkspaceModifyOperation() {
+
                 @Override
                 protected void execute(final IProgressMonitor progressMonitor) {
                     try {
@@ -244,6 +246,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
             if (activePart instanceof ISetSelectionTarget) {
                 final ISelection targetSelection = new StructuredSelection(modelFile);
                 this.getShell().getDisplay().asyncExec(new Runnable() {
+
                     @Override
                     public void run() {
                         ((ISetSelectionTarget) activePart).selectReveal(targetSelection);
@@ -276,6 +279,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
      * @generated
      */
     public class MonitorRepositoryModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
+
         /**
          * Pass in the selection. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
@@ -325,6 +329,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
      * @generated
      */
     public class MonitorRepositoryModelWizardInitialObjectCreationPage extends WizardPage {
+
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
@@ -433,6 +438,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
          * @generated
          */
         protected ModifyListener validator = new ModifyListener() {
+
             @Override
             public void modifyText(final ModifyEvent e) {
                 MonitorRepositoryModelWizardInitialObjectCreationPage.this

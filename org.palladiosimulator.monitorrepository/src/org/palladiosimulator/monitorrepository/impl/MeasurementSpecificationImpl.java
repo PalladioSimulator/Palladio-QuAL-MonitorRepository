@@ -43,6 +43,7 @@ import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
  * @generated
  */
 public class MeasurementSpecificationImpl extends IdentifierImpl implements MeasurementSpecification {
+
     /**
      * The cached value of the '{@link #getTemporalRestriction() <em>Temporal Restriction</em>}'
      * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->

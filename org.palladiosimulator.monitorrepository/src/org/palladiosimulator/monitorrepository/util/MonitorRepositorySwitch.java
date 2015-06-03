@@ -5,6 +5,7 @@ package org.palladiosimulator.monitorrepository.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.palladiosimulator.mdsdprofiles.StereotypableElement;
 import org.palladiosimulator.monitorrepository.DelayedIntervall;
 import org.palladiosimulator.monitorrepository.Intervall;
 import org.palladiosimulator.monitorrepository.MeasurementSpecification;
@@ -29,6 +30,7 @@ import de.uka.ipd.sdq.pcm.core.entity.NamedElement;
  * @generated
  */
 public class MonitorRepositorySwitch<T> extends Switch<T> {
+
     /**
      * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -83,6 +85,9 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
                 result = this.caseNamedElement(monitorRepository);
             }
             if (result == null) {
+                result = this.caseStereotypableElement(monitorRepository);
+            }
+            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -100,6 +105,9 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
                 result = this.caseNamedElement(monitor);
             }
             if (result == null) {
+                result = this.caseStereotypableElement(monitor);
+            }
+            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -111,6 +119,9 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
                 result = this.caseIdentifier(measurementSpecification);
             }
             if (result == null) {
+                result = this.caseStereotypableElement(measurementSpecification);
+            }
+            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -120,6 +131,9 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
             T result = this.caseTemporalCharacterization(temporalCharacterization);
             if (result == null) {
                 result = this.caseIdentifier(temporalCharacterization);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(temporalCharacterization);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -134,6 +148,9 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
             }
             if (result == null) {
                 result = this.caseIdentifier(intervall);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(intervall);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -153,6 +170,9 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
                 result = this.caseIdentifier(delayedIntervall);
             }
             if (result == null) {
+                result = this.caseStereotypableElement(delayedIntervall);
+            }
+            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -165,6 +185,9 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
             }
             if (result == null) {
                 result = this.caseIdentifier(timeFrame);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(timeFrame);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -281,6 +304,22 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseTimeFrame(final TimeFrame object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '
+     * <em>Stereotypable Element</em>'. <!-- begin-user-doc --> This implementation returns null;
+     * returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     *
+     * @param object
+     *            the target of the switch.
+     * @return the result of interpreting the object as an instance of '
+     *         <em>Stereotypable Element</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseStereotypableElement(final StereotypableElement object) {
         return null;
     }
 
