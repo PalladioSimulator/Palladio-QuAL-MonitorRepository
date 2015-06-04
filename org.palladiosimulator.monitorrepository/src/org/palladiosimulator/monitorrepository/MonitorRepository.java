@@ -38,7 +38,7 @@ public interface MonitorRepository extends Entity {
      * really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Monitors</em>' containment reference list.
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMonitorRepository_Monitors()
      * @see org.palladiosimulator.monitorrepository.Monitor#getMonitorRepository

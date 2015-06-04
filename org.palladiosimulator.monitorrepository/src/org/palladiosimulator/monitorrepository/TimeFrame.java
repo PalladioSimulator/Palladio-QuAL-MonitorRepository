@@ -31,7 +31,7 @@ public interface TimeFrame extends TemporalCharacterization {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Start</em>' attribute.
      * @see #setStart(double)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getTimeFrame_Start()
@@ -43,7 +43,7 @@ public interface TimeFrame extends TemporalCharacterization {
     /**
      * Sets the value of the '{@link org.palladiosimulator.monitorrepository.TimeFrame#getStart
      * <em>Start</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Start</em>' attribute.
      * @see #getStart()
@@ -59,7 +59,7 @@ public interface TimeFrame extends TemporalCharacterization {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Stop</em>' attribute.
      * @see #setStop(double)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getTimeFrame_Stop()
@@ -71,7 +71,7 @@ public interface TimeFrame extends TemporalCharacterization {
     /**
      * Sets the value of the '{@link org.palladiosimulator.monitorrepository.TimeFrame#getStop
      * <em>Stop</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Stop</em>' attribute.
      * @see #getStop()

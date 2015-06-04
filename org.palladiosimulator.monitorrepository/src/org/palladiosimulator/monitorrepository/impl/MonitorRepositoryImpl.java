@@ -34,7 +34,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
     /**
      * The cached value of the '{@link #getMonitors() <em>Monitors</em>}' containment reference
      * list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getMonitors()
      * @generated
      * @ordered
@@ -43,7 +43,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected MonitorRepositoryImpl() {
@@ -52,7 +52,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -62,7 +62,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -77,7 +77,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -93,7 +93,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -108,7 +108,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -122,7 +122,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -139,7 +139,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -154,7 +154,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

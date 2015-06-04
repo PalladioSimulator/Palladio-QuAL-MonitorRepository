@@ -26,7 +26,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
     /**
      * The default value of the '{@link #getDelay() <em>Delay</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getDelay()
      * @generated
      * @ordered
@@ -36,7 +36,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
     /**
      * The cached value of the '{@link #getDelay() <em>Delay</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getDelay()
      * @generated
      * @ordered
@@ -45,7 +45,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected DelayedIntervallImpl() {
@@ -54,7 +54,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -64,7 +64,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -74,7 +74,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -89,7 +89,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -103,7 +103,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -118,7 +118,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -133,7 +133,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -147,7 +147,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
