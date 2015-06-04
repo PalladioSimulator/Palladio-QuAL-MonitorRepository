@@ -30,7 +30,7 @@ public interface DelayedIntervall extends Intervall {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Delay</em>' attribute.
      * @see #setDelay(double)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getDelayedIntervall_Delay()
@@ -43,7 +43,7 @@ public interface DelayedIntervall extends Intervall {
      * Sets the value of the '
      * {@link org.palladiosimulator.monitorrepository.DelayedIntervall#getDelay <em>Delay</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Delay</em>' attribute.
      * @see #getDelay()

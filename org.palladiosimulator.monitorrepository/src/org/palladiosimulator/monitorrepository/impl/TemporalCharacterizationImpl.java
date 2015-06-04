@@ -20,7 +20,7 @@ public abstract class TemporalCharacterizationImpl extends IdentifierImpl implem
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected TemporalCharacterizationImpl() {
@@ -29,7 +29,7 @@ public abstract class TemporalCharacterizationImpl extends IdentifierImpl implem
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

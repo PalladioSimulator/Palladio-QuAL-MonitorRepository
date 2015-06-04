@@ -44,7 +44,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
      * The cached value of the '{@link #getMeasurementSpecifications()
      * <em>Measurement Specifications</em>}' containment reference list. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getMeasurementSpecifications()
      * @generated
      * @ordered
@@ -54,7 +54,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
     /**
      * The cached value of the '{@link #getMeasuringPoint() <em>Measuring Point</em>}' reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getMeasuringPoint()
      * @generated
      * @ordered
@@ -63,7 +63,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MonitorImpl() {
@@ -72,7 +72,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -82,7 +82,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -97,7 +97,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -117,7 +117,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public MeasuringPoint basicGetMeasuringPoint() {
@@ -126,7 +126,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -141,7 +141,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -154,7 +154,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetMonitorRepository(final MonitorRepository newMonitorRepository,
@@ -166,7 +166,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -196,7 +196,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -217,7 +217,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -234,7 +234,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -249,7 +249,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -270,7 +270,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -293,7 +293,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -314,7 +314,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
