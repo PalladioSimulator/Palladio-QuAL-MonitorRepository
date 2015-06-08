@@ -5,6 +5,7 @@ package org.palladiosimulator.monitorrepository.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -210,7 +211,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
      */
     @Override
     public MetricDescription getMetricDescription() {
-        if (this.metricDescription != null && this.metricDescription.eIsProxy()) {
+        if (this.metricDescription != null && ((EObject) this.metricDescription).eIsProxy()) {
             final InternalEObject oldMetricDescription = (InternalEObject) this.metricDescription;
             this.metricDescription = (MetricDescription) this.eResolveProxy(oldMetricDescription);
             if (this.metricDescription != oldMetricDescription) {
