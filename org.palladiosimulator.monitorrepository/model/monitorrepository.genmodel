@@ -4,9 +4,9 @@
     editorDirectory="/org.palladiosimulator.monitorrepository.editor/src" modelPluginID="org.palladiosimulator.monitorrepository"
     modelName="Monitorrepository" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject"
     rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl" codeFormatting="true"
-    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
-    editPluginID="org.palladiosimulator.monitorrepository.edit" editorPluginID="org.palladiosimulator.monitorrepository.editor"
-    usedGenPackages="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel#//metricspec platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.genmodel#//pcm platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units platform:/plugin/org.palladiosimulator.edp2/model/EDP2.genmodel#//models"
+    importerID="org.eclipse.emf.importer.ecore" featureDelegation="Dynamic" complianceLevel="6.0"
+    copyrightFields="false" editPluginID="org.palladiosimulator.monitorrepository.edit"
+    editorPluginID="org.palladiosimulator.monitorrepository.editor" usedGenPackages="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel#//metricspec platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.genmodel#//pcm platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units platform:/plugin/org.palladiosimulator.edp2/model/EDP2.genmodel#//models"
     cleanup="true">
   <foreignModel>monitorrepository.ecore</foreignModel>
   <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>

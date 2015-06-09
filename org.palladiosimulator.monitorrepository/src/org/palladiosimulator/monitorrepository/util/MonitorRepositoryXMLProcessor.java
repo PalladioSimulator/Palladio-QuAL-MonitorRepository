@@ -12,14 +12,14 @@ import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 /**
  * This class contains helper methods to serialize and deserialize XML documents <!-- begin-user-doc
  * --> <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class MonitorRepositoryXMLProcessor extends XMLProcessor {
 
     /**
      * Public constructor to instantiate the helper. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public MonitorRepositoryXMLProcessor() {
@@ -30,7 +30,7 @@ public class MonitorRepositoryXMLProcessor extends XMLProcessor {
     /**
      * Register for "*" and "xml" file extensions the MonitorRepositoryResourceFactoryImpl factory.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

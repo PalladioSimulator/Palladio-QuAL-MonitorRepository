@@ -2,9 +2,7 @@
  */
 package org.palladiosimulator.monitorrepository.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.palladiosimulator.monitorrepository.Intervall;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 
@@ -34,18 +32,8 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
     protected static final double INTERVALL_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getIntervall() <em>Intervall</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getIntervall()
-     * @generated
-     * @ordered
-     */
-    protected double intervall = INTERVALL_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected IntervallImpl() {
@@ -54,7 +42,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -64,32 +52,29 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public double getIntervall() {
-        return this.intervall;
+        return (Double) this.eDynamicGet(MonitorRepositoryPackage.INTERVALL__INTERVALL,
+                MonitorRepositoryPackage.Literals.INTERVALL__INTERVALL, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setIntervall(final double newIntervall) {
-        final double oldIntervall = this.intervall;
-        this.intervall = newIntervall;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, MonitorRepositoryPackage.INTERVALL__INTERVALL,
-                    oldIntervall, this.intervall));
-        }
+        this.eDynamicSet(MonitorRepositoryPackage.INTERVALL__INTERVALL,
+                MonitorRepositoryPackage.Literals.INTERVALL__INTERVALL, newIntervall);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -103,7 +88,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -118,7 +103,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -133,34 +118,16 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case MonitorRepositoryPackage.INTERVALL__INTERVALL:
-            return this.intervall != INTERVALL_EDEFAULT;
+            return this.getIntervall() != INTERVALL_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (intervall: ");
-        result.append(this.intervall);
-        result.append(')');
-        return result.toString();
     }
 
 } // IntervallImpl

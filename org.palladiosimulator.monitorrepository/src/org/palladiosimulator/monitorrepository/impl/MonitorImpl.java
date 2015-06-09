@@ -4,15 +4,10 @@ package org.palladiosimulator.monitorrepository.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.palladiosimulator.edp2.models.measuringpoint.MeasuringPoint;
 import org.palladiosimulator.monitorrepository.MeasurementSpecification;
@@ -42,29 +37,8 @@ import de.uka.ipd.sdq.pcm.core.entity.impl.EntityImpl;
 public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
-     * The cached value of the '{@link #getMeasurementSpecifications()
-     * <em>Measurement Specifications</em>}' containment reference list. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     *
-     * @see #getMeasurementSpecifications()
-     * @generated
-     * @ordered
-     */
-    protected EList<MeasurementSpecification> measurementSpecifications;
-
-    /**
-     * The cached value of the '{@link #getMeasuringPoint() <em>Measuring Point</em>}' reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getMeasuringPoint()
-     * @generated
-     * @ordered
-     */
-    protected MeasuringPoint measuringPoint;
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected MonitorImpl() {
@@ -73,7 +47,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -83,79 +57,63 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public EList<MeasurementSpecification> getMeasurementSpecifications() {
-        if (this.measurementSpecifications == null) {
-            this.measurementSpecifications = new EObjectContainmentWithInverseEList<MeasurementSpecification>(
-                    MeasurementSpecification.class, this, MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS,
-                    MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR);
-        }
-        return this.measurementSpecifications;
+        return (EList<MeasurementSpecification>) this.eDynamicGet(
+                MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS,
+                MonitorRepositoryPackage.Literals.MONITOR__MEASUREMENT_SPECIFICATIONS, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public MeasuringPoint getMeasuringPoint() {
-        if (this.measuringPoint != null && ((EObject) this.measuringPoint).eIsProxy()) {
-            final InternalEObject oldMeasuringPoint = (InternalEObject) this.measuringPoint;
-            this.measuringPoint = (MeasuringPoint) this.eResolveProxy(oldMeasuringPoint);
-            if (this.measuringPoint != oldMeasuringPoint) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            MonitorRepositoryPackage.MONITOR__MEASURING_POINT, oldMeasuringPoint, this.measuringPoint));
-                }
-            }
-        }
-        return this.measuringPoint;
+        return (MeasuringPoint) this.eDynamicGet(MonitorRepositoryPackage.MONITOR__MEASURING_POINT,
+                MonitorRepositoryPackage.Literals.MONITOR__MEASURING_POINT, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public MeasuringPoint basicGetMeasuringPoint() {
-        return this.measuringPoint;
+        return (MeasuringPoint) this.eDynamicGet(MonitorRepositoryPackage.MONITOR__MEASURING_POINT,
+                MonitorRepositoryPackage.Literals.MONITOR__MEASURING_POINT, false, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setMeasuringPoint(final MeasuringPoint newMeasuringPoint) {
-        final MeasuringPoint oldMeasuringPoint = this.measuringPoint;
-        this.measuringPoint = newMeasuringPoint;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MonitorRepositoryPackage.MONITOR__MEASURING_POINT, oldMeasuringPoint, this.measuringPoint));
-        }
+        this.eDynamicSet(MonitorRepositoryPackage.MONITOR__MEASURING_POINT,
+                MonitorRepositoryPackage.Literals.MONITOR__MEASURING_POINT, newMeasuringPoint);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public MonitorRepository getMonitorRepository() {
-        if (this.eContainerFeatureID() != MonitorRepositoryPackage.MONITOR__MONITOR_REPOSITORY) {
-            return null;
-        }
-        return (MonitorRepository) this.eInternalContainer();
+        return (MonitorRepository) this.eDynamicGet(MonitorRepositoryPackage.MONITOR__MONITOR_REPOSITORY,
+                MonitorRepositoryPackage.Literals.MONITOR__MONITOR_REPOSITORY, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetMonitorRepository(final MonitorRepository newMonitorRepository,
@@ -167,37 +125,18 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setMonitorRepository(final MonitorRepository newMonitorRepository) {
-        if (newMonitorRepository != this.eInternalContainer()
-                || (this.eContainerFeatureID() != MonitorRepositoryPackage.MONITOR__MONITOR_REPOSITORY && newMonitorRepository != null)) {
-            if (EcoreUtil.isAncestor(this, newMonitorRepository)) {
-                throw new IllegalArgumentException("Recursive containment not allowed for " + this.toString());
-            }
-            NotificationChain msgs = null;
-            if (this.eInternalContainer() != null) {
-                msgs = this.eBasicRemoveFromContainer(msgs);
-            }
-            if (newMonitorRepository != null) {
-                msgs = ((InternalEObject) newMonitorRepository).eInverseAdd(this,
-                        MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS, MonitorRepository.class, msgs);
-            }
-            msgs = this.basicSetMonitorRepository(newMonitorRepository, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MonitorRepositoryPackage.MONITOR__MONITOR_REPOSITORY, newMonitorRepository, newMonitorRepository));
-        }
+        this.eDynamicSet(MonitorRepositoryPackage.MONITOR__MONITOR_REPOSITORY,
+                MonitorRepositoryPackage.Literals.MONITOR__MONITOR_REPOSITORY, newMonitorRepository);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -218,7 +157,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -235,7 +174,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -250,7 +189,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -271,7 +210,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -294,7 +233,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -315,16 +254,16 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS:
-            return this.measurementSpecifications != null && !this.measurementSpecifications.isEmpty();
+            return !this.getMeasurementSpecifications().isEmpty();
         case MonitorRepositoryPackage.MONITOR__MEASURING_POINT:
-            return this.measuringPoint != null;
+            return this.basicGetMeasuringPoint() != null;
         case MonitorRepositoryPackage.MONITOR__MONITOR_REPOSITORY:
             return this.getMonitorRepository() != null;
         }

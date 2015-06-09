@@ -2,9 +2,7 @@
  */
 package org.palladiosimulator.monitorrepository.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 import org.palladiosimulator.monitorrepository.TimeFrame;
 
@@ -26,7 +24,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
     /**
      * The default value of the '{@link #getStart() <em>Start</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getStart()
      * @generated
      * @ordered
@@ -34,19 +32,9 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
     protected static final double START_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getStart() <em>Start</em>}' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @see #getStart()
-     * @generated
-     * @ordered
-     */
-    protected double start = START_EDEFAULT;
-
-    /**
      * The default value of the '{@link #getStop() <em>Stop</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getStop()
      * @generated
      * @ordered
@@ -54,18 +42,8 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
     protected static final double STOP_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getStop() <em>Stop</em>}' attribute. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     *
-     * @see #getStop()
-     * @generated
-     * @ordered
-     */
-    protected double stop = STOP_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected TimeFrameImpl() {
@@ -74,7 +52,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -84,57 +62,51 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public double getStart() {
-        return this.start;
+        return (Double) this.eDynamicGet(MonitorRepositoryPackage.TIME_FRAME__START,
+                MonitorRepositoryPackage.Literals.TIME_FRAME__START, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setStart(final double newStart) {
-        final double oldStart = this.start;
-        this.start = newStart;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, MonitorRepositoryPackage.TIME_FRAME__START,
-                    oldStart, this.start));
-        }
+        this.eDynamicSet(MonitorRepositoryPackage.TIME_FRAME__START,
+                MonitorRepositoryPackage.Literals.TIME_FRAME__START, newStart);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public double getStop() {
-        return this.stop;
+        return (Double) this.eDynamicGet(MonitorRepositoryPackage.TIME_FRAME__STOP,
+                MonitorRepositoryPackage.Literals.TIME_FRAME__STOP, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setStop(final double newStop) {
-        final double oldStop = this.stop;
-        this.stop = newStop;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, MonitorRepositoryPackage.TIME_FRAME__STOP,
-                    oldStop, this.stop));
-        }
+        this.eDynamicSet(MonitorRepositoryPackage.TIME_FRAME__STOP, MonitorRepositoryPackage.Literals.TIME_FRAME__STOP,
+                newStop);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -150,7 +122,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -168,7 +140,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -186,38 +158,18 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case MonitorRepositoryPackage.TIME_FRAME__START:
-            return this.start != START_EDEFAULT;
+            return this.getStart() != START_EDEFAULT;
         case MonitorRepositoryPackage.TIME_FRAME__STOP:
-            return this.stop != STOP_EDEFAULT;
+            return this.getStop() != STOP_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (start: ");
-        result.append(this.start);
-        result.append(", stop: ");
-        result.append(this.stop);
-        result.append(')');
-        return result.toString();
     }
 
 } // TimeFrameImpl

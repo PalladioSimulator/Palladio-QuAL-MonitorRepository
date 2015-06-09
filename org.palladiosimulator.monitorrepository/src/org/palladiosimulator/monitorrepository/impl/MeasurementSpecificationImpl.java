@@ -2,14 +2,10 @@
  */
 package org.palladiosimulator.monitorrepository.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.palladiosimulator.metricspec.MetricDescription;
 import org.palladiosimulator.monitorrepository.MeasurementSpecification;
 import org.palladiosimulator.monitorrepository.Monitor;
@@ -46,16 +42,6 @@ import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
 public class MeasurementSpecificationImpl extends IdentifierImpl implements MeasurementSpecification {
 
     /**
-     * The cached value of the '{@link #getTemporalRestriction() <em>Temporal Restriction</em>}'
-     * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getTemporalRestriction()
-     * @generated
-     * @ordered
-     */
-    protected TemporalCharacterization temporalRestriction;
-
-    /**
      * The default value of the '{@link #getStatisticalCharacterization()
      * <em>Statistical Characterization</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
@@ -65,27 +51,6 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
      * @ordered
      */
     protected static final StatisticalCharacterizationEnum STATISTICAL_CHARACTERIZATION_EDEFAULT = StatisticalCharacterizationEnum.NONE;
-
-    /**
-     * The cached value of the '{@link #getStatisticalCharacterization()
-     * <em>Statistical Characterization</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
-     * -->
-     *
-     * @see #getStatisticalCharacterization()
-     * @generated
-     * @ordered
-     */
-    protected StatisticalCharacterizationEnum statisticalCharacterization = STATISTICAL_CHARACTERIZATION_EDEFAULT;
-
-    /**
-     * The cached value of the '{@link #getMetricDescription() <em>Metric Description</em>}'
-     * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getMetricDescription()
-     * @generated
-     * @ordered
-     */
-    protected MetricDescription metricDescription;
 
     /**
      * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute. <!--
@@ -100,7 +65,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected MeasurementSpecificationImpl() {
@@ -109,7 +74,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -119,153 +84,112 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public TemporalCharacterization getTemporalRestriction() {
-        return this.temporalRestriction;
+        return (TemporalCharacterization) this.eDynamicGet(
+                MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetTemporalRestriction(final TemporalCharacterization newTemporalRestriction,
             NotificationChain msgs) {
-        final TemporalCharacterization oldTemporalRestriction = this.temporalRestriction;
-        this.temporalRestriction = newTemporalRestriction;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION, oldTemporalRestriction,
-                    newTemporalRestriction);
-            if (msgs == null) {
-                msgs = notification;
-            } else {
-                msgs.add(notification);
-            }
-        }
+        msgs = this.eDynamicInverseAdd((InternalEObject) newTemporalRestriction,
+                MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION, msgs);
         return msgs;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setTemporalRestriction(final TemporalCharacterization newTemporalRestriction) {
-        if (newTemporalRestriction != this.temporalRestriction) {
-            NotificationChain msgs = null;
-            if (this.temporalRestriction != null) {
-                msgs = ((InternalEObject) this.temporalRestriction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION, null, msgs);
-            }
-            if (newTemporalRestriction != null) {
-                msgs = ((InternalEObject) newTemporalRestriction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION, null, msgs);
-            }
-            msgs = this.basicSetTemporalRestriction(newTemporalRestriction, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION, newTemporalRestriction,
-                    newTemporalRestriction));
-        }
+        this.eDynamicSet(MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION,
+                newTemporalRestriction);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public StatisticalCharacterizationEnum getStatisticalCharacterization() {
-        return this.statisticalCharacterization;
+        return (StatisticalCharacterizationEnum) this.eDynamicGet(
+                MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setStatisticalCharacterization(final StatisticalCharacterizationEnum newStatisticalCharacterization) {
-        final StatisticalCharacterizationEnum oldStatisticalCharacterization = this.statisticalCharacterization;
-        this.statisticalCharacterization = newStatisticalCharacterization == null ? STATISTICAL_CHARACTERIZATION_EDEFAULT
-                : newStatisticalCharacterization;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION,
-                    oldStatisticalCharacterization, this.statisticalCharacterization));
-        }
+        this.eDynamicSet(MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION,
+                newStatisticalCharacterization);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public MetricDescription getMetricDescription() {
-        if (this.metricDescription != null && ((EObject) this.metricDescription).eIsProxy()) {
-            final InternalEObject oldMetricDescription = (InternalEObject) this.metricDescription;
-            this.metricDescription = (MetricDescription) this.eResolveProxy(oldMetricDescription);
-            if (this.metricDescription != oldMetricDescription) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION,
-                            oldMetricDescription, this.metricDescription));
-                }
-            }
-        }
-        return this.metricDescription;
+        return (MetricDescription) this.eDynamicGet(
+                MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public MetricDescription basicGetMetricDescription() {
-        return this.metricDescription;
+        return (MetricDescription) this.eDynamicGet(
+                MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION, false, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setMetricDescription(final MetricDescription newMetricDescription) {
-        final MetricDescription oldMetricDescription = this.metricDescription;
-        this.metricDescription = newMetricDescription;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION, oldMetricDescription,
-                    this.metricDescription));
-        }
+        this.eDynamicSet(MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION, newMetricDescription);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public Monitor getMonitor() {
-        if (this.eContainerFeatureID() != MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR) {
-            return null;
-        }
-        return (Monitor) this.eInternalContainer();
+        return (Monitor) this.eDynamicGet(MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__MONITOR, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetMonitor(final Monitor newMonitor, NotificationChain msgs) {
@@ -276,57 +200,40 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setMonitor(final Monitor newMonitor) {
-        if (newMonitor != this.eInternalContainer()
-                || (this.eContainerFeatureID() != MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR && newMonitor != null)) {
-            if (EcoreUtil.isAncestor(this, newMonitor)) {
-                throw new IllegalArgumentException("Recursive containment not allowed for " + this.toString());
-            }
-            NotificationChain msgs = null;
-            if (this.eInternalContainer() != null) {
-                msgs = this.eBasicRemoveFromContainer(msgs);
-            }
-            if (newMonitor != null) {
-                msgs = ((InternalEObject) newMonitor).eInverseAdd(this,
-                        MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS, Monitor.class, msgs);
-            }
-            msgs = this.basicSetMonitor(newMonitor, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR, newMonitor, newMonitor));
-        }
+        this.eDynamicSet(MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__MONITOR, newMonitor);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public String getName() {
-        return (String) this.NAME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+        return (String) this.eDynamicGet(MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__NAME,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__NAME, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setName(final String newName) {
-        this.NAME__ESETTING_DELEGATE.dynamicSet(this, null, 0, newName);
+        this.eDynamicSet(MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__NAME,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__NAME, newName);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -343,7 +250,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -360,7 +267,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -375,7 +282,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -400,7 +307,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -427,7 +334,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -454,42 +361,24 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
-            return this.temporalRestriction != null;
+            return this.getTemporalRestriction() != null;
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION:
-            return this.statisticalCharacterization != STATISTICAL_CHARACTERIZATION_EDEFAULT;
+            return this.getStatisticalCharacterization() != STATISTICAL_CHARACTERIZATION_EDEFAULT;
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION:
-            return this.metricDescription != null;
+            return this.basicGetMetricDescription() != null;
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
             return this.getMonitor() != null;
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
             return this.NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (statisticalCharacterization: ");
-        result.append(this.statisticalCharacterization);
-        result.append(')');
-        return result.toString();
     }
 
 } // MeasurementSpecificationImpl

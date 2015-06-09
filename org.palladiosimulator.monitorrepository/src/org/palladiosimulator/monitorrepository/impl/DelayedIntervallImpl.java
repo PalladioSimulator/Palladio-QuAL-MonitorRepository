@@ -2,9 +2,7 @@
  */
 package org.palladiosimulator.monitorrepository.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.palladiosimulator.monitorrepository.DelayedIntervall;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 
@@ -26,7 +24,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
     /**
      * The default value of the '{@link #getDelay() <em>Delay</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getDelay()
      * @generated
      * @ordered
@@ -34,18 +32,8 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
     protected static final double DELAY_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getDelay() <em>Delay</em>}' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @see #getDelay()
-     * @generated
-     * @ordered
-     */
-    protected double delay = DELAY_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected DelayedIntervallImpl() {
@@ -54,7 +42,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -64,32 +52,29 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public double getDelay() {
-        return this.delay;
+        return (Double) this.eDynamicGet(MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY,
+                MonitorRepositoryPackage.Literals.DELAYED_INTERVALL__DELAY, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setDelay(final double newDelay) {
-        final double oldDelay = this.delay;
-        this.delay = newDelay;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY, oldDelay, this.delay));
-        }
+        this.eDynamicSet(MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY,
+                MonitorRepositoryPackage.Literals.DELAYED_INTERVALL__DELAY, newDelay);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -103,7 +88,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -118,7 +103,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -133,34 +118,16 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY:
-            return this.delay != DELAY_EDEFAULT;
+            return this.getDelay() != DELAY_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (delay: ");
-        result.append(this.delay);
-        result.append(')');
-        return result.toString();
     }
 
 } // DelayedIntervallImpl

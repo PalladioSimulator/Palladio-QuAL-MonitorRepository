@@ -8,7 +8,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.palladiosimulator.monitorrepository.Monitor;
 import org.palladiosimulator.monitorrepository.MonitorRepository;
@@ -32,18 +31,8 @@ import de.uka.ipd.sdq.pcm.core.entity.impl.EntityImpl;
 public class MonitorRepositoryImpl extends EntityImpl implements MonitorRepository {
 
     /**
-     * The cached value of the '{@link #getMonitors() <em>Monitors</em>}' containment reference
-     * list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getMonitors()
-     * @generated
-     * @ordered
-     */
-    protected EList<Monitor> monitors;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected MonitorRepositoryImpl() {
@@ -52,7 +41,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -62,22 +51,19 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public EList<Monitor> getMonitors() {
-        if (this.monitors == null) {
-            this.monitors = new EObjectContainmentWithInverseEList<Monitor>(Monitor.class, this,
-                    MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS,
-                    MonitorRepositoryPackage.MONITOR__MONITOR_REPOSITORY);
-        }
-        return this.monitors;
+        return (EList<Monitor>) this.eDynamicGet(MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS,
+                MonitorRepositoryPackage.Literals.MONITOR_REPOSITORY__MONITORS, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -93,7 +79,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -108,7 +94,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -122,7 +108,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -139,7 +125,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -154,14 +140,14 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS:
-            return this.monitors != null && !this.monitors.isEmpty();
+            return !this.getMonitors().isEmpty();
         }
         return super.eIsSet(featureID);
     }
