@@ -22,6 +22,16 @@
          version="0.0.0"/>
 
    <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.palladiosimulator.monitorrepository"/>
+      <import plugin="de.uka.ipd.sdq.identifier"/>
+      <import plugin="org.palladiosimulator.metricspec"/>
+      <import plugin="de.uka.ipd.sdq.pcm"/>
+      <import plugin="de.uka.ipd.sdq.probfunction"/>
+      <import plugin="de.uka.ipd.sdq.stoex"/>
+      <import plugin="de.uka.ipd.sdq.units"/>
+      <import plugin="org.palladiosimulator.edp2"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
       <import plugin="org.junit"/>
    </requires>
 
