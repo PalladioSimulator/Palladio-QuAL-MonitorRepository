@@ -11,11 +11,6 @@
       [Enter Feature Description here.]
    </description>
 
-   <copyright url="http://www.example.com/copyright">
-      [Enter Copyright Description here.]
-   </copyright>
-
-   
    <url>
       <update label="MonitorRepository Update Site" url="https://sdqweb.ipd.kit.edu/eclipse/monitorrepository/nightly/"/>
    </url>
