@@ -18,7 +18,7 @@
    </license>
 
    <url>
-      <update label="MonitorRepository Update Site" url="http://sdqweb.ipd.kit.edu/eclipse/monitorrepository/nightly/"/>
+      <update label="MonitorRepository Update Site" url="https://sdqweb.ipd.kit.edu/eclipse/monitorrepository/nightly/"/>
    </url>
 
    <requires>
