@@ -3,8 +3,6 @@
 
   <rm:locator pattern="^org\.palladiosimulator\.monitorrepository.*" searchPathRef="MonitorRepository" failOnError="true"/>
   
-  <rm:redirect pattern="^org\.palladiosimulator\.license.*"
-		href="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Build/trunk/org.palladiosimulator.targetPlatformBuild/commons.rmap" />
   <rm:redirect pattern=".*"
 		href="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Build/trunk/org.palladiosimulator.targetPlatformBuild/pcm_base.rmap" />
   
