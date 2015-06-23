@@ -16,7 +16,7 @@ import org.palladiosimulator.monitorrepository.Monitor;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryFactory;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 
-import de.uka.ipd.sdq.pcm.core.entity.provider.EntityItemProvider;
+import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.monitorrepository.Monitor}

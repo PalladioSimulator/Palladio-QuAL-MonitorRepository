@@ -13,7 +13,7 @@ import org.palladiosimulator.monitorrepository.Monitor;
 import org.palladiosimulator.monitorrepository.MonitorRepository;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 
-import de.uka.ipd.sdq.pcm.core.entity.impl.EntityImpl;
+import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Monitor Repository</b></em>

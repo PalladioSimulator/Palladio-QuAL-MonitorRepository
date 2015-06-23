@@ -16,8 +16,8 @@ import org.palladiosimulator.monitorrepository.TemporalCharacterization;
 import org.palladiosimulator.monitorrepository.TimeFrame;
 
 import de.uka.ipd.sdq.identifier.Identifier;
-import de.uka.ipd.sdq.pcm.core.entity.Entity;
-import de.uka.ipd.sdq.pcm.core.entity.NamedElement;
+import org.palladiosimulator.pcm.core.entity.Entity;
+import org.palladiosimulator.pcm.core.entity.NamedElement;
 
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
@@ -263,13 +263,13 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.pcm.core.entity.NamedElement <em>Named Element</em>}'. <!--
+     * {@link org.palladiosimulator.pcm.core.entity.NamedElement <em>Named Element</em>}'. <!--
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
      *
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.pcm.core.entity.NamedElement
+     * @see org.palladiosimulator.pcm.core.entity.NamedElement
      * @generated
      */
     public Adapter createNamedElementAdapter() {
@@ -277,13 +277,13 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.pcm.core.entity.Entity
+     * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.core.entity.Entity
      * <em>Entity</em>}'. <!-- begin-user-doc --> This default implementation returns null so that
      * we can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
      * cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.pcm.core.entity.Entity
+     * @see org.palladiosimulator.pcm.core.entity.Entity
      * @generated
      */
     public Adapter createEntityAdapter() {

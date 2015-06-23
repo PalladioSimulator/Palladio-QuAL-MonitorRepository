@@ -5,7 +5,7 @@ package org.palladiosimulator.monitorrepository;
 import org.eclipse.emf.common.util.EList;
 import org.palladiosimulator.edp2.models.measuringpoint.MeasuringPoint;
 
-import de.uka.ipd.sdq.pcm.core.entity.Entity;
+import org.palladiosimulator.pcm.core.entity.Entity;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Monitor</b></em>'. <!--

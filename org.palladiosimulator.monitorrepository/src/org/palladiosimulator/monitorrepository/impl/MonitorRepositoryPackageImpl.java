@@ -24,8 +24,8 @@ import org.palladiosimulator.monitorrepository.TemporalCharacterization;
 import org.palladiosimulator.monitorrepository.TimeFrame;
 
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
-import de.uka.ipd.sdq.pcm.PcmPackage;
-import de.uka.ipd.sdq.pcm.core.entity.EntityPackage;
+import org.palladiosimulator.pcm.PcmPackage;
+import org.palladiosimulator.pcm.core.entity.EntityPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
