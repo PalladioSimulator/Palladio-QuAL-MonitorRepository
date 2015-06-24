@@ -9,14 +9,14 @@
   <models xmi:type="genmodel:GenModel" href="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#/"/>
   <models xmi:type="genmodel:GenModel" href="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#/"/>
   <models xmi:type="genmodel:GenModel" href="platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel#/"/>
-  <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.genmodel#/"/>
+  <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.genmodel#/"/>
   <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#/"/>
   <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#/"/>
   <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#/"/>
   <models xmi:type="genmodel:GenModel" href="platform:/plugin/org.palladiosimulator.edp2/model/EDP2.genmodel#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#/"/>
   <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/org.eclipse.uml2.types/model/Types.genmodel#/"/>
-  <models xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#/"/>
+  <models xmi:type="ecore:EPackage" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#/"/>
@@ -947,8 +947,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_QahwoKyVEeSbDJ8ytHVHeA" name="Entity" tooltipText="" outgoingEdges="_VGODsKyVEeSbDJ8ytHVHeA" incomingEdges="_ZC7J0KyVEeSbDJ8ytHVHeA _ZwGY4KyVEeSbDJ8ytHVHeA" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//core/entity/Entity"/>
-        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//core/entity/Entity"/>
+        <target xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
         <decorations xmi:type="viewpoint:Decoration" xmi:id="_QayPUKyVEeSbDJ8ytHVHeA">
           <description xmi:type="description:SemanticBasedDecoration" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='External']"/>
         </decorations>
@@ -993,9 +993,9 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_VGODsKyVEeSbDJ8ytHVHeA" sourceNode="_QahwoKyVEeSbDJ8ytHVHeA" targetNode="_VGABQKyVEeSbDJ8ytHVHeA">
-        <target xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//core/entity/Entity"/>
-        <semanticElements xmi:type="ecore:EGenericType" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//core/entity/Entity/@eGenericSuperTypes.0"/>
-        <semanticElements xmi:type="ecore:EGenericType" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//core/entity/Entity/@eGenericSuperTypes.1"/>
+        <target xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+        <semanticElements xmi:type="ecore:EGenericType" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity/@eGenericSuperTypes.0"/>
+        <semanticElements xmi:type="ecore:EGenericType" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity/@eGenericSuperTypes.1"/>
         <decorations xmi:type="viewpoint:Decoration" xmi:id="_ZC4GgKyVEeSbDJ8ytHVHeA">
           <description xmi:type="description:SemanticBasedDecoration" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='External']"/>
         </decorations>

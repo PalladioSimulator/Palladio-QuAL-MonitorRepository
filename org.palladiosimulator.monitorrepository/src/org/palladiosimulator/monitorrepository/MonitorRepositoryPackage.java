@@ -24,7 +24,7 @@ import org.palladiosimulator.pcm.core.entity.EntityPackage;
  * 
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryFactory
  * @model kind="package" annotation=
- *        "http://www.eclipse.org/OCL/Import ecore='http://www.eclipse.org/emf/2002/Ecore' edp2='../../../plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//measuringpoint' entity='../../../plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//core/entity' identifier='../../../plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#/' metricspec='../../../plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#/'"
+ *        "http://www.eclipse.org/OCL/Import ecore='http://www.eclipse.org/emf/2002/Ecore' edp2='../../../plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//measuringpoint' entity='../../../plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity' identifier='../../../plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#/' metricspec='../../../plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#/'"
  *        annotation=
  *        "http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL'"
  * @generated

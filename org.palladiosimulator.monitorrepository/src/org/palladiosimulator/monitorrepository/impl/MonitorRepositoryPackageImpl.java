@@ -578,7 +578,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
         final String source = "http://www.eclipse.org/OCL/Import";
         this.addAnnotation(this, source, new String[] { "ecore", "http://www.eclipse.org/emf/2002/Ecore", "edp2",
                 "../../../plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//measuringpoint", "entity",
-                "../../../plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//core/entity", "identifier",
+                "../../../plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity", "identifier",
                 "../../../plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#/", "metricspec",
         "../../../plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#/" });
     }
