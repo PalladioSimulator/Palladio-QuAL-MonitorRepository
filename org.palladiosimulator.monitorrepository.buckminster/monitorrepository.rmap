@@ -3,13 +3,10 @@
 
   <rm:locator pattern="^org\.palladiosimulator\.monitorrepository.*" searchPathRef="MonitorRepository" failOnError="true"/>
   
-  <rm:redirect pattern=".*"
-		href="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Build/trunk/org.palladiosimulator.targetPlatformBuild/pcm_base.rmap" />
+  <rm:redirect pattern=".*" href="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Palladio/Core/trunk/Editors/org.palladiosimulator.editors.buckminster/editors.rmap"/>
   
   <rm:searchPath name="MonitorRepository">
-    <rm:provider componentTypes="eclipse.feature,osgi.bundle" readerType="svn">
-      <rm:property key="buckminster.source" value="true"/>
-      <rm:property key="buckminster.mutable" value="true"/>
+    <rm:provider componentTypes="eclipse.feature,osgi.bundle" readerType="svn" source="true" mutable="true">
       <rm:uri format="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/MonitorRepository/trunk/{0}">
         <bc:propertyRef key="buckminster.component"/>
       </rm:uri>

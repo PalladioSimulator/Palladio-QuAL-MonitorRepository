@@ -14,7 +14,6 @@ import org.palladiosimulator.monitorrepository.MeasurementSpecification;
 import org.palladiosimulator.monitorrepository.Monitor;
 import org.palladiosimulator.monitorrepository.MonitorRepository;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
-
 import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 
 /**
@@ -38,7 +37,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MonitorImpl() {
@@ -47,7 +46,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -57,7 +56,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -70,7 +69,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -81,7 +80,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public MeasuringPoint basicGetMeasuringPoint() {
@@ -91,7 +90,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -102,7 +101,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -113,7 +112,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetMonitorRepository(final MonitorRepository newMonitorRepository,
@@ -125,7 +124,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -136,13 +135,14 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
     public NotificationChain eInverseAdd(final InternalEObject otherEnd, final int featureID, NotificationChain msgs) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS:
             return ((InternalEList<InternalEObject>) (InternalEList<?>) this.getMeasurementSpecifications()).basicAdd(
                     otherEnd, msgs);
@@ -157,13 +157,14 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS:
             return ((InternalEList<?>) this.getMeasurementSpecifications()).basicRemove(otherEnd, msgs);
         case MonitorRepositoryPackage.MONITOR__MONITOR_REPOSITORY:
@@ -174,27 +175,30 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public NotificationChain eBasicRemoveFromContainerFeature(final NotificationChain msgs) {
-        switch (this.eContainerFeatureID()) {
+        switch (this.eContainerFeatureID())
+        {
         case MonitorRepositoryPackage.MONITOR__MONITOR_REPOSITORY:
             return this.eInternalContainer().eInverseRemove(this,
-                    MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS, MonitorRepository.class, msgs);
+                    MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS,
+                    MonitorRepository.class, msgs);
         }
         return super.eBasicRemoveFromContainerFeature(msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS:
             return this.getMeasurementSpecifications();
         case MonitorRepositoryPackage.MONITOR__MEASURING_POINT:
@@ -210,13 +214,14 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS:
             this.getMeasurementSpecifications().clear();
             this.getMeasurementSpecifications().addAll((Collection<? extends MeasurementSpecification>) newValue);
@@ -233,12 +238,13 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS:
             this.getMeasurementSpecifications().clear();
             return;
@@ -254,12 +260,13 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS:
             return !this.getMeasurementSpecifications().isEmpty();
         case MonitorRepositoryPackage.MONITOR__MEASURING_POINT:

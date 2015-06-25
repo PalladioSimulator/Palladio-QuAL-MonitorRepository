@@ -59,7 +59,7 @@ public interface MeasurementSpecification extends Identifier {
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getTemporalRestriction
      * <em>Temporal Restriction</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Temporal Restriction</em>' containment reference.
      * @see #getTemporalRestriction()
@@ -109,7 +109,7 @@ public interface MeasurementSpecification extends Identifier {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Metric Description</em>' reference.
      * @see #setMetricDescription(MetricDescription)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification_MetricDescription()
@@ -122,7 +122,7 @@ public interface MeasurementSpecification extends Identifier {
      * Sets the value of the '
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMetricDescription
      * <em>Metric Description</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Metric Description</em>' reference.
      * @see #getMetricDescription()
@@ -140,7 +140,7 @@ public interface MeasurementSpecification extends Identifier {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Monitor</em>' container reference.
      * @see #setMonitor(Monitor)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification_Monitor()
@@ -154,7 +154,7 @@ public interface MeasurementSpecification extends Identifier {
      * Sets the value of the '
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMonitor
      * <em>Monitor</em>}' container reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Monitor</em>' container reference.
      * @see #getMonitor()
@@ -170,7 +170,7 @@ public interface MeasurementSpecification extends Identifier {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification_Name()
@@ -184,7 +184,7 @@ public interface MeasurementSpecification extends Identifier {
      * Sets the value of the '
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getName
      * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Name</em>' attribute.
      * @see #getName()

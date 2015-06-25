@@ -14,15 +14,15 @@ import org.palladiosimulator.monitorrepository.MonitorRepository;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 import org.palladiosimulator.monitorrepository.TemporalCharacterization;
 import org.palladiosimulator.monitorrepository.TimeFrame;
-
-import de.uka.ipd.sdq.identifier.Identifier;
 import org.palladiosimulator.pcm.core.entity.Entity;
 import org.palladiosimulator.pcm.core.entity.NamedElement;
+
+import de.uka.ipd.sdq.identifier.Identifier;
 
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage
  * @generated
  */
@@ -30,18 +30,19 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static MonitorRepositoryPackage modelPackage;
 
     /**
      * Creates an instance of the adapter factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public MonitorRepositoryAdapterFactory() {
-        if (modelPackage == null) {
+        if (modelPackage == null)
+        {
             modelPackage = MonitorRepositoryPackage.eINSTANCE;
         }
     }
@@ -50,16 +51,18 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * Returns whether this factory is applicable for the type of the object. <!-- begin-user-doc
      * --> This implementation returns <code>true</code> if the object is either the model's package
      * or is an instance object of the model. <!-- end-user-doc -->
-     * 
+     *
      * @return whether this factory is applicable for the type of the object.
      * @generated
      */
     @Override
     public boolean isFactoryForType(final Object object) {
-        if (object == modelPackage) {
+        if (object == modelPackage)
+        {
             return true;
         }
-        if (object instanceof EObject) {
+        if (object instanceof EObject)
+        {
             return ((EObject) object).eClass().getEPackage() == modelPackage;
         }
         return false;
@@ -68,237 +71,248 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
     /**
      * The switch that delegates to the <code>createXXX</code> methods. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
-    protected MonitorRepositorySwitch<Adapter> modelSwitch = new MonitorRepositorySwitch<Adapter>() {
-
+    protected MonitorRepositorySwitch<Adapter> modelSwitch = new MonitorRepositorySwitch<Adapter>()
+            {
         @Override
-        public Adapter caseMonitorRepository(final MonitorRepository object) {
+        public Adapter caseMonitorRepository(final MonitorRepository object)
+        {
             return MonitorRepositoryAdapterFactory.this.createMonitorRepositoryAdapter();
         }
 
         @Override
-        public Adapter caseMonitor(final Monitor object) {
+        public Adapter caseMonitor(final Monitor object)
+        {
             return MonitorRepositoryAdapterFactory.this.createMonitorAdapter();
         }
 
         @Override
-        public Adapter caseMeasurementSpecification(final MeasurementSpecification object) {
+        public Adapter caseMeasurementSpecification(final MeasurementSpecification object)
+        {
             return MonitorRepositoryAdapterFactory.this.createMeasurementSpecificationAdapter();
         }
 
         @Override
-        public Adapter caseTemporalCharacterization(final TemporalCharacterization object) {
+        public Adapter caseTemporalCharacterization(final TemporalCharacterization object)
+        {
             return MonitorRepositoryAdapterFactory.this.createTemporalCharacterizationAdapter();
         }
 
         @Override
-        public Adapter caseIntervall(final Intervall object) {
+        public Adapter caseIntervall(final Intervall object)
+        {
             return MonitorRepositoryAdapterFactory.this.createIntervallAdapter();
         }
 
         @Override
-        public Adapter caseDelayedIntervall(final DelayedIntervall object) {
+        public Adapter caseDelayedIntervall(final DelayedIntervall object)
+        {
             return MonitorRepositoryAdapterFactory.this.createDelayedIntervallAdapter();
         }
 
         @Override
-        public Adapter caseTimeFrame(final TimeFrame object) {
+        public Adapter caseTimeFrame(final TimeFrame object)
+        {
             return MonitorRepositoryAdapterFactory.this.createTimeFrameAdapter();
         }
 
         @Override
-        public Adapter caseIdentifier(final Identifier object) {
+        public Adapter caseIdentifier(final Identifier object)
+        {
             return MonitorRepositoryAdapterFactory.this.createIdentifierAdapter();
         }
 
         @Override
-        public Adapter caseNamedElement(final NamedElement object) {
+        public Adapter caseNamedElement(final NamedElement object)
+        {
             return MonitorRepositoryAdapterFactory.this.createNamedElementAdapter();
         }
 
         @Override
-        public Adapter caseEntity(final Entity object) {
+        public Adapter caseEntity(final Entity object)
+        {
             return MonitorRepositoryAdapterFactory.this.createEntityAdapter();
         }
 
         @Override
-        public Adapter defaultCase(final EObject object) {
+        public Adapter defaultCase(final EObject object)
+        {
             return MonitorRepositoryAdapterFactory.this.createEObjectAdapter();
         }
-    };
+            };
 
-    /**
-     * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+            /**
+             * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @param target
      *            the object to adapt.
      * @return the adapter for the <code>target</code>.
-     * @generated
-     */
-    @Override
-    public Adapter createAdapter(final Notifier target) {
-        return this.modelSwitch.doSwitch((EObject) target);
-    }
+             * @generated
+             */
+            @Override
+            public Adapter createAdapter(final Notifier target) {
+                return this.modelSwitch.doSwitch((EObject) target);
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.monitorrepository.MonitorRepository <em>Monitor Repository</em>}
      * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
-     * 
-     * @return the new adapter.
-     * @see org.palladiosimulator.monitorrepository.MonitorRepository
-     * @generated
-     */
-    public Adapter createMonitorRepositoryAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '
-     * {@link org.palladiosimulator.monitorrepository.Monitor <em>Monitor</em>}'. <!--
-     * begin-user-doc --> This default implementation returns null so that we can easily ignore
-     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
-     * end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.monitorrepository.Monitor
-     * @generated
-     */
-    public Adapter createMonitorAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.monitorrepository.MonitorRepository
+             * @generated
+             */
+            public Adapter createMonitorRepositoryAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
+             * {@link org.palladiosimulator.monitorrepository.Monitor <em>Monitor</em>}'. <!--
+             * begin-user-doc --> This default implementation returns null so that we can easily ignore
+             * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
+             * end-user-doc -->
+             *
+             * @return the new adapter.
+             * @see org.palladiosimulator.monitorrepository.Monitor
+             * @generated
+             */
+            public Adapter createMonitorAdapter() {
+                return null;
+            }
+
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification
      * <em>Measurement Specification</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
-     * @see org.palladiosimulator.monitorrepository.MeasurementSpecification
-     * @generated
-     */
-    public Adapter createMeasurementSpecificationAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.monitorrepository.MeasurementSpecification
+             * @generated
+             */
+            public Adapter createMeasurementSpecificationAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.monitorrepository.TemporalCharacterization
      * <em>Temporal Characterization</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
-     * @return the new adapter.
-     * @see org.palladiosimulator.monitorrepository.TemporalCharacterization
-     * @generated
-     */
-    public Adapter createTemporalCharacterizationAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '
-     * {@link org.palladiosimulator.monitorrepository.Intervall <em>Intervall</em>}'. <!--
-     * begin-user-doc --> This default implementation returns null so that we can easily ignore
-     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
-     * end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.monitorrepository.Intervall
-     * @generated
-     */
-    public Adapter createIntervallAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.monitorrepository.TemporalCharacterization
+             * @generated
+             */
+            public Adapter createTemporalCharacterizationAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
+             * {@link org.palladiosimulator.monitorrepository.Intervall <em>Intervall</em>}'. <!--
+             * begin-user-doc --> This default implementation returns null so that we can easily ignore
+             * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
+             * end-user-doc -->
+             *
+             * @return the new adapter.
+             * @see org.palladiosimulator.monitorrepository.Intervall
+             * @generated
+             */
+            public Adapter createIntervallAdapter() {
+                return null;
+            }
+
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.monitorrepository.DelayedIntervall <em>Delayed Intervall</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
-     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
-     * end-user-doc -->
-     * 
+             * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+             * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
+             * end-user-doc -->
+             *
      * @return the new adapter.
-     * @see org.palladiosimulator.monitorrepository.DelayedIntervall
-     * @generated
-     */
-    public Adapter createDelayedIntervallAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.monitorrepository.DelayedIntervall
+             * @generated
+             */
+            public Adapter createDelayedIntervallAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
-     * {@link org.palladiosimulator.monitorrepository.TimeFrame <em>Time Frame</em>}'. <!--
-     * begin-user-doc --> This default implementation returns null so that we can easily ignore
-     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
-     * end-user-doc -->
-     *
-     * @return the new adapter.
-     * @see org.palladiosimulator.monitorrepository.TimeFrame
-     * @generated
-     */
-    public Adapter createTimeFrameAdapter() {
-        return null;
-    }
+            /**
+             * Creates a new adapter for an object of class '
+             * {@link org.palladiosimulator.monitorrepository.TimeFrame <em>Time Frame</em>}'. <!--
+             * begin-user-doc --> This default implementation returns null so that we can easily ignore
+             * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
+             * end-user-doc -->
+             *
+             * @return the new adapter.
+             * @see org.palladiosimulator.monitorrepository.TimeFrame
+             * @generated
+             */
+            public Adapter createTimeFrameAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.identifier.Identifier
+            /**
+             * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.identifier.Identifier
      * <em>Identifier</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
-     * @return the new adapter.
-     * @see de.uka.ipd.sdq.identifier.Identifier
-     * @generated
-     */
-    public Adapter createIdentifierAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '
-     * {@link org.palladiosimulator.pcm.core.entity.NamedElement <em>Named Element</em>}'. <!--
-     * begin-user-doc --> This default implementation returns null so that we can easily ignore
-     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
-     * end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.pcm.core.entity.NamedElement
-     * @generated
-     */
-    public Adapter createNamedElementAdapter() {
-        return null;
-    }
+             * @see de.uka.ipd.sdq.identifier.Identifier
+             * @generated
+             */
+            public Adapter createIdentifierAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.core.entity.Entity
-     * <em>Entity</em>}'. <!-- begin-user-doc --> This default implementation returns null so that
-     * we can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
-     * cases anyway. <!-- end-user-doc -->
-     * 
+            /**
+             * Creates a new adapter for an object of class '
+             * {@link org.palladiosimulator.pcm.core.entity.NamedElement <em>Named Element</em>}'. <!--
+             * begin-user-doc --> This default implementation returns null so that we can easily ignore
+             * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
+             * end-user-doc -->
+             *
+             * @return the new adapter.
+             * @see org.palladiosimulator.pcm.core.entity.NamedElement
+             * @generated
+             */
+            public Adapter createNamedElementAdapter() {
+                return null;
+            }
+
+            /**
+             * Creates a new adapter for an object of class '
+     * {@link org.palladiosimulator.pcm.core.entity.Entity <em>Entity</em>}'. <!-- begin-user-doc
+     * --> This default implementation returns null so that we can easily ignore cases; it's useful
+     * to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     *
      * @return the new adapter.
-     * @see org.palladiosimulator.pcm.core.entity.Entity
-     * @generated
-     */
-    public Adapter createEntityAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.pcm.core.entity.Entity
+             * @generated
+             */
+            public Adapter createEntityAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
+            /**
+             * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
      * implementation returns null. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
-     * @generated
-     */
-    public Adapter createEObjectAdapter() {
-        return null;
-    }
+             * @generated
+             */
+            public Adapter createEObjectAdapter() {
+                return null;
+            }
 
 } // MonitorRepositoryAdapterFactory

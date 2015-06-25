@@ -33,7 +33,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected IntervallImpl() {
@@ -42,7 +42,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -52,7 +52,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -63,7 +63,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -74,12 +74,13 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.INTERVALL__INTERVALL:
             return this.getIntervall();
         }
@@ -88,12 +89,13 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.INTERVALL__INTERVALL:
             this.setIntervall((Double) newValue);
             return;
@@ -103,12 +105,13 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.INTERVALL__INTERVALL:
             this.setIntervall(INTERVALL_EDEFAULT);
             return;
@@ -118,12 +121,13 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.INTERVALL__INTERVALL:
             return this.getIntervall() != INTERVALL_EDEFAULT;
         }

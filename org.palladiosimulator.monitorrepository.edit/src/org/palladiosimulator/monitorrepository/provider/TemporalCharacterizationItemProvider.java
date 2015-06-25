@@ -40,7 +40,8 @@ public class TemporalCharacterizationItemProvider extends IdentifierItemProvider
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
         }
@@ -56,8 +57,9 @@ public class TemporalCharacterizationItemProvider extends IdentifierItemProvider
     @Override
     public String getText(final Object object) {
         final String label = ((TemporalCharacterization) object).getId();
-        return label == null || label.length() == 0 ? this.getString("_UI_TemporalCharacterization_type") : this
-                .getString("_UI_TemporalCharacterization_type") + " " + label;
+        return label == null || label.length() == 0 ?
+                this.getString("_UI_TemporalCharacterization_type") :
+                this.getString("_UI_TemporalCharacterization_type") + " " + label;
     }
 
     /**

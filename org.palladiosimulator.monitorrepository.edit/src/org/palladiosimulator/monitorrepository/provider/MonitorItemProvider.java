@@ -15,7 +15,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.monitorrepository.Monitor;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryFactory;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
-
 import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 /**
@@ -44,7 +43,8 @@ public class MonitorItemProvider extends EntityItemProvider {
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
             this.addMeasuringPointPropertyDescriptor(object);
@@ -59,12 +59,21 @@ public class MonitorItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addMeasuringPointPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Monitor_measuringPoint_feature"),
-                this.getString("_UI_PropertyDescriptor_description", "_UI_Monitor_measuringPoint_feature",
-                        "_UI_Monitor_type"), MonitorRepositoryPackage.Literals.MONITOR__MEASURING_POINT, true, false,
-                true, null, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Monitor_measuringPoint_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_Monitor_measuringPoint_feature",
+                                "_UI_Monitor_type"),
+                                MonitorRepositoryPackage.Literals.MONITOR__MEASURING_POINT,
+                                true,
+                                false,
+                                true,
+                                null,
+                                null,
+                                null));
     }
 
     /**
@@ -78,7 +87,8 @@ public class MonitorItemProvider extends EntityItemProvider {
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null) {
+        if (this.childrenFeatures == null)
+        {
             super.getChildrenFeatures(object);
             this.childrenFeatures.add(MonitorRepositoryPackage.Literals.MONITOR__MEASUREMENT_SPECIFICATIONS);
         }
@@ -117,8 +127,9 @@ public class MonitorItemProvider extends EntityItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((Monitor) object).getEntityName();
-        return label == null || label.length() == 0 ? this.getString("_UI_Monitor_type") : this
-                .getString("_UI_Monitor_type") + " " + label;
+        return label == null || label.length() == 0 ?
+                this.getString("_UI_Monitor_type") :
+                this.getString("_UI_Monitor_type") + " " + label;
     }
 
     /**
@@ -132,7 +143,8 @@ public class MonitorItemProvider extends EntityItemProvider {
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(Monitor.class)) {
+        switch (notification.getFeatureID(Monitor.class))
+        {
         case MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
@@ -150,9 +162,10 @@ public class MonitorItemProvider extends EntityItemProvider {
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(this.createChildParameter(
-                MonitorRepositoryPackage.Literals.MONITOR__MEASUREMENT_SPECIFICATIONS,
-                MonitorRepositoryFactory.eINSTANCE.createMeasurementSpecification()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (MonitorRepositoryPackage.Literals.MONITOR__MEASUREMENT_SPECIFICATIONS,
+                        MonitorRepositoryFactory.eINSTANCE.createMeasurementSpecification()));
     }
 
     /**

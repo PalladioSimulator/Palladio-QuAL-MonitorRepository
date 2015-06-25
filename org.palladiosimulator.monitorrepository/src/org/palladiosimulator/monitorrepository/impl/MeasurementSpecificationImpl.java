@@ -65,7 +65,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MeasurementSpecificationImpl() {
@@ -74,7 +74,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -84,7 +84,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -96,7 +96,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetTemporalRestriction(final TemporalCharacterization newTemporalRestriction,
@@ -108,7 +108,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -120,7 +120,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -132,7 +132,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -144,7 +144,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -156,7 +156,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public MetricDescription basicGetMetricDescription() {
@@ -167,7 +167,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -178,7 +178,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -189,7 +189,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetMonitor(final Monitor newMonitor, NotificationChain msgs) {
@@ -200,7 +200,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -211,7 +211,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -222,7 +222,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -233,12 +233,13 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public NotificationChain eInverseAdd(final InternalEObject otherEnd, final int featureID, NotificationChain msgs) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
             if (this.eInternalContainer() != null) {
                 msgs = this.eBasicRemoveFromContainer(msgs);
@@ -250,13 +251,14 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
             return this.basicSetTemporalRestriction(null, msgs);
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
@@ -267,12 +269,13 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public NotificationChain eBasicRemoveFromContainerFeature(final NotificationChain msgs) {
-        switch (this.eContainerFeatureID()) {
+        switch (this.eContainerFeatureID())
+        {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
             return this.eInternalContainer().eInverseRemove(this,
                     MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS, Monitor.class, msgs);
@@ -282,12 +285,13 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
             return this.getTemporalRestriction();
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION:
@@ -307,12 +311,13 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
             this.setTemporalRestriction((TemporalCharacterization) newValue);
             return;
@@ -334,12 +339,13 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
             this.setTemporalRestriction((TemporalCharacterization) null);
             return;
@@ -361,12 +367,13 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
             return this.getTemporalRestriction() != null;
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION:

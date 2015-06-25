@@ -20,7 +20,7 @@
             name="%_UI_MonitorRepositoryModelWizard_label"
             class="org.palladiosimulator.monitorrepository.presentation.MonitorRepositoryModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/MonitorRepositoryModelFile.gif">
+            icon="icons/full/obj16/MonitorrepositoryModelFile.gif">
          <description>%_UI_MonitorRepositoryModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
@@ -31,7 +31,7 @@
       <editor
             id="org.palladiosimulator.monitorrepository.presentation.MonitorRepositoryEditorID"
             name="%_UI_MonitorRepositoryEditor_label"
-            icon="icons/full/obj16/MonitorRepositoryModelFile.gif"
+            icon="icons/full/obj16/MonitorrepositoryModelFile.gif"
             extensions="monitorrepository"
             class="org.palladiosimulator.monitorrepository.presentation.MonitorRepositoryEditor"
             contributorClass="org.palladiosimulator.monitorrepository.presentation.MonitorRepositoryActionBarContributor">

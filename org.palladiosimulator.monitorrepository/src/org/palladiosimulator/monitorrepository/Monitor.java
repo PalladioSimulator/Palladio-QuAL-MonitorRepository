@@ -4,7 +4,6 @@ package org.palladiosimulator.monitorrepository;
 
 import org.eclipse.emf.common.util.EList;
 import org.palladiosimulator.edp2.models.measuringpoint.MeasuringPoint;
-
 import org.palladiosimulator.pcm.core.entity.Entity;
 
 /**
@@ -44,7 +43,7 @@ public interface Monitor extends Entity {
      * clear, there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Measurement Specifications</em>' containment reference list.
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMonitor_MeasurementSpecifications()
      * @see org.palladiosimulator.monitorrepository.MeasurementSpecification#getMonitor
@@ -60,7 +59,7 @@ public interface Monitor extends Entity {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Measuring Point</em>' reference.
      * @see #setMeasuringPoint(MeasuringPoint)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMonitor_MeasuringPoint()
@@ -73,7 +72,7 @@ public interface Monitor extends Entity {
      * Sets the value of the '
      * {@link org.palladiosimulator.monitorrepository.Monitor#getMeasuringPoint
      * <em>Measuring Point</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Measuring Point</em>' reference.
      * @see #getMeasuringPoint()
@@ -91,7 +90,7 @@ public interface Monitor extends Entity {
      * really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Monitor Repository</em>' container reference.
      * @see #setMonitorRepository(MonitorRepository)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMonitor_MonitorRepository()

@@ -24,7 +24,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
     /**
      * The default value of the '{@link #getStart() <em>Start</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getStart()
      * @generated
      * @ordered
@@ -34,7 +34,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
     /**
      * The default value of the '{@link #getStop() <em>Stop</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getStop()
      * @generated
      * @ordered
@@ -43,7 +43,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected TimeFrameImpl() {
@@ -52,7 +52,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -62,7 +62,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -73,18 +73,19 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setStart(final double newStart) {
         this.eDynamicSet(MonitorRepositoryPackage.TIME_FRAME__START,
-                MonitorRepositoryPackage.Literals.TIME_FRAME__START, newStart);
+                MonitorRepositoryPackage.Literals.TIME_FRAME__START,
+                newStart);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -95,7 +96,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -106,12 +107,13 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.TIME_FRAME__START:
             return this.getStart();
         case MonitorRepositoryPackage.TIME_FRAME__STOP:
@@ -122,12 +124,13 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.TIME_FRAME__START:
             this.setStart((Double) newValue);
             return;
@@ -140,12 +143,13 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.TIME_FRAME__START:
             this.setStart(START_EDEFAULT);
             return;
@@ -158,12 +162,13 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.TIME_FRAME__START:
             return this.getStart() != START_EDEFAULT;
         case MonitorRepositoryPackage.TIME_FRAME__STOP:

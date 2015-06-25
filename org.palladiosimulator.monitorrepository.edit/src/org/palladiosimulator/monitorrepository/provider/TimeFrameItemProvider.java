@@ -40,7 +40,8 @@ public class TimeFrameItemProvider extends TemporalCharacterizationItemProvider 
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
             this.addStartPropertyDescriptor(object);
@@ -56,12 +57,20 @@ public class TimeFrameItemProvider extends TemporalCharacterizationItemProvider 
      * @generated
      */
     protected void addStartPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_TimeFrame_start_feature"), this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_TimeFrame_start_feature", "_UI_TimeFrame_type"),
-                        MonitorRepositoryPackage.Literals.TIME_FRAME__START, true, false, false,
-                        ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_TimeFrame_start_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_TimeFrame_start_feature",
+                                "_UI_TimeFrame_type"),
+                                MonitorRepositoryPackage.Literals.TIME_FRAME__START,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -71,12 +80,20 @@ public class TimeFrameItemProvider extends TemporalCharacterizationItemProvider 
      * @generated
      */
     protected void addStopPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_TimeFrame_stop_feature"), this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_TimeFrame_stop_feature", "_UI_TimeFrame_type"),
-                        MonitorRepositoryPackage.Literals.TIME_FRAME__STOP, true, false, false,
-                        ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_TimeFrame_stop_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_TimeFrame_stop_feature",
+                                "_UI_TimeFrame_type"),
+                                MonitorRepositoryPackage.Literals.TIME_FRAME__STOP,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -112,7 +129,8 @@ public class TimeFrameItemProvider extends TemporalCharacterizationItemProvider 
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(TimeFrame.class)) {
+        switch (notification.getFeatureID(TimeFrame.class))
+        {
         case MonitorRepositoryPackage.TIME_FRAME__START:
         case MonitorRepositoryPackage.TIME_FRAME__STOP:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

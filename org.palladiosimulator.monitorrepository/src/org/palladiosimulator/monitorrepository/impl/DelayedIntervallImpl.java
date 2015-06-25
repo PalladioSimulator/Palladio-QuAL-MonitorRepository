@@ -24,7 +24,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
     /**
      * The default value of the '{@link #getDelay() <em>Delay</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getDelay()
      * @generated
      * @ordered
@@ -33,7 +33,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected DelayedIntervallImpl() {
@@ -42,7 +42,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -52,7 +52,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -63,7 +63,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -74,12 +74,13 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY:
             return this.getDelay();
         }
@@ -88,12 +89,13 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY:
             this.setDelay((Double) newValue);
             return;
@@ -103,12 +105,13 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY:
             this.setDelay(DELAY_EDEFAULT);
             return;
@@ -118,12 +121,13 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY:
             return this.getDelay() != DELAY_EDEFAULT;
         }
