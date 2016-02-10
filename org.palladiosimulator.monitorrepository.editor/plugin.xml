@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated monitorrepository -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.monitorrepository.presentation.MonitorRepositoryModelWizardID"
+            name="%_UI_MonitorRepositoryModelWizard_label"
+            class="org.palladiosimulator.monitorrepository.presentation.MonitorRepositoryModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MonitorRepositoryModelFile.gif">
+         <description>%_UI_MonitorRepositoryModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated monitorrepository -->
+      <editor
+            id="org.palladiosimulator.monitorrepository.presentation.MonitorRepositoryEditorID"
+            name="%_UI_MonitorRepositoryEditor_label"
+            icon="icons/full/obj16/MonitorRepositoryModelFile.gif"
+            extensions="monitorrepository"
+            class="org.palladiosimulator.monitorrepository.presentation.MonitorRepositoryEditor"
+            contributorClass="org.palladiosimulator.monitorrepository.presentation.MonitorRepositoryActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
