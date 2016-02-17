@@ -18,6 +18,8 @@ import org.eclipse.emf.cdo.CDOObject;
  * <li>
  * {@link org.palladiosimulator.monitorrepository.RetrospectiveCharacterization#getRetrospectionLength
  * <em>Retrospection Length</em>}</li>
+ * <li>{@link org.palladiosimulator.monitorrepository.RetrospectiveCharacterization#getName
+ * <em>Name</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getRetrospectiveCharacterization()
@@ -54,6 +56,23 @@ public interface RetrospectiveCharacterization extends CDOObject {
      * @generated
      */
     void setRetrospectionLength(double value);
+
+    /**
+     * Returns the value of the '<em><b>Name</b></em>' attribute. The default value is
+     * <code>""</code>. <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a
+     * description here...
+     * </p>
+     * <!-- end-user-doc -->
+     *
+     * @return the value of the '<em>Name</em>' attribute.
+     * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getRetrospectiveCharacterization_Name()
+     * @model default="" changeable="false" volatile="true" derived="true" annotation=
+     *        "http://www.eclipse.org/emf/2002/Ecore/OCL derivation='\'retrospectionLength \' + self.windowLength.toString()  + \' s\''"
+     * @generated
+     */
+    String getName();
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Convenience method to

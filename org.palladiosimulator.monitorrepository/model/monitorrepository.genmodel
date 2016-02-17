@@ -73,11 +73,13 @@
     <genClasses ecoreClass="monitorrepository.ecore#//WindowCharacterization">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//WindowCharacterization/windowLength"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//WindowCharacterization/windowIncrement"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//WindowCharacterization/name"/>
       <genOperations ecoreOperation="monitorrepository.ecore#//WindowCharacterization/getWindowLengthAsMeasure"/>
       <genOperations ecoreOperation="monitorrepository.ecore#//WindowCharacterization/getWindowIncrementAsMeasure"/>
     </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//RetrospectiveCharacterization">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//RetrospectiveCharacterization/retrospectionLength"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//RetrospectiveCharacterization/name"/>
       <genOperations ecoreOperation="monitorrepository.ecore#//RetrospectiveCharacterization/getRetrospectionLengthAsMeasure"/>
     </genClasses>
     <nestedGenPackages prefix="Util" basePackage="org.palladiosimulator.monitorrepository"

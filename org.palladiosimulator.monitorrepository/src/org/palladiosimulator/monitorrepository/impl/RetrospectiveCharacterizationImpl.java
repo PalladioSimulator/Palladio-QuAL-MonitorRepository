@@ -6,6 +6,7 @@ import javax.measure.Measure;
 import javax.measure.quantity.Duration;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 import org.palladiosimulator.monitorrepository.RetrospectiveCharacterization;
@@ -20,6 +21,8 @@ import org.palladiosimulator.monitorrepository.RetrospectiveCharacterization;
  * <li>
  * {@link org.palladiosimulator.monitorrepository.impl.RetrospectiveCharacterizationImpl#getRetrospectionLength
  * <em>Retrospection Length</em>}</li>
+ * <li>{@link org.palladiosimulator.monitorrepository.impl.RetrospectiveCharacterizationImpl#getName
+ * <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -34,6 +37,17 @@ public class RetrospectiveCharacterizationImpl extends CDOObjectImpl implements 
      * @ordered
      */
     protected static final double RETROSPECTION_LENGTH_EDEFAULT = 10.0;
+
+    /**
+     * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal) MonitorRepositoryPackage.Literals.RETROSPECTIVE_CHARACTERIZATION__NAME)
+            .getSettingDelegate();
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -93,6 +107,17 @@ public class RetrospectiveCharacterizationImpl extends CDOObjectImpl implements 
      * @generated
      */
     @Override
+    public String getName() {
+        return (String) this.eDynamicGet(MonitorRepositoryPackage.RETROSPECTIVE_CHARACTERIZATION__NAME,
+                MonitorRepositoryPackage.Literals.RETROSPECTIVE_CHARACTERIZATION__NAME, true, true);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public Measure<Double, Duration> getRetrospectionLengthAsMeasure() {
         return Measure.valueOf(this.getRetrospectionLength(), javax.measure.unit.SI.SECOND);
     }
@@ -107,6 +132,8 @@ public class RetrospectiveCharacterizationImpl extends CDOObjectImpl implements 
         switch (featureID) {
         case MonitorRepositoryPackage.RETROSPECTIVE_CHARACTERIZATION__RETROSPECTION_LENGTH:
             return this.getRetrospectionLength();
+        case MonitorRepositoryPackage.RETROSPECTIVE_CHARACTERIZATION__NAME:
+            return this.getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -151,6 +178,8 @@ public class RetrospectiveCharacterizationImpl extends CDOObjectImpl implements 
         switch (featureID) {
         case MonitorRepositoryPackage.RETROSPECTIVE_CHARACTERIZATION__RETROSPECTION_LENGTH:
             return this.getRetrospectionLength() != RETROSPECTION_LENGTH_EDEFAULT;
+        case MonitorRepositoryPackage.RETROSPECTIVE_CHARACTERIZATION__NAME:
+            return this.NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
         }
         return super.eIsSet(featureID);
     }

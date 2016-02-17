@@ -710,13 +710,22 @@ public interface MonitorRepositoryPackage extends EPackage {
     int WINDOW_CHARACTERIZATION__WINDOW_INCREMENT = 1;
 
     /**
+     * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int WINDOW_CHARACTERIZATION__NAME = 2;
+
+    /**
      * The number of structural features of the '<em>Window Characterization</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int WINDOW_CHARACTERIZATION_FEATURE_COUNT = 2;
+    int WINDOW_CHARACTERIZATION_FEATURE_COUNT = 3;
 
     /**
      * The meta object id for the '
@@ -740,13 +749,22 @@ public interface MonitorRepositoryPackage extends EPackage {
     int RETROSPECTIVE_CHARACTERIZATION__RETROSPECTION_LENGTH = 0;
 
     /**
+     * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int RETROSPECTIVE_CHARACTERIZATION__NAME = 1;
+
+    /**
      * The number of structural features of the '<em>Retrospective Characterization</em>' class.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int RETROSPECTIVE_CHARACTERIZATION_FEATURE_COUNT = 1;
+    int RETROSPECTIVE_CHARACTERIZATION_FEATURE_COUNT = 2;
 
     /**
      * Returns the meta object for class '
@@ -1114,6 +1132,18 @@ public interface MonitorRepositoryPackage extends EPackage {
     EAttribute getWindowCharacterization_WindowIncrement();
 
     /**
+     * Returns the meta object for the attribute '
+     * {@link org.palladiosimulator.monitorrepository.WindowCharacterization#getName <em>Name</em>}
+     * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the attribute '<em>Name</em>'.
+     * @see org.palladiosimulator.monitorrepository.WindowCharacterization#getName()
+     * @see #getWindowCharacterization()
+     * @generated
+     */
+    EAttribute getWindowCharacterization_Name();
+
+    /**
      * Returns the meta object for class '
      * {@link org.palladiosimulator.monitorrepository.RetrospectiveCharacterization
      * <em>Retrospective Characterization</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1135,6 +1165,18 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @generated
      */
     EAttribute getRetrospectiveCharacterization_RetrospectionLength();
+
+    /**
+     * Returns the meta object for the attribute '
+     * {@link org.palladiosimulator.monitorrepository.RetrospectiveCharacterization#getName
+     * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the attribute '<em>Name</em>'.
+     * @see org.palladiosimulator.monitorrepository.RetrospectiveCharacterization#getName()
+     * @see #getRetrospectiveCharacterization()
+     * @generated
+     */
+    EAttribute getRetrospectiveCharacterization_Name();
 
     /**
      * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
@@ -1466,6 +1508,14 @@ public interface MonitorRepositoryPackage extends EPackage {
         EAttribute WINDOW_CHARACTERIZATION__WINDOW_INCREMENT = eINSTANCE.getWindowCharacterization_WindowIncrement();
 
         /**
+         * The meta object literal for the '<em><b>Name</b></em>' attribute feature. <!--
+         * begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EAttribute WINDOW_CHARACTERIZATION__NAME = eINSTANCE.getWindowCharacterization_Name();
+
+        /**
          * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.RetrospectiveCharacterizationImpl
          * <em>Retrospective Characterization</em>}' class. <!-- begin-user-doc --> <!--
@@ -1485,6 +1535,14 @@ public interface MonitorRepositoryPackage extends EPackage {
          */
         EAttribute RETROSPECTIVE_CHARACTERIZATION__RETROSPECTION_LENGTH = eINSTANCE
                 .getRetrospectiveCharacterization_RetrospectionLength();
+
+        /**
+         * The meta object literal for the '<em><b>Name</b></em>' attribute feature. <!--
+         * begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EAttribute RETROSPECTIVE_CHARACTERIZATION__NAME = eINSTANCE.getRetrospectiveCharacterization_Name();
 
     }
 

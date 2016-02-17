@@ -19,6 +19,8 @@ import org.eclipse.emf.cdo.CDOObject;
  * <em>Window Length</em>}</li>
  * <li>{@link org.palladiosimulator.monitorrepository.WindowCharacterization#getWindowIncrement
  * <em>Window Increment</em>}</li>
+ * <li>{@link org.palladiosimulator.monitorrepository.WindowCharacterization#getName <em>Name</em>}
+ * </li>
  * </ul>
  *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getWindowCharacterization()
@@ -79,6 +81,23 @@ public interface WindowCharacterization extends CDOObject {
      * @generated
      */
     void setWindowIncrement(double value);
+
+    /**
+     * Returns the value of the '<em><b>Name</b></em>' attribute. The default value is
+     * <code>""</code>. <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a
+     * description here...
+     * </p>
+     * <!-- end-user-doc -->
+     *
+     * @return the value of the '<em>Name</em>' attribute.
+     * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getWindowCharacterization_Name()
+     * @model default="" changeable="false" volatile="true" derived="true" annotation=
+     *        "http://www.eclipse.org/emf/2002/Ecore/OCL derivation='\'windowLength \' + self.windowLength.toString() + \' s windowIncrement: \' + self.windowIncrement.toString() + \' s\''"
+     * @generated
+     */
+    String getName();
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Convenience method to

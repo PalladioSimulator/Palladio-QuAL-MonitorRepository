@@ -5,7 +5,7 @@ package org.palladiosimulator.monitorrepository.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.StatisticalCharacterizationAggregator;
-import org.palladiosimulator.metricspec.MetricSetDescription;
+import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 import org.palladiosimulator.monitorrepository.StatisticalCharacterization;
 
@@ -51,7 +51,8 @@ public abstract class StatisticalCharacterizationImpl extends CDOObjectImpl impl
      * @generated
      */
     @Override
-    public StatisticalCharacterizationAggregator getAggregator(final MetricSetDescription expectedWindowMetric) {
+    public StatisticalCharacterizationAggregator getAggregator(
+            final NumericalBaseMetricDescription expectedWindowMetric) {
         // TODO: implement this method
         // Ensure that you remove @generated or mark it @generated NOT
         throw new UnsupportedOperationException();

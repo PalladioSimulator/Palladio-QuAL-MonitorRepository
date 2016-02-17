@@ -578,6 +578,16 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
      * @generated
      */
     @Override
+    public EAttribute getWindowCharacterization_Name() {
+        return (EAttribute) this.windowCharacterizationEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public EClass getRetrospectiveCharacterization() {
         return this.retrospectiveCharacterizationEClass;
     }
@@ -590,6 +600,16 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
     @Override
     public EAttribute getRetrospectiveCharacterization_RetrospectionLength() {
         return (EAttribute) this.retrospectiveCharacterizationEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EAttribute getRetrospectiveCharacterization_Name() {
+        return (EAttribute) this.retrospectiveCharacterizationEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -669,10 +689,12 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
         this.windowCharacterizationEClass = this.createEClass(WINDOW_CHARACTERIZATION);
         this.createEAttribute(this.windowCharacterizationEClass, WINDOW_CHARACTERIZATION__WINDOW_LENGTH);
         this.createEAttribute(this.windowCharacterizationEClass, WINDOW_CHARACTERIZATION__WINDOW_INCREMENT);
+        this.createEAttribute(this.windowCharacterizationEClass, WINDOW_CHARACTERIZATION__NAME);
 
         this.retrospectiveCharacterizationEClass = this.createEClass(RETROSPECTIVE_CHARACTERIZATION);
         this.createEAttribute(this.retrospectiveCharacterizationEClass,
                 RETROSPECTIVE_CHARACTERIZATION__RETROSPECTION_LENGTH);
+        this.createEAttribute(this.retrospectiveCharacterizationEClass, RETROSPECTIVE_CHARACTERIZATION__NAME);
     }
 
     /**
@@ -782,40 +804,40 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
         EOperation op = this.addEOperation(this.statisticalCharacterizationEClass,
                 theUtilPackage.getStatisticalCharacterizationAggregator(), "getAggregator", 0, 1, IS_UNIQUE,
                 IS_ORDERED);
-        this.addEParameter(op, theMetricSpecPackage.getMetricSetDescription(), "expectedWindowMetric", 0, 1, IS_UNIQUE,
-                IS_ORDERED);
+        this.addEParameter(op, theMetricSpecPackage.getNumericalBaseMetricDescription(), "expectedWindowMetric", 0, 1,
+                IS_UNIQUE, IS_ORDERED);
 
         this.initEClass(this.arithmeticMeanEClass, ArithmeticMean.class, "ArithmeticMean", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
 
         op = this.addEOperation(this.arithmeticMeanEClass, theUtilPackage.getStatisticalCharacterizationAggregator(),
                 "getAggregator", 0, 1, IS_UNIQUE, IS_ORDERED);
-        this.addEParameter(op, theMetricSpecPackage.getMetricSetDescription(), "expectedWindowMetric", 0, 1, IS_UNIQUE,
-                IS_ORDERED);
+        this.addEParameter(op, theMetricSpecPackage.getNumericalBaseMetricDescription(), "expectedWindowMetric", 0, 1,
+                IS_UNIQUE, IS_ORDERED);
 
         this.initEClass(this.harmonicMeanEClass, HarmonicMean.class, "HarmonicMean", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
 
         op = this.addEOperation(this.harmonicMeanEClass, theUtilPackage.getStatisticalCharacterizationAggregator(),
                 "getAggregator", 0, 1, IS_UNIQUE, IS_ORDERED);
-        this.addEParameter(op, theMetricSpecPackage.getMetricSetDescription(), "expectedWindowMetric", 0, 1, IS_UNIQUE,
-                IS_ORDERED);
+        this.addEParameter(op, theMetricSpecPackage.getNumericalBaseMetricDescription(), "expectedWindowMetric", 0, 1,
+                IS_UNIQUE, IS_ORDERED);
 
         this.initEClass(this.geometricMeanEClass, GeometricMean.class, "GeometricMean", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
 
         op = this.addEOperation(this.geometricMeanEClass, theUtilPackage.getStatisticalCharacterizationAggregator(),
                 "getAggregator", 0, 1, IS_UNIQUE, IS_ORDERED);
-        this.addEParameter(op, theMetricSpecPackage.getMetricSetDescription(), "expectedWindowMetric", 0, 1, IS_UNIQUE,
-                IS_ORDERED);
+        this.addEParameter(op, theMetricSpecPackage.getNumericalBaseMetricDescription(), "expectedWindowMetric", 0, 1,
+                IS_UNIQUE, IS_ORDERED);
 
         this.initEClass(this.medianEClass, Median.class, "Median", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
 
         op = this.addEOperation(this.medianEClass, theUtilPackage.getStatisticalCharacterizationAggregator(),
                 "getAggregator", 0, 1, IS_UNIQUE, IS_ORDERED);
-        this.addEParameter(op, theMetricSpecPackage.getMetricSetDescription(), "expectedWindowMetric", 0, 1, IS_UNIQUE,
-                IS_ORDERED);
+        this.addEParameter(op, theMetricSpecPackage.getNumericalBaseMetricDescription(), "expectedWindowMetric", 0, 1,
+                IS_UNIQUE, IS_ORDERED);
 
         this.initEClass(this.processingTypeEClass, ProcessingType.class, "ProcessingType", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
@@ -865,6 +887,9 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
         this.initEAttribute(this.getWindowCharacterization_WindowIncrement(), this.ecorePackage.getEDouble(),
                 "windowIncrement", "10.0", 0, 1, WindowCharacterization.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEAttribute(this.getWindowCharacterization_Name(), this.ecorePackage.getEString(), "name", "", 0, 1,
+                WindowCharacterization.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
         op = this.addEOperation(this.windowCharacterizationEClass, null, "getWindowLengthAsMeasure", 0, 1, IS_UNIQUE,
                 IS_ORDERED);
@@ -889,6 +914,9 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
         this.initEAttribute(this.getRetrospectiveCharacterization_RetrospectionLength(), this.ecorePackage.getEDouble(),
                 "retrospectionLength", "10.0", 1, 1, RetrospectiveCharacterization.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEAttribute(this.getRetrospectiveCharacterization_Name(), this.ecorePackage.getEString(), "name", "", 0,
+                1, RetrospectiveCharacterization.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE,
+                !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
         op = this.addEOperation(this.retrospectiveCharacterizationEClass, null, "getRetrospectionLengthAsMeasure", 0, 1,
                 IS_UNIQUE, IS_ORDERED);
@@ -969,8 +997,12 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
                 new String[] { "measNum", "self.numberOfMeasurements > 0", "frequency", "self.frequency > 0" });
         this.addAnnotation(this.windowCharacterizationEClass, source, new String[] { "windowLength",
                 "self.windowLength > 0.0", "windowIncrement", "self.windowIncrement > 0.0" });
+        this.addAnnotation(this.getWindowCharacterization_Name(), source, new String[] { "derivation",
+                "\'windowLength \' + self.windowLength.toString() + \' s windowIncrement: \' + self.windowIncrement.toString() + \' s\'" });
         this.addAnnotation(this.retrospectiveCharacterizationEClass, source,
                 new String[] { "retroLength", "self.retrospectionLength > 0.0" });
+        this.addAnnotation(this.getRetrospectiveCharacterization_Name(), source,
+                new String[] { "derivation", "\'retrospectionLength \' + self.windowLength.toString()  + \' s\'" });
     }
 
 } // MonitorRepositoryPackageImpl

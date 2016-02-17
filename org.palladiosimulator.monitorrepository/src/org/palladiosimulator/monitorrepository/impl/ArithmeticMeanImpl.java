@@ -4,7 +4,7 @@ package org.palladiosimulator.monitorrepository.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.StatisticalCharacterizationAggregator;
-import org.palladiosimulator.metricspec.MetricSetDescription;
+import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
 import org.palladiosimulator.monitorrepository.ArithmeticMean;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 
@@ -40,7 +40,8 @@ public class ArithmeticMeanImpl extends StatisticalCharacterizationImpl implemen
      * @generated
      */
     @Override
-    public StatisticalCharacterizationAggregator getAggregator(final MetricSetDescription expectedWindowMetric) {
+    public StatisticalCharacterizationAggregator getAggregator(
+            final NumericalBaseMetricDescription expectedWindowMetric) {
         return new org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.ArithmeticMeanAggregator(
                 expectedWindowMetric);
     }

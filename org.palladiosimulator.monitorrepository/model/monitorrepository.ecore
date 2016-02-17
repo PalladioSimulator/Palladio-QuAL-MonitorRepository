@@ -56,7 +56,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatisticalCharacterization" abstract="true">
     <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
-      <eParameters name="expectedWindowMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//MetricSetDescription"/>
+      <eParameters name="expectedWindowMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArithmeticMean" eSuperTypes="#//StatisticalCharacterization">
@@ -67,7 +67,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="suppressedSetVisibility" value="true"/>
       </eAnnotations>
-      <eParameters name="expectedWindowMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//MetricSetDescription"/>
+      <eParameters name="expectedWindowMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HarmonicMean" eSuperTypes="#//StatisticalCharacterization">
@@ -78,7 +78,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="suppressedSetVisibility" value="true"/>
       </eAnnotations>
-      <eParameters name="expectedWindowMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//MetricSetDescription"/>
+      <eParameters name="expectedWindowMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeometricMean" eSuperTypes="#//StatisticalCharacterization">
@@ -89,7 +89,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="suppressedSetVisibility" value="true"/>
       </eAnnotations>
-      <eParameters name="expectedWindowMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//MetricSetDescription"/>
+      <eParameters name="expectedWindowMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Median" eSuperTypes="#//StatisticalCharacterization">
@@ -100,7 +100,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="suppressedSetVisibility" value="true"/>
       </eAnnotations>
-      <eParameters name="expectedWindowMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//MetricSetDescription"/>
+      <eParameters name="expectedWindowMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProcessingType" abstract="true" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
@@ -192,6 +192,12 @@
         <details key="documentation" value="The increment of the sliding window, in seconds."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true" defaultValueLiteral="" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="derivation" value="'windowLength ' + self.windowLength.toString() + ' s windowIncrement: ' + self.windowIncrement.toString() + ' s'"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RetrospectiveCharacterization">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
@@ -214,6 +220,12 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="10.0">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="This value (interpreted as seconds) determines the length of the retrospection interval.&#xD;&#xA;That is, it specifies which measurements shall be included in the aggregation."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true" defaultValueLiteral="" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="derivation" value="'retrospectionLength ' + self.windowLength.toString()  + ' s'"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>

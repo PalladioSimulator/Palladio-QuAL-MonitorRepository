@@ -3,7 +3,7 @@
 package org.palladiosimulator.monitorrepository;
 
 import org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.StatisticalCharacterizationAggregator;
-import org.palladiosimulator.metricspec.MetricSetDescription;
+import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Geometric Mean</b></em>'.
@@ -26,6 +26,6 @@ public interface GeometricMean extends StatisticalCharacterization {
      * @generated
      */
     @Override
-    StatisticalCharacterizationAggregator getAggregator(MetricSetDescription expectedWindowMetric);
+    StatisticalCharacterizationAggregator getAggregator(NumericalBaseMetricDescription expectedWindowMetric);
 
 } // GeometricMean

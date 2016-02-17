@@ -6,6 +6,7 @@ import javax.measure.Measure;
 import javax.measure.quantity.Duration;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 import org.palladiosimulator.monitorrepository.WindowCharacterization;
@@ -23,6 +24,8 @@ import org.palladiosimulator.monitorrepository.WindowCharacterization;
  * <li>
  * {@link org.palladiosimulator.monitorrepository.impl.WindowCharacterizationImpl#getWindowIncrement
  * <em>Window Increment</em>}</li>
+ * <li>{@link org.palladiosimulator.monitorrepository.impl.WindowCharacterizationImpl#getName
+ * <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,6 +50,17 @@ public class WindowCharacterizationImpl extends CDOObjectImpl implements WindowC
      * @ordered
      */
     protected static final double WINDOW_INCREMENT_EDEFAULT = 10.0;
+
+    /**
+     * The cached setting delegate for the '{@link #getName() <em>Name</em>}' attribute. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal) MonitorRepositoryPackage.Literals.WINDOW_CHARACTERIZATION__NAME)
+            .getSettingDelegate();
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -127,6 +141,17 @@ public class WindowCharacterizationImpl extends CDOObjectImpl implements WindowC
      * @generated
      */
     @Override
+    public String getName() {
+        return (String) this.eDynamicGet(MonitorRepositoryPackage.WINDOW_CHARACTERIZATION__NAME,
+                MonitorRepositoryPackage.Literals.WINDOW_CHARACTERIZATION__NAME, true, true);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public Measure<Double, Duration> getWindowLengthAsMeasure() {
         return Measure.valueOf(this.getWindowLength(), javax.measure.unit.SI.SECOND);
     }
@@ -153,6 +178,8 @@ public class WindowCharacterizationImpl extends CDOObjectImpl implements WindowC
             return this.getWindowLength();
         case MonitorRepositoryPackage.WINDOW_CHARACTERIZATION__WINDOW_INCREMENT:
             return this.getWindowIncrement();
+        case MonitorRepositoryPackage.WINDOW_CHARACTERIZATION__NAME:
+            return this.getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -205,6 +232,8 @@ public class WindowCharacterizationImpl extends CDOObjectImpl implements WindowC
             return this.getWindowLength() != WINDOW_LENGTH_EDEFAULT;
         case MonitorRepositoryPackage.WINDOW_CHARACTERIZATION__WINDOW_INCREMENT:
             return this.getWindowIncrement() != WINDOW_INCREMENT_EDEFAULT;
+        case MonitorRepositoryPackage.WINDOW_CHARACTERIZATION__NAME:
+            return this.NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
         }
         return super.eIsSet(featureID);
     }

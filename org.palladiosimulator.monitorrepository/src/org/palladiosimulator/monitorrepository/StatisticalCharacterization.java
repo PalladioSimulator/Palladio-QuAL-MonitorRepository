@@ -4,7 +4,7 @@ package org.palladiosimulator.monitorrepository;
 
 import org.eclipse.emf.cdo.CDOObject;
 import org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.StatisticalCharacterizationAggregator;
-import org.palladiosimulator.metricspec.MetricSetDescription;
+import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -24,6 +24,6 @@ public interface StatisticalCharacterization extends CDOObject {
      *        "org.palladiosimulator.monitorrepository.util.StatisticalCharacterizationAggregator"
      * @generated
      */
-    StatisticalCharacterizationAggregator getAggregator(MetricSetDescription expectedWindowMetric);
+    StatisticalCharacterizationAggregator getAggregator(NumericalBaseMetricDescription expectedWindowMetric);
 
 } // StatisticalCharacterization
