@@ -53,6 +53,7 @@ public class WindowCharacterizationItemProvider extends ItemProviderAdapter impl
 
             this.addWindowLengthPropertyDescriptor(object);
             this.addWindowIncrementPropertyDescriptor(object);
+            this.addNamePropertyDescriptor(object);
         }
         return this.itemPropertyDescriptors;
     }
@@ -90,6 +91,22 @@ public class WindowCharacterizationItemProvider extends ItemProviderAdapter impl
     }
 
     /**
+     * This adds a property descriptor for the Name feature. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     */
+    protected void addNamePropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_WindowCharacterization_name_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_WindowCharacterization_name_feature",
+                        "_UI_WindowCharacterization_type"),
+                MonitorRepositoryPackage.Literals.WINDOW_CHARACTERIZATION__NAME, false, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+    }
+
+    /**
      * This returns WindowCharacterization.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
@@ -107,8 +124,9 @@ public class WindowCharacterizationItemProvider extends ItemProviderAdapter impl
      */
     @Override
     public String getText(final Object object) {
-        final WindowCharacterization windowCharacterization = (WindowCharacterization) object;
-        return this.getString("_UI_WindowCharacterization_type") + " " + windowCharacterization.getWindowLength();
+        final String label = ((WindowCharacterization) object).getName();
+        return label == null || label.length() == 0 ? this.getString("_UI_WindowCharacterization_type")
+                : this.getString("_UI_WindowCharacterization_type") + " " + label;
     }
 
     /**
@@ -125,6 +143,7 @@ public class WindowCharacterizationItemProvider extends ItemProviderAdapter impl
         switch (notification.getFeatureID(WindowCharacterization.class)) {
         case MonitorRepositoryPackage.WINDOW_CHARACTERIZATION__WINDOW_LENGTH:
         case MonitorRepositoryPackage.WINDOW_CHARACTERIZATION__WINDOW_INCREMENT:
+        case MonitorRepositoryPackage.WINDOW_CHARACTERIZATION__NAME:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }

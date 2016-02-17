@@ -53,6 +53,7 @@ public class RetrospectiveCharacterizationItemProvider extends ItemProviderAdapt
             super.getPropertyDescriptors(object);
 
             this.addRetrospectionLengthPropertyDescriptor(object);
+            this.addNamePropertyDescriptor(object);
         }
         return this.itemPropertyDescriptors;
     }
@@ -75,6 +76,22 @@ public class RetrospectiveCharacterizationItemProvider extends ItemProviderAdapt
     }
 
     /**
+     * This adds a property descriptor for the Name feature. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     */
+    protected void addNamePropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_RetrospectiveCharacterization_name_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_RetrospectiveCharacterization_name_feature",
+                        "_UI_RetrospectiveCharacterization_type"),
+                MonitorRepositoryPackage.Literals.RETROSPECTIVE_CHARACTERIZATION__NAME, false, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+    }
+
+    /**
      * This returns RetrospectiveCharacterization.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
@@ -93,9 +110,9 @@ public class RetrospectiveCharacterizationItemProvider extends ItemProviderAdapt
      */
     @Override
     public String getText(final Object object) {
-        final RetrospectiveCharacterization retrospectiveCharacterization = (RetrospectiveCharacterization) object;
-        return this.getString("_UI_RetrospectiveCharacterization_type") + " "
-                + retrospectiveCharacterization.getRetrospectionLength();
+        final String label = ((RetrospectiveCharacterization) object).getName();
+        return label == null || label.length() == 0 ? this.getString("_UI_RetrospectiveCharacterization_type")
+                : this.getString("_UI_RetrospectiveCharacterization_type") + " " + label;
     }
 
     /**
@@ -111,6 +128,7 @@ public class RetrospectiveCharacterizationItemProvider extends ItemProviderAdapt
 
         switch (notification.getFeatureID(RetrospectiveCharacterization.class)) {
         case MonitorRepositoryPackage.RETROSPECTIVE_CHARACTERIZATION__RETROSPECTION_LENGTH:
+        case MonitorRepositoryPackage.RETROSPECTIVE_CHARACTERIZATION__NAME:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
