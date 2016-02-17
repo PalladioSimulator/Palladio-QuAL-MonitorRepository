@@ -44,19 +44,23 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         volatile="true" defaultValueLiteral="" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if self.specificationKind.oclIsTypeOf(TimeDrivenVariableSizeAggregation) then self.monitor.entityName + ': TimeDrivenVariableSizeAggregation( ' + self.specificationKind.oclAsType(TimeDrivenVariableSizeAggregation).statisticalCharacterization.toString() +')' else self.monitor.entityName + ': ' + self.specificationKind.toString() endif"/>
+        <details key="derivation" value="if self.processingType.oclIsTypeOf(TimeDrivenAggregation) then self.monitor.entityName + ': TimeDrivenAggregation( ' + self.processingType.oclAsType(TimeDrivenAggregation).statisticalCharacterization.toString() +')' else self.monitor.entityName + ': ' + self.processingType.toString() endif"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="specificationKind" lowerBound="1"
-        eType="#//SpecificationKind" containment="true" eOpposite="#//SpecificationKind/measurementSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processingType" lowerBound="1"
+        eType="#//ProcessingType" containment="true" eOpposite="#//ProcessingType/measurementSpecification">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This attribute specifies in what way measurements shall be further processed or aggregated (besides or before being recorded) upon reception."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatisticalCharacterization" abstract="true">
-    <eOperations name="getAggregator" eType="#//StatisticalCharacterizationAggregator">
+    <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
       <eParameters name="expectedWindowMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//MetricSetDescription"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArithmeticMean" eSuperTypes="#//StatisticalCharacterization">
-    <eOperations name="getAggregator" eType="#//StatisticalCharacterizationAggregator">
+    <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return new org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.ArithmeticMeanAggregator(expectedWindowMetric);"/>
       </eAnnotations>
@@ -67,7 +71,7 @@
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HarmonicMean" eSuperTypes="#//StatisticalCharacterization">
-    <eOperations name="getAggregator" eType="#//StatisticalCharacterizationAggregator">
+    <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return new org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.HarmonicMeanAggregator(expectedWindowMetric);"/>
       </eAnnotations>
@@ -78,7 +82,7 @@
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeometricMean" eSuperTypes="#//StatisticalCharacterization">
-    <eOperations name="getAggregator" eType="#//StatisticalCharacterizationAggregator">
+    <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return new org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.GeometricMeanAggregator(expectedWindowMetric);"/>
       </eAnnotations>
@@ -89,7 +93,7 @@
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Median" eSuperTypes="#//StatisticalCharacterization">
-    <eOperations name="getAggregator" eType="#//StatisticalCharacterizationAggregator">
+    <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return new org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.MedianAggregator(expectedWindowMetric);"/>
       </eAnnotations>
@@ -99,13 +103,14 @@
       <eParameters name="expectedWindowMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//MetricSetDescription"/>
     </eOperations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="StatisticalCharacterizationAggregator"
-      instanceClassName="org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.StatisticalCharacterizationAggregator"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SpecificationKind" abstract="true" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessingType" abstract="true" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A ProcessingType specifies in what way measurements shall be further processed or aggregated (besides or before being recorded) upon reception."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="measurementSpecification"
-        lowerBound="1" eType="#//MeasurementSpecification" eOpposite="#//MeasurementSpecification/specificationKind"/>
+        lowerBound="1" eType="#//MeasurementSpecification" eOpposite="#//MeasurementSpecification/processingType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Aggregation" abstract="true" eSuperTypes="#//SpecificationKind">
+  <eClassifiers xsi:type="ecore:EClass" name="Aggregation" abstract="true" eSuperTypes="#//ProcessingType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="statisticalCharacterization"
         lowerBound="1" eType="#//StatisticalCharacterization" containment="true"/>
   </eClassifiers>
@@ -126,24 +131,27 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequency" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="This positive int value indicates the frequency of aggregation.&#xD;&#xA;That is, a value of 'n' indicates that the aggreation shall be done each n-th memasurement.&#xD;&#xA;By default, this value is set to 1."/>
+        <details key="documentation" value="This positive int value indicates the frequency of aggregation.&#xD;&#xA;That is, a value of 'n' indicates that the aggreation shall be done each n-th measurement.&#xD;&#xA;By default, this value is set to 1."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TimeDrivenVariableSizeAggregation" eSuperTypes="#//TimeDriven #//Aggregation"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TimeDriven" eSuperTypes="#//SpecificationKind">
+  <eClassifiers xsi:type="ecore:EClass" name="TimeDrivenAggregation" eSuperTypes="#//TimeDriven #//Aggregation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeDriven" eSuperTypes="#//ProcessingType">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="SpecificationKind suitable for measurement specifications that demand a WindowCharacterization but are not based on statistical aggregation.&#xD;&#xA;Examples for such measurement specifications re the window-based utilization calculation or the power and energy calculation that bases thereof."/>
+      <details key="documentation" value="ProcessingType suitable for measurement specifications that demand a WindowCharacterization (e.g., before being recorded) but are not based on statistical aggregation.&#xD;&#xA;Examples for such measurement specifications re the window-based utilization calculation or the power and energy calculation that bases thereof."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="windowCharacterization"
         lowerBound="1" eType="#//WindowCharacterization" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MeasurementDrivenVariableSizeAggregation"
-      eSuperTypes="#//Aggregation">
+  <eClassifiers xsi:type="ecore:EClass" name="VariableSizeAggregation" eSuperTypes="#//Aggregation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="retrospection" lowerBound="1"
         eType="#//RetrospectiveCharacterization" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SingleValue" eSuperTypes="#//SpecificationKind"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FeedThrough" eSuperTypes="#//ProcessingType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="ProcessingType suitable for measurement specifications that specify measurements which shall only to a recorder.&#xD;&#xA;That is, no more processing or aggregation of any kind whatsover is done."/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WindowCharacterization">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
       <details key="windowLength" value="self.windowLength > 0.0"/>
@@ -152,6 +160,26 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="windowLength windowIncrement"/>
     </eAnnotations>
+    <eOperations name="getWindowLengthAsMeasure">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value=" return Measure .valueOf(getWindowLength(),  javax.measure.unit.SI.SECOND);"/>
+        <details key="documentation" value=" Convenience method to retrieve the property 'windowLength' (interpreted as given in seconds) in terms of a javax.measure.Measure"/>
+      </eAnnotations>
+      <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//ExperimentData/EJSMeasure">
+        <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+        <eTypeArguments eClassifier="#//util/Duration"/>
+      </eGenericType>
+    </eOperations>
+    <eOperations name="getWindowIncrementAsMeasure">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value=" return Measure .valueOf(getWindowIncrement(),  javax.measure.unit.SI.SECOND);"/>
+        <details key="documentation" value=" Convenience method to retrieve the property 'windowIncrement' (interpreted as given in seconds) in terms of a javax.measure.Measure"/>
+      </eAnnotations>
+      <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//ExperimentData/EJSMeasure">
+        <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+        <eTypeArguments eClassifier="#//util/Duration"/>
+      </eGenericType>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="windowLength" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         defaultValueLiteral="10.0">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -172,6 +200,16 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="retroLength"/>
     </eAnnotations>
+    <eOperations name="getRetrospectionLengthAsMeasure">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value=" return Measure .valueOf(getRetrospectionLength(),  javax.measure.unit.SI.SECOND);"/>
+        <details key="documentation" value=" Convenience method to retrieve the property 'retrospectionLength' (interpreted as given in seconds) in terms of a javax.measure.Measure"/>
+      </eAnnotations>
+      <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//ExperimentData/EJSMeasure">
+        <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+        <eTypeArguments eClassifier="#//util/Duration"/>
+      </eGenericType>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="retrospectionLength" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="10.0">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -179,4 +217,10 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
+  <eSubpackages name="util" nsURI="http://palladiosimulator.org/MonitorRepository/Util/1.0"
+      nsPrefix="monitorrepository">
+    <eClassifiers xsi:type="ecore:EDataType" name="Duration" instanceClassName="javax.measure.quantity.Duration"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="StatisticalCharacterizationAggregator"
+        instanceClassName="org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.StatisticalCharacterizationAggregator"/>
+  </eSubpackages>
 </ecore:EPackage>

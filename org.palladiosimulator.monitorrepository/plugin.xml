@@ -25,4 +25,12 @@
             class="org.palladiosimulator.monitorrepository.util.MonitorRepositoryResourceFactoryImpl"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated monitorrepository -->
+      <package
+            uri="http://palladiosimulator.org/MonitorRepository/Util/1.0"
+            class="org.palladiosimulator.monitorrepository.util.UtilPackage"
+            genModel="model/monitorrepository.genmodel"/>
+   </extension>
+
 </plugin>
