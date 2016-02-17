@@ -7,30 +7,28 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.palladiosimulator.monitorrepository.MonitorRepository;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryFactory;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
-import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
+import org.palladiosimulator.monitorrepository.TimeDrivenAggregation;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.monitorrepository.MonitorRepository} object. <!-- begin-user-doc -->
- * <!-- end-user-doc -->
+ * {@link org.palladiosimulator.monitorrepository.TimeDrivenAggregation} object. <!-- begin-user-doc
+ * --> <!-- end-user-doc -->
  *
  * @generated
  */
-public class MonitorRepositoryItemProvider extends EntityItemProvider {
+public class TimeDrivenAggregationItemProvider extends TimeDrivenItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
      * @generated
      */
-    public MonitorRepositoryItemProvider(final AdapterFactory adapterFactory) {
+    public TimeDrivenAggregationItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -62,7 +60,7 @@ public class MonitorRepositoryItemProvider extends EntityItemProvider {
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
         if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            this.childrenFeatures.add(MonitorRepositoryPackage.Literals.MONITOR_REPOSITORY__MONITORS);
+            this.childrenFeatures.add(MonitorRepositoryPackage.Literals.AGGREGATION__STATISTICAL_CHARACTERIZATION);
         }
         return this.childrenFeatures;
     }
@@ -81,13 +79,13 @@ public class MonitorRepositoryItemProvider extends EntityItemProvider {
     }
 
     /**
-     * This returns MonitorRepository.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This returns TimeDrivenAggregation.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     @Override
     public Object getImage(final Object object) {
-        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/MonitorRepository"));
+        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/TimeDrivenAggregation"));
     }
 
     /**
@@ -98,9 +96,9 @@ public class MonitorRepositoryItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((MonitorRepository) object).getEntityName();
-        return label == null || label.length() == 0 ? this.getString("_UI_MonitorRepository_type")
-                : this.getString("_UI_MonitorRepository_type") + " " + label;
+        final String label = ((TimeDrivenAggregation) object).getId();
+        return label == null || label.length() == 0 ? this.getString("_UI_TimeDrivenAggregation_type")
+                : this.getString("_UI_TimeDrivenAggregation_type") + " " + label;
     }
 
     /**
@@ -114,8 +112,8 @@ public class MonitorRepositoryItemProvider extends EntityItemProvider {
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(MonitorRepository.class)) {
-        case MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS:
+        switch (notification.getFeatureID(TimeDrivenAggregation.class)) {
+        case MonitorRepositoryPackage.TIME_DRIVEN_AGGREGATION__STATISTICAL_CHARACTERIZATION:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
@@ -132,20 +130,21 @@ public class MonitorRepositoryItemProvider extends EntityItemProvider {
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors
-                .add(this.createChildParameter(MonitorRepositoryPackage.Literals.MONITOR_REPOSITORY__MONITORS,
-                        MonitorRepositoryFactory.eINSTANCE.createMonitor()));
-    }
+        newChildDescriptors.add(
+                this.createChildParameter(MonitorRepositoryPackage.Literals.AGGREGATION__STATISTICAL_CHARACTERIZATION,
+                        MonitorRepositoryFactory.eINSTANCE.createArithmeticMean()));
 
-    /**
-     * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public ResourceLocator getResourceLocator() {
-        return MonitorrepositoryEditPlugin.INSTANCE;
+        newChildDescriptors.add(
+                this.createChildParameter(MonitorRepositoryPackage.Literals.AGGREGATION__STATISTICAL_CHARACTERIZATION,
+                        MonitorRepositoryFactory.eINSTANCE.createHarmonicMean()));
+
+        newChildDescriptors.add(
+                this.createChildParameter(MonitorRepositoryPackage.Literals.AGGREGATION__STATISTICAL_CHARACTERIZATION,
+                        MonitorRepositoryFactory.eINSTANCE.createGeometricMean()));
+
+        newChildDescriptors.add(
+                this.createChildParameter(MonitorRepositoryPackage.Literals.AGGREGATION__STATISTICAL_CHARACTERIZATION,
+                        MonitorRepositoryFactory.eINSTANCE.createMedian()));
     }
 
 }

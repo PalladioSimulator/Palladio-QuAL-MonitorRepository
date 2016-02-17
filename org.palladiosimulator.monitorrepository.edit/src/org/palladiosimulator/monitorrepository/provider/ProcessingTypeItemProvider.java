@@ -8,30 +8,26 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.palladiosimulator.monitorrepository.ProcessingType;
+
+import de.uka.ipd.sdq.identifier.provider.IdentifierItemProvider;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.monitorrepository.StatisticalCharacterization} object. <!--
- * begin-user-doc --> <!-- end-user-doc -->
+ * {@link org.palladiosimulator.monitorrepository.ProcessingType} object. <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
  *
  * @generated
  */
-public class StatisticalCharacterizationItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ProcessingTypeItemProvider extends IdentifierItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
      * @generated
      */
-    public StatisticalCharacterizationItemProvider(final AdapterFactory adapterFactory) {
+    public ProcessingTypeItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -58,7 +54,9 @@ public class StatisticalCharacterizationItemProvider extends ItemProviderAdapter
      */
     @Override
     public String getText(final Object object) {
-        return this.getString("_UI_StatisticalCharacterization_type");
+        final String label = ((ProcessingType) object).getId();
+        return label == null || label.length() == 0 ? this.getString("_UI_ProcessingType_type")
+                : this.getString("_UI_ProcessingType_type") + " " + label;
     }
 
     /**

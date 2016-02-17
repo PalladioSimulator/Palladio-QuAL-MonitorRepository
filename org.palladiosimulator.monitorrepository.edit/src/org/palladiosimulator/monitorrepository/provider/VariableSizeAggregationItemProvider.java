@@ -12,23 +12,23 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryFactory;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
-import org.palladiosimulator.monitorrepository.TimeDrivenVariableSizeAggregation;
+import org.palladiosimulator.monitorrepository.VariableSizeAggregation;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.monitorrepository.TimeDrivenVariableSizeAggregation} object. <!--
+ * {@link org.palladiosimulator.monitorrepository.VariableSizeAggregation} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  *
  * @generated
  */
-public class TimeDrivenVariableSizeAggregationItemProvider extends TimeDrivenItemProvider {
+public class VariableSizeAggregationItemProvider extends AggregationItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
      * @generated
      */
-    public TimeDrivenVariableSizeAggregationItemProvider(final AdapterFactory adapterFactory) {
+    public VariableSizeAggregationItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -60,7 +60,7 @@ public class TimeDrivenVariableSizeAggregationItemProvider extends TimeDrivenIte
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
         if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            this.childrenFeatures.add(MonitorRepositoryPackage.Literals.AGGREGATION__STATISTICAL_CHARACTERIZATION);
+            this.childrenFeatures.add(MonitorRepositoryPackage.Literals.VARIABLE_SIZE_AGGREGATION__RETROSPECTION);
         }
         return this.childrenFeatures;
     }
@@ -79,15 +79,13 @@ public class TimeDrivenVariableSizeAggregationItemProvider extends TimeDrivenIte
     }
 
     /**
-     * This returns TimeDrivenVariableSizeAggregation.gif. <!-- begin-user-doc --> <!-- end-user-doc
-     * -->
+     * This returns VariableSizeAggregation.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     @Override
     public Object getImage(final Object object) {
-        return this.overlayImage(object,
-                this.getResourceLocator().getImage("full/obj16/TimeDrivenVariableSizeAggregation"));
+        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/VariableSizeAggregation"));
     }
 
     /**
@@ -98,9 +96,9 @@ public class TimeDrivenVariableSizeAggregationItemProvider extends TimeDrivenIte
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((TimeDrivenVariableSizeAggregation) object).getId();
-        return label == null || label.length() == 0 ? this.getString("_UI_TimeDrivenVariableSizeAggregation_type")
-                : this.getString("_UI_TimeDrivenVariableSizeAggregation_type") + " " + label;
+        final String label = ((VariableSizeAggregation) object).getId();
+        return label == null || label.length() == 0 ? this.getString("_UI_VariableSizeAggregation_type")
+                : this.getString("_UI_VariableSizeAggregation_type") + " " + label;
     }
 
     /**
@@ -114,8 +112,8 @@ public class TimeDrivenVariableSizeAggregationItemProvider extends TimeDrivenIte
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(TimeDrivenVariableSizeAggregation.class)) {
-        case MonitorRepositoryPackage.TIME_DRIVEN_VARIABLE_SIZE_AGGREGATION__STATISTICAL_CHARACTERIZATION:
+        switch (notification.getFeatureID(VariableSizeAggregation.class)) {
+        case MonitorRepositoryPackage.VARIABLE_SIZE_AGGREGATION__RETROSPECTION:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
@@ -133,20 +131,8 @@ public class TimeDrivenVariableSizeAggregationItemProvider extends TimeDrivenIte
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(
-                this.createChildParameter(MonitorRepositoryPackage.Literals.AGGREGATION__STATISTICAL_CHARACTERIZATION,
-                        MonitorRepositoryFactory.eINSTANCE.createArithmeticMean()));
-
-        newChildDescriptors.add(
-                this.createChildParameter(MonitorRepositoryPackage.Literals.AGGREGATION__STATISTICAL_CHARACTERIZATION,
-                        MonitorRepositoryFactory.eINSTANCE.createHarmonicMean()));
-
-        newChildDescriptors.add(
-                this.createChildParameter(MonitorRepositoryPackage.Literals.AGGREGATION__STATISTICAL_CHARACTERIZATION,
-                        MonitorRepositoryFactory.eINSTANCE.createGeometricMean()));
-
-        newChildDescriptors.add(
-                this.createChildParameter(MonitorRepositoryPackage.Literals.AGGREGATION__STATISTICAL_CHARACTERIZATION,
-                        MonitorRepositoryFactory.eINSTANCE.createMedian()));
+                this.createChildParameter(MonitorRepositoryPackage.Literals.VARIABLE_SIZE_AGGREGATION__RETROSPECTION,
+                        MonitorRepositoryFactory.eINSTANCE.createRetrospectiveCharacterization()));
     }
 
 }

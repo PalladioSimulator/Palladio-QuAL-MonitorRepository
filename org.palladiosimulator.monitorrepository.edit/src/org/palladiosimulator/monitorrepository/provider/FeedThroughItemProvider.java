@@ -8,21 +8,23 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.palladiosimulator.monitorrepository.FeedThrough;
 
 /**
- * This is the item provider adapter for a {@link org.palladiosimulator.monitorrepository.Median}
- * object. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * This is the item provider adapter for a
+ * {@link org.palladiosimulator.monitorrepository.FeedThrough} object. <!-- begin-user-doc --> <!--
+ * end-user-doc -->
  *
  * @generated
  */
-public class MedianItemProvider extends StatisticalCharacterizationItemProvider {
+public class FeedThroughItemProvider extends ProcessingTypeItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
      * @generated
      */
-    public MedianItemProvider(final AdapterFactory adapterFactory) {
+    public FeedThroughItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -42,13 +44,13 @@ public class MedianItemProvider extends StatisticalCharacterizationItemProvider 
     }
 
     /**
-     * This returns Median.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This returns FeedThrough.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     @Override
     public Object getImage(final Object object) {
-        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/Median"));
+        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/FeedThrough"));
     }
 
     /**
@@ -59,7 +61,9 @@ public class MedianItemProvider extends StatisticalCharacterizationItemProvider 
      */
     @Override
     public String getText(final Object object) {
-        return this.getString("_UI_Median_type");
+        final String label = ((FeedThrough) object).getId();
+        return label == null || label.length() == 0 ? this.getString("_UI_FeedThrough_type")
+                : this.getString("_UI_FeedThrough_type") + " " + label;
     }
 
     /**
