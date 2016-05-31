@@ -10,10 +10,11 @@ package org.palladiosimulator.monitorrepository;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.palladiosimulator.monitorrepository.Intervall#getIntervall <em>Intervall</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.palladiosimulator.monitorrepository.Intervall#getIntervall <em>Intervall</em>}
+ * </li>
+ * </ul>
  *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getIntervall()
  * @model

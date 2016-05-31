@@ -11,11 +11,12 @@ import org.palladiosimulator.monitorrepository.TimeFrame;
  * end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.monitorrepository.impl.TimeFrameImpl#getStart <em>Start</em>}</li>
+ * <li>{@link org.palladiosimulator.monitorrepository.impl.TimeFrameImpl#getStart <em>Start</em>}
+ * </li>
  * <li>{@link org.palladiosimulator.monitorrepository.impl.TimeFrameImpl#getStop <em>Stop</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -79,8 +80,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
     @Override
     public void setStart(final double newStart) {
         this.eDynamicSet(MonitorRepositoryPackage.TIME_FRAME__START,
-                MonitorRepositoryPackage.Literals.TIME_FRAME__START,
-                newStart);
+                MonitorRepositoryPackage.Literals.TIME_FRAME__START, newStart);
     }
 
     /**
@@ -112,8 +112,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.TIME_FRAME__START:
             return this.getStart();
         case MonitorRepositoryPackage.TIME_FRAME__STOP:
@@ -129,8 +128,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.TIME_FRAME__START:
             this.setStart((Double) newValue);
             return;
@@ -148,8 +146,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.TIME_FRAME__START:
             this.setStart(START_EDEFAULT);
             return;
@@ -167,8 +164,7 @@ public class TimeFrameImpl extends TemporalCharacterizationImpl implements TimeF
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.TIME_FRAME__START:
             return this.getStart() != START_EDEFAULT;
         case MonitorRepositoryPackage.TIME_FRAME__STOP:

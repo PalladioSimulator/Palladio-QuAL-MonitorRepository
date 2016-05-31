@@ -15,6 +15,7 @@ import de.uka.ipd.sdq.identifier.Identifier;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  * <li>
  * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getTemporalRestriction
@@ -24,12 +25,14 @@ import de.uka.ipd.sdq.identifier.Identifier;
  * <em>Statistical Characterization</em>}</li>
  * <li>{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMetricDescription
  * <em>Metric Description</em>}</li>
- * <li>{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMonitor <em>
- * Monitor</em>}</li>
- * <li>{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getName <em>Name
- * </em>}</li>
+ * <li>{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMonitor
+ * <em>Monitor</em>}</li>
+ * <li>{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getName <em>Name</em>
+ * }</li>
+ * <li>
+ * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#isTriggersSelfAdaptations
+ * <em>Triggers Self Adaptations</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification()
  * @model
@@ -182,8 +185,8 @@ public interface MeasurementSpecification extends Identifier {
 
     /**
      * Sets the value of the '
-     * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getName
-     * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getName <em>Name</em>
+     * }' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value
      *            the new value of the '<em>Name</em>' attribute.
@@ -191,5 +194,34 @@ public interface MeasurementSpecification extends Identifier {
      * @generated
      */
     void setName(String value);
+
+    /**
+     * Returns the value of the '<em><b>Triggers Self Adaptations</b></em>' attribute. The default
+     * value is <code>"true"</code>. <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Triggers Self Adaptations</em>' attribute isn't clear, there
+     * really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     *
+     * @return the value of the '<em>Triggers Self Adaptations</em>' attribute.
+     * @see #setTriggersSelfAdaptations(boolean)
+     * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification_TriggersSelfAdaptations()
+     * @model default="true"
+     * @generated
+     */
+    boolean isTriggersSelfAdaptations();
+
+    /**
+     * Sets the value of the '
+     * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#isTriggersSelfAdaptations
+     * <em>Triggers Self Adaptations</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @param value
+     *            the new value of the '<em>Triggers Self Adaptations</em>' attribute.
+     * @see #isTriggersSelfAdaptations()
+     * @generated
+     */
+    void setTriggersSelfAdaptations(boolean value);
 
 } // MeasurementSpecification

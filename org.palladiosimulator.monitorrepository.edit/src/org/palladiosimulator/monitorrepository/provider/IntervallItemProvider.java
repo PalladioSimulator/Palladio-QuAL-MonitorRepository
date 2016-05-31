@@ -40,8 +40,7 @@ public class IntervallItemProvider extends TemporalCharacterizationItemProvider 
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addIntervallPropertyDescriptor(object);
@@ -56,20 +55,13 @@ public class IntervallItemProvider extends TemporalCharacterizationItemProvider 
      * @generated
      */
     protected void addIntervallPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-                (this.createItemPropertyDescriptor
-                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_Intervall_intervall_feature"),
-                        this.getString("_UI_PropertyDescriptor_description", "_UI_Intervall_intervall_feature",
-                                "_UI_Intervall_type"),
-                                MonitorRepositoryPackage.Literals.INTERVALL__INTERVALL,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_Intervall_intervall_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_Intervall_intervall_feature",
+                        "_UI_Intervall_type"),
+                MonitorRepositoryPackage.Literals.INTERVALL__INTERVALL, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -105,8 +97,7 @@ public class IntervallItemProvider extends TemporalCharacterizationItemProvider 
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(Intervall.class))
-        {
+        switch (notification.getFeatureID(Intervall.class)) {
         case MonitorRepositoryPackage.INTERVALL__INTERVALL:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;

@@ -19,11 +19,11 @@ import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
  * '. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.palladiosimulator.monitorrepository.impl.MonitorRepositoryImpl#getMonitors <em>
- * Monitors</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.palladiosimulator.monitorrepository.impl.MonitorRepositoryImpl#getMonitors
+ * <em>Monitors</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -69,8 +69,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
     @Override
     public NotificationChain eInverseAdd(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS:
             return ((InternalEList<InternalEObject>) (InternalEList<?>) this.getMonitors()).basicAdd(otherEnd, msgs);
         }
@@ -85,8 +84,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
     @Override
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS:
             return ((InternalEList<?>) this.getMonitors()).basicRemove(otherEnd, msgs);
         }
@@ -100,8 +98,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS:
             return this.getMonitors();
         }
@@ -116,8 +113,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
     @SuppressWarnings("unchecked")
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS:
             this.getMonitors().clear();
             this.getMonitors().addAll((Collection<? extends Monitor>) newValue);
@@ -133,8 +129,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS:
             this.getMonitors().clear();
             return;
@@ -149,8 +144,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.MONITOR_REPOSITORY__MONITORS:
             return !this.getMonitors().isEmpty();
         }

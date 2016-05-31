@@ -11,10 +11,10 @@ package org.palladiosimulator.monitorrepository;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  * <li>{@link org.palladiosimulator.monitorrepository.DelayedIntervall#getDelay <em>Delay</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getDelayedIntervall()
  * @model

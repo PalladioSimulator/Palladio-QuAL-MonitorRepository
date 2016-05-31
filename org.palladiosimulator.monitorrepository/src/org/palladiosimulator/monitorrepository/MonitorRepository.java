@@ -14,11 +14,11 @@ import org.palladiosimulator.pcm.core.entity.Entity;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.palladiosimulator.monitorrepository.MonitorRepository#getMonitors <em>Monitors
- * </em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.palladiosimulator.monitorrepository.MonitorRepository#getMonitors
+ * <em>Monitors</em>}</li>
+ * </ul>
  *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMonitorRepository()
  * @model

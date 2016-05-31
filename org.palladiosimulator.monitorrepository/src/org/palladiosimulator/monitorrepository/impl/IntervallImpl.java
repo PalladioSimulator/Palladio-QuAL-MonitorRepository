@@ -11,11 +11,11 @@ import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
  * end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.palladiosimulator.monitorrepository.impl.IntervallImpl#getIntervall <em>Intervall
- * </em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.palladiosimulator.monitorrepository.impl.IntervallImpl#getIntervall
+ * <em>Intervall</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -79,8 +79,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.INTERVALL__INTERVALL:
             return this.getIntervall();
         }
@@ -94,8 +93,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.INTERVALL__INTERVALL:
             this.setIntervall((Double) newValue);
             return;
@@ -110,8 +108,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.INTERVALL__INTERVALL:
             this.setIntervall(INTERVALL_EDEFAULT);
             return;
@@ -126,8 +123,7 @@ public class IntervallImpl extends TemporalCharacterizationImpl implements Inter
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.INTERVALL__INTERVALL:
             return this.getIntervall() != INTERVALL_EDEFAULT;
         }

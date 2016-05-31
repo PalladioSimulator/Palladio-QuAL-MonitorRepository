@@ -30,8 +30,8 @@ import org.palladiosimulator.monitorrepository.util.MonitorRepositoryAdapterFact
  *
  * @generated
  */
-public class MonitorRepositoryItemProviderAdapterFactory extends MonitorRepositoryAdapterFactory implements
-        ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+public class MonitorRepositoryItemProviderAdapterFactory extends MonitorRepositoryAdapterFactory
+        implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
@@ -88,8 +88,7 @@ public class MonitorRepositoryItemProviderAdapterFactory extends MonitorReposito
      */
     @Override
     public Adapter createMonitorRepositoryAdapter() {
-        if (this.monitorRepositoryItemProvider == null)
-        {
+        if (this.monitorRepositoryItemProvider == null) {
             this.monitorRepositoryItemProvider = new MonitorRepositoryItemProvider(this);
         }
 
@@ -113,8 +112,7 @@ public class MonitorRepositoryItemProviderAdapterFactory extends MonitorReposito
      */
     @Override
     public Adapter createMonitorAdapter() {
-        if (this.monitorItemProvider == null)
-        {
+        if (this.monitorItemProvider == null) {
             this.monitorItemProvider = new MonitorItemProvider(this);
         }
 
@@ -139,8 +137,7 @@ public class MonitorRepositoryItemProviderAdapterFactory extends MonitorReposito
      */
     @Override
     public Adapter createMeasurementSpecificationAdapter() {
-        if (this.measurementSpecificationItemProvider == null)
-        {
+        if (this.measurementSpecificationItemProvider == null) {
             this.measurementSpecificationItemProvider = new MeasurementSpecificationItemProvider(this);
         }
 
@@ -164,8 +161,7 @@ public class MonitorRepositoryItemProviderAdapterFactory extends MonitorReposito
      */
     @Override
     public Adapter createIntervallAdapter() {
-        if (this.intervallItemProvider == null)
-        {
+        if (this.intervallItemProvider == null) {
             this.intervallItemProvider = new IntervallItemProvider(this);
         }
 
@@ -190,8 +186,7 @@ public class MonitorRepositoryItemProviderAdapterFactory extends MonitorReposito
      */
     @Override
     public Adapter createDelayedIntervallAdapter() {
-        if (this.delayedIntervallItemProvider == null)
-        {
+        if (this.delayedIntervallItemProvider == null) {
             this.delayedIntervallItemProvider = new DelayedIntervallItemProvider(this);
         }
 
@@ -215,8 +210,7 @@ public class MonitorRepositoryItemProviderAdapterFactory extends MonitorReposito
      */
     @Override
     public Adapter createTimeFrameAdapter() {
-        if (this.timeFrameItemProvider == null)
-        {
+        if (this.timeFrameItemProvider == null) {
             this.timeFrameItemProvider = new TimeFrameItemProvider(this);
         }
 
@@ -273,11 +267,9 @@ public class MonitorRepositoryItemProviderAdapterFactory extends MonitorReposito
      */
     @Override
     public Object adapt(final Object object, final Object type) {
-        if (this.isFactoryForType(type))
-        {
+        if (this.isFactoryForType(type)) {
             final Object adapter = super.adapt(object, type);
-            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter)))
-            {
+            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
                 return adapter;
             }
         }
@@ -315,8 +307,7 @@ public class MonitorRepositoryItemProviderAdapterFactory extends MonitorReposito
     public void fireNotifyChanged(final Notification notification) {
         this.changeNotifier.fireNotifyChanged(notification);
 
-        if (this.parentAdapterFactory != null)
-        {
+        if (this.parentAdapterFactory != null) {
             this.parentAdapterFactory.fireNotifyChanged(notification);
         }
     }

@@ -11,11 +11,11 @@ import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
  * '. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.palladiosimulator.monitorrepository.impl.DelayedIntervallImpl#getDelay <em>Delay
- * </em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.palladiosimulator.monitorrepository.impl.DelayedIntervallImpl#getDelay
+ * <em>Delay</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -79,8 +79,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY:
             return this.getDelay();
         }
@@ -94,8 +93,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY:
             this.setDelay((Double) newValue);
             return;
@@ -110,8 +108,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY:
             this.setDelay(DELAY_EDEFAULT);
             return;
@@ -126,8 +123,7 @@ public class DelayedIntervallImpl extends IntervallImpl implements DelayedInterv
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.DELAYED_INTERVALL__DELAY:
             return this.getDelay() != DELAY_EDEFAULT;
         }

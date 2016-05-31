@@ -20,6 +20,7 @@ import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
  * <em><b>Measurement Specification</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  * <li>
  * {@link org.palladiosimulator.monitorrepository.impl.MeasurementSpecificationImpl#getTemporalRestriction
@@ -32,10 +33,12 @@ import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
  * <em>Metric Description</em>}</li>
  * <li>{@link org.palladiosimulator.monitorrepository.impl.MeasurementSpecificationImpl#getMonitor
  * <em>Monitor</em>}</li>
- * <li>{@link org.palladiosimulator.monitorrepository.impl.MeasurementSpecificationImpl#getName <em>
- * Name</em>}</li>
+ * <li>{@link org.palladiosimulator.monitorrepository.impl.MeasurementSpecificationImpl#getName
+ * <em>Name</em>}</li>
+ * <li>
+ * {@link org.palladiosimulator.monitorrepository.impl.MeasurementSpecificationImpl#isTriggersSelfAdaptations
+ * <em>Triggers Self Adaptations</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -62,6 +65,16 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
      */
     protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal) MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__NAME)
             .getSettingDelegate();
+
+    /**
+     * The default value of the '{@link #isTriggersSelfAdaptations()
+     * <em>Triggers Self Adaptations</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @see #isTriggersSelfAdaptations()
+     * @generated
+     * @ordered
+     */
+    protected static final boolean TRIGGERS_SELF_ADAPTATIONS_EDEFAULT = true;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -237,9 +250,31 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
      * @generated
      */
     @Override
+    public boolean isTriggersSelfAdaptations() {
+        return (Boolean) this.eDynamicGet(MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS, true, true);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setTriggersSelfAdaptations(final boolean newTriggersSelfAdaptations) {
+        this.eDynamicSet(MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS,
+                newTriggersSelfAdaptations);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public NotificationChain eInverseAdd(final InternalEObject otherEnd, final int featureID, NotificationChain msgs) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
             if (this.eInternalContainer() != null) {
                 msgs = this.eBasicRemoveFromContainer(msgs);
@@ -257,8 +292,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
     @Override
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
             return this.basicSetTemporalRestriction(null, msgs);
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
@@ -274,8 +308,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
      */
     @Override
     public NotificationChain eBasicRemoveFromContainerFeature(final NotificationChain msgs) {
-        switch (this.eContainerFeatureID())
-        {
+        switch (this.eContainerFeatureID()) {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
             return this.eInternalContainer().eInverseRemove(this,
                     MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS, Monitor.class, msgs);
@@ -290,8 +323,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
             return this.getTemporalRestriction();
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION:
@@ -305,6 +337,8 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
             return this.getMonitor();
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
             return this.getName();
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS:
+            return this.isTriggersSelfAdaptations();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -316,8 +350,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
             this.setTemporalRestriction((TemporalCharacterization) newValue);
             return;
@@ -333,6 +366,9 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
             this.setName((String) newValue);
             return;
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS:
+            this.setTriggersSelfAdaptations((Boolean) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -344,8 +380,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
             this.setTemporalRestriction((TemporalCharacterization) null);
             return;
@@ -361,6 +396,9 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
             this.NAME__ESETTING_DELEGATE.dynamicUnset(this, null, 0);
             return;
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS:
+            this.setTriggersSelfAdaptations(TRIGGERS_SELF_ADAPTATIONS_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -372,8 +410,7 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
             return this.getTemporalRestriction() != null;
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION:
@@ -384,6 +421,8 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
             return this.getMonitor() != null;
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
             return this.NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS:
+            return this.isTriggersSelfAdaptations() != TRIGGERS_SELF_ADAPTATIONS_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

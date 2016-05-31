@@ -32,6 +32,8 @@
         eType="ecore:EClass platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//measuringpoint/MeasuringPoint"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="monitorRepository" lowerBound="1"
         eType="#//MonitorRepository" eOpposite="#//MonitorRepository/monitors"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activated" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
+        defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MeasurementSpecification" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -51,6 +53,9 @@
         <details key="derivation" value="if self.temporalRestriction->notEmpty() then self.monitor.entityName + ': ' + self.statisticalCharacterization.toString() + ' of ' + self.temporalRestriction.oclAsType(ecore::EObject).eClass().name else self.monitor.entityName + ': ' + self.statisticalCharacterization.toString() endif"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="triggersSelfAdaptations"
+        eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
+        defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TemporalCharacterization" abstract="true"
       eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">

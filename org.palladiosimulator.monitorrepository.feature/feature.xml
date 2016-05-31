@@ -2,7 +2,7 @@
 <feature
       id="org.palladiosimulator.monitorrepository.feature"
       label="MonitorRepository Feature"
-      version="1.0.0.qualifier"
+      version="1.0.1.qualifier"
       plugin="org.palladiosimulator.branding"
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
@@ -27,7 +27,7 @@
       <import plugin="de.uka.ipd.sdq.stoex"/>
       <import plugin="de.uka.ipd.sdq.units"/>
       <import plugin="org.palladiosimulator.edp2" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.monitorrepository" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="org.palladiosimulator.monitorrepository" version="2.0.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.edit" version="2.10.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.ecore.edit" version="2.9.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.identifier.edit" version="2.1.0" match="greaterOrEqual"/>
@@ -40,7 +40,7 @@
       <import plugin="de.uka.ipd.sdq.units.edit" version="2.1.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.edp2.edit" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.resources" version="3.9.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.monitorrepository.edit" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="org.palladiosimulator.monitorrepository.edit" version="2.0.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.edit.ui" version="2.10.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui.ide" version="3.10.0" match="greaterOrEqual"/>
       <import plugin="org.junit"/>
@@ -62,13 +62,6 @@
 
    <plugin
          id="org.palladiosimulator.monitorrepository.editor"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.palladiosimulator.monitorrepository.tests"
          download-size="0"
          install-size="0"
          version="0.0.0"

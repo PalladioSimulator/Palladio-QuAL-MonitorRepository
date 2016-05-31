@@ -31,16 +31,13 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
      * @generated
      */
     public static MonitorRepositoryFactory init() {
-        try
-        {
+        try {
             final MonitorRepositoryFactory theMonitorRepositoryFactory = (MonitorRepositoryFactory) EPackage.Registry.INSTANCE
                     .getEFactory(MonitorRepositoryPackage.eNS_URI);
-            if (theMonitorRepositoryFactory != null)
-            {
+            if (theMonitorRepositoryFactory != null) {
                 return theMonitorRepositoryFactory;
             }
-        } catch (final Exception exception)
-        {
+        } catch (final Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
         return new MonitorRepositoryFactoryImpl();
@@ -62,8 +59,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
      */
     @Override
     public EObject create(final EClass eClass) {
-        switch (eClass.getClassifierID())
-        {
+        switch (eClass.getClassifierID()) {
         case MonitorRepositoryPackage.MONITOR_REPOSITORY:
             return this.createMonitorRepository();
         case MonitorRepositoryPackage.MONITOR:
@@ -88,8 +84,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
      */
     @Override
     public Object createFromString(final EDataType eDataType, final String initialValue) {
-        switch (eDataType.getClassifierID())
-        {
+        switch (eDataType.getClassifierID()) {
         case MonitorRepositoryPackage.STATISTICAL_CHARACTERIZATION_ENUM:
             return this.createStatisticalCharacterizationEnumFromString(eDataType, initialValue);
         default:
@@ -104,8 +99,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
      */
     @Override
     public String convertToString(final EDataType eDataType, final Object instanceValue) {
-        switch (eDataType.getClassifierID())
-        {
+        switch (eDataType.getClassifierID()) {
         case MonitorRepositoryPackage.STATISTICAL_CHARACTERIZATION_ENUM:
             return this.convertStatisticalCharacterizationEnumToString(eDataType, instanceValue);
         default:
@@ -188,8 +182,8 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
             final String initialValue) {
         final StatisticalCharacterizationEnum result = StatisticalCharacterizationEnum.get(initialValue);
         if (result == null) {
-            throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '"
-                    + eDataType.getName() + "'");
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
         }
         return result;
     }
@@ -199,7 +193,8 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
      *
      * @generated
      */
-    public String convertStatisticalCharacterizationEnumToString(final EDataType eDataType, final Object instanceValue) {
+    public String convertStatisticalCharacterizationEnumToString(final EDataType eDataType,
+            final Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 

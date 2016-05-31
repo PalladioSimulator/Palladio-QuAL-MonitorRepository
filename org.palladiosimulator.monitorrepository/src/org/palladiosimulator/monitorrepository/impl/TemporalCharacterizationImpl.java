@@ -11,8 +11,6 @@ import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Temporal Characterization</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

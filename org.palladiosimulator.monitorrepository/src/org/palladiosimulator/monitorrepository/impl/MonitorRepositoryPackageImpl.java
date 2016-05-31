@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.palladiosimulator.edp2.models.ExperimentData.ExperimentDataPackage;
 import org.palladiosimulator.edp2.models.Repository.RepositoryPackage;
@@ -227,6 +228,16 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
      * @generated
      */
     @Override
+    public EAttribute getMonitor_Activated() {
+        return (EAttribute) this.monitorEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public EClass getMeasurementSpecification() {
         return this.measurementSpecificationEClass;
     }
@@ -279,6 +290,16 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
     @Override
     public EAttribute getMeasurementSpecification_Name() {
         return (EAttribute) this.measurementSpecificationEClass.getEStructuralFeatures().get(4);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EAttribute getMeasurementSpecification_TriggersSelfAdaptations() {
+        return (EAttribute) this.measurementSpecificationEClass.getEStructuralFeatures().get(5);
     }
 
     /**
@@ -408,6 +429,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
         this.createEReference(this.monitorEClass, MONITOR__MEASUREMENT_SPECIFICATIONS);
         this.createEReference(this.monitorEClass, MONITOR__MEASURING_POINT);
         this.createEReference(this.monitorEClass, MONITOR__MONITOR_REPOSITORY);
+        this.createEAttribute(this.monitorEClass, MONITOR__ACTIVATED);
 
         this.measurementSpecificationEClass = this.createEClass(MEASUREMENT_SPECIFICATION);
         this.createEReference(this.measurementSpecificationEClass, MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION);
@@ -416,6 +438,8 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
         this.createEReference(this.measurementSpecificationEClass, MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION);
         this.createEReference(this.measurementSpecificationEClass, MEASUREMENT_SPECIFICATION__MONITOR);
         this.createEAttribute(this.measurementSpecificationEClass, MEASUREMENT_SPECIFICATION__NAME);
+        this.createEAttribute(this.measurementSpecificationEClass,
+                MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS);
 
         this.temporalCharacterizationEClass = this.createEClass(TEMPORAL_CHARACTERIZATION);
 
@@ -462,6 +486,8 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
                 .getEPackage(EntityPackage.eNS_URI);
         final MeasuringpointPackage theMeasuringpointPackage = (MeasuringpointPackage) EPackage.Registry.INSTANCE
                 .getEPackage(MeasuringpointPackage.eNS_URI);
+        final EcorePackage theEcorePackage = (EcorePackage) EPackage.Registry.INSTANCE
+                .getEPackage(EcorePackage.eNS_URI);
         final IdentifierPackage theIdentifierPackage = (IdentifierPackage) EPackage.Registry.INSTANCE
                 .getEPackage(IdentifierPackage.eNS_URI);
         final MetricSpecPackage theMetricSpecPackage = (MetricSpecPackage) EPackage.Registry.INSTANCE
@@ -482,12 +508,11 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
         // Initialize classes and features; add operations and parameters
         this.initEClass(this.monitorRepositoryEClass, MonitorRepository.class, "MonitorRepository", !IS_ABSTRACT,
-                !IS_INTERFACE,
-                IS_GENERATED_INSTANCE_CLASS);
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEReference(this.getMonitorRepository_Monitors(), this.getMonitor(),
-                this.getMonitor_MonitorRepository(),
-                "monitors", null, 0, -1, MonitorRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                this.getMonitor_MonitorRepository(), "monitors", null, 0, -1, MonitorRepository.class, !IS_TRANSIENT,
+                !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+                IS_ORDERED);
 
         this.initEClass(this.monitorEClass, Monitor.class, "Monitor", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
@@ -500,24 +525,25 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEReference(this.getMonitor_MonitorRepository(), this.getMonitorRepository(),
                 this.getMonitorRepository_Monitors(), "monitorRepository", null, 1, 1, Monitor.class, !IS_TRANSIENT,
-                !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+                !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+                IS_ORDERED);
+        this.initEAttribute(this.getMonitor_Activated(), theEcorePackage.getEBoolean(), "activated", "true", 0, 1,
+                Monitor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, IS_ORDERED);
 
-        this.initEClass(this.measurementSpecificationEClass, MeasurementSpecification.class,
-                "MeasurementSpecification",
+        this.initEClass(this.measurementSpecificationEClass, MeasurementSpecification.class, "MeasurementSpecification",
                 !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEReference(this.getMeasurementSpecification_TemporalRestriction(), this.getTemporalCharacterization(),
-                null,
-                "temporalRestriction", null, 0, 1, MeasurementSpecification.class, !IS_TRANSIENT, !IS_VOLATILE,
+                null, "temporalRestriction", null, 0, 1, MeasurementSpecification.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEAttribute(this.getMeasurementSpecification_StatisticalCharacterization(),
                 this.getStatisticalCharacterizationEnum(), "statisticalCharacterization", "None", 1, 1,
                 MeasurementSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEReference(this.getMeasurementSpecification_MetricDescription(),
-                theMetricSpecPackage.getMetricDescription(),
-                null, "metricDescription", null, 1, 1, MeasurementSpecification.class, !IS_TRANSIENT, !IS_VOLATILE,
-                IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                theMetricSpecPackage.getMetricDescription(), null, "metricDescription", null, 1, 1,
+                MeasurementSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEReference(this.getMeasurementSpecification_Monitor(), this.getMonitor(),
                 this.getMonitor_MeasurementSpecifications(), "monitor", null, 1, 1, MeasurementSpecification.class,
                 !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
@@ -525,20 +551,21 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
         this.initEAttribute(this.getMeasurementSpecification_Name(), this.ecorePackage.getEString(), "name", "", 0, 1,
                 MeasurementSpecification.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        this.initEAttribute(this.getMeasurementSpecification_TriggersSelfAdaptations(), theEcorePackage.getEBoolean(),
+                "triggersSelfAdaptations", "true", 0, 1, MeasurementSpecification.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        this.initEClass(this.temporalCharacterizationEClass, TemporalCharacterization.class,
-                "TemporalCharacterization",
+        this.initEClass(this.temporalCharacterizationEClass, TemporalCharacterization.class, "TemporalCharacterization",
                 IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         this.initEClass(this.intervallEClass, Intervall.class, "Intervall", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getIntervall_Intervall(), this.ecorePackage.getEDouble(), "intervall", "0.0", 1, 1,
-                Intervall.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                Intervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.delayedIntervallEClass, DelayedIntervall.class, "DelayedIntervall", !IS_ABSTRACT,
-                !IS_INTERFACE,
-                IS_GENERATED_INSTANCE_CLASS);
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getDelayedIntervall_Delay(), this.ecorePackage.getEDouble(), "delay", "0.0", 1, 1,
                 DelayedIntervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, IS_ORDERED);
@@ -546,18 +573,19 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
         this.initEClass(this.timeFrameEClass, TimeFrame.class, "TimeFrame", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getTimeFrame_Start(), this.ecorePackage.getEDouble(), "start", "0.0", 1, 1,
-                TimeFrame.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                TimeFrame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, IS_ORDERED);
         this.initEAttribute(this.getTimeFrame_Stop(), this.ecorePackage.getEDouble(), "stop", "0.0", 1, 1,
-                TimeFrame.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                TimeFrame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         this.initEEnum(this.statisticalCharacterizationEnumEEnum, StatisticalCharacterizationEnum.class,
                 "StatisticalCharacterizationEnum");
         this.addEEnumLiteral(this.statisticalCharacterizationEnumEEnum, StatisticalCharacterizationEnum.NONE);
         this.addEEnumLiteral(this.statisticalCharacterizationEnumEEnum, StatisticalCharacterizationEnum.MEDIAN);
-        this.addEEnumLiteral(this.statisticalCharacterizationEnumEEnum, StatisticalCharacterizationEnum.ARITHMETIC_MEAN);
+        this.addEEnumLiteral(this.statisticalCharacterizationEnumEEnum,
+                StatisticalCharacterizationEnum.ARITHMETIC_MEAN);
         this.addEEnumLiteral(this.statisticalCharacterizationEnumEEnum, StatisticalCharacterizationEnum.GEOMETRIC_MEAN);
         this.addEEnumLiteral(this.statisticalCharacterizationEnumEEnum, StatisticalCharacterizationEnum.HARMONIC_MEAN);
 
@@ -581,16 +609,12 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
      */
     protected void createImportAnnotations() {
         final String source = "http://www.eclipse.org/OCL/Import";
-        this.addAnnotation(this,
-                source,
-                new String[]
-                        {
-                "ecore", "http://www.eclipse.org/emf/2002/Ecore",
-                "edp2", "../../../plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//measuringpoint",
-                "entity", "../../../plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity",
-                "identifier", "../../../plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#/",
-                "metricspec", "../../../plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#/"
-                        });
+        this.addAnnotation(this, source,
+                new String[] { "ecore", "http://www.eclipse.org/emf/2002/Ecore", "edp2",
+                        "../../../plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//measuringpoint", "entity",
+                        "../../../plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity", "identifier",
+                        "../../../plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#/", "metricspec",
+                        "../../../plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#/" });
     }
 
     /**
@@ -601,14 +625,10 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
      */
     protected void createEcoreAnnotations() {
         final String source = "http://www.eclipse.org/emf/2002/Ecore";
-        this.addAnnotation(this,
-                source,
-                new String[]
-                        {
-                "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
-                "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
-                "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
-                        });
+        this.addAnnotation(this, source,
+                new String[] { "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL", "settingDelegates",
+                        "http://www.eclipse.org/emf/2002/Ecore/OCL", "validationDelegates",
+                        "http://www.eclipse.org/emf/2002/Ecore/OCL" });
     }
 
     /**
@@ -619,14 +639,8 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
      */
     protected void createOCLAnnotations() {
         final String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
-        this.addAnnotation(
-                this.getMeasurementSpecification_Name(),
-                source,
-                new String[]
-                        {
-                    "derivation",
-                    "if self.temporalRestriction->notEmpty() then self.monitor.entityName + \': \' + self.statisticalCharacterization.toString() + \' of \' + self.temporalRestriction.oclAsType(ecore::EObject).eClass().name else self.monitor.entityName + \': \' + self.statisticalCharacterization.toString() endif"
-                        });
+        this.addAnnotation(this.getMeasurementSpecification_Name(), source, new String[] { "derivation",
+                "if self.temporalRestriction->notEmpty() then self.monitor.entityName + \': \' + self.statisticalCharacterization.toString() + \' of \' + self.temporalRestriction.oclAsType(ecore::EObject).eClass().name else self.monitor.entityName + \': \' + self.statisticalCharacterization.toString() endif" });
     }
 
 } // MonitorRepositoryPackageImpl

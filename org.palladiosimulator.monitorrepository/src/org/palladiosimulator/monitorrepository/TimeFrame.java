@@ -11,11 +11,11 @@ package org.palladiosimulator.monitorrepository;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  * <li>{@link org.palladiosimulator.monitorrepository.TimeFrame#getStart <em>Start</em>}</li>
  * <li>{@link org.palladiosimulator.monitorrepository.TimeFrame#getStop <em>Stop</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getTimeFrame()
  * @model

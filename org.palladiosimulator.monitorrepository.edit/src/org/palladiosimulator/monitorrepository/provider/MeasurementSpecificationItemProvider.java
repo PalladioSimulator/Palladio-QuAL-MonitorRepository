@@ -46,13 +46,13 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addStatisticalCharacterizationPropertyDescriptor(object);
             this.addMetricDescriptionPropertyDescriptor(object);
             this.addNamePropertyDescriptor(object);
+            this.addTriggersSelfAdaptationsPropertyDescriptor(object);
         }
         return this.itemPropertyDescriptors;
     }
@@ -64,22 +64,14 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
      * @generated
      */
     protected void addStatisticalCharacterizationPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-        .add
-                (this.createItemPropertyDescriptor
-                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_MeasurementSpecification_statisticalCharacterization_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_MeasurementSpecification_statisticalCharacterization_feature",
-                                "_UI_MeasurementSpecification_type"),
-                                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_MeasurementSpecification_statisticalCharacterization_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_MeasurementSpecification_statisticalCharacterization_feature",
+                        "_UI_MeasurementSpecification_type"),
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION, true, false,
+                false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -89,21 +81,13 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
      * @generated
      */
     protected void addMetricDescriptionPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-                (this.createItemPropertyDescriptor
-                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_MeasurementSpecification_metricDescription_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_MeasurementSpecification_metricDescription_feature",
-                                "_UI_MeasurementSpecification_type"),
-                                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION,
-                                true,
-                                false,
-                                true,
-                                null,
-                                null,
-                                null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_MeasurementSpecification_metricDescription_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_MeasurementSpecification_metricDescription_feature", "_UI_MeasurementSpecification_type"),
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -113,21 +97,30 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
      * @generated
      */
     protected void addNamePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-                (this.createItemPropertyDescriptor
-                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_MeasurementSpecification_name_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_MeasurementSpecification_name_feature",
-                                "_UI_MeasurementSpecification_type"),
-                                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__NAME,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_MeasurementSpecification_name_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_MeasurementSpecification_name_feature",
+                        "_UI_MeasurementSpecification_type"),
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+    }
+
+    /**
+     * This adds a property descriptor for the Triggers Self Adaptations feature. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    protected void addTriggersSelfAdaptationsPropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_MeasurementSpecification_triggersSelfAdaptations_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_MeasurementSpecification_triggersSelfAdaptations_feature",
+                        "_UI_MeasurementSpecification_type"),
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS, true, false,
+                false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -141,11 +134,10 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures
-            .add(MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION);
+                    .add(MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION);
         }
         return this.childrenFeatures;
     }
@@ -182,9 +174,8 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
     @Override
     public String getText(final Object object) {
         final String label = ((MeasurementSpecification) object).getName();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_MeasurementSpecification_type") :
-                this.getString("_UI_MeasurementSpecification_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_MeasurementSpecification_type")
+                : this.getString("_UI_MeasurementSpecification_type") + " " + label;
     }
 
     /**
@@ -198,10 +189,10 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(MeasurementSpecification.class))
-        {
+        switch (notification.getFeatureID(MeasurementSpecification.class)) {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__STATISTICAL_CHARACTERIZATION:
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION:
@@ -221,20 +212,17 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-                (this.createChildParameter
-                (MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION,
-                        MonitorRepositoryFactory.eINSTANCE.createIntervall()));
+        newChildDescriptors.add(this.createChildParameter(
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION,
+                MonitorRepositoryFactory.eINSTANCE.createIntervall()));
 
-        newChildDescriptors.add
-                (this.createChildParameter
-                (MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION,
-                        MonitorRepositoryFactory.eINSTANCE.createDelayedIntervall()));
+        newChildDescriptors.add(this.createChildParameter(
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION,
+                MonitorRepositoryFactory.eINSTANCE.createDelayedIntervall()));
 
-        newChildDescriptors.add
-                (this.createChildParameter
-                (MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION,
-                        MonitorRepositoryFactory.eINSTANCE.createTimeFrame()));
+        newChildDescriptors.add(this.createChildParameter(
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TEMPORAL_RESTRICTION,
+                MonitorRepositoryFactory.eINSTANCE.createTimeFrame()));
     }
 
     /**

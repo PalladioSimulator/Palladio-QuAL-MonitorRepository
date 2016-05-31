@@ -147,14 +147,8 @@ public enum StatisticalCharacterizationEnum implements Enumerator {
      *
      * @generated
      */
-    private static final StatisticalCharacterizationEnum[] VALUES_ARRAY = new StatisticalCharacterizationEnum[]
-            {
-        NONE,
-        MEDIAN,
-        ARITHMETIC_MEAN,
-        GEOMETRIC_MEAN,
-        HARMONIC_MEAN,
-            };
+    private static final StatisticalCharacterizationEnum[] VALUES_ARRAY = new StatisticalCharacterizationEnum[] { NONE,
+            MEDIAN, ARITHMETIC_MEAN, GEOMETRIC_MEAN, HARMONIC_MEAN, };
 
     /**
      * A public read-only list of all the '<em><b>Statistical Characterization Enum</b></em>'
@@ -162,19 +156,21 @@ public enum StatisticalCharacterizationEnum implements Enumerator {
      *
      * @generated
      */
-    public static final List<StatisticalCharacterizationEnum> VALUES = Collections.unmodifiableList(Arrays
-            .asList(VALUES_ARRAY));
+    public static final List<StatisticalCharacterizationEnum> VALUES = Collections
+            .unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
      * Returns the '<em><b>Statistical Characterization Enum</b></em>' literal with the specified
      * literal value. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
+     * @param literal
+     *            the literal.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static StatisticalCharacterizationEnum get(final String literal) {
         for (final StatisticalCharacterizationEnum result : VALUES_ARRAY) {
-            if (result.toString().equals(literal))
-            {
+            if (result.toString().equals(literal)) {
                 return result;
             }
         }
@@ -185,12 +181,14 @@ public enum StatisticalCharacterizationEnum implements Enumerator {
      * Returns the '<em><b>Statistical Characterization Enum</b></em>' literal with the specified
      * name. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
+     * @param name
+     *            the name.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static StatisticalCharacterizationEnum getByName(final String name) {
         for (final StatisticalCharacterizationEnum result : VALUES_ARRAY) {
-            if (result.getName().equals(name))
-            {
+            if (result.getName().equals(name)) {
                 return result;
             }
         }
@@ -201,11 +199,13 @@ public enum StatisticalCharacterizationEnum implements Enumerator {
      * Returns the '<em><b>Statistical Characterization Enum</b></em>' literal with the specified
      * integer value. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
+     * @param value
+     *            the integer value.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static StatisticalCharacterizationEnum get(final int value) {
-        switch (value)
-        {
+        switch (value) {
         case NONE_VALUE:
             return NONE;
         case MEDIAN_VALUE:
