@@ -31,6 +31,9 @@ import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
  * <li>
  * {@link org.palladiosimulator.monitorrepository.impl.MeasurementSpecificationImpl#getProcessingType
  * <em>Processing Type</em>}</li>
+ * <li>
+ * {@link org.palladiosimulator.monitorrepository.impl.MeasurementSpecificationImpl#isTriggersSelfAdaptations
+ * <em>Triggers Self Adaptations</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,6 +49,16 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
      */
     protected EStructuralFeature.Internal.SettingDelegate NAME__ESETTING_DELEGATE = ((EStructuralFeature.Internal) MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__NAME)
             .getSettingDelegate();
+
+    /**
+     * The default value of the '{@link #isTriggersSelfAdaptations()
+     * <em>Triggers Self Adaptations</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @see #isTriggersSelfAdaptations()
+     * @generated
+     * @ordered
+     */
+    protected static final boolean TRIGGERS_SELF_ADAPTATIONS_EDEFAULT = true;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -194,6 +207,29 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
      * @generated
      */
     @Override
+    public boolean isTriggersSelfAdaptations() {
+        return (Boolean) this.eDynamicGet(MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS, true, true);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setTriggersSelfAdaptations(final boolean newTriggersSelfAdaptations) {
+        this.eDynamicSet(MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS,
+                newTriggersSelfAdaptations);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public NotificationChain eInverseAdd(final InternalEObject otherEnd, final int featureID, NotificationChain msgs) {
         switch (featureID) {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__MONITOR:
@@ -264,6 +300,8 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
             return this.getName();
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__PROCESSING_TYPE:
             return this.getProcessingType();
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS:
+            return this.isTriggersSelfAdaptations();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -287,6 +325,9 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
             return;
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__PROCESSING_TYPE:
             this.setProcessingType((ProcessingType) newValue);
+            return;
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS:
+            this.setTriggersSelfAdaptations((Boolean) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -312,6 +353,9 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__PROCESSING_TYPE:
             this.setProcessingType((ProcessingType) null);
             return;
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS:
+            this.setTriggersSelfAdaptations(TRIGGERS_SELF_ADAPTATIONS_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -332,6 +376,8 @@ public class MeasurementSpecificationImpl extends IdentifierImpl implements Meas
             return this.NAME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__PROCESSING_TYPE:
             return this.getProcessingType() != null;
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS:
+            return this.isTriggersSelfAdaptations() != TRIGGERS_SELF_ADAPTATIONS_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

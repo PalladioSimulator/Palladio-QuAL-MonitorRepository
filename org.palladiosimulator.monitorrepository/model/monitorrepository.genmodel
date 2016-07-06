@@ -20,12 +20,14 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference monitorrepository.ecore#//Monitor/measurementSpecifications"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference monitorrepository.ecore#//Monitor/measuringPoint"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference monitorrepository.ecore#//Monitor/monitorRepository"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//Monitor/activated"/>
     </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//MeasurementSpecification" labelFeature="#//monitorrepository/MeasurementSpecification/name">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference monitorrepository.ecore#//MeasurementSpecification/metricDescription"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference monitorrepository.ecore#//MeasurementSpecification/monitor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//MeasurementSpecification/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference monitorrepository.ecore#//MeasurementSpecification/processingType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//MeasurementSpecification/triggersSelfAdaptations"/>
     </genClasses>
     <genClasses image="false" ecoreClass="monitorrepository.ecore#//StatisticalCharacterization">
       <genOperations ecoreOperation="monitorrepository.ecore#//StatisticalCharacterization/getAggregator">

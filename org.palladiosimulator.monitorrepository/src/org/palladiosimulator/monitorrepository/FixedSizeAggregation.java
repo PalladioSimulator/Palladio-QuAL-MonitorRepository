@@ -6,6 +6,9 @@ package org.palladiosimulator.monitorrepository;
  * <!-- begin-user-doc --> A representation of the model object '
  * <em><b>Fixed Size Aggregation</b></em>'. <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc --> ProcessingType which indicates that fixed-sized sequences of consecutive
+ * measurements shall be aggregated. <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

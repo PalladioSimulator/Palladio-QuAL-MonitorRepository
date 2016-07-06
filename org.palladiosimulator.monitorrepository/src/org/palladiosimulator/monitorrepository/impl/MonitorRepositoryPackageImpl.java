@@ -318,6 +318,16 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
      * @generated
      */
     @Override
+    public EAttribute getMonitor_Activated() {
+        return (EAttribute) this.monitorEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public EClass getMeasurementSpecification() {
         return this.measurementSpecificationEClass;
     }
@@ -360,6 +370,16 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
     @Override
     public EReference getMeasurementSpecification_ProcessingType() {
         return (EReference) this.measurementSpecificationEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EAttribute getMeasurementSpecification_TriggersSelfAdaptations() {
+        return (EAttribute) this.measurementSpecificationEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -649,12 +669,15 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
         this.createEReference(this.monitorEClass, MONITOR__MEASUREMENT_SPECIFICATIONS);
         this.createEReference(this.monitorEClass, MONITOR__MEASURING_POINT);
         this.createEReference(this.monitorEClass, MONITOR__MONITOR_REPOSITORY);
+        this.createEAttribute(this.monitorEClass, MONITOR__ACTIVATED);
 
         this.measurementSpecificationEClass = this.createEClass(MEASUREMENT_SPECIFICATION);
         this.createEReference(this.measurementSpecificationEClass, MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION);
         this.createEReference(this.measurementSpecificationEClass, MEASUREMENT_SPECIFICATION__MONITOR);
         this.createEAttribute(this.measurementSpecificationEClass, MEASUREMENT_SPECIFICATION__NAME);
         this.createEReference(this.measurementSpecificationEClass, MEASUREMENT_SPECIFICATION__PROCESSING_TYPE);
+        this.createEAttribute(this.measurementSpecificationEClass,
+                MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS);
 
         this.statisticalCharacterizationEClass = this.createEClass(STATISTICAL_CHARACTERIZATION);
 
@@ -779,6 +802,9 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
                 this.getMonitorRepository_Monitors(), "monitorRepository", null, 1, 1, Monitor.class, !IS_TRANSIENT,
                 !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
                 IS_ORDERED);
+        this.initEAttribute(this.getMonitor_Activated(), this.ecorePackage.getEBoolean(), "activated", "true", 0, 1,
+                Monitor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.measurementSpecificationEClass, MeasurementSpecification.class, "MeasurementSpecification",
                 !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -797,6 +823,9 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
                 this.getProcessingType_MeasurementSpecification(), "processingType", null, 1, 1,
                 MeasurementSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEAttribute(this.getMeasurementSpecification_TriggersSelfAdaptations(), this.ecorePackage.getEBoolean(),
+                "triggersSelfAdaptations", "true", 0, 1, MeasurementSpecification.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.statisticalCharacterizationEClass, StatisticalCharacterization.class,
                 "StatisticalCharacterization", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

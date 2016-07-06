@@ -161,13 +161,22 @@ public interface MonitorRepositoryPackage extends EPackage {
     int MONITOR__MONITOR_REPOSITORY = EntityPackage.ENTITY_FEATURE_COUNT + 2;
 
     /**
+     * The feature id for the '<em><b>Activated</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int MONITOR__ACTIVATED = EntityPackage.ENTITY_FEATURE_COUNT + 3;
+
+    /**
      * The number of structural features of the '<em>Monitor</em>' class. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int MONITOR_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 3;
+    int MONITOR_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 4;
 
     /**
      * The meta object id for the '
@@ -226,13 +235,22 @@ public interface MonitorRepositoryPackage extends EPackage {
     int MEASUREMENT_SPECIFICATION__PROCESSING_TYPE = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 3;
 
     /**
+     * The feature id for the '<em><b>Triggers Self Adaptations</b></em>' attribute. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 4;
+
+    /**
      * The number of structural features of the '<em>Measurement Specification</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int MEASUREMENT_SPECIFICATION_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 4;
+    int MEASUREMENT_SPECIFICATION_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 5;
 
     /**
      * The meta object id for the '
@@ -837,6 +855,18 @@ public interface MonitorRepositoryPackage extends EPackage {
     EReference getMonitor_MonitorRepository();
 
     /**
+     * Returns the meta object for the attribute '
+     * {@link org.palladiosimulator.monitorrepository.Monitor#isActivated <em>Activated</em>}'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the attribute '<em>Activated</em>'.
+     * @see org.palladiosimulator.monitorrepository.Monitor#isActivated()
+     * @see #getMonitor()
+     * @generated
+     */
+    EAttribute getMonitor_Activated();
+
+    /**
      * Returns the meta object for class '
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification
      * <em>Measurement Specification</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -894,6 +924,18 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @generated
      */
     EReference getMeasurementSpecification_ProcessingType();
+
+    /**
+     * Returns the meta object for the attribute '
+     * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#isTriggersSelfAdaptations
+     * <em>Triggers Self Adaptations</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the attribute '<em>Triggers Self Adaptations</em>'.
+     * @see org.palladiosimulator.monitorrepository.MeasurementSpecification#isTriggersSelfAdaptations()
+     * @see #getMeasurementSpecification()
+     * @generated
+     */
+    EAttribute getMeasurementSpecification_TriggersSelfAdaptations();
 
     /**
      * Returns the meta object for class '
@@ -1255,6 +1297,14 @@ public interface MonitorRepositoryPackage extends EPackage {
         EReference MONITOR__MONITOR_REPOSITORY = eINSTANCE.getMonitor_MonitorRepository();
 
         /**
+         * The meta object literal for the '<em><b>Activated</b></em>' attribute feature. <!--
+         * begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EAttribute MONITOR__ACTIVATED = eINSTANCE.getMonitor_Activated();
+
+        /**
          * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.MeasurementSpecificationImpl
          * <em>Measurement Specification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1297,6 +1347,15 @@ public interface MonitorRepositoryPackage extends EPackage {
          * @generated
          */
         EReference MEASUREMENT_SPECIFICATION__PROCESSING_TYPE = eINSTANCE.getMeasurementSpecification_ProcessingType();
+
+        /**
+         * The meta object literal for the '<em><b>Triggers Self Adaptations</b></em>' attribute
+         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EAttribute MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS = eINSTANCE
+                .getMeasurementSpecification_TriggersSelfAdaptations();
 
         /**
          * The meta object literal for the '

@@ -11,7 +11,7 @@ import de.uka.ipd.sdq.identifier.Identifier;
  * <em><b>Measurement Specification</b></em>'. <!-- end-user-doc -->
  *
  * <!-- begin-model-doc --> A measurement specification for a pcm element including the performance
- * metric and the statistical charaterization. <!-- end-model-doc -->
+ * metric and the processing type. <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
@@ -25,6 +25,9 @@ import de.uka.ipd.sdq.identifier.Identifier;
  * }</li>
  * <li>{@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getProcessingType
  * <em>Processing Type</em>}</li>
+ * <li>
+ * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#isTriggersSelfAdaptations
+ * <em>Triggers Self Adaptations</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification()
@@ -153,5 +156,34 @@ public interface MeasurementSpecification extends Identifier {
      * @generated
      */
     void setProcessingType(ProcessingType value);
+
+    /**
+     * Returns the value of the '<em><b>Triggers Self Adaptations</b></em>' attribute. The default
+     * value is <code>"true"</code>. <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Triggers Self Adaptations</em>' attribute isn't clear, there
+     * really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     *
+     * @return the value of the '<em>Triggers Self Adaptations</em>' attribute.
+     * @see #setTriggersSelfAdaptations(boolean)
+     * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification_TriggersSelfAdaptations()
+     * @model default="true"
+     * @generated
+     */
+    boolean isTriggersSelfAdaptations();
+
+    /**
+     * Sets the value of the '
+     * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#isTriggersSelfAdaptations
+     * <em>Triggers Self Adaptations</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @param value
+     *            the new value of the '<em>Triggers Self Adaptations</em>' attribute.
+     * @see #isTriggersSelfAdaptations()
+     * @generated
+     */
+    void setTriggersSelfAdaptations(boolean value);
 
 } // MeasurementSpecification

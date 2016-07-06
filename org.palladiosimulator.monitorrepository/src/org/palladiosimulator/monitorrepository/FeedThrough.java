@@ -7,8 +7,8 @@ package org.palladiosimulator.monitorrepository;
  * end-user-doc -->
  *
  * <!-- begin-model-doc --> ProcessingType suitable for measurement specifications that specify
- * measurements which shall only to a recorder. That is, no more processing or aggregation of any
- * kind whatsover is done. <!-- end-model-doc -->
+ * measurements which shall only be passed to a recorder. That is, no more processing or aggregation
+ * of any kind whatsover is done. <!-- end-model-doc -->
  *
  *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getFeedThrough()

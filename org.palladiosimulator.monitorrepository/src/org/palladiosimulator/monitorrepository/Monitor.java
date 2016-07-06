@@ -23,6 +23,7 @@ import org.palladiosimulator.pcm.core.entity.Entity;
  * <em>Measuring Point</em>}</li>
  * <li>{@link org.palladiosimulator.monitorrepository.Monitor#getMonitorRepository
  * <em>Monitor Repository</em>}</li>
+ * <li>{@link org.palladiosimulator.monitorrepository.Monitor#isActivated <em>Activated</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMonitor()
@@ -111,5 +112,33 @@ public interface Monitor extends Entity {
      * @generated
      */
     void setMonitorRepository(MonitorRepository value);
+
+    /**
+     * Returns the value of the '<em><b>Activated</b></em>' attribute. The default value is
+     * <code>"true"</code>. <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Activated</em>' attribute isn't clear, there really should be more
+     * of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     *
+     * @return the value of the '<em>Activated</em>' attribute.
+     * @see #setActivated(boolean)
+     * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMonitor_Activated()
+     * @model default="true"
+     * @generated
+     */
+    boolean isActivated();
+
+    /**
+     * Sets the value of the '{@link org.palladiosimulator.monitorrepository.Monitor#isActivated
+     * <em>Activated</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @param value
+     *            the new value of the '<em>Activated</em>' attribute.
+     * @see #isActivated()
+     * @generated
+     */
+    void setActivated(boolean value);
 
 } // Monitor

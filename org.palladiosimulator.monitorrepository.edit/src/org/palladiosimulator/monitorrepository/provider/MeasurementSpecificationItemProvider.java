@@ -50,6 +50,7 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
 
             this.addMetricDescriptionPropertyDescriptor(object);
             this.addNamePropertyDescriptor(object);
+            this.addTriggersSelfAdaptationsPropertyDescriptor(object);
         }
         return this.itemPropertyDescriptors;
     }
@@ -84,6 +85,23 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
                         "_UI_MeasurementSpecification_type"),
                 MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__NAME, true, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+    }
+
+    /**
+     * This adds a property descriptor for the Triggers Self Adaptations feature. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    protected void addTriggersSelfAdaptationsPropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_MeasurementSpecification_triggersSelfAdaptations_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_MeasurementSpecification_triggersSelfAdaptations_feature",
+                        "_UI_MeasurementSpecification_type"),
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS, true, false,
+                false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -153,6 +171,7 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
 
         switch (notification.getFeatureID(MeasurementSpecification.class)) {
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__NAME:
+        case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case MonitorRepositoryPackage.MEASUREMENT_SPECIFICATION__PROCESSING_TYPE:

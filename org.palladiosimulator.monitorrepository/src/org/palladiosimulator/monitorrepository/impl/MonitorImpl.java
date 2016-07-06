@@ -29,11 +29,23 @@ import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
  * <em>Measuring Point</em>}</li>
  * <li>{@link org.palladiosimulator.monitorrepository.impl.MonitorImpl#getMonitorRepository
  * <em>Monitor Repository</em>}</li>
+ * <li>{@link org.palladiosimulator.monitorrepository.impl.MonitorImpl#isActivated
+ * <em>Activated</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MonitorImpl extends EntityImpl implements Monitor {
+    /**
+     * The default value of the '{@link #isActivated() <em>Activated</em>}' attribute. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @see #isActivated()
+     * @generated
+     * @ordered
+     */
+    protected static final boolean ACTIVATED_EDEFAULT = true;
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -137,6 +149,28 @@ public class MonitorImpl extends EntityImpl implements Monitor {
      *
      * @generated
      */
+    @Override
+    public boolean isActivated() {
+        return (Boolean) this.eDynamicGet(MonitorRepositoryPackage.MONITOR__ACTIVATED,
+                MonitorRepositoryPackage.Literals.MONITOR__ACTIVATED, true, true);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setActivated(final boolean newActivated) {
+        this.eDynamicSet(MonitorRepositoryPackage.MONITOR__ACTIVATED,
+                MonitorRepositoryPackage.Literals.MONITOR__ACTIVATED, newActivated);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
     @SuppressWarnings("unchecked")
     @Override
     public NotificationChain eInverseAdd(final InternalEObject otherEnd, final int featureID, NotificationChain msgs) {
@@ -202,6 +236,8 @@ public class MonitorImpl extends EntityImpl implements Monitor {
             return this.basicGetMeasuringPoint();
         case MonitorRepositoryPackage.MONITOR__MONITOR_REPOSITORY:
             return this.getMonitorRepository();
+        case MonitorRepositoryPackage.MONITOR__ACTIVATED:
+            return this.isActivated();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -225,6 +261,9 @@ public class MonitorImpl extends EntityImpl implements Monitor {
         case MonitorRepositoryPackage.MONITOR__MONITOR_REPOSITORY:
             this.setMonitorRepository((MonitorRepository) newValue);
             return;
+        case MonitorRepositoryPackage.MONITOR__ACTIVATED:
+            this.setActivated((Boolean) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -246,6 +285,9 @@ public class MonitorImpl extends EntityImpl implements Monitor {
         case MonitorRepositoryPackage.MONITOR__MONITOR_REPOSITORY:
             this.setMonitorRepository((MonitorRepository) null);
             return;
+        case MonitorRepositoryPackage.MONITOR__ACTIVATED:
+            this.setActivated(ACTIVATED_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -264,6 +306,8 @@ public class MonitorImpl extends EntityImpl implements Monitor {
             return this.basicGetMeasuringPoint() != null;
         case MonitorRepositoryPackage.MONITOR__MONITOR_REPOSITORY:
             return this.getMonitorRepository() != null;
+        case MonitorRepositoryPackage.MONITOR__ACTIVATED:
+            return this.isActivated() != ACTIVATED_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

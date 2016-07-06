@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.monitorrepository.Monitor;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryFactory;
@@ -46,6 +47,7 @@ public class MonitorItemProvider extends EntityItemProvider {
             super.getPropertyDescriptors(object);
 
             this.addMeasuringPointPropertyDescriptor(object);
+            this.addActivatedPropertyDescriptor(object);
         }
         return this.itemPropertyDescriptors;
     }
@@ -63,6 +65,22 @@ public class MonitorItemProvider extends EntityItemProvider {
                 this.getString("_UI_PropertyDescriptor_description", "_UI_Monitor_measuringPoint_feature",
                         "_UI_Monitor_type"),
                 MonitorRepositoryPackage.Literals.MONITOR__MEASURING_POINT, true, false, true, null, null, null));
+    }
+
+    /**
+     * This adds a property descriptor for the Activated feature. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     */
+    protected void addActivatedPropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_Monitor_activated_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_Monitor_activated_feature",
+                        "_UI_Monitor_type"),
+                MonitorRepositoryPackage.Literals.MONITOR__ACTIVATED, true, false, false,
+                ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -131,6 +149,9 @@ public class MonitorItemProvider extends EntityItemProvider {
         this.updateChildren(notification);
 
         switch (notification.getFeatureID(Monitor.class)) {
+        case MonitorRepositoryPackage.MONITOR__ACTIVATED:
+            this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+            return;
         case MonitorRepositoryPackage.MONITOR__MEASUREMENT_SPECIFICATIONS:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;

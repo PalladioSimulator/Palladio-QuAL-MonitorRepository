@@ -8,7 +8,7 @@ package org.palladiosimulator.monitorrepository;
  *
  * <!-- begin-model-doc --> ProcessingType suitable for measurement specifications that demand a
  * WindowCharacterization (e.g., before being recorded) but are not based on statistical
- * aggregation. Examples for such measurement specifications re the window-based utilization
+ * aggregation. Examples for such measurement specifications are the window-based utilization
  * calculation or the power and energy calculation that bases thereof. <!-- end-model-doc -->
  *
  * <p>

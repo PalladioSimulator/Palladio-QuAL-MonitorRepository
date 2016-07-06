@@ -6,6 +6,9 @@ package org.palladiosimulator.monitorrepository;
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Aggregation</b></em>'. <!--
  * end-user-doc -->
  *
+ * <!-- begin-model-doc --> Base class of all kinds of ProcessingTypes which define some manner of
+ * (statistical) aggregation of consecutive measurements. <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
