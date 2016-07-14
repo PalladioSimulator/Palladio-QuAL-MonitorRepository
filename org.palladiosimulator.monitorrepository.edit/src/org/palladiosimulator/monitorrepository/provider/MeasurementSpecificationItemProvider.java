@@ -83,7 +83,7 @@ public class MeasurementSpecificationItemProvider extends IdentifierItemProvider
                 this.getString("_UI_MeasurementSpecification_name_feature"),
                 this.getString("_UI_PropertyDescriptor_description", "_UI_MeasurementSpecification_name_feature",
                         "_UI_MeasurementSpecification_type"),
-                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__NAME, true, false, false,
+                MonitorRepositoryPackage.Literals.MEASUREMENT_SPECIFICATION__NAME, false, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 

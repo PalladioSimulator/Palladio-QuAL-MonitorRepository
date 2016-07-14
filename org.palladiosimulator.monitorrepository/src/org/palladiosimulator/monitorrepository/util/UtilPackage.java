@@ -63,8 +63,7 @@ public interface UtilPackage extends EPackage {
      * The meta object id for the '<em>Statistical Characterization Aggregator</em>' data type. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
-     * @see org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.
-     *      StatisticalCharacterizationAggregator
+     * @see org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.slidingwindow.SlidingWindowStatisticalCharacterizationAggregator
      * @see org.palladiosimulator.monitorrepository.util.impl.UtilPackageImpl#getStatisticalCharacterizationAggregator()
      * @generated
      */
@@ -83,13 +82,12 @@ public interface UtilPackage extends EPackage {
 
     /**
      * Returns the meta object for data type '
-     * {@link org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.StatisticalCharacterizationAggregator
+     * {@link org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.slidingwindow.SlidingWindowStatisticalCharacterizationAggregator
      * <em>Statistical Characterization Aggregator</em>}'. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
      *
      * @return the meta object for data type '<em>Statistical Characterization Aggregator</em>'.
-     * @see org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.
-     *      StatisticalCharacterizationAggregator
+     * @see org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.slidingwindow.SlidingWindowStatisticalCharacterizationAggregator
      * @model instanceClass=
      *        "org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.StatisticalCharacterizationAggregator"
      * @generated

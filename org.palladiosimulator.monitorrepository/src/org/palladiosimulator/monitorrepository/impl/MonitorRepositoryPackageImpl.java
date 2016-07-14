@@ -833,7 +833,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
         EOperation op = this.addEOperation(this.statisticalCharacterizationEClass,
                 theUtilPackage.getStatisticalCharacterizationAggregator(), "getAggregator", 0, 1, IS_UNIQUE,
                 IS_ORDERED);
-        this.addEParameter(op, theMetricSpecPackage.getNumericalBaseMetricDescription(), "expectedWindowMetric", 0, 1,
+        this.addEParameter(op, theMetricSpecPackage.getNumericalBaseMetricDescription(), "expectedDataMetric", 0, 1,
                 IS_UNIQUE, IS_ORDERED);
 
         this.initEClass(this.arithmeticMeanEClass, ArithmeticMean.class, "ArithmeticMean", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1021,7 +1021,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
     protected void createOCLAnnotations() {
         final String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
         this.addAnnotation(this.getMeasurementSpecification_Name(), source, new String[] { "derivation",
-                "if self.processingType.oclIsTypeOf(TimeDrivenAggregation) then self.monitor.entityName + \': TimeDrivenAggregation( \' + self.processingType.oclAsType(TimeDrivenAggregation).statisticalCharacterization.toString() +\')\' else self.monitor.entityName + \': \' + self.processingType.toString() endif" });
+                "if self.processingType.oclIsTypeOf(TimeDrivenAggregation) then self.monitor.entityName + \': TimeDrivenAggregation(\' + self.processingType.oclAsType(TimeDrivenAggregation).statisticalCharacterization.toString() +\')\' else self.monitor.entityName + \': \' + self.processingType.toString() endif" });
         this.addAnnotation(this.fixedSizeAggregationEClass, source,
                 new String[] { "measNum", "self.numberOfMeasurements > 0", "frequency", "self.frequency > 0" });
         this.addAnnotation(this.windowCharacterizationEClass, source, new String[] { "windowLength",

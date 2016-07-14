@@ -24,6 +24,6 @@ public interface StatisticalCharacterization extends CDOObject {
      *        "org.palladiosimulator.monitorrepository.util.StatisticalCharacterizationAggregator"
      * @generated
      */
-    StatisticalCharacterizationAggregator getAggregator(NumericalBaseMetricDescription expectedWindowMetric);
+    StatisticalCharacterizationAggregator getAggregator(NumericalBaseMetricDescription expectedDataMetric);
 
 } // StatisticalCharacterization

@@ -52,7 +52,7 @@ public abstract class StatisticalCharacterizationImpl extends CDOObjectImpl impl
      */
     @Override
     public StatisticalCharacterizationAggregator getAggregator(
-            final NumericalBaseMetricDescription expectedWindowMetric) {
+            final NumericalBaseMetricDescription expectedDataMetric) {
         // TODO: implement this method
         // Ensure that you remove @generated or mark it @generated NOT
         throw new UnsupportedOperationException();

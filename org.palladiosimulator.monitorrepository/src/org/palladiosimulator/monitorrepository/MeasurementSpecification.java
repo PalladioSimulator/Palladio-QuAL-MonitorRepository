@@ -109,7 +109,7 @@ public interface MeasurementSpecification extends Identifier {
      * @see #setName(String)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification_Name()
      * @model default="" volatile="true" derived="true" annotation=
-     *        "http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if self.processingType.oclIsTypeOf(TimeDrivenAggregation) then self.monitor.entityName + \': TimeDrivenAggregation( \' + self.processingType.oclAsType(TimeDrivenAggregation).statisticalCharacterization.toString() +\')\' else self.monitor.entityName + \': \' + self.processingType.toString() endif'"
+     *        "http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if self.processingType.oclIsTypeOf(TimeDrivenAggregation) then self.monitor.entityName + \': TimeDrivenAggregation(\' + self.processingType.oclAsType(TimeDrivenAggregation).statisticalCharacterization.toString() +\')\' else self.monitor.entityName + \': \' + self.processingType.toString() endif'"
      * @generated
      */
     String getName();
