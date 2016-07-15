@@ -3,8 +3,8 @@
 package org.palladiosimulator.monitorrepository;
 
 import org.eclipse.emf.cdo.CDOObject;
-import org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.StatisticalCharacterizationAggregator;
 import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
+import org.palladiosimulator.monitorrepository.statisticalcharacterization.StatisticalCharacterizationAggregator;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '

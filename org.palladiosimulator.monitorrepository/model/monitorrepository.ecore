@@ -66,45 +66,45 @@
   <eClassifiers xsi:type="ecore:EClass" name="ArithmeticMean" eSuperTypes="#//StatisticalCharacterization">
     <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return new org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.ArithmeticMeanAggregator(expectedWindowMetric);"/>
+        <details key="body" value="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.ArithmeticMeanAggregator(expectedDataMetric);"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="suppressedSetVisibility" value="true"/>
       </eAnnotations>
-      <eParameters name="expectedWindowMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
+      <eParameters name="expectedDataMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HarmonicMean" eSuperTypes="#//StatisticalCharacterization">
     <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return new org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.HarmonicMeanAggregator(expectedWindowMetric);"/>
+        <details key="body" value="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.HarmonicMeanAggregator(expectedDataMetric);"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="suppressedSetVisibility" value="true"/>
       </eAnnotations>
-      <eParameters name="expectedWindowMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
+      <eParameters name="expectedDataMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeometricMean" eSuperTypes="#//StatisticalCharacterization">
     <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return new org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.GeometricMeanAggregator(expectedWindowMetric);"/>
+        <details key="body" value="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.GeometricMeanAggregator(expectedDataMetric);"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="suppressedSetVisibility" value="true"/>
       </eAnnotations>
-      <eParameters name="expectedWindowMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
+      <eParameters name="expectedDataMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Median" eSuperTypes="#//StatisticalCharacterization">
     <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return new org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.MedianAggregator(expectedWindowMetric);"/>
+        <details key="body" value="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.MedianAggregator(expectedDataMetric);"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="suppressedSetVisibility" value="true"/>
       </eAnnotations>
-      <eParameters name="expectedWindowMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
+      <eParameters name="expectedDataMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProcessingType" abstract="true" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
@@ -250,6 +250,6 @@
       nsPrefix="monitorrepository">
     <eClassifiers xsi:type="ecore:EDataType" name="Duration" instanceClassName="javax.measure.quantity.Duration"/>
     <eClassifiers xsi:type="ecore:EDataType" name="StatisticalCharacterizationAggregator"
-        instanceClassName="org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.StatisticalCharacterizationAggregator"/>
+        instanceClassName="org.palladiosimulator.monitorrepository.statisticalcharacterization.StatisticalCharacterizationAggregator"/>
   </eSubpackages>
 </ecore:EPackage>

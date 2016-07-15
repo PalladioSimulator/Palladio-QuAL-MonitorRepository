@@ -3,10 +3,10 @@
 package org.palladiosimulator.monitorrepository.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.StatisticalCharacterizationAggregator;
 import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
 import org.palladiosimulator.monitorrepository.GeometricMean;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
+import org.palladiosimulator.monitorrepository.statisticalcharacterization.StatisticalCharacterizationAggregator;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Geometric Mean</b></em>'.
@@ -41,9 +41,9 @@ public class GeometricMeanImpl extends StatisticalCharacterizationImpl implement
      */
     @Override
     public StatisticalCharacterizationAggregator getAggregator(
-            final NumericalBaseMetricDescription expectedWindowMetric) {
-        return new org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.GeometricMeanAggregator(
-                expectedWindowMetric);
+            final NumericalBaseMetricDescription expectedDataMetric) {
+        return new org.palladiosimulator.monitorrepository.statisticalcharacterization.GeometricMeanAggregator(
+                expectedDataMetric);
     }
 
 } // GeometricMeanImpl

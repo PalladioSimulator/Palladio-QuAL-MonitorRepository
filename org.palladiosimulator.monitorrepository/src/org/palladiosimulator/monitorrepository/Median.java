@@ -2,8 +2,8 @@
  */
 package org.palladiosimulator.monitorrepository;
 
-import org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.StatisticalCharacterizationAggregator;
 import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
+import org.palladiosimulator.monitorrepository.statisticalcharacterization.StatisticalCharacterizationAggregator;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Median</b></em>'. <!--
@@ -21,11 +21,11 @@ public interface Median extends StatisticalCharacterization {
      * @model dataType=
      *        "org.palladiosimulator.monitorrepository.util.StatisticalCharacterizationAggregator"
      *        annotation=
-     *        "http://www.eclipse.org/emf/2002/GenModel body='return new org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.MedianAggregator(expectedWindowMetric);'"
+     *        "http://www.eclipse.org/emf/2002/GenModel body='return new org.palladiosimulator.monitorrepository.statisticalcharacterization.MedianAggregator(expectedDataMetric);'"
      *        annotation="http://www.eclipse.org/emf/2002/Ecore suppressedSetVisibility='true'"
      * @generated
      */
     @Override
-    StatisticalCharacterizationAggregator getAggregator(NumericalBaseMetricDescription expectedWindowMetric);
+    StatisticalCharacterizationAggregator getAggregator(NumericalBaseMetricDescription expectedDataMetric);
 
 } // Median

@@ -841,7 +841,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
         op = this.addEOperation(this.arithmeticMeanEClass, theUtilPackage.getStatisticalCharacterizationAggregator(),
                 "getAggregator", 0, 1, IS_UNIQUE, IS_ORDERED);
-        this.addEParameter(op, theMetricSpecPackage.getNumericalBaseMetricDescription(), "expectedWindowMetric", 0, 1,
+        this.addEParameter(op, theMetricSpecPackage.getNumericalBaseMetricDescription(), "expectedDataMetric", 0, 1,
                 IS_UNIQUE, IS_ORDERED);
 
         this.initEClass(this.harmonicMeanEClass, HarmonicMean.class, "HarmonicMean", !IS_ABSTRACT, !IS_INTERFACE,
@@ -849,7 +849,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
         op = this.addEOperation(this.harmonicMeanEClass, theUtilPackage.getStatisticalCharacterizationAggregator(),
                 "getAggregator", 0, 1, IS_UNIQUE, IS_ORDERED);
-        this.addEParameter(op, theMetricSpecPackage.getNumericalBaseMetricDescription(), "expectedWindowMetric", 0, 1,
+        this.addEParameter(op, theMetricSpecPackage.getNumericalBaseMetricDescription(), "expectedDataMetric", 0, 1,
                 IS_UNIQUE, IS_ORDERED);
 
         this.initEClass(this.geometricMeanEClass, GeometricMean.class, "GeometricMean", !IS_ABSTRACT, !IS_INTERFACE,
@@ -857,7 +857,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
         op = this.addEOperation(this.geometricMeanEClass, theUtilPackage.getStatisticalCharacterizationAggregator(),
                 "getAggregator", 0, 1, IS_UNIQUE, IS_ORDERED);
-        this.addEParameter(op, theMetricSpecPackage.getNumericalBaseMetricDescription(), "expectedWindowMetric", 0, 1,
+        this.addEParameter(op, theMetricSpecPackage.getNumericalBaseMetricDescription(), "expectedDataMetric", 0, 1,
                 IS_UNIQUE, IS_ORDERED);
 
         this.initEClass(this.medianEClass, Median.class, "Median", !IS_ABSTRACT, !IS_INTERFACE,
@@ -865,7 +865,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
         op = this.addEOperation(this.medianEClass, theUtilPackage.getStatisticalCharacterizationAggregator(),
                 "getAggregator", 0, 1, IS_UNIQUE, IS_ORDERED);
-        this.addEParameter(op, theMetricSpecPackage.getNumericalBaseMetricDescription(), "expectedWindowMetric", 0, 1,
+        this.addEParameter(op, theMetricSpecPackage.getNumericalBaseMetricDescription(), "expectedDataMetric", 0, 1,
                 IS_UNIQUE, IS_ORDERED);
 
         this.initEClass(this.processingTypeEClass, ProcessingType.class, "ProcessingType", IS_ABSTRACT, !IS_INTERFACE,

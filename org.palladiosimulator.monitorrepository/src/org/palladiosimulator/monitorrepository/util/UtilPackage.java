@@ -130,7 +130,7 @@ public interface UtilPackage extends EPackage {
          * The meta object literal for the '<em>Statistical Characterization Aggregator</em>' data
          * type. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
-         * @see org.palladiosimulator.experimentanalysis.statisticalcharacterization.aggregators.StatisticalCharacterizationAggregator
+         * @see org.palladiosimulator.monitorrepository.statisticalcharacterization.StatisticalCharacterizationAggregator
          * @see org.palladiosimulator.monitorrepository.util.impl.UtilPackageImpl#getStatisticalCharacterizationAggregator()
          * @generated
          */

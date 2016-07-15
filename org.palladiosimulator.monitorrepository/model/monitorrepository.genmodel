@@ -36,22 +36,22 @@
     </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//ArithmeticMean">
       <genOperations ecoreOperation="monitorrepository.ecore#//ArithmeticMean/getAggregator">
-        <genParameters ecoreParameter="monitorrepository.ecore#//ArithmeticMean/getAggregator/expectedWindowMetric"/>
+        <genParameters ecoreParameter="monitorrepository.ecore#//ArithmeticMean/getAggregator/expectedDataMetric"/>
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//HarmonicMean">
       <genOperations ecoreOperation="monitorrepository.ecore#//HarmonicMean/getAggregator">
-        <genParameters ecoreParameter="monitorrepository.ecore#//HarmonicMean/getAggregator/expectedWindowMetric"/>
+        <genParameters ecoreParameter="monitorrepository.ecore#//HarmonicMean/getAggregator/expectedDataMetric"/>
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//GeometricMean">
       <genOperations ecoreOperation="monitorrepository.ecore#//GeometricMean/getAggregator">
-        <genParameters ecoreParameter="monitorrepository.ecore#//GeometricMean/getAggregator/expectedWindowMetric"/>
+        <genParameters ecoreParameter="monitorrepository.ecore#//GeometricMean/getAggregator/expectedDataMetric"/>
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//Median">
       <genOperations ecoreOperation="monitorrepository.ecore#//Median/getAggregator">
-        <genParameters ecoreParameter="monitorrepository.ecore#//Median/getAggregator/expectedWindowMetric"/>
+        <genParameters ecoreParameter="monitorrepository.ecore#//Median/getAggregator/expectedDataMetric"/>
       </genOperations>
     </genClasses>
     <genClasses image="false" ecoreClass="monitorrepository.ecore#//ProcessingType">
