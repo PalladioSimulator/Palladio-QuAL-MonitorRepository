@@ -12,14 +12,24 @@ import javax.measure.unit.SI;
 import org.jscience.physics.amount.Amount;
 import org.palladiosimulator.measurementframework.MeasuringValue;
 import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
+import org.palladiosimulator.monitorrepository.ArithmeticMean;
 
 /**
- * {@link SlidingWindowAggregator} which computes the arithmetic mean from the measurements in the
- * window once it moves on:<br>
- * AM=(x<sub>1</sub> + x<sub>2</sub> + ... + x<sub>n</sub>) / n
+ * {@link StatisticalCharacterizationAggregator} corresponding to the {@link ArithmeticMean} model
+ * class which computes the arithmetic mean of a sequence of measurements (discrete case) or a
+ * function with respect to an interval (continuous case): <br>
+ * In the discrete case this is simply
+ * <code>AM=(x<sub>1</sub> + x<sub>2</sub> + ... + x<sub>n</sub>) / n</code> with {@code n} being
+ * the number of measurements. <br>
+ * <br>
+ * In the continuous case, this aggregator approximates the integral </code> AM=&#8747;f(x)dx
+ * &frasl; (b-a)</code> where {@code a} and {@code b} are upper and lower interval bound and the
+ * integration is carried out from a to b, and the function {@code f} is given by a finite set of
+ * samples (i.e., measurements).
  * 
  * @author Florian Rosenthal
- *
+ * @see <a href=https://en.wikipedia.org/wiki/Mean_of_a_function>https://en.wikipedia.org/wiki/
+ *      Mean_of_a_function</a>
  */
 public class ArithmeticMeanAggregator extends StatisticalCharacterizationAggregator {
 

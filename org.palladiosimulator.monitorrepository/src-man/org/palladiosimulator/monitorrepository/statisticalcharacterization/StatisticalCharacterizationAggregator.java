@@ -15,7 +15,15 @@ import org.palladiosimulator.measurementframework.MeasuringValue;
 import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
 import org.palladiosimulator.metricspec.ScopeOfValidity;
 import org.palladiosimulator.metricspec.constants.MetricDescriptionConstants;
+import org.palladiosimulator.monitorrepository.StatisticalCharacterization;
 
+/**
+ * Abstract base class for all implementations of aggregators for
+ * {@link StatisticalCharacterization}s.
+ * 
+ * @author Florian Rosenthal
+ *
+ */
 public abstract class StatisticalCharacterizationAggregator {
 
     private final NumericalBaseMetricDescription dataMetric;
@@ -26,8 +34,8 @@ public abstract class StatisticalCharacterizationAggregator {
     private Amount<Duration> intervalRightBound;
 
     /**
-     * Initializes a new instance of the {@link SlidingWindowStatisticalCharacterizationAggregator}
-     * class with the given parameter.
+     * Initializes a new instance of the {@link StatisticalCharacterizationAggregator} class with
+     * the given parameter.
      * 
      * @param expectedDataMetric
      *            The {@link NumericalBaseMetricDescription} that describes which kind of
@@ -41,14 +49,48 @@ public abstract class StatisticalCharacterizationAggregator {
         this.dataDefaultUnit = dataMetric.getDefaultUnit();
     }
 
+    /**
+     * Gets the data metric of the measurements this instance is aggregating.
+     * 
+     * @return The {@link NumericalBaseMetricDescription} representing the underlying metric of the
+     *         data.
+     * @see #getDataDefaultUnit()
+     */
     public NumericalBaseMetricDescription getDataMetric() {
         return this.dataMetric;
     }
 
+    /**
+     * Gets the default unit of the aggregated data.
+     * 
+     * @return The default unit of the aggregated data, expressed as a {@link Unit} object.
+     * @see NumericalBaseMetricDescription#getDefaultUnit()
+     * @see #getDataMetric()
+     */
     public Unit<Quantity> getDataDefaultUnit() {
         return this.dataDefaultUnit;
     }
 
+    /**
+     * Method to be called by clients that wish to aggregate a sequence of data.
+     * 
+     * @param data
+     *            The sequence of data/measurements to be aggregated, expressed as an
+     *            {@link Iterable} of {@link MeasuringValue}s.
+     * @param intervalLeftBound
+     *            The left bound of the interval all measurements lie in, expressed in terms of a
+     *            {@link Duration} {@link Amount}.
+     * @param intervalRightBound
+     *            The right bound of the interval all measurements lie in, expressed in terms of a
+     *            {@link Duration} {@link Amount}.
+     * @param intervalLength
+     *            A potentially empty {@link Optional} indicating the interval length.<br>
+     *            If empty, the length is computed from the passed interval bounds.
+     * @return A {@link MeasuringValue} representing the result of the aggregation.
+     * @throws NullPointerException
+     *             If any of the parameters is {@code null}.
+     * @see #getDataMetric()
+     */
     public final MeasuringValue aggregateData(Iterable<MeasuringValue> data, Amount<Duration> intervalLeftBound,
             Amount<Duration> intervalRightBound, Optional<Amount<Duration>> intervalLength) {
 
@@ -77,6 +119,11 @@ public abstract class StatisticalCharacterizationAggregator {
         return measurement.getMeasureForMetric(this.dataMetric);
     }
 
+    /**
+     * Gets the length of the interval that the data to aggregate lie in.
+     * 
+     * @return An {@link Amount} indicating the interval length.
+     */
     protected final Amount<Duration> getIntervalLength() {
         return this.intervalLength;
     }

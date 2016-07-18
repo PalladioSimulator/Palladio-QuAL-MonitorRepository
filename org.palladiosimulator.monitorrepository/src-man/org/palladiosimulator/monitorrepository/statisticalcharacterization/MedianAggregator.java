@@ -17,9 +17,12 @@ import javax.measure.quantity.Quantity;
 import org.jscience.physics.amount.Amount;
 import org.palladiosimulator.measurementframework.MeasuringValue;
 import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
+import org.palladiosimulator.monitorrepository.Median;
 
 /**
- * {@link SlidingWindowAggregator} which computes the median of the measurements.<br>
+ * {@link StatisticalCharacterizationAggregator} corresponding to the {@link Median} model class
+ * which computes the median of a sequence of measurements (discrete case) or a function with
+ * respect to an interval (continuous case)
  * 
  * @author Florian Rosenthal
  *

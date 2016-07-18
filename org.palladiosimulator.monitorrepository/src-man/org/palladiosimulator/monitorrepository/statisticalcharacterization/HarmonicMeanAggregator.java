@@ -12,16 +12,26 @@ import javax.measure.quantity.Quantity;
 import org.jscience.physics.amount.Amount;
 import org.palladiosimulator.measurementframework.MeasuringValue;
 import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
+import org.palladiosimulator.monitorrepository.HarmonicMean;
 
 /**
- * {@link SlidingWindowAggregator} which computes the geometric mean of a sequence of measurements:
- * <br>
- * It is equal to the reciprocal of the arithmetic mean of the reciprocals of the measurements.<br>
+ * {@link StatisticalCharacterizationAggregator} corresponding to the {@link HarmonicMean} model
+ * class which computes the harmonic mean of a sequence of measurements (discrete case) or a
+ * function with respect to an interval (continuous case): <br>
+ * In the discrete case this is simply the reciprocal of the arithmetic mean of the reciprocals of
+ * the measurements.<br>
  * Note that it is not defined if any of the measurements is exactly 0. In such a case this
- * implementation returns 0
+ * implementation returns 0.<br>
+ * <br>
+ * In the continuous case, this aggregator approximates the integral </code> HM=(b-a) &frasl;
+ * &#8747;dx/f(x)</code> where {@code a} and {@code b} are upper and lower interval bound and the
+ * integration is carried out from a to b, and the (positive) function {@code f} is given by a
+ * finite set of samples (i.e., measurements).
  * 
  * @author Florian Rosenthal
- *
+ * @see <a
+ *      href=https://math.stackexchange.com/questions/9007/harmonic-mean-and-logarithmic-mean>https:
+ *      //math.stackexchange.com/questions/9007/harmonic-mean-and-logarithmic-mean</a>
  */
 public class HarmonicMeanAggregator extends StatisticalCharacterizationAggregator {
 
