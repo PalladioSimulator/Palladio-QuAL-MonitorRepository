@@ -1030,8 +1030,8 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
                 "\'windowLength \' + self.windowLength.toString() + \' s windowIncrement: \' + self.windowIncrement.toString() + \' s\'" });
         this.addAnnotation(this.retrospectiveCharacterizationEClass, source,
                 new String[] { "retroLength", "self.retrospectionLength > 0.0" });
-        this.addAnnotation(this.getRetrospectiveCharacterization_Name(), source,
-                new String[] { "derivation", "\'retrospectionLength \' + self.windowLength.toString()  + \' s\'" });
+        this.addAnnotation(this.getRetrospectiveCharacterization_Name(), source, new String[] { "derivation",
+                "\'retrospectionLength \' + self.retrospectionLength.toString()  + \' s\'" });
     }
 
 } // MonitorRepositoryPackageImpl

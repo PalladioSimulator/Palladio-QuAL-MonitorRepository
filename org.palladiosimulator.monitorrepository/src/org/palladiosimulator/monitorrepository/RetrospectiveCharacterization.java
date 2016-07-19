@@ -69,7 +69,7 @@ public interface RetrospectiveCharacterization extends CDOObject {
      * @return the value of the '<em>Name</em>' attribute.
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getRetrospectiveCharacterization_Name()
      * @model default="" changeable="false" volatile="true" derived="true" annotation=
-     *        "http://www.eclipse.org/emf/2002/Ecore/OCL derivation='\'retrospectionLength \' + self.windowLength.toString()  + \' s\''"
+     *        "http://www.eclipse.org/emf/2002/Ecore/OCL derivation='\'retrospectionLength \' + self.retrospectionLength.toString()  + \' s\''"
      * @generated
      */
     String getName();

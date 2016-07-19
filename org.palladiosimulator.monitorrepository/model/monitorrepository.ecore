@@ -242,7 +242,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" defaultValueLiteral="" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="'retrospectionLength ' + self.windowLength.toString()  + ' s'"/>
+        <details key="derivation" value="'retrospectionLength ' + self.retrospectionLength.toString()  + ' s'"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
