@@ -15,6 +15,7 @@ import org.palladiosimulator.monitorrepository.FeedThrough;
 import org.palladiosimulator.monitorrepository.FixedSizeAggregation;
 import org.palladiosimulator.monitorrepository.GeometricMean;
 import org.palladiosimulator.monitorrepository.HarmonicMean;
+import org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation;
 import org.palladiosimulator.monitorrepository.MeasurementSpecification;
 import org.palladiosimulator.monitorrepository.Median;
 import org.palladiosimulator.monitorrepository.Monitor;
@@ -118,6 +119,9 @@ public class MonitorRepositoryValidator extends EObjectValidator {
             return this.validateProcessingType((ProcessingType) value, diagnostics, context);
         case MonitorRepositoryPackage.AGGREGATION:
             return this.validateAggregation((Aggregation) value, diagnostics, context);
+        case MonitorRepositoryPackage.MEASUREMENT_DRIVEN_AGGREGATION:
+            return this.validateMeasurementDrivenAggregation((MeasurementDrivenAggregation) value, diagnostics,
+                    context);
         case MonitorRepositoryPackage.FIXED_SIZE_AGGREGATION:
             return this.validateFixedSizeAggregation((FixedSizeAggregation) value, diagnostics, context);
         case MonitorRepositoryPackage.TIME_DRIVEN_AGGREGATION:
@@ -243,6 +247,69 @@ public class MonitorRepositoryValidator extends EObjectValidator {
      *
      * @generated
      */
+    public boolean validateMeasurementDrivenAggregation(final MeasurementDrivenAggregation measurementDrivenAggregation,
+            final DiagnosticChain diagnostics, final Map<Object, Object> context) {
+        if (!this.validate_NoCircularContainment(measurementDrivenAggregation, diagnostics, context)) {
+            return false;
+        }
+        boolean result = this.validate_EveryMultiplicityConforms(measurementDrivenAggregation, diagnostics, context);
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryDataValueConforms(measurementDrivenAggregation, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryReferenceIsContained(measurementDrivenAggregation, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryBidirectionalReferenceIsPaired(measurementDrivenAggregation, diagnostics,
+                    context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryProxyResolves(measurementDrivenAggregation, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_UniqueID(measurementDrivenAggregation, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryKeyUnique(measurementDrivenAggregation, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryMapEntryUnique(measurementDrivenAggregation, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validateMeasurementDrivenAggregation_frequency(measurementDrivenAggregation, diagnostics,
+                    context);
+        }
+        return result;
+    }
+
+    /**
+     * The cached validation expression for the frequency constraint of '
+     * <em>Measurement Driven Aggregation</em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    protected static final String MEASUREMENT_DRIVEN_AGGREGATION__FREQUENCY__EEXPRESSION = "self.frequency > 0";
+
+    /**
+     * Validates the frequency constraint of '<em>Measurement Driven Aggregation</em>'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public boolean validateMeasurementDrivenAggregation_frequency(
+            final MeasurementDrivenAggregation measurementDrivenAggregation, final DiagnosticChain diagnostics,
+            final Map<Object, Object> context) {
+        return this.validate(MonitorRepositoryPackage.Literals.MEASUREMENT_DRIVEN_AGGREGATION,
+                measurementDrivenAggregation, diagnostics, context, "http://www.eclipse.org/emf/2002/Ecore/OCL",
+                "frequency", MEASUREMENT_DRIVEN_AGGREGATION__FREQUENCY__EEXPRESSION, Diagnostic.ERROR,
+                DIAGNOSTIC_SOURCE, 0);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
     public boolean validateFixedSizeAggregation(final FixedSizeAggregation fixedSizeAggregation,
             final DiagnosticChain diagnostics, final Map<Object, Object> context) {
         if (!this.validate_NoCircularContainment(fixedSizeAggregation, diagnostics, context)) {
@@ -271,10 +338,10 @@ public class MonitorRepositoryValidator extends EObjectValidator {
             result &= this.validate_EveryMapEntryUnique(fixedSizeAggregation, diagnostics, context);
         }
         if (result || diagnostics != null) {
-            result &= this.validateFixedSizeAggregation_measNum(fixedSizeAggregation, diagnostics, context);
+            result &= this.validateMeasurementDrivenAggregation_frequency(fixedSizeAggregation, diagnostics, context);
         }
         if (result || diagnostics != null) {
-            result &= this.validateFixedSizeAggregation_frequency(fixedSizeAggregation, diagnostics, context);
+            result &= this.validateFixedSizeAggregation_measNum(fixedSizeAggregation, diagnostics, context);
         }
         return result;
     }
@@ -298,27 +365,6 @@ public class MonitorRepositoryValidator extends EObjectValidator {
         return this.validate(MonitorRepositoryPackage.Literals.FIXED_SIZE_AGGREGATION, fixedSizeAggregation,
                 diagnostics, context, "http://www.eclipse.org/emf/2002/Ecore/OCL", "measNum",
                 FIXED_SIZE_AGGREGATION__MEAS_NUM__EEXPRESSION, Diagnostic.ERROR, DIAGNOSTIC_SOURCE, 0);
-    }
-
-    /**
-     * The cached validation expression for the frequency constraint of '
-     * <em>Fixed Size Aggregation</em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    protected static final String FIXED_SIZE_AGGREGATION__FREQUENCY__EEXPRESSION = "self.frequency > 0";
-
-    /**
-     * Validates the frequency constraint of '<em>Fixed Size Aggregation</em>'. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    public boolean validateFixedSizeAggregation_frequency(final FixedSizeAggregation fixedSizeAggregation,
-            final DiagnosticChain diagnostics, final Map<Object, Object> context) {
-        return this.validate(MonitorRepositoryPackage.Literals.FIXED_SIZE_AGGREGATION, fixedSizeAggregation,
-                diagnostics, context, "http://www.eclipse.org/emf/2002/Ecore/OCL", "frequency",
-                FIXED_SIZE_AGGREGATION__FREQUENCY__EEXPRESSION, Diagnostic.ERROR, DIAGNOSTIC_SOURCE, 0);
     }
 
     /**
@@ -348,7 +394,36 @@ public class MonitorRepositoryValidator extends EObjectValidator {
      */
     public boolean validateVariableSizeAggregation(final VariableSizeAggregation variableSizeAggregation,
             final DiagnosticChain diagnostics, final Map<Object, Object> context) {
-        return this.validate_EveryDefaultConstraint(variableSizeAggregation, diagnostics, context);
+        if (!this.validate_NoCircularContainment(variableSizeAggregation, diagnostics, context)) {
+            return false;
+        }
+        boolean result = this.validate_EveryMultiplicityConforms(variableSizeAggregation, diagnostics, context);
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryDataValueConforms(variableSizeAggregation, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryReferenceIsContained(variableSizeAggregation, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryBidirectionalReferenceIsPaired(variableSizeAggregation, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryProxyResolves(variableSizeAggregation, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_UniqueID(variableSizeAggregation, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryKeyUnique(variableSizeAggregation, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryMapEntryUnique(variableSizeAggregation, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validateMeasurementDrivenAggregation_frequency(variableSizeAggregation, diagnostics,
+                    context);
+        }
+        return result;
     }
 
     /**

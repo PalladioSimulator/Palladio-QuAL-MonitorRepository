@@ -20,6 +20,7 @@ import org.palladiosimulator.monitorrepository.FeedThrough;
 import org.palladiosimulator.monitorrepository.FixedSizeAggregation;
 import org.palladiosimulator.monitorrepository.GeometricMean;
 import org.palladiosimulator.monitorrepository.HarmonicMean;
+import org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation;
 import org.palladiosimulator.monitorrepository.MeasurementSpecification;
 import org.palladiosimulator.monitorrepository.Median;
 import org.palladiosimulator.monitorrepository.Monitor;
@@ -116,6 +117,13 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
      * @generated
      */
     private EClass aggregationEClass = null;
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    private EClass measurementDrivenAggregationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -478,6 +486,26 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
      * @generated
      */
     @Override
+    public EClass getMeasurementDrivenAggregation() {
+        return this.measurementDrivenAggregationEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EAttribute getMeasurementDrivenAggregation_Frequency() {
+        return (EAttribute) this.measurementDrivenAggregationEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public EClass getFixedSizeAggregation() {
         return this.fixedSizeAggregationEClass;
     }
@@ -490,16 +518,6 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
     @Override
     public EAttribute getFixedSizeAggregation_NumberOfMeasurements() {
         return (EAttribute) this.fixedSizeAggregationEClass.getEStructuralFeatures().get(0);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EAttribute getFixedSizeAggregation_Frequency() {
-        return (EAttribute) this.fixedSizeAggregationEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -695,9 +713,11 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
         this.aggregationEClass = this.createEClass(AGGREGATION);
         this.createEReference(this.aggregationEClass, AGGREGATION__STATISTICAL_CHARACTERIZATION);
 
+        this.measurementDrivenAggregationEClass = this.createEClass(MEASUREMENT_DRIVEN_AGGREGATION);
+        this.createEAttribute(this.measurementDrivenAggregationEClass, MEASUREMENT_DRIVEN_AGGREGATION__FREQUENCY);
+
         this.fixedSizeAggregationEClass = this.createEClass(FIXED_SIZE_AGGREGATION);
         this.createEAttribute(this.fixedSizeAggregationEClass, FIXED_SIZE_AGGREGATION__NUMBER_OF_MEASUREMENTS);
-        this.createEAttribute(this.fixedSizeAggregationEClass, FIXED_SIZE_AGGREGATION__FREQUENCY);
 
         this.timeDrivenAggregationEClass = this.createEClass(TIME_DRIVEN_AGGREGATION);
 
@@ -774,11 +794,12 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
         this.medianEClass.getESuperTypes().add(this.getStatisticalCharacterization());
         this.processingTypeEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
         this.aggregationEClass.getESuperTypes().add(this.getProcessingType());
-        this.fixedSizeAggregationEClass.getESuperTypes().add(this.getAggregation());
+        this.measurementDrivenAggregationEClass.getESuperTypes().add(this.getAggregation());
+        this.fixedSizeAggregationEClass.getESuperTypes().add(this.getMeasurementDrivenAggregation());
         this.timeDrivenAggregationEClass.getESuperTypes().add(this.getTimeDriven());
         this.timeDrivenAggregationEClass.getESuperTypes().add(this.getAggregation());
         this.timeDrivenEClass.getESuperTypes().add(this.getProcessingType());
-        this.variableSizeAggregationEClass.getESuperTypes().add(this.getAggregation());
+        this.variableSizeAggregationEClass.getESuperTypes().add(this.getMeasurementDrivenAggregation());
         this.feedThroughEClass.getESuperTypes().add(this.getProcessingType());
 
         // Initialize classes and features; add operations and parameters
@@ -881,14 +902,17 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
                 null, "statisticalCharacterization", null, 1, 1, Aggregation.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+        this.initEClass(this.measurementDrivenAggregationEClass, MeasurementDrivenAggregation.class,
+                "MeasurementDrivenAggregation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEAttribute(this.getMeasurementDrivenAggregation_Frequency(), this.ecorePackage.getEInt(), "frequency",
+                "1", 1, 1, MeasurementDrivenAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
         this.initEClass(this.fixedSizeAggregationEClass, FixedSizeAggregation.class, "FixedSizeAggregation",
                 !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getFixedSizeAggregation_NumberOfMeasurements(), this.ecorePackage.getEInt(),
                 "numberOfMeasurements", "10", 1, 1, FixedSizeAggregation.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEAttribute(this.getFixedSizeAggregation_Frequency(), this.ecorePackage.getEInt(), "frequency", "1", 1,
-                1, FixedSizeAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-                IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.timeDrivenAggregationEClass, TimeDrivenAggregation.class, "TimeDrivenAggregation",
                 !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1004,8 +1028,9 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
                 new String[] { "suppressedSetVisibility", "true" });
         this.addAnnotation(this.medianEClass.getEOperations().get(0), source,
                 new String[] { "suppressedSetVisibility", "true" });
-        this.addAnnotation(this.fixedSizeAggregationEClass, source,
-                new String[] { "constraints", "measNum frequency" });
+        this.addAnnotation(this.measurementDrivenAggregationEClass, source,
+                new String[] { "constraints", "frequency" });
+        this.addAnnotation(this.fixedSizeAggregationEClass, source, new String[] { "constraints", "measNum" });
         this.addAnnotation(this.windowCharacterizationEClass, source,
                 new String[] { "constraints", "windowLength windowIncrement" });
         this.addAnnotation(this.retrospectiveCharacterizationEClass, source,
@@ -1022,8 +1047,10 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
         final String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
         this.addAnnotation(this.getMeasurementSpecification_Name(), source, new String[] { "derivation",
                 "if self.processingType.oclIsTypeOf(TimeDrivenAggregation) then self.monitor.entityName + \': TimeDrivenAggregation(\' + self.processingType.oclAsType(TimeDrivenAggregation).statisticalCharacterization.toString() +\')\' else self.monitor.entityName + \': \' + self.processingType.toString() endif" });
+        this.addAnnotation(this.measurementDrivenAggregationEClass, source,
+                new String[] { "frequency", "self.frequency > 0" });
         this.addAnnotation(this.fixedSizeAggregationEClass, source,
-                new String[] { "measNum", "self.numberOfMeasurements > 0", "frequency", "self.frequency > 0" });
+                new String[] { "measNum", "self.numberOfMeasurements > 0" });
         this.addAnnotation(this.windowCharacterizationEClass, source, new String[] { "windowLength",
                 "self.windowLength > 0.0", "windowIncrement", "self.windowIncrement > 0.0" });
         this.addAnnotation(this.getWindowCharacterization_Name(), source, new String[] { "derivation",

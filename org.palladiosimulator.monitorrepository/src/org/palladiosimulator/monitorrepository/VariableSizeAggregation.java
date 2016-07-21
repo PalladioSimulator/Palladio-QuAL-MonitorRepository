@@ -18,7 +18,7 @@ package org.palladiosimulator.monitorrepository;
  * @model
  * @generated
  */
-public interface VariableSizeAggregation extends Aggregation {
+public interface VariableSizeAggregation extends MeasurementDrivenAggregation {
     /**
      * Returns the value of the '<em><b>Retrospection</b></em>' containment reference. <!--
      * begin-user-doc -->

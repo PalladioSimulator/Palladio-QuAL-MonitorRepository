@@ -23,7 +23,7 @@ import org.palladiosimulator.monitorrepository.VariableSizeAggregation;
  *
  * @generated
  */
-public class VariableSizeAggregationImpl extends AggregationImpl implements VariableSizeAggregation {
+public class VariableSizeAggregationImpl extends MeasurementDrivenAggregationImpl implements VariableSizeAggregation {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

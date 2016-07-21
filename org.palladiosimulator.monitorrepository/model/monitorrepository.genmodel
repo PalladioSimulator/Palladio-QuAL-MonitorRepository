@@ -60,9 +60,11 @@
     <genClasses image="false" ecoreClass="monitorrepository.ecore#//Aggregation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference monitorrepository.ecore#//Aggregation/statisticalCharacterization"/>
     </genClasses>
+    <genClasses ecoreClass="monitorrepository.ecore#//MeasurementDrivenAggregation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//MeasurementDrivenAggregation/frequency"/>
+    </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//FixedSizeAggregation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//FixedSizeAggregation/numberOfMeasurements"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//FixedSizeAggregation/frequency"/>
     </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//TimeDrivenAggregation"/>
     <genClasses ecoreClass="monitorrepository.ecore#//TimeDriven">

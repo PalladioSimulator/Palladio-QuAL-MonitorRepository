@@ -11,6 +11,7 @@ import org.palladiosimulator.monitorrepository.FeedThrough;
 import org.palladiosimulator.monitorrepository.FixedSizeAggregation;
 import org.palladiosimulator.monitorrepository.GeometricMean;
 import org.palladiosimulator.monitorrepository.HarmonicMean;
+import org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation;
 import org.palladiosimulator.monitorrepository.MeasurementSpecification;
 import org.palladiosimulator.monitorrepository.Median;
 import org.palladiosimulator.monitorrepository.Monitor;
@@ -203,9 +204,29 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
             }
             return result;
         }
+        case MonitorRepositoryPackage.MEASUREMENT_DRIVEN_AGGREGATION: {
+            final MeasurementDrivenAggregation measurementDrivenAggregation = (MeasurementDrivenAggregation) theEObject;
+            T result = this.caseMeasurementDrivenAggregation(measurementDrivenAggregation);
+            if (result == null) {
+                result = this.caseAggregation(measurementDrivenAggregation);
+            }
+            if (result == null) {
+                result = this.caseProcessingType(measurementDrivenAggregation);
+            }
+            if (result == null) {
+                result = this.caseIdentifier(measurementDrivenAggregation);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
+            return result;
+        }
         case MonitorRepositoryPackage.FIXED_SIZE_AGGREGATION: {
             final FixedSizeAggregation fixedSizeAggregation = (FixedSizeAggregation) theEObject;
             T result = this.caseFixedSizeAggregation(fixedSizeAggregation);
+            if (result == null) {
+                result = this.caseMeasurementDrivenAggregation(fixedSizeAggregation);
+            }
             if (result == null) {
                 result = this.caseAggregation(fixedSizeAggregation);
             }
@@ -257,6 +278,9 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
         case MonitorRepositoryPackage.VARIABLE_SIZE_AGGREGATION: {
             final VariableSizeAggregation variableSizeAggregation = (VariableSizeAggregation) theEObject;
             T result = this.caseVariableSizeAggregation(variableSizeAggregation);
+            if (result == null) {
+                result = this.caseMeasurementDrivenAggregation(variableSizeAggregation);
+            }
             if (result == null) {
                 result = this.caseAggregation(variableSizeAggregation);
             }
@@ -456,6 +480,22 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseAggregation(final Aggregation object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '
+     * <em>Measurement Driven Aggregation</em>'. <!-- begin-user-doc --> This implementation returns
+     * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     *
+     * @param object
+     *            the target of the switch.
+     * @return the result of interpreting the object as an instance of '
+     *         <em>Measurement Driven Aggregation</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseMeasurementDrivenAggregation(final MeasurementDrivenAggregation object) {
         return null;
     }
 

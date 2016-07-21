@@ -11,24 +11,24 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.palladiosimulator.monitorrepository.FixedSizeAggregation;
+import org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.monitorrepository.FixedSizeAggregation} object. <!-- begin-user-doc
- * --> <!-- end-user-doc -->
+ * {@link org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation} object. <!--
+ * begin-user-doc --> <!-- end-user-doc -->
  *
  * @generated
  */
-public class FixedSizeAggregationItemProvider extends MeasurementDrivenAggregationItemProvider {
+public class MeasurementDrivenAggregationItemProvider extends AggregationItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
      * @generated
      */
-    public FixedSizeAggregationItemProvider(final AdapterFactory adapterFactory) {
+    public MeasurementDrivenAggregationItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -43,35 +43,35 @@ public class FixedSizeAggregationItemProvider extends MeasurementDrivenAggregati
         if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            this.addNumberOfMeasurementsPropertyDescriptor(object);
+            this.addFrequencyPropertyDescriptor(object);
         }
         return this.itemPropertyDescriptors;
     }
 
     /**
-     * This adds a property descriptor for the Number Of Measurements feature. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * This adds a property descriptor for the Frequency feature. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
      *
      * @generated
      */
-    protected void addNumberOfMeasurementsPropertyDescriptor(final Object object) {
+    protected void addFrequencyPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_FixedSizeAggregation_numberOfMeasurements_feature"),
+                this.getString("_UI_MeasurementDrivenAggregation_frequency_feature"),
                 this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_FixedSizeAggregation_numberOfMeasurements_feature", "_UI_FixedSizeAggregation_type"),
-                MonitorRepositoryPackage.Literals.FIXED_SIZE_AGGREGATION__NUMBER_OF_MEASUREMENTS, true, false, false,
+                        "_UI_MeasurementDrivenAggregation_frequency_feature", "_UI_MeasurementDrivenAggregation_type"),
+                MonitorRepositoryPackage.Literals.MEASUREMENT_DRIVEN_AGGREGATION__FREQUENCY, true, false, false,
                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
-     * This returns FixedSizeAggregation.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This returns MeasurementDrivenAggregation.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     @Override
     public Object getImage(final Object object) {
-        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/FixedSizeAggregation"));
+        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/MeasurementDrivenAggregation"));
     }
 
     /**
@@ -82,9 +82,9 @@ public class FixedSizeAggregationItemProvider extends MeasurementDrivenAggregati
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((FixedSizeAggregation) object).getId();
-        return label == null || label.length() == 0 ? this.getString("_UI_FixedSizeAggregation_type")
-                : this.getString("_UI_FixedSizeAggregation_type") + " " + label;
+        final String label = ((MeasurementDrivenAggregation) object).getId();
+        return label == null || label.length() == 0 ? this.getString("_UI_MeasurementDrivenAggregation_type")
+                : this.getString("_UI_MeasurementDrivenAggregation_type") + " " + label;
     }
 
     /**
@@ -98,8 +98,8 @@ public class FixedSizeAggregationItemProvider extends MeasurementDrivenAggregati
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(FixedSizeAggregation.class)) {
-        case MonitorRepositoryPackage.FIXED_SIZE_AGGREGATION__NUMBER_OF_MEASUREMENTS:
+        switch (notification.getFeatureID(MeasurementDrivenAggregation.class)) {
+        case MonitorRepositoryPackage.MEASUREMENT_DRIVEN_AGGREGATION__FREQUENCY:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }

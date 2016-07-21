@@ -438,14 +438,15 @@ public interface MonitorRepositoryPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link org.palladiosimulator.monitorrepository.impl.FixedSizeAggregationImpl
-     * <em>Fixed Size Aggregation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.monitorrepository.impl.MeasurementDrivenAggregationImpl
+     * <em>Measurement Driven Aggregation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
      *
-     * @see org.palladiosimulator.monitorrepository.impl.FixedSizeAggregationImpl
-     * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getFixedSizeAggregation()
+     * @see org.palladiosimulator.monitorrepository.impl.MeasurementDrivenAggregationImpl
+     * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getMeasurementDrivenAggregation()
      * @generated
      */
-    int FIXED_SIZE_AGGREGATION = 10;
+    int MEASUREMENT_DRIVEN_AGGREGATION = 10;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -454,7 +455,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FIXED_SIZE_AGGREGATION__ID = AGGREGATION__ID;
+    int MEASUREMENT_DRIVEN_AGGREGATION__ID = AGGREGATION__ID;
 
     /**
      * The feature id for the '<em><b>Measurement Specification</b></em>' container reference. <!--
@@ -463,7 +464,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FIXED_SIZE_AGGREGATION__MEASUREMENT_SPECIFICATION = AGGREGATION__MEASUREMENT_SPECIFICATION;
+    int MEASUREMENT_DRIVEN_AGGREGATION__MEASUREMENT_SPECIFICATION = AGGREGATION__MEASUREMENT_SPECIFICATION;
 
     /**
      * The feature id for the '<em><b>Statistical Characterization</b></em>' containment reference.
@@ -472,16 +473,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FIXED_SIZE_AGGREGATION__STATISTICAL_CHARACTERIZATION = AGGREGATION__STATISTICAL_CHARACTERIZATION;
-
-    /**
-     * The feature id for the '<em><b>Number Of Measurements</b></em>' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int FIXED_SIZE_AGGREGATION__NUMBER_OF_MEASUREMENTS = AGGREGATION_FEATURE_COUNT + 0;
+    int MEASUREMENT_DRIVEN_AGGREGATION__STATISTICAL_CHARACTERIZATION = AGGREGATION__STATISTICAL_CHARACTERIZATION;
 
     /**
      * The feature id for the '<em><b>Frequency</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -490,7 +482,72 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FIXED_SIZE_AGGREGATION__FREQUENCY = AGGREGATION_FEATURE_COUNT + 1;
+    int MEASUREMENT_DRIVEN_AGGREGATION__FREQUENCY = AGGREGATION_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Measurement Driven Aggregation</em>' class.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int MEASUREMENT_DRIVEN_AGGREGATION_FEATURE_COUNT = AGGREGATION_FEATURE_COUNT + 1;
+
+    /**
+     * The meta object id for the '
+     * {@link org.palladiosimulator.monitorrepository.impl.FixedSizeAggregationImpl
+     * <em>Fixed Size Aggregation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @see org.palladiosimulator.monitorrepository.impl.FixedSizeAggregationImpl
+     * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getFixedSizeAggregation()
+     * @generated
+     */
+    int FIXED_SIZE_AGGREGATION = 11;
+
+    /**
+     * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int FIXED_SIZE_AGGREGATION__ID = MEASUREMENT_DRIVEN_AGGREGATION__ID;
+
+    /**
+     * The feature id for the '<em><b>Measurement Specification</b></em>' container reference. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int FIXED_SIZE_AGGREGATION__MEASUREMENT_SPECIFICATION = MEASUREMENT_DRIVEN_AGGREGATION__MEASUREMENT_SPECIFICATION;
+
+    /**
+     * The feature id for the '<em><b>Statistical Characterization</b></em>' containment reference.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int FIXED_SIZE_AGGREGATION__STATISTICAL_CHARACTERIZATION = MEASUREMENT_DRIVEN_AGGREGATION__STATISTICAL_CHARACTERIZATION;
+
+    /**
+     * The feature id for the '<em><b>Frequency</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int FIXED_SIZE_AGGREGATION__FREQUENCY = MEASUREMENT_DRIVEN_AGGREGATION__FREQUENCY;
+
+    /**
+     * The feature id for the '<em><b>Number Of Measurements</b></em>' attribute. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int FIXED_SIZE_AGGREGATION__NUMBER_OF_MEASUREMENTS = MEASUREMENT_DRIVEN_AGGREGATION_FEATURE_COUNT + 0;
 
     /**
      * The number of structural features of the '<em>Fixed Size Aggregation</em>' class. <!--
@@ -499,7 +556,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FIXED_SIZE_AGGREGATION_FEATURE_COUNT = AGGREGATION_FEATURE_COUNT + 2;
+    int FIXED_SIZE_AGGREGATION_FEATURE_COUNT = MEASUREMENT_DRIVEN_AGGREGATION_FEATURE_COUNT + 1;
 
     /**
      * The meta object id for the '
@@ -510,7 +567,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getTimeDriven()
      * @generated
      */
-    int TIME_DRIVEN = 12;
+    int TIME_DRIVEN = 13;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -557,7 +614,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getTimeDrivenAggregation()
      * @generated
      */
-    int TIME_DRIVEN_AGGREGATION = 11;
+    int TIME_DRIVEN_AGGREGATION = 12;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -613,7 +670,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getVariableSizeAggregation()
      * @generated
      */
-    int VARIABLE_SIZE_AGGREGATION = 13;
+    int VARIABLE_SIZE_AGGREGATION = 14;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -622,7 +679,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int VARIABLE_SIZE_AGGREGATION__ID = AGGREGATION__ID;
+    int VARIABLE_SIZE_AGGREGATION__ID = MEASUREMENT_DRIVEN_AGGREGATION__ID;
 
     /**
      * The feature id for the '<em><b>Measurement Specification</b></em>' container reference. <!--
@@ -631,7 +688,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int VARIABLE_SIZE_AGGREGATION__MEASUREMENT_SPECIFICATION = AGGREGATION__MEASUREMENT_SPECIFICATION;
+    int VARIABLE_SIZE_AGGREGATION__MEASUREMENT_SPECIFICATION = MEASUREMENT_DRIVEN_AGGREGATION__MEASUREMENT_SPECIFICATION;
 
     /**
      * The feature id for the '<em><b>Statistical Characterization</b></em>' containment reference.
@@ -640,7 +697,16 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int VARIABLE_SIZE_AGGREGATION__STATISTICAL_CHARACTERIZATION = AGGREGATION__STATISTICAL_CHARACTERIZATION;
+    int VARIABLE_SIZE_AGGREGATION__STATISTICAL_CHARACTERIZATION = MEASUREMENT_DRIVEN_AGGREGATION__STATISTICAL_CHARACTERIZATION;
+
+    /**
+     * The feature id for the '<em><b>Frequency</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int VARIABLE_SIZE_AGGREGATION__FREQUENCY = MEASUREMENT_DRIVEN_AGGREGATION__FREQUENCY;
 
     /**
      * The feature id for the '<em><b>Retrospection</b></em>' containment reference. <!--
@@ -649,7 +715,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int VARIABLE_SIZE_AGGREGATION__RETROSPECTION = AGGREGATION_FEATURE_COUNT + 0;
+    int VARIABLE_SIZE_AGGREGATION__RETROSPECTION = MEASUREMENT_DRIVEN_AGGREGATION_FEATURE_COUNT + 0;
 
     /**
      * The number of structural features of the '<em>Variable Size Aggregation</em>' class. <!--
@@ -658,7 +724,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int VARIABLE_SIZE_AGGREGATION_FEATURE_COUNT = AGGREGATION_FEATURE_COUNT + 1;
+    int VARIABLE_SIZE_AGGREGATION_FEATURE_COUNT = MEASUREMENT_DRIVEN_AGGREGATION_FEATURE_COUNT + 1;
 
     /**
      * The meta object id for the '
@@ -669,7 +735,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getFeedThrough()
      * @generated
      */
-    int FEED_THROUGH = 14;
+    int FEED_THROUGH = 15;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -707,7 +773,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getWindowCharacterization()
      * @generated
      */
-    int WINDOW_CHARACTERIZATION = 15;
+    int WINDOW_CHARACTERIZATION = 16;
 
     /**
      * The feature id for the '<em><b>Window Length</b></em>' attribute. <!-- begin-user-doc -->
@@ -755,7 +821,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getRetrospectiveCharacterization()
      * @generated
      */
-    int RETROSPECTIVE_CHARACTERIZATION = 16;
+    int RETROSPECTIVE_CHARACTERIZATION = 17;
 
     /**
      * The feature id for the '<em><b>Retrospection Length</b></em>' attribute. <!-- begin-user-doc
@@ -1039,6 +1105,29 @@ public interface MonitorRepositoryPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
+     * {@link org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation
+     * <em>Measurement Driven Aggregation</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for class '<em>Measurement Driven Aggregation</em>'.
+     * @see org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation
+     * @generated
+     */
+    EClass getMeasurementDrivenAggregation();
+
+    /**
+     * Returns the meta object for the attribute '
+     * {@link org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation#getFrequency
+     * <em>Frequency</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the attribute '<em>Frequency</em>'.
+     * @see org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation#getFrequency()
+     * @see #getMeasurementDrivenAggregation()
+     * @generated
+     */
+    EAttribute getMeasurementDrivenAggregation_Frequency();
+
+    /**
+     * Returns the meta object for class '
      * {@link org.palladiosimulator.monitorrepository.FixedSizeAggregation
      * <em>Fixed Size Aggregation</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -1059,18 +1148,6 @@ public interface MonitorRepositoryPackage extends EPackage {
      * @generated
      */
     EAttribute getFixedSizeAggregation_NumberOfMeasurements();
-
-    /**
-     * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.monitorrepository.FixedSizeAggregation#getFrequency
-     * <em>Frequency</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for the attribute '<em>Frequency</em>'.
-     * @see org.palladiosimulator.monitorrepository.FixedSizeAggregation#getFrequency()
-     * @see #getFixedSizeAggregation()
-     * @generated
-     */
-    EAttribute getFixedSizeAggregation_Frequency();
 
     /**
      * Returns the meta object for class '
@@ -1453,6 +1530,26 @@ public interface MonitorRepositoryPackage extends EPackage {
 
         /**
          * The meta object literal for the '
+         * {@link org.palladiosimulator.monitorrepository.impl.MeasurementDrivenAggregationImpl
+         * <em>Measurement Driven Aggregation</em>}' class. <!-- begin-user-doc --> <!--
+         * end-user-doc -->
+         *
+         * @see org.palladiosimulator.monitorrepository.impl.MeasurementDrivenAggregationImpl
+         * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getMeasurementDrivenAggregation()
+         * @generated
+         */
+        EClass MEASUREMENT_DRIVEN_AGGREGATION = eINSTANCE.getMeasurementDrivenAggregation();
+
+        /**
+         * The meta object literal for the '<em><b>Frequency</b></em>' attribute feature. <!--
+         * begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EAttribute MEASUREMENT_DRIVEN_AGGREGATION__FREQUENCY = eINSTANCE.getMeasurementDrivenAggregation_Frequency();
+
+        /**
+         * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.FixedSizeAggregationImpl
          * <em>Fixed Size Aggregation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
@@ -1470,14 +1567,6 @@ public interface MonitorRepositoryPackage extends EPackage {
          */
         EAttribute FIXED_SIZE_AGGREGATION__NUMBER_OF_MEASUREMENTS = eINSTANCE
                 .getFixedSizeAggregation_NumberOfMeasurements();
-
-        /**
-         * The meta object literal for the '<em><b>Frequency</b></em>' attribute feature. <!--
-         * begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @generated
-         */
-        EAttribute FIXED_SIZE_AGGREGATION__FREQUENCY = eINSTANCE.getFixedSizeAggregation_Frequency();
 
         /**
          * The meta object literal for the '

@@ -121,13 +121,30 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="statisticalCharacterization"
         lowerBound="1" eType="#//StatisticalCharacterization" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FixedSizeAggregation" eSuperTypes="#//Aggregation">
+  <eClassifiers xsi:type="ecore:EClass" name="MeasurementDrivenAggregation" abstract="true"
+      eSuperTypes="#//Aggregation">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details key="measNum" value="self.numberOfMeasurements > 0"/>
       <details key="frequency" value="self.frequency > 0"/>
     </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="ProcessingType that defines a measurement-driven way of aggregation, i.e., aggregation is triggered upon reception of a new measurement."/>
+    </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="measNum frequency"/>
+      <details key="constraints" value="frequency"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequency" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This positive int value indicates the frequency of aggregation.&#xD;&#xA;That is, a value of 'n' indicates that the aggreation shall be done each n-th measurement.&#xD;&#xA;By default, this value is set to 1."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FixedSizeAggregation" eSuperTypes="#//MeasurementDrivenAggregation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="measNum" value="self.numberOfMeasurements > 0"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="measNum"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="ProcessingType which indicates that fixed-sized sequences of consecutive measurements shall be aggregated."/>
@@ -136,12 +153,6 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="10">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="This positive int value determines the number of measurements that shall be aggregated.&#xD;&#xA;By default, this value is set to 10."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequency" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="This positive int value indicates the frequency of aggregation.&#xD;&#xA;That is, a value of 'n' indicates that the aggreation shall be done each n-th measurement.&#xD;&#xA;By default, this value is set to 1."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -157,7 +168,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="windowCharacterization"
         lowerBound="1" eType="#//WindowCharacterization" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VariableSizeAggregation" eSuperTypes="#//Aggregation">
+  <eClassifiers xsi:type="ecore:EClass" name="VariableSizeAggregation" eSuperTypes="#//MeasurementDrivenAggregation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="retrospection" lowerBound="1"
         eType="#//RetrospectiveCharacterization" containment="true"/>
   </eClassifiers>

@@ -21,7 +21,7 @@ import org.palladiosimulator.monitorrepository.VariableSizeAggregation;
  *
  * @generated
  */
-public class VariableSizeAggregationItemProvider extends AggregationItemProvider {
+public class VariableSizeAggregationItemProvider extends MeasurementDrivenAggregationItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->

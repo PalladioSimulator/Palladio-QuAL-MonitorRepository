@@ -12,6 +12,7 @@ import org.palladiosimulator.monitorrepository.FeedThrough;
 import org.palladiosimulator.monitorrepository.FixedSizeAggregation;
 import org.palladiosimulator.monitorrepository.GeometricMean;
 import org.palladiosimulator.monitorrepository.HarmonicMean;
+import org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation;
 import org.palladiosimulator.monitorrepository.MeasurementSpecification;
 import org.palladiosimulator.monitorrepository.Median;
 import org.palladiosimulator.monitorrepository.Monitor;
@@ -129,6 +130,11 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
         @Override
         public Adapter caseAggregation(final Aggregation object) {
             return MonitorRepositoryAdapterFactory.this.createAggregationAdapter();
+        }
+
+        @Override
+        public Adapter caseMeasurementDrivenAggregation(final MeasurementDrivenAggregation object) {
+            return MonitorRepositoryAdapterFactory.this.createMeasurementDrivenAggregationAdapter();
         }
 
         @Override
@@ -346,6 +352,21 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createAggregationAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '
+     * {@link org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation
+     * <em>Measurement Driven Aggregation</em>}'. <!-- begin-user-doc --> This default
+     * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
+     * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     *
+     * @return the new adapter.
+     * @see org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation
+     * @generated
+     */
+    public Adapter createMeasurementDrivenAggregationAdapter() {
         return null;
     }
 
