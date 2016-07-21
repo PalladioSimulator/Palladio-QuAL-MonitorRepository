@@ -1,7 +1,5 @@
 package org.palladiosimulator.monitorrepository.statisticalcharacterization;
 
-import static java.util.stream.Collectors.toList;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -22,7 +20,7 @@ import org.palladiosimulator.monitorrepository.Median;
 /**
  * {@link StatisticalCharacterizationAggregator} corresponding to the {@link Median} model class
  * which computes the median of a sequence of measurements (discrete case) or a function with
- * respect to an interval (continuous case)
+ * respect to an interval (continuous case).
  * 
  * @author Florian Rosenthal
  *
@@ -36,15 +34,15 @@ public class MedianAggregator extends StatisticalCharacterizationAggregator {
     @Override
     protected Measure<Double, Quantity> calculateStatisticalCharaterizationDiscrete(
             Iterable<MeasuringValue> windowData) {
-        List<Double> data = StreamSupport.stream(windowData.spliterator(), false)
-                .map(this::obtainDataValueFromMeasurement).sorted().collect(toList());
+        Double[] sortedData = StreamSupport.stream(windowData.spliterator(), false)
+                .map(this::obtainDataValueFromMeasurement).sorted().toArray(Double[]::new);
         double median = 0d;
-        if (!data.isEmpty()) {
-            int middle = data.size() / 2;
-            if (data.size() % 2 == 0) {
-                median = 0.5 * (data.get(middle) + data.get(middle - 1));
+        if (sortedData.length != 0) {
+            int middle = sortedData.length / 2;
+            if (sortedData.length % 2 == 0) {
+                median = 0.5 * (sortedData[middle] + sortedData[middle - 1]);
             } else {
-                median = data.get(middle);
+                median = sortedData[middle];
             }
         }
         return Measure.valueOf(median, getDataDefaultUnit());
