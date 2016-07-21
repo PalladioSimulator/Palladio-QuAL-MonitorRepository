@@ -166,20 +166,22 @@ public abstract class StatisticalCharacterizationAggregator {
     protected abstract Measure<Double, Quantity> calculateStatisticalCharacterizationContinuous(
             Iterable<MeasuringValue> dataToAggregate);
 
+    private static Amount<Duration> getPointInTimeOfMeasurement(MeasuringValue measurement) {
+        assert measurement != null;
+
+        Measure<Double, Duration> pointInTimeMeasure = measurement
+                .getMeasureForMetric(MetricDescriptionConstants.POINT_IN_TIME_METRIC);
+
+        return Amount.valueOf(pointInTimeMeasure.doubleValue(SI.SECOND), SI.SECOND);
+    }
+
     protected final Amount<Duration> obtainCurrentMeasurementValidityScope(MeasuringValue currentMeasurement,
             Optional<MeasuringValue> nextMeasurement) {
         if (this.dataMetric.getScopeOfValidity() != ScopeOfValidity.CONTINUOUS) {
             throw new IllegalStateException("Method is only reasonable for metrics with continuous scope of validity!");
         }
-        Amount<Duration> current = Amount.valueOf(currentMeasurement
-                .<Double, Duration> getMeasureForMetric(MetricDescriptionConstants.POINT_IN_TIME_METRIC)
-                .doubleValue(SI.SECOND), SI.SECOND);
-        Amount<Duration> next = nextMeasurement
-                .map(m -> Amount
-                        .valueOf(
-                                m.<Double, Duration> getMeasureForMetric(
-                                        MetricDescriptionConstants.POINT_IN_TIME_METRIC).doubleValue(SI.SECOND),
-                                SI.SECOND))
+        Amount<Duration> current = getPointInTimeOfMeasurement(currentMeasurement);
+        Amount<Duration> next = nextMeasurement.map(StatisticalCharacterizationAggregator::getPointInTimeOfMeasurement)
                 .orElse(this.intervalRightBound);
         // special treatment for amount that is out of interval bounds:
         // consider only parts inside interval
