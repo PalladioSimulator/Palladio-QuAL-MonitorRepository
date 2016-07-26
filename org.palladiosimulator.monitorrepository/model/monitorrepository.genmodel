@@ -12,7 +12,7 @@
   <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
   <modelPluginVariables>OCL_ECORE=org.eclipse.ocl.ecore</modelPluginVariables>
   <genPackages prefix="MonitorRepository" basePackage="org.palladiosimulator" resource="XML"
-      disposableProviderFactory="true" ecorePackage="monitorrepository.ecore#/">
+      disposableProviderFactory="true" childCreationExtenders="true" ecorePackage="monitorrepository.ecore#/">
     <genClasses ecoreClass="monitorrepository.ecore#//MonitorRepository" labelFeature="platform:/plugin/org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference monitorrepository.ecore#//MonitorRepository/monitors"/>
     </genClasses>
@@ -68,24 +68,16 @@
     </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//TimeDrivenAggregation"/>
     <genClasses ecoreClass="monitorrepository.ecore#//TimeDriven">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference monitorrepository.ecore#//TimeDriven/windowCharacterization"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//TimeDriven/windowLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//TimeDriven/windowIncrement"/>
+      <genOperations ecoreOperation="monitorrepository.ecore#//TimeDriven/getWindowLengthAsMeasure"/>
+      <genOperations ecoreOperation="monitorrepository.ecore#//TimeDriven/getWindowIncrementAsMeasure"/>
     </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//VariableSizeAggregation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference monitorrepository.ecore#//VariableSizeAggregation/retrospection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//VariableSizeAggregation/retrospectionLength"/>
+      <genOperations ecoreOperation="monitorrepository.ecore#//VariableSizeAggregation/getRetrospectionLengthAsMeasure"/>
     </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//FeedThrough"/>
-    <genClasses ecoreClass="monitorrepository.ecore#//WindowCharacterization">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//WindowCharacterization/windowLength"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//WindowCharacterization/windowIncrement"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//WindowCharacterization/name"/>
-      <genOperations ecoreOperation="monitorrepository.ecore#//WindowCharacterization/getWindowLengthAsMeasure"/>
-      <genOperations ecoreOperation="monitorrepository.ecore#//WindowCharacterization/getWindowIncrementAsMeasure"/>
-    </genClasses>
-    <genClasses ecoreClass="monitorrepository.ecore#//RetrospectiveCharacterization">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//RetrospectiveCharacterization/retrospectionLength"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//RetrospectiveCharacterization/name"/>
-      <genOperations ecoreOperation="monitorrepository.ecore#//RetrospectiveCharacterization/getRetrospectionLengthAsMeasure"/>
-    </genClasses>
     <nestedGenPackages prefix="Util" basePackage="org.palladiosimulator.monitorrepository"
         disposableProviderFactory="true" ecorePackage="monitorrepository.ecore#//util">
       <genDataTypes ecoreDataType="monitorrepository.ecore#//util/Duration"/>
