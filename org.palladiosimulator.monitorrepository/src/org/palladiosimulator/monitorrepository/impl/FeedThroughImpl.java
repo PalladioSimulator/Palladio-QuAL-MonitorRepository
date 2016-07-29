@@ -15,7 +15,7 @@ import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
 public class FeedThroughImpl extends ProcessingTypeImpl implements FeedThrough {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected FeedThroughImpl() {
@@ -24,7 +24,7 @@ public class FeedThroughImpl extends ProcessingTypeImpl implements FeedThrough {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

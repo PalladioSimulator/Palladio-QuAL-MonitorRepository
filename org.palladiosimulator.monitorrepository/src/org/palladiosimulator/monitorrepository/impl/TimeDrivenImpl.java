@@ -28,7 +28,7 @@ public class TimeDrivenImpl extends ProcessingTypeImpl implements TimeDriven {
     /**
      * The default value of the '{@link #getWindowLength() <em>Window Length</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getWindowLength()
      * @generated
      * @ordered
@@ -38,7 +38,7 @@ public class TimeDrivenImpl extends ProcessingTypeImpl implements TimeDriven {
     /**
      * The default value of the '{@link #getWindowIncrement() <em>Window Increment</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getWindowIncrement()
      * @generated
      * @ordered
@@ -47,7 +47,7 @@ public class TimeDrivenImpl extends ProcessingTypeImpl implements TimeDriven {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected TimeDrivenImpl() {
@@ -56,7 +56,7 @@ public class TimeDrivenImpl extends ProcessingTypeImpl implements TimeDriven {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -66,7 +66,7 @@ public class TimeDrivenImpl extends ProcessingTypeImpl implements TimeDriven {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -77,7 +77,7 @@ public class TimeDrivenImpl extends ProcessingTypeImpl implements TimeDriven {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -88,7 +88,7 @@ public class TimeDrivenImpl extends ProcessingTypeImpl implements TimeDriven {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -99,7 +99,7 @@ public class TimeDrivenImpl extends ProcessingTypeImpl implements TimeDriven {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -110,7 +110,7 @@ public class TimeDrivenImpl extends ProcessingTypeImpl implements TimeDriven {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -120,7 +120,7 @@ public class TimeDrivenImpl extends ProcessingTypeImpl implements TimeDriven {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -130,7 +130,7 @@ public class TimeDrivenImpl extends ProcessingTypeImpl implements TimeDriven {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -146,7 +146,7 @@ public class TimeDrivenImpl extends ProcessingTypeImpl implements TimeDriven {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -164,7 +164,7 @@ public class TimeDrivenImpl extends ProcessingTypeImpl implements TimeDriven {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -182,7 +182,7 @@ public class TimeDrivenImpl extends ProcessingTypeImpl implements TimeDriven {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

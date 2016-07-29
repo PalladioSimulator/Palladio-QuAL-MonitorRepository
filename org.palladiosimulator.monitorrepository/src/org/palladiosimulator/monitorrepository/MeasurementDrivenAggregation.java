@@ -30,7 +30,7 @@ public interface MeasurementDrivenAggregation extends Aggregation {
      * positive int value indicates the frequency of aggregation. That is, a value of 'n' indicates
      * that the aggreation shall be done each n-th measurement. By default, this value is set to 1.
      * <!-- end-model-doc -->
-     * 
+     *
      * @return the value of the '<em>Frequency</em>' attribute.
      * @see #setFrequency(int)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementDrivenAggregation_Frequency()
@@ -43,7 +43,7 @@ public interface MeasurementDrivenAggregation extends Aggregation {
      * Sets the value of the '
      * {@link org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation#getFrequency
      * <em>Frequency</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Frequency</em>' attribute.
      * @see #getFrequency()

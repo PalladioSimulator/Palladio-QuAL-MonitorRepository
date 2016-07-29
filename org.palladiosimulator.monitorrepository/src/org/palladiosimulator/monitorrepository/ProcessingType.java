@@ -34,7 +34,7 @@ public interface ProcessingType extends Identifier {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Measurement Specification</em>' container reference.
      * @see #setMeasurementSpecification(MeasurementSpecification)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getProcessingType_MeasurementSpecification()
@@ -49,7 +49,7 @@ public interface ProcessingType extends Identifier {
      * {@link org.palladiosimulator.monitorrepository.ProcessingType#getMeasurementSpecification
      * <em>Measurement Specification</em>}' container reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Measurement Specification</em>' container reference.
      * @see #getMeasurementSpecification()

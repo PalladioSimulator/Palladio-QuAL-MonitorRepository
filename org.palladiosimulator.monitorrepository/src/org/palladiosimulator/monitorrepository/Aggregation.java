@@ -30,7 +30,7 @@ public interface Aggregation extends ProcessingType {
      * clear, there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Statistical Characterization</em>' containment reference.
      * @see #setStatisticalCharacterization(StatisticalCharacterization)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getAggregation_StatisticalCharacterization()
@@ -44,7 +44,7 @@ public interface Aggregation extends ProcessingType {
      * {@link org.palladiosimulator.monitorrepository.Aggregation#getStatisticalCharacterization
      * <em>Statistical Characterization</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Statistical Characterization</em>' containment
      *            reference.

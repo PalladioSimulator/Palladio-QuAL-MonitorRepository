@@ -24,13 +24,13 @@ import org.palladiosimulator.monitorrepository.VariableSizeAggregation;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements MonitorRepositoryFactory {
     /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static MonitorRepositoryFactory init() {
@@ -48,7 +48,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
 
     /**
      * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public MonitorRepositoryFactoryImpl() {
@@ -57,7 +57,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -94,7 +94,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -105,7 +105,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -116,7 +116,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -127,7 +127,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -138,7 +138,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -149,7 +149,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -160,7 +160,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -171,7 +171,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -182,7 +182,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -193,7 +193,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -204,7 +204,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -215,7 +215,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -226,7 +226,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -236,7 +236,7 @@ public class MonitorRepositoryFactoryImpl extends EFactoryImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @deprecated
      * @generated
      */

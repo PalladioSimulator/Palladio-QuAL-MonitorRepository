@@ -42,118 +42,118 @@ import de.uka.ipd.sdq.identifier.IdentifierPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class MonitorRepositoryPackageImpl extends EPackageImpl implements MonitorRepositoryPackage {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass monitorRepositoryEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass monitorEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass measurementSpecificationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass statisticalCharacterizationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass arithmeticMeanEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass harmonicMeanEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass geometricMeanEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass medianEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass processingTypeEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass aggregationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass measurementDrivenAggregationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass fixedSizeAggregationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass timeDrivenAggregationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass timeDrivenEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass variableSizeAggregationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass feedThroughEClass = null;
@@ -166,7 +166,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
      * Note: the correct way to create the package is via the static factory method {@link #init
      * init()}, which also performs initialization of the package, or returns the registered
      * package, if one already exists. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.eclipse.emf.ecore.EPackage.Registry
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#eNS_URI
      * @see #init()
@@ -178,7 +178,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private static boolean isInited = false;
@@ -191,7 +191,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
      * This method is used to initialize {@link MonitorRepositoryPackage#eINSTANCE} when that field
      * is accessed. Clients should not invoke it directly. Instead, they should simply access that
      * field to obtain the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #eNS_URI
      * @see #createPackageContents()
      * @see #initializePackageContents()
@@ -246,7 +246,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -256,7 +256,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -266,7 +266,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -276,7 +276,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -286,7 +286,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -296,7 +296,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -306,7 +306,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -316,7 +316,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -326,7 +326,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -336,7 +336,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -346,7 +346,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -356,7 +356,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -366,7 +366,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -376,7 +376,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -386,7 +386,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -396,7 +396,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -406,7 +406,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -416,7 +416,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -426,7 +426,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -436,7 +436,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -446,7 +446,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -456,7 +456,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -466,7 +466,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -476,7 +476,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -486,7 +486,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -496,7 +496,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -506,7 +506,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -516,7 +516,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -526,7 +526,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -536,7 +536,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -546,7 +546,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -556,7 +556,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -566,7 +566,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -576,7 +576,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -586,7 +586,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private boolean isCreated = false;
@@ -594,7 +594,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
     /**
      * Creates the meta-model objects for the package. This method is guarded to have no affect on
      * any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public void createPackageContents() {
@@ -657,7 +657,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private boolean isInitialized = false;
@@ -665,7 +665,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
     /**
      * Complete the initialization of the package and its meta-model. This method is guarded to have
      * no affect on any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public void initializePackageContents() {
@@ -891,7 +891,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
     /**
      * Initializes the annotations for <b>http://www.eclipse.org/OCL/Import</b>. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void createImportAnnotations() {
@@ -907,7 +907,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
     /**
      * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void createEcoreAnnotations() {
@@ -935,7 +935,7 @@ public class MonitorRepositoryPackageImpl extends EPackageImpl implements Monito
     /**
      * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL</b>. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void createOCLAnnotations() {

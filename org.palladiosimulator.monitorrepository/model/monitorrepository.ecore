@@ -59,11 +59,20 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatisticalCharacterization" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A {@link StatisticalCharacterization} defines the way a sequence of measurements is to be aggregated."/>
+    </eAnnotations>
     <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Gets the {@link org.palladiosimulator.monitorrepository.statisticalcharacterization.StatisticalCharacterizationAggregator} performing the measurement aggregation defined by this instance."/>
+      </eAnnotations>
       <eParameters name="expectedDataMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArithmeticMean" eSuperTypes="#//StatisticalCharacterization">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The StatisticalCharacterization 'ArithmeticMean' which computes the arithmetic mean of a sequence of measurements."/>
+    </eAnnotations>
     <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.ArithmeticMeanAggregator(expectedDataMetric);"/>
@@ -75,6 +84,9 @@
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HarmonicMean" eSuperTypes="#//StatisticalCharacterization">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The StatisticalCharacterization 'HarmonicMean' which computes the harmonic mean of a sequence of measurements."/>
+    </eAnnotations>
     <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.HarmonicMeanAggregator(expectedDataMetric);"/>
@@ -86,6 +98,9 @@
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeometricMean" eSuperTypes="#//StatisticalCharacterization">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The StatisticalCharacterization 'GeometricMean' which computes the geometric mean of a sequence of measurements."/>
+    </eAnnotations>
     <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.GeometricMeanAggregator(expectedDataMetric);"/>
@@ -97,6 +112,9 @@
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Median" eSuperTypes="#//StatisticalCharacterization">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The StatisticalCharacterization 'Median' which computes the median value of a sequence of measurements."/>
+    </eAnnotations>
     <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.MedianAggregator(expectedDataMetric);"/>
@@ -163,7 +181,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TimeDriven" eSuperTypes="#//ProcessingType">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="ProcessingType suitable for measurement specifications that demand a WindowCharacterization (e.g., before being recorded) but are not based on statistical aggregation.&#xD;&#xA;Examples for such measurement specifications are the window-based utilization calculation or the power and energy calculation that bases thereof."/>
+      <details key="documentation" value="ProcessingType suitable for measurement specifications that demand a sliding window (e.g., before being recorded) but are not based on statistical aggregation.&#xD;&#xA;Examples for such measurement specifications are the window-based utilization calculation or the power and energy calculation that bases thereof."/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
       <details key="windowLength" value="self.windowLength > 0.0"/>
@@ -225,7 +243,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="retrospectionLength" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="10.0">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="This value (interpreted as seconds) determines the length of the retrospection interval.&#xD;&#xA;That is, it specifies which measurements shall be included in the aggregation."/>
+        <details key="documentation" value="This value (interpreted as seconds) determines the length of the retrospection interval.&#xD;&#xA;That is, it specifies which preceding measurements shall be included in the aggregation."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>

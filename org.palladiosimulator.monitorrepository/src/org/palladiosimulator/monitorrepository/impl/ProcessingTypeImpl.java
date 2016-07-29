@@ -28,7 +28,7 @@ import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
 public abstract class ProcessingTypeImpl extends IdentifierImpl implements ProcessingType {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ProcessingTypeImpl() {
@@ -37,7 +37,7 @@ public abstract class ProcessingTypeImpl extends IdentifierImpl implements Proce
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -47,7 +47,7 @@ public abstract class ProcessingTypeImpl extends IdentifierImpl implements Proce
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -59,7 +59,7 @@ public abstract class ProcessingTypeImpl extends IdentifierImpl implements Proce
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetMeasurementSpecification(
@@ -71,7 +71,7 @@ public abstract class ProcessingTypeImpl extends IdentifierImpl implements Proce
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -83,7 +83,7 @@ public abstract class ProcessingTypeImpl extends IdentifierImpl implements Proce
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -100,7 +100,7 @@ public abstract class ProcessingTypeImpl extends IdentifierImpl implements Proce
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -115,7 +115,7 @@ public abstract class ProcessingTypeImpl extends IdentifierImpl implements Proce
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -131,7 +131,7 @@ public abstract class ProcessingTypeImpl extends IdentifierImpl implements Proce
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -145,7 +145,7 @@ public abstract class ProcessingTypeImpl extends IdentifierImpl implements Proce
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -160,7 +160,7 @@ public abstract class ProcessingTypeImpl extends IdentifierImpl implements Proce
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -175,7 +175,7 @@ public abstract class ProcessingTypeImpl extends IdentifierImpl implements Proce
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

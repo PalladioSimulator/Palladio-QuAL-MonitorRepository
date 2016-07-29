@@ -18,7 +18,7 @@ import org.palladiosimulator.monitorrepository.statisticalcharacterization.Stati
 public abstract class StatisticalCharacterizationImpl extends CDOObjectImpl implements StatisticalCharacterization {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected StatisticalCharacterizationImpl() {
@@ -27,7 +27,7 @@ public abstract class StatisticalCharacterizationImpl extends CDOObjectImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -37,7 +37,7 @@ public abstract class StatisticalCharacterizationImpl extends CDOObjectImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -47,7 +47,7 @@ public abstract class StatisticalCharacterizationImpl extends CDOObjectImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

@@ -17,7 +17,7 @@ import org.palladiosimulator.monitorrepository.statisticalcharacterization.Stati
 public class GeometricMeanImpl extends StatisticalCharacterizationImpl implements GeometricMean {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected GeometricMeanImpl() {
@@ -26,7 +26,7 @@ public class GeometricMeanImpl extends StatisticalCharacterizationImpl implement
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -36,7 +36,7 @@ public class GeometricMeanImpl extends StatisticalCharacterizationImpl implement
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

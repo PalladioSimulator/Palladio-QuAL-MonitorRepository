@@ -9,6 +9,9 @@ import org.palladiosimulator.monitorrepository.statisticalcharacterization.Stati
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Harmonic Mean</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc --> The StatisticalCharacterization 'HarmonicMean' which computes the
+ * harmonic mean of a sequence of measurements. <!-- end-model-doc -->
+ *
  *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getHarmonicMean()
  * @model
@@ -17,7 +20,7 @@ import org.palladiosimulator.monitorrepository.statisticalcharacterization.Stati
 public interface HarmonicMean extends StatisticalCharacterization {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @model dataType=
      *        "org.palladiosimulator.monitorrepository.util.StatisticalCharacterizationAggregator"
      *        annotation=

@@ -9,6 +9,9 @@ import org.palladiosimulator.monitorrepository.statisticalcharacterization.Stati
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Geometric Mean</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc --> The StatisticalCharacterization 'GeometricMean' which computes the
+ * geometric mean of a sequence of measurements. <!-- end-model-doc -->
+ *
  *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getGeometricMean()
  * @model
@@ -17,7 +20,7 @@ import org.palladiosimulator.monitorrepository.statisticalcharacterization.Stati
 public interface GeometricMean extends StatisticalCharacterization {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @model dataType=
      *        "org.palladiosimulator.monitorrepository.util.StatisticalCharacterizationAggregator"
      *        annotation=

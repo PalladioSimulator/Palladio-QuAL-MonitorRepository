@@ -43,7 +43,7 @@ public interface MeasurementSpecification extends Identifier {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Metric Description</em>' reference.
      * @see #setMetricDescription(MetricDescription)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification_MetricDescription()
@@ -56,7 +56,7 @@ public interface MeasurementSpecification extends Identifier {
      * Sets the value of the '
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMetricDescription
      * <em>Metric Description</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Metric Description</em>' reference.
      * @see #getMetricDescription()
@@ -74,7 +74,7 @@ public interface MeasurementSpecification extends Identifier {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Monitor</em>' container reference.
      * @see #setMonitor(Monitor)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification_Monitor()
@@ -88,7 +88,7 @@ public interface MeasurementSpecification extends Identifier {
      * Sets the value of the '
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMonitor
      * <em>Monitor</em>}' container reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Monitor</em>' container reference.
      * @see #getMonitor()
@@ -104,7 +104,7 @@ public interface MeasurementSpecification extends Identifier {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification_Name()
@@ -118,7 +118,7 @@ public interface MeasurementSpecification extends Identifier {
      * Sets the value of the '
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getName <em>Name</em>
      * }' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Name</em>' attribute.
      * @see #getName()
@@ -134,7 +134,7 @@ public interface MeasurementSpecification extends Identifier {
      * begin-model-doc --> This attribute specifies in what way measurements shall be further
      * processed or aggregated (besides or before being recorded) upon reception. <!-- end-model-doc
      * -->
-     * 
+     *
      * @return the value of the '<em>Processing Type</em>' containment reference.
      * @see #setProcessingType(ProcessingType)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification_ProcessingType()
@@ -149,7 +149,7 @@ public interface MeasurementSpecification extends Identifier {
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getProcessingType
      * <em>Processing Type</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Processing Type</em>' containment reference.
      * @see #getProcessingType()
@@ -165,7 +165,7 @@ public interface MeasurementSpecification extends Identifier {
      * really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Triggers Self Adaptations</em>' attribute.
      * @see #setTriggersSelfAdaptations(boolean)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getMeasurementSpecification_TriggersSelfAdaptations()
@@ -178,7 +178,7 @@ public interface MeasurementSpecification extends Identifier {
      * Sets the value of the '
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#isTriggersSelfAdaptations
      * <em>Triggers Self Adaptations</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Triggers Self Adaptations</em>' attribute.
      * @see #isTriggersSelfAdaptations()

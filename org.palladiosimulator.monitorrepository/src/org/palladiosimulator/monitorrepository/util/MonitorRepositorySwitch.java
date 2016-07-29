@@ -33,21 +33,21 @@ import de.uka.ipd.sdq.identifier.Identifier;
  * each class of the model, starting with the actual class of the object and proceeding up the
  * inheritance hierarchy until a non-null result is returned, which is the result of the switch.
  * <!-- end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage
  * @generated
  */
 public class MonitorRepositorySwitch<T> extends Switch<T> {
     /**
      * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static MonitorRepositoryPackage modelPackage;
 
     /**
      * Creates an instance of the switch. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public MonitorRepositorySwitch() {
@@ -59,7 +59,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
     /**
      * Checks whether this is a switch for the given package. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @param ePackage
      *            the package in question.
      * @return whether this is a switch for the given package.
@@ -73,7 +73,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
     /**
      * Calls <code>caseXXX</code> for each class of the model until one returns a non null result;
      * it yields that result. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the first non-null result returned by a <code>caseXXX</code> call.
      * @generated
      */
@@ -316,7 +316,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Monitor Repository</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Monitor Repository</em>
@@ -332,7 +332,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Monitor</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Monitor</em>'.
@@ -347,7 +347,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Measurement Specification</em>'. <!-- begin-user-doc --> This implementation returns
      * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -363,7 +363,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Statistical Characterization</em>'. <!-- begin-user-doc --> This implementation returns
      * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -379,7 +379,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Arithmetic Mean</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Arithmetic Mean</em>'.
@@ -394,7 +394,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Harmonic Mean</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Harmonic Mean</em>'.
@@ -409,7 +409,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Geometric Mean</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Geometric Mean</em>'.
@@ -424,7 +424,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Median</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Median</em>'.
@@ -439,7 +439,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Processing Type</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Processing Type</em>'.
@@ -454,7 +454,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Aggregation</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Aggregation</em>'.
@@ -469,7 +469,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Measurement Driven Aggregation</em>'. <!-- begin-user-doc --> This implementation returns
      * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -485,7 +485,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Fixed Size Aggregation</em>'. <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -501,7 +501,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Time Driven Aggregation</em>'. <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -517,7 +517,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Time Driven</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Time Driven</em>'.
@@ -532,7 +532,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Variable Size Aggregation</em>'. <!-- begin-user-doc --> This implementation returns
      * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -548,7 +548,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Feed Through</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Feed Through</em>'.
@@ -563,7 +563,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Identifier</em>'.
@@ -578,7 +578,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
@@ -593,7 +593,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Entity</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
@@ -608,7 +608,7 @@ public class MonitorRepositorySwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>EObject</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch, but this is the last case anyway. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>EObject</em>'.

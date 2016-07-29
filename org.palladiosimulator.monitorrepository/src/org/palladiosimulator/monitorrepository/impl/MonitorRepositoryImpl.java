@@ -30,7 +30,7 @@ import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 public class MonitorRepositoryImpl extends EntityImpl implements MonitorRepository {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MonitorRepositoryImpl() {
@@ -39,7 +39,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -49,7 +49,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -61,7 +61,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -77,7 +77,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -92,7 +92,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -106,7 +106,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -123,7 +123,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -138,7 +138,7 @@ public class MonitorRepositoryImpl extends EntityImpl implements MonitorReposito
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

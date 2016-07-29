@@ -26,7 +26,7 @@ import org.palladiosimulator.monitorrepository.StatisticalCharacterization;
 public abstract class AggregationImpl extends ProcessingTypeImpl implements Aggregation {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected AggregationImpl() {
@@ -35,7 +35,7 @@ public abstract class AggregationImpl extends ProcessingTypeImpl implements Aggr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -45,7 +45,7 @@ public abstract class AggregationImpl extends ProcessingTypeImpl implements Aggr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -57,7 +57,7 @@ public abstract class AggregationImpl extends ProcessingTypeImpl implements Aggr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetStatisticalCharacterization(
@@ -69,7 +69,7 @@ public abstract class AggregationImpl extends ProcessingTypeImpl implements Aggr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -81,7 +81,7 @@ public abstract class AggregationImpl extends ProcessingTypeImpl implements Aggr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -96,7 +96,7 @@ public abstract class AggregationImpl extends ProcessingTypeImpl implements Aggr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -110,7 +110,7 @@ public abstract class AggregationImpl extends ProcessingTypeImpl implements Aggr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -125,7 +125,7 @@ public abstract class AggregationImpl extends ProcessingTypeImpl implements Aggr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -140,7 +140,7 @@ public abstract class AggregationImpl extends ProcessingTypeImpl implements Aggr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

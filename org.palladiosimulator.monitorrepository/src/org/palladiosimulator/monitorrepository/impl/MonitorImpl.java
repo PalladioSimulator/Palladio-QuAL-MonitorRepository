@@ -39,7 +39,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
     /**
      * The default value of the '{@link #isActivated() <em>Activated</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #isActivated()
      * @generated
      * @ordered
@@ -48,7 +48,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MonitorImpl() {
@@ -57,7 +57,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -67,7 +67,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -80,7 +80,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -91,7 +91,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public MeasuringPoint basicGetMeasuringPoint() {
@@ -101,7 +101,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -112,7 +112,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -123,7 +123,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetMonitorRepository(final MonitorRepository newMonitorRepository,
@@ -135,7 +135,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -146,7 +146,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -157,7 +157,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -168,7 +168,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -189,7 +189,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -206,7 +206,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -221,7 +221,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -244,7 +244,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -270,7 +270,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -294,7 +294,7 @@ public class MonitorImpl extends EntityImpl implements Monitor {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

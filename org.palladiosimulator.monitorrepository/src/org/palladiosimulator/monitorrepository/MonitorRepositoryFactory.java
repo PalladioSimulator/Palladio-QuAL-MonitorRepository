@@ -7,14 +7,14 @@ import org.eclipse.emf.ecore.EFactory;
 /**
  * <!-- begin-user-doc --> The <b>Factory</b> for the model. It provides a create method for each
  * non-abstract class of the model. <!-- end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage
  * @generated
  */
 public interface MonitorRepositoryFactory extends EFactory {
     /**
      * The singleton instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     MonitorRepositoryFactory eINSTANCE = org.palladiosimulator.monitorrepository.impl.MonitorRepositoryFactoryImpl
@@ -23,7 +23,7 @@ public interface MonitorRepositoryFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Monitor Repository</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @return a new object of class '<em>Monitor Repository</em>'.
      * @generated
      */
@@ -32,7 +32,7 @@ public interface MonitorRepositoryFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Monitor</em>'. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @return a new object of class '<em>Monitor</em>'.
      * @generated
      */
@@ -41,7 +41,7 @@ public interface MonitorRepositoryFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Measurement Specification</em>'. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @return a new object of class '<em>Measurement Specification</em>'.
      * @generated
      */
@@ -50,7 +50,7 @@ public interface MonitorRepositoryFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Arithmetic Mean</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @return a new object of class '<em>Arithmetic Mean</em>'.
      * @generated
      */
@@ -59,7 +59,7 @@ public interface MonitorRepositoryFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Harmonic Mean</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @return a new object of class '<em>Harmonic Mean</em>'.
      * @generated
      */
@@ -68,7 +68,7 @@ public interface MonitorRepositoryFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Geometric Mean</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @return a new object of class '<em>Geometric Mean</em>'.
      * @generated
      */
@@ -77,7 +77,7 @@ public interface MonitorRepositoryFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Median</em>'. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @return a new object of class '<em>Median</em>'.
      * @generated
      */
@@ -86,7 +86,7 @@ public interface MonitorRepositoryFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Fixed Size Aggregation</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @return a new object of class '<em>Fixed Size Aggregation</em>'.
      * @generated
      */
@@ -95,7 +95,7 @@ public interface MonitorRepositoryFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Time Driven Aggregation</em>'. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @return a new object of class '<em>Time Driven Aggregation</em>'.
      * @generated
      */
@@ -104,7 +104,7 @@ public interface MonitorRepositoryFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Time Driven</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @return a new object of class '<em>Time Driven</em>'.
      * @generated
      */
@@ -113,7 +113,7 @@ public interface MonitorRepositoryFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Variable Size Aggregation</em>'. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @return a new object of class '<em>Variable Size Aggregation</em>'.
      * @generated
      */
@@ -122,7 +122,7 @@ public interface MonitorRepositoryFactory extends EFactory {
     /**
      * Returns a new object of class '<em>Feed Through</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @return a new object of class '<em>Feed Through</em>'.
      * @generated
      */
@@ -130,7 +130,7 @@ public interface MonitorRepositoryFactory extends EFactory {
 
     /**
      * Returns the package supported by this factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the package supported by this factory.
      * @generated
      */

@@ -17,7 +17,7 @@ import org.palladiosimulator.monitorrepository.statisticalcharacterization.Stati
 public class MedianImpl extends StatisticalCharacterizationImpl implements Median {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MedianImpl() {
@@ -26,7 +26,7 @@ public class MedianImpl extends StatisticalCharacterizationImpl implements Media
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -36,7 +36,7 @@ public class MedianImpl extends StatisticalCharacterizationImpl implements Media
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

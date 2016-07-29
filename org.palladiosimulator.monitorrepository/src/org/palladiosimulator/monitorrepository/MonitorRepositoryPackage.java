@@ -20,7 +20,7 @@ import de.uka.ipd.sdq.identifier.IdentifierPackage;
  * <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryFactory
  * @model kind="package" annotation=
  *        "http://www.eclipse.org/OCL/Import ecore='http://www.eclipse.org/emf/2002/Ecore' edp2='../../../plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//measuringpoint' entity='../../../plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity' identifier='../../../plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#/' metricspec='../../../plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#/'"
@@ -31,28 +31,28 @@ import de.uka.ipd.sdq.identifier.IdentifierPackage;
 public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The package name. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String eNAME = "monitorrepository";
 
     /**
      * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String eNS_URI = "http://palladiosimulator.org/MonitorRepository/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String eNS_PREFIX = "monitorrepository";
 
     /**
      * The singleton instance of the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     MonitorRepositoryPackage eINSTANCE = org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl
@@ -62,7 +62,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.monitorrepository.impl.MonitorRepositoryImpl
      * <em>Monitor Repository</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryImpl
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getMonitorRepository()
      * @generated
@@ -72,7 +72,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -81,7 +81,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Entity Name</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -90,7 +90,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Monitors</b></em>' containment reference list. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -99,7 +99,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Monitor Repository</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -108,7 +108,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The meta object id for the '{@link org.palladiosimulator.monitorrepository.impl.MonitorImpl
      * <em>Monitor</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.monitorrepository.impl.MonitorImpl
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getMonitor()
      * @generated
@@ -118,7 +118,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -127,7 +127,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Entity Name</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -136,7 +136,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Measurement Specifications</b></em>' containment reference
      * list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -145,7 +145,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Measuring Point</b></em>' reference. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -154,7 +154,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Monitor Repository</b></em>' container reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -163,7 +163,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Activated</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -172,7 +172,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Monitor</em>' class. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -182,7 +182,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.monitorrepository.impl.MeasurementSpecificationImpl
      * <em>Measurement Specification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.monitorrepository.impl.MeasurementSpecificationImpl
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getMeasurementSpecification()
      * @generated
@@ -192,7 +192,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -201,7 +201,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Metric Description</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -210,7 +210,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Monitor</b></em>' container reference. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -219,7 +219,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -228,7 +228,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Processing Type</b></em>' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -237,7 +237,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Triggers Self Adaptations</b></em>' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -246,7 +246,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Measurement Specification</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -256,7 +256,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.monitorrepository.impl.StatisticalCharacterizationImpl
      * <em>Statistical Characterization</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.monitorrepository.impl.StatisticalCharacterizationImpl
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getStatisticalCharacterization()
      * @generated
@@ -266,7 +266,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Statistical Characterization</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -276,7 +276,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.monitorrepository.impl.ArithmeticMeanImpl
      * <em>Arithmetic Mean</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.monitorrepository.impl.ArithmeticMeanImpl
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getArithmeticMean()
      * @generated
@@ -286,7 +286,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Arithmetic Mean</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -296,7 +296,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.monitorrepository.impl.HarmonicMeanImpl <em>Harmonic Mean</em>}'
      * class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.monitorrepository.impl.HarmonicMeanImpl
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getHarmonicMean()
      * @generated
@@ -306,7 +306,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Harmonic Mean</em>' class. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -316,7 +316,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.monitorrepository.impl.GeometricMeanImpl <em>Geometric Mean</em>
      * }' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.monitorrepository.impl.GeometricMeanImpl
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getGeometricMean()
      * @generated
@@ -326,7 +326,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Geometric Mean</em>' class. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -335,7 +335,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The meta object id for the '{@link org.palladiosimulator.monitorrepository.impl.MedianImpl
      * <em>Median</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.monitorrepository.impl.MedianImpl
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getMedian()
      * @generated
@@ -345,7 +345,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Median</em>' class. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -355,7 +355,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.monitorrepository.impl.ProcessingTypeImpl
      * <em>Processing Type</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.monitorrepository.impl.ProcessingTypeImpl
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getProcessingType()
      * @generated
@@ -365,7 +365,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -374,7 +374,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Measurement Specification</b></em>' container reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -383,7 +383,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Processing Type</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -393,7 +393,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.monitorrepository.impl.AggregationImpl <em>Aggregation</em>}'
      * class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.monitorrepository.impl.AggregationImpl
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getAggregation()
      * @generated
@@ -403,7 +403,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -412,7 +412,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Measurement Specification</b></em>' container reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -421,7 +421,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Statistical Characterization</b></em>' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -430,7 +430,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Aggregation</em>' class. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -441,7 +441,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * {@link org.palladiosimulator.monitorrepository.impl.MeasurementDrivenAggregationImpl
      * <em>Measurement Driven Aggregation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @see org.palladiosimulator.monitorrepository.impl.MeasurementDrivenAggregationImpl
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getMeasurementDrivenAggregation()
      * @generated
@@ -451,7 +451,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -460,7 +460,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Measurement Specification</b></em>' container reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -469,7 +469,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Statistical Characterization</b></em>' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -478,7 +478,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Frequency</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -487,7 +487,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Measurement Driven Aggregation</em>' class.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -497,7 +497,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.monitorrepository.impl.FixedSizeAggregationImpl
      * <em>Fixed Size Aggregation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.monitorrepository.impl.FixedSizeAggregationImpl
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getFixedSizeAggregation()
      * @generated
@@ -507,7 +507,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -516,7 +516,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Measurement Specification</b></em>' container reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -525,7 +525,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Statistical Characterization</b></em>' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -534,7 +534,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Frequency</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -543,7 +543,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Number Of Measurements</b></em>' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -552,7 +552,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Fixed Size Aggregation</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -562,7 +562,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.monitorrepository.impl.TimeDrivenImpl <em>Time Driven</em>}'
      * class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.monitorrepository.impl.TimeDrivenImpl
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getTimeDriven()
      * @generated
@@ -572,7 +572,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -581,7 +581,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Measurement Specification</b></em>' container reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -590,7 +590,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Window Length</b></em>' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -599,7 +599,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Window Increment</b></em>' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -608,7 +608,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Time Driven</em>' class. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -618,7 +618,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.monitorrepository.impl.TimeDrivenAggregationImpl
      * <em>Time Driven Aggregation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.monitorrepository.impl.TimeDrivenAggregationImpl
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getTimeDrivenAggregation()
      * @generated
@@ -628,7 +628,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -637,7 +637,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Measurement Specification</b></em>' container reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -646,7 +646,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Window Length</b></em>' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -655,7 +655,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Window Increment</b></em>' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -664,7 +664,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Statistical Characterization</b></em>' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -673,7 +673,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Time Driven Aggregation</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -683,7 +683,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.monitorrepository.impl.VariableSizeAggregationImpl
      * <em>Variable Size Aggregation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.monitorrepository.impl.VariableSizeAggregationImpl
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getVariableSizeAggregation()
      * @generated
@@ -693,7 +693,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -702,7 +702,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Measurement Specification</b></em>' container reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -711,7 +711,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Statistical Characterization</b></em>' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -720,7 +720,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Frequency</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -729,7 +729,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Retrospection Length</b></em>' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -738,7 +738,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Variable Size Aggregation</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -748,7 +748,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.monitorrepository.impl.FeedThroughImpl <em>Feed Through</em>}'
      * class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.monitorrepository.impl.FeedThroughImpl
      * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getFeedThrough()
      * @generated
@@ -758,7 +758,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -767,7 +767,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Measurement Specification</b></em>' container reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -776,7 +776,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Feed Through</em>' class. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -786,7 +786,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.monitorrepository.MonitorRepository <em>Monitor Repository</em>}
      * '. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Monitor Repository</em>'.
      * @see org.palladiosimulator.monitorrepository.MonitorRepository
      * @generated
@@ -797,7 +797,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the containment reference list '
      * {@link org.palladiosimulator.monitorrepository.MonitorRepository#getMonitors
      * <em>Monitors</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the containment reference list '<em>Monitors</em>'.
      * @see org.palladiosimulator.monitorrepository.MonitorRepository#getMonitors()
      * @see #getMonitorRepository()
@@ -808,7 +808,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * Returns the meta object for class '{@link org.palladiosimulator.monitorrepository.Monitor
      * <em>Monitor</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Monitor</em>'.
      * @see org.palladiosimulator.monitorrepository.Monitor
      * @generated
@@ -819,7 +819,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the containment reference list '
      * {@link org.palladiosimulator.monitorrepository.Monitor#getMeasurementSpecifications
      * <em>Measurement Specifications</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the containment reference list '
      *         <em>Measurement Specifications</em>'.
      * @see org.palladiosimulator.monitorrepository.Monitor#getMeasurementSpecifications()
@@ -832,7 +832,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the reference '
      * {@link org.palladiosimulator.monitorrepository.Monitor#getMeasuringPoint
      * <em>Measuring Point</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the reference '<em>Measuring Point</em>'.
      * @see org.palladiosimulator.monitorrepository.Monitor#getMeasuringPoint()
      * @see #getMonitor()
@@ -844,7 +844,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the container reference '
      * {@link org.palladiosimulator.monitorrepository.Monitor#getMonitorRepository
      * <em>Monitor Repository</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the container reference '<em>Monitor Repository</em>'.
      * @see org.palladiosimulator.monitorrepository.Monitor#getMonitorRepository()
      * @see #getMonitor()
@@ -856,7 +856,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the attribute '
      * {@link org.palladiosimulator.monitorrepository.Monitor#isActivated <em>Activated</em>}'. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Activated</em>'.
      * @see org.palladiosimulator.monitorrepository.Monitor#isActivated()
      * @see #getMonitor()
@@ -868,7 +868,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification
      * <em>Measurement Specification</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Measurement Specification</em>'.
      * @see org.palladiosimulator.monitorrepository.MeasurementSpecification
      * @generated
@@ -879,7 +879,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the reference '
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMetricDescription
      * <em>Metric Description</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the reference '<em>Metric Description</em>'.
      * @see org.palladiosimulator.monitorrepository.MeasurementSpecification#getMetricDescription()
      * @see #getMeasurementSpecification()
@@ -891,7 +891,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the container reference '
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getMonitor
      * <em>Monitor</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the container reference '<em>Monitor</em>'.
      * @see org.palladiosimulator.monitorrepository.MeasurementSpecification#getMonitor()
      * @see #getMeasurementSpecification()
@@ -903,7 +903,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the attribute '
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getName <em>Name</em>
      * }'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Name</em>'.
      * @see org.palladiosimulator.monitorrepository.MeasurementSpecification#getName()
      * @see #getMeasurementSpecification()
@@ -915,7 +915,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the containment reference '
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#getProcessingType
      * <em>Processing Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the containment reference '<em>Processing Type</em>'.
      * @see org.palladiosimulator.monitorrepository.MeasurementSpecification#getProcessingType()
      * @see #getMeasurementSpecification()
@@ -927,7 +927,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the attribute '
      * {@link org.palladiosimulator.monitorrepository.MeasurementSpecification#isTriggersSelfAdaptations
      * <em>Triggers Self Adaptations</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Triggers Self Adaptations</em>'.
      * @see org.palladiosimulator.monitorrepository.MeasurementSpecification#isTriggersSelfAdaptations()
      * @see #getMeasurementSpecification()
@@ -939,7 +939,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.monitorrepository.StatisticalCharacterization
      * <em>Statistical Characterization</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Statistical Characterization</em>'.
      * @see org.palladiosimulator.monitorrepository.StatisticalCharacterization
      * @generated
@@ -950,7 +950,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.monitorrepository.ArithmeticMean <em>Arithmetic Mean</em>}'.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Arithmetic Mean</em>'.
      * @see org.palladiosimulator.monitorrepository.ArithmeticMean
      * @generated
@@ -961,7 +961,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.monitorrepository.HarmonicMean <em>Harmonic Mean</em>}'. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Harmonic Mean</em>'.
      * @see org.palladiosimulator.monitorrepository.HarmonicMean
      * @generated
@@ -972,7 +972,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.monitorrepository.GeometricMean <em>Geometric Mean</em>}'. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Geometric Mean</em>'.
      * @see org.palladiosimulator.monitorrepository.GeometricMean
      * @generated
@@ -982,7 +982,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * Returns the meta object for class '{@link org.palladiosimulator.monitorrepository.Median
      * <em>Median</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Median</em>'.
      * @see org.palladiosimulator.monitorrepository.Median
      * @generated
@@ -993,7 +993,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.monitorrepository.ProcessingType <em>Processing Type</em>}'.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Processing Type</em>'.
      * @see org.palladiosimulator.monitorrepository.ProcessingType
      * @generated
@@ -1004,7 +1004,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the container reference '
      * {@link org.palladiosimulator.monitorrepository.ProcessingType#getMeasurementSpecification
      * <em>Measurement Specification</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the container reference '<em>Measurement Specification</em>'.
      * @see org.palladiosimulator.monitorrepository.ProcessingType#getMeasurementSpecification()
      * @see #getProcessingType()
@@ -1015,7 +1015,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * Returns the meta object for class '{@link org.palladiosimulator.monitorrepository.Aggregation
      * <em>Aggregation</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Aggregation</em>'.
      * @see org.palladiosimulator.monitorrepository.Aggregation
      * @generated
@@ -1026,7 +1026,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the containment reference '
      * {@link org.palladiosimulator.monitorrepository.Aggregation#getStatisticalCharacterization
      * <em>Statistical Characterization</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the containment reference '<em>Statistical Characterization</em>
      *         '.
      * @see org.palladiosimulator.monitorrepository.Aggregation#getStatisticalCharacterization()
@@ -1039,7 +1039,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation
      * <em>Measurement Driven Aggregation</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Measurement Driven Aggregation</em>'.
      * @see org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation
      * @generated
@@ -1050,7 +1050,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the attribute '
      * {@link org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation#getFrequency
      * <em>Frequency</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Frequency</em>'.
      * @see org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation#getFrequency()
      * @see #getMeasurementDrivenAggregation()
@@ -1062,7 +1062,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.monitorrepository.FixedSizeAggregation
      * <em>Fixed Size Aggregation</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Fixed Size Aggregation</em>'.
      * @see org.palladiosimulator.monitorrepository.FixedSizeAggregation
      * @generated
@@ -1073,7 +1073,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the attribute '
      * {@link org.palladiosimulator.monitorrepository.FixedSizeAggregation#getNumberOfMeasurements
      * <em>Number Of Measurements</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Number Of Measurements</em>'.
      * @see org.palladiosimulator.monitorrepository.FixedSizeAggregation#getNumberOfMeasurements()
      * @see #getFixedSizeAggregation()
@@ -1085,7 +1085,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.monitorrepository.TimeDrivenAggregation
      * <em>Time Driven Aggregation</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Time Driven Aggregation</em>'.
      * @see org.palladiosimulator.monitorrepository.TimeDrivenAggregation
      * @generated
@@ -1095,7 +1095,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * Returns the meta object for class '{@link org.palladiosimulator.monitorrepository.TimeDriven
      * <em>Time Driven</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Time Driven</em>'.
      * @see org.palladiosimulator.monitorrepository.TimeDriven
      * @generated
@@ -1106,7 +1106,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the attribute '
      * {@link org.palladiosimulator.monitorrepository.TimeDriven#getWindowLength
      * <em>Window Length</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Window Length</em>'.
      * @see org.palladiosimulator.monitorrepository.TimeDriven#getWindowLength()
      * @see #getTimeDriven()
@@ -1118,7 +1118,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the attribute '
      * {@link org.palladiosimulator.monitorrepository.TimeDriven#getWindowIncrement
      * <em>Window Increment</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Window Increment</em>'.
      * @see org.palladiosimulator.monitorrepository.TimeDriven#getWindowIncrement()
      * @see #getTimeDriven()
@@ -1130,7 +1130,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.monitorrepository.VariableSizeAggregation
      * <em>Variable Size Aggregation</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Variable Size Aggregation</em>'.
      * @see org.palladiosimulator.monitorrepository.VariableSizeAggregation
      * @generated
@@ -1141,7 +1141,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * Returns the meta object for the attribute '
      * {@link org.palladiosimulator.monitorrepository.VariableSizeAggregation#getRetrospectionLength
      * <em>Retrospection Length</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Retrospection Length</em>'.
      * @see org.palladiosimulator.monitorrepository.VariableSizeAggregation#getRetrospectionLength()
      * @see #getVariableSizeAggregation()
@@ -1152,7 +1152,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * Returns the meta object for class '{@link org.palladiosimulator.monitorrepository.FeedThrough
      * <em>Feed Through</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Feed Through</em>'.
      * @see org.palladiosimulator.monitorrepository.FeedThrough
      * @generated
@@ -1162,7 +1162,7 @@ public interface MonitorRepositoryPackage extends EPackage {
     /**
      * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @return the factory that creates the instances of the model.
      * @generated
      */
@@ -1177,7 +1177,7 @@ public interface MonitorRepositoryPackage extends EPackage {
      * <li>and each data type</li>
      * </ul>
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     interface Literals {
@@ -1185,7 +1185,7 @@ public interface MonitorRepositoryPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.MonitorRepositoryImpl
          * <em>Monitor Repository</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryImpl
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getMonitorRepository()
          * @generated
@@ -1195,7 +1195,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Monitors</b></em>' containment reference list
          * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EReference MONITOR_REPOSITORY__MONITORS = eINSTANCE.getMonitorRepository_Monitors();
@@ -1204,7 +1204,7 @@ public interface MonitorRepositoryPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.MonitorImpl <em>Monitor</em>}' class.
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.monitorrepository.impl.MonitorImpl
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getMonitor()
          * @generated
@@ -1214,7 +1214,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Measurement Specifications</b></em>' containment
          * reference list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EReference MONITOR__MEASUREMENT_SPECIFICATIONS = eINSTANCE.getMonitor_MeasurementSpecifications();
@@ -1222,7 +1222,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Measuring Point</b></em>' reference feature. <!--
          * begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EReference MONITOR__MEASURING_POINT = eINSTANCE.getMonitor_MeasuringPoint();
@@ -1230,7 +1230,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Monitor Repository</b></em>' container reference
          * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EReference MONITOR__MONITOR_REPOSITORY = eINSTANCE.getMonitor_MonitorRepository();
@@ -1238,7 +1238,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Activated</b></em>' attribute feature. <!--
          * begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EAttribute MONITOR__ACTIVATED = eINSTANCE.getMonitor_Activated();
@@ -1247,7 +1247,7 @@ public interface MonitorRepositoryPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.MeasurementSpecificationImpl
          * <em>Measurement Specification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.monitorrepository.impl.MeasurementSpecificationImpl
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getMeasurementSpecification()
          * @generated
@@ -1257,7 +1257,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Metric Description</b></em>' reference feature.
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EReference MEASUREMENT_SPECIFICATION__METRIC_DESCRIPTION = eINSTANCE
@@ -1266,7 +1266,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Monitor</b></em>' container reference feature.
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EReference MEASUREMENT_SPECIFICATION__MONITOR = eINSTANCE.getMeasurementSpecification_Monitor();
@@ -1274,7 +1274,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Name</b></em>' attribute feature. <!--
          * begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EAttribute MEASUREMENT_SPECIFICATION__NAME = eINSTANCE.getMeasurementSpecification_Name();
@@ -1282,7 +1282,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Processing Type</b></em>' containment reference
          * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EReference MEASUREMENT_SPECIFICATION__PROCESSING_TYPE = eINSTANCE.getMeasurementSpecification_ProcessingType();
@@ -1290,7 +1290,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Triggers Self Adaptations</b></em>' attribute
          * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EAttribute MEASUREMENT_SPECIFICATION__TRIGGERS_SELF_ADAPTATIONS = eINSTANCE
@@ -1301,7 +1301,7 @@ public interface MonitorRepositoryPackage extends EPackage {
          * {@link org.palladiosimulator.monitorrepository.impl.StatisticalCharacterizationImpl
          * <em>Statistical Characterization</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
          * -->
-         * 
+         *
          * @see org.palladiosimulator.monitorrepository.impl.StatisticalCharacterizationImpl
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getStatisticalCharacterization()
          * @generated
@@ -1312,7 +1312,7 @@ public interface MonitorRepositoryPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.ArithmeticMeanImpl
          * <em>Arithmetic Mean</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.monitorrepository.impl.ArithmeticMeanImpl
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getArithmeticMean()
          * @generated
@@ -1323,7 +1323,7 @@ public interface MonitorRepositoryPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.HarmonicMeanImpl
          * <em>Harmonic Mean</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.monitorrepository.impl.HarmonicMeanImpl
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getHarmonicMean()
          * @generated
@@ -1334,7 +1334,7 @@ public interface MonitorRepositoryPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.GeometricMeanImpl
          * <em>Geometric Mean</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.monitorrepository.impl.GeometricMeanImpl
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getGeometricMean()
          * @generated
@@ -1345,7 +1345,7 @@ public interface MonitorRepositoryPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.MedianImpl <em>Median</em>}' class.
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.monitorrepository.impl.MedianImpl
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getMedian()
          * @generated
@@ -1356,7 +1356,7 @@ public interface MonitorRepositoryPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.ProcessingTypeImpl
          * <em>Processing Type</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.monitorrepository.impl.ProcessingTypeImpl
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getProcessingType()
          * @generated
@@ -1366,7 +1366,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Measurement Specification</b></em>' container
          * reference feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EReference PROCESSING_TYPE__MEASUREMENT_SPECIFICATION = eINSTANCE.getProcessingType_MeasurementSpecification();
@@ -1375,7 +1375,7 @@ public interface MonitorRepositoryPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.AggregationImpl <em>Aggregation</em>}
          * ' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.monitorrepository.impl.AggregationImpl
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getAggregation()
          * @generated
@@ -1385,7 +1385,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Statistical Characterization</b></em>'
          * containment reference feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EReference AGGREGATION__STATISTICAL_CHARACTERIZATION = eINSTANCE.getAggregation_StatisticalCharacterization();
@@ -1395,7 +1395,7 @@ public interface MonitorRepositoryPackage extends EPackage {
          * {@link org.palladiosimulator.monitorrepository.impl.MeasurementDrivenAggregationImpl
          * <em>Measurement Driven Aggregation</em>}' class. <!-- begin-user-doc --> <!--
          * end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.monitorrepository.impl.MeasurementDrivenAggregationImpl
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getMeasurementDrivenAggregation()
          * @generated
@@ -1405,7 +1405,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Frequency</b></em>' attribute feature. <!--
          * begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EAttribute MEASUREMENT_DRIVEN_AGGREGATION__FREQUENCY = eINSTANCE.getMeasurementDrivenAggregation_Frequency();
@@ -1414,7 +1414,7 @@ public interface MonitorRepositoryPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.FixedSizeAggregationImpl
          * <em>Fixed Size Aggregation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.monitorrepository.impl.FixedSizeAggregationImpl
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getFixedSizeAggregation()
          * @generated
@@ -1424,7 +1424,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Number Of Measurements</b></em>' attribute
          * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EAttribute FIXED_SIZE_AGGREGATION__NUMBER_OF_MEASUREMENTS = eINSTANCE
@@ -1434,7 +1434,7 @@ public interface MonitorRepositoryPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.TimeDrivenAggregationImpl
          * <em>Time Driven Aggregation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.monitorrepository.impl.TimeDrivenAggregationImpl
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getTimeDrivenAggregation()
          * @generated
@@ -1445,7 +1445,7 @@ public interface MonitorRepositoryPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.TimeDrivenImpl <em>Time Driven</em>}'
          * class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.monitorrepository.impl.TimeDrivenImpl
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getTimeDriven()
          * @generated
@@ -1455,7 +1455,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Window Length</b></em>' attribute feature. <!--
          * begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EAttribute TIME_DRIVEN__WINDOW_LENGTH = eINSTANCE.getTimeDriven_WindowLength();
@@ -1463,7 +1463,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Window Increment</b></em>' attribute feature.
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EAttribute TIME_DRIVEN__WINDOW_INCREMENT = eINSTANCE.getTimeDriven_WindowIncrement();
@@ -1472,7 +1472,7 @@ public interface MonitorRepositoryPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.VariableSizeAggregationImpl
          * <em>Variable Size Aggregation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.monitorrepository.impl.VariableSizeAggregationImpl
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getVariableSizeAggregation()
          * @generated
@@ -1482,7 +1482,7 @@ public interface MonitorRepositoryPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Retrospection Length</b></em>' attribute feature.
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EAttribute VARIABLE_SIZE_AGGREGATION__RETROSPECTION_LENGTH = eINSTANCE
@@ -1492,7 +1492,7 @@ public interface MonitorRepositoryPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.monitorrepository.impl.FeedThroughImpl <em>Feed Through</em>
          * }' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.monitorrepository.impl.FeedThroughImpl
          * @see org.palladiosimulator.monitorrepository.impl.MonitorRepositoryPackageImpl#getFeedThrough()
          * @generated

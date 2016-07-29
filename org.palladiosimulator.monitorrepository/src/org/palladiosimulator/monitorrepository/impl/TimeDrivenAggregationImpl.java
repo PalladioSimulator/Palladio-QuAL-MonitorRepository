@@ -27,7 +27,7 @@ import org.palladiosimulator.monitorrepository.TimeDrivenAggregation;
 public class TimeDrivenAggregationImpl extends TimeDrivenImpl implements TimeDrivenAggregation {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected TimeDrivenAggregationImpl() {
@@ -36,7 +36,7 @@ public class TimeDrivenAggregationImpl extends TimeDrivenImpl implements TimeDri
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -46,7 +46,7 @@ public class TimeDrivenAggregationImpl extends TimeDrivenImpl implements TimeDri
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -58,7 +58,7 @@ public class TimeDrivenAggregationImpl extends TimeDrivenImpl implements TimeDri
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetStatisticalCharacterization(
@@ -70,7 +70,7 @@ public class TimeDrivenAggregationImpl extends TimeDrivenImpl implements TimeDri
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -82,7 +82,7 @@ public class TimeDrivenAggregationImpl extends TimeDrivenImpl implements TimeDri
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -97,7 +97,7 @@ public class TimeDrivenAggregationImpl extends TimeDrivenImpl implements TimeDri
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -111,7 +111,7 @@ public class TimeDrivenAggregationImpl extends TimeDrivenImpl implements TimeDri
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -126,7 +126,7 @@ public class TimeDrivenAggregationImpl extends TimeDrivenImpl implements TimeDri
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -141,7 +141,7 @@ public class TimeDrivenAggregationImpl extends TimeDrivenImpl implements TimeDri
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -155,7 +155,7 @@ public class TimeDrivenAggregationImpl extends TimeDrivenImpl implements TimeDri
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -173,7 +173,7 @@ public class TimeDrivenAggregationImpl extends TimeDrivenImpl implements TimeDri
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

@@ -24,7 +24,7 @@ public abstract class MeasurementDrivenAggregationImpl extends AggregationImpl i
     /**
      * The default value of the '{@link #getFrequency() <em>Frequency</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getFrequency()
      * @generated
      * @ordered
@@ -33,7 +33,7 @@ public abstract class MeasurementDrivenAggregationImpl extends AggregationImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MeasurementDrivenAggregationImpl() {
@@ -42,7 +42,7 @@ public abstract class MeasurementDrivenAggregationImpl extends AggregationImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -52,7 +52,7 @@ public abstract class MeasurementDrivenAggregationImpl extends AggregationImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -63,7 +63,7 @@ public abstract class MeasurementDrivenAggregationImpl extends AggregationImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -74,7 +74,7 @@ public abstract class MeasurementDrivenAggregationImpl extends AggregationImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -88,7 +88,7 @@ public abstract class MeasurementDrivenAggregationImpl extends AggregationImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -103,7 +103,7 @@ public abstract class MeasurementDrivenAggregationImpl extends AggregationImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -118,7 +118,7 @@ public abstract class MeasurementDrivenAggregationImpl extends AggregationImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

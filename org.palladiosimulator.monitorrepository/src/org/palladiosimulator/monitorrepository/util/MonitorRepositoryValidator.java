@@ -29,14 +29,14 @@ import org.palladiosimulator.monitorrepository.VariableSizeAggregation;
 
 /**
  * <!-- begin-user-doc --> The <b>Validator</b> for the model. <!-- end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage
  * @generated
  */
 public class MonitorRepositoryValidator extends EObjectValidator {
     /**
      * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final MonitorRepositoryValidator INSTANCE = new MonitorRepositoryValidator();
@@ -45,7 +45,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
      * A constant for the {@link org.eclipse.emf.common.util.Diagnostic#getSource() source} of
      * diagnostic {@link org.eclipse.emf.common.util.Diagnostic#getCode() codes} from this package.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.eclipse.emf.common.util.Diagnostic#getSource()
      * @see org.eclipse.emf.common.util.Diagnostic#getCode()
      * @generated
@@ -55,7 +55,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
     /**
      * A constant with a fixed name that can be used as the base value for additional hand written
      * constants. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 0;
@@ -63,14 +63,14 @@ public class MonitorRepositoryValidator extends EObjectValidator {
     /**
      * A constant with a fixed name that can be used as the base value for additional hand written
      * constants in a derived class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static final int DIAGNOSTIC_CODE_COUNT = GENERATED_DIAGNOSTIC_CODE_COUNT;
 
     /**
      * Creates an instance of the switch. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public MonitorRepositoryValidator() {
@@ -79,7 +79,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * Returns the package of this validator switch. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -90,7 +90,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
     /**
      * Calls <code>validateXXX</code> for the corresponding classifier of the model. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -137,7 +137,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateMonitorRepository(final MonitorRepository monitorRepository,
@@ -147,7 +147,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateMonitor(final Monitor monitor, final DiagnosticChain diagnostics,
@@ -157,7 +157,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateMeasurementSpecification(final MeasurementSpecification measurementSpecification,
@@ -167,7 +167,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateStatisticalCharacterization(final StatisticalCharacterization statisticalCharacterization,
@@ -177,7 +177,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateArithmeticMean(final ArithmeticMean arithmeticMean, final DiagnosticChain diagnostics,
@@ -187,7 +187,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateHarmonicMean(final HarmonicMean harmonicMean, final DiagnosticChain diagnostics,
@@ -197,7 +197,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateGeometricMean(final GeometricMean geometricMean, final DiagnosticChain diagnostics,
@@ -207,7 +207,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateMedian(final Median median, final DiagnosticChain diagnostics,
@@ -217,7 +217,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateProcessingType(final ProcessingType processingType, final DiagnosticChain diagnostics,
@@ -227,7 +227,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateAggregation(final Aggregation aggregation, final DiagnosticChain diagnostics,
@@ -237,7 +237,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateMeasurementDrivenAggregation(final MeasurementDrivenAggregation measurementDrivenAggregation,
@@ -278,7 +278,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
     /**
      * The cached validation expression for the frequency constraint of '
      * <em>Measurement Driven Aggregation</em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static final String MEASUREMENT_DRIVEN_AGGREGATION__FREQUENCY__EEXPRESSION = "self.frequency > 0";
@@ -286,7 +286,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
     /**
      * Validates the frequency constraint of '<em>Measurement Driven Aggregation</em>'. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateMeasurementDrivenAggregation_frequency(
@@ -300,7 +300,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateFixedSizeAggregation(final FixedSizeAggregation fixedSizeAggregation,
@@ -342,7 +342,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
     /**
      * The cached validation expression for the measNum constraint of '
      * <em>Fixed Size Aggregation</em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static final String FIXED_SIZE_AGGREGATION__MEAS_NUM__EEXPRESSION = "self.numberOfMeasurements > 0";
@@ -350,7 +350,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
     /**
      * Validates the measNum constraint of '<em>Fixed Size Aggregation</em>'. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateFixedSizeAggregation_measNum(final FixedSizeAggregation fixedSizeAggregation,
@@ -362,7 +362,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateTimeDrivenAggregation(final TimeDrivenAggregation timeDrivenAggregation,
@@ -403,7 +403,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateTimeDriven(final TimeDriven timeDriven, final DiagnosticChain diagnostics,
@@ -445,7 +445,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
     /**
      * The cached validation expression for the windowLength constraint of '<em>Time Driven</em>'.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static final String TIME_DRIVEN__WINDOW_LENGTH__EEXPRESSION = "self.windowLength > 0.0";
@@ -453,7 +453,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
     /**
      * Validates the windowLength constraint of '<em>Time Driven</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateTimeDriven_windowLength(final TimeDriven timeDriven, final DiagnosticChain diagnostics,
@@ -466,7 +466,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
     /**
      * The cached validation expression for the windowIncrement constraint of '<em>Time Driven</em>
      * '. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static final String TIME_DRIVEN__WINDOW_INCREMENT__EEXPRESSION = "self.windowIncrement > 0.0";
@@ -474,7 +474,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
     /**
      * Validates the windowIncrement constraint of '<em>Time Driven</em>'. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateTimeDriven_windowIncrement(final TimeDriven timeDriven, final DiagnosticChain diagnostics,
@@ -486,7 +486,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateVariableSizeAggregation(final VariableSizeAggregation variableSizeAggregation,
@@ -529,7 +529,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
     /**
      * The cached validation expression for the retroLength constraint of '
      * <em>Variable Size Aggregation</em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static final String VARIABLE_SIZE_AGGREGATION__RETRO_LENGTH__EEXPRESSION = "self.retrospectionLength > 0.0";
@@ -537,7 +537,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
     /**
      * Validates the retroLength constraint of '<em>Variable Size Aggregation</em>'. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateVariableSizeAggregation_retroLength(final VariableSizeAggregation variableSizeAggregation,
@@ -549,7 +549,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public boolean validateFeedThrough(final FeedThrough feedThrough, final DiagnosticChain diagnostics,
@@ -560,7 +560,7 @@ public class MonitorRepositoryValidator extends EObjectValidator {
     /**
      * Returns the resource locator that will be used to fetch messages for this validator's
      * diagnostics. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

@@ -24,7 +24,7 @@ public class FixedSizeAggregationImpl extends MeasurementDrivenAggregationImpl i
     /**
      * The default value of the '{@link #getNumberOfMeasurements() <em>Number Of Measurements</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getNumberOfMeasurements()
      * @generated
      * @ordered
@@ -33,7 +33,7 @@ public class FixedSizeAggregationImpl extends MeasurementDrivenAggregationImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected FixedSizeAggregationImpl() {
@@ -42,7 +42,7 @@ public class FixedSizeAggregationImpl extends MeasurementDrivenAggregationImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -52,7 +52,7 @@ public class FixedSizeAggregationImpl extends MeasurementDrivenAggregationImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -63,7 +63,7 @@ public class FixedSizeAggregationImpl extends MeasurementDrivenAggregationImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -75,7 +75,7 @@ public class FixedSizeAggregationImpl extends MeasurementDrivenAggregationImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -89,7 +89,7 @@ public class FixedSizeAggregationImpl extends MeasurementDrivenAggregationImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -104,7 +104,7 @@ public class FixedSizeAggregationImpl extends MeasurementDrivenAggregationImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -119,7 +119,7 @@ public class FixedSizeAggregationImpl extends MeasurementDrivenAggregationImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

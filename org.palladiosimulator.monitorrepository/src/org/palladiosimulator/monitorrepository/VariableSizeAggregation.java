@@ -30,7 +30,7 @@ public interface VariableSizeAggregation extends MeasurementDrivenAggregation {
      * --> This value (interpreted as seconds) determines the length of the retrospection interval.
      * That is, it specifies which measurements shall be included in the aggregation. <!--
      * end-model-doc -->
-     * 
+     *
      * @return the value of the '<em>Retrospection Length</em>' attribute.
      * @see #setRetrospectionLength(double)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getVariableSizeAggregation_RetrospectionLength()
@@ -43,7 +43,7 @@ public interface VariableSizeAggregation extends MeasurementDrivenAggregation {
      * Sets the value of the '
      * {@link org.palladiosimulator.monitorrepository.VariableSizeAggregation#getRetrospectionLength
      * <em>Retrospection Length</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Retrospection Length</em>' attribute.
      * @see #getRetrospectionLength()
@@ -55,7 +55,7 @@ public interface VariableSizeAggregation extends MeasurementDrivenAggregation {
      * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Convenience method to
      * retrieve the property 'retrospectionLength' (interpreted as given in seconds) in terms of a
      * {@link javax.measure.Measure}. <!-- end-model-doc -->
-     * 
+     *
      * @model kind="operation" dataType=
      *        "org.palladiosimulator.edp2.models.ExperimentData.EJSMeasure<org.eclipse.emf.ecore.EDoubleObject, org.palladiosimulator.monitorrepository.util.Duration>"
      *        annotation=

@@ -31,21 +31,21 @@ import de.uka.ipd.sdq.identifier.Identifier;
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage
  * @generated
  */
 public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
     /**
      * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static MonitorRepositoryPackage modelPackage;
 
     /**
      * Creates an instance of the adapter factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public MonitorRepositoryAdapterFactory() {
@@ -58,7 +58,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * Returns whether this factory is applicable for the type of the object. <!-- begin-user-doc
      * --> This implementation returns <code>true</code> if the object is either the model's package
      * or is an instance object of the model. <!-- end-user-doc -->
-     * 
+     *
      * @return whether this factory is applicable for the type of the object.
      * @generated
      */
@@ -76,7 +76,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
     /**
      * The switch that delegates to the <code>createXXX</code> methods. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MonitorRepositorySwitch<Adapter> modelSwitch = new MonitorRepositorySwitch<Adapter>() {
@@ -183,7 +183,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param target
      *            the object to adapt.
      * @return the adapter for the <code>target</code>.
@@ -200,7 +200,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.monitorrepository.MonitorRepository
      * @generated
@@ -215,7 +215,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.monitorrepository.Monitor
      * @generated
@@ -230,7 +230,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * <em>Measurement Specification</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.monitorrepository.MeasurementSpecification
      * @generated
@@ -245,7 +245,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * <em>Statistical Characterization</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.monitorrepository.StatisticalCharacterization
      * @generated
@@ -260,7 +260,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.monitorrepository.ArithmeticMean
      * @generated
@@ -275,7 +275,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.monitorrepository.HarmonicMean
      * @generated
@@ -290,7 +290,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.monitorrepository.GeometricMean
      * @generated
@@ -304,7 +304,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * {@link org.palladiosimulator.monitorrepository.Median <em>Median</em>}'. <!-- begin-user-doc
      * --> This default implementation returns null so that we can easily ignore cases; it's useful
      * to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.monitorrepository.Median
      * @generated
@@ -319,7 +319,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.monitorrepository.ProcessingType
      * @generated
@@ -334,7 +334,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.monitorrepository.Aggregation
      * @generated
@@ -349,7 +349,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * <em>Measurement Driven Aggregation</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.monitorrepository.MeasurementDrivenAggregation
      * @generated
@@ -364,7 +364,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * <em>Fixed Size Aggregation</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.monitorrepository.FixedSizeAggregation
      * @generated
@@ -379,7 +379,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * <em>Time Driven Aggregation</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.monitorrepository.TimeDrivenAggregation
      * @generated
@@ -394,7 +394,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.monitorrepository.TimeDriven
      * @generated
@@ -409,7 +409,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * <em>Variable Size Aggregation</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.monitorrepository.VariableSizeAggregation
      * @generated
@@ -424,7 +424,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.monitorrepository.FeedThrough
      * @generated
@@ -438,7 +438,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * <em>Identifier</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.identifier.Identifier
      * @generated
@@ -453,7 +453,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.pcm.core.entity.NamedElement
      * @generated
@@ -467,7 +467,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
      * {@link org.palladiosimulator.pcm.core.entity.Entity <em>Entity</em>}'. <!-- begin-user-doc
      * --> This default implementation returns null so that we can easily ignore cases; it's useful
      * to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.pcm.core.entity.Entity
      * @generated
@@ -479,7 +479,7 @@ public class MonitorRepositoryAdapterFactory extends AdapterFactoryImpl {
     /**
      * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
      * implementation returns null. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @generated
      */

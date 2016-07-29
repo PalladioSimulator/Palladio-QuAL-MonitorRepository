@@ -27,7 +27,7 @@ public class VariableSizeAggregationImpl extends MeasurementDrivenAggregationImp
     /**
      * The default value of the '{@link #getRetrospectionLength() <em>Retrospection Length</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getRetrospectionLength()
      * @generated
      * @ordered
@@ -36,7 +36,7 @@ public class VariableSizeAggregationImpl extends MeasurementDrivenAggregationImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected VariableSizeAggregationImpl() {
@@ -45,7 +45,7 @@ public class VariableSizeAggregationImpl extends MeasurementDrivenAggregationImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -55,7 +55,7 @@ public class VariableSizeAggregationImpl extends MeasurementDrivenAggregationImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -66,7 +66,7 @@ public class VariableSizeAggregationImpl extends MeasurementDrivenAggregationImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -78,7 +78,7 @@ public class VariableSizeAggregationImpl extends MeasurementDrivenAggregationImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -88,7 +88,7 @@ public class VariableSizeAggregationImpl extends MeasurementDrivenAggregationImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -102,7 +102,7 @@ public class VariableSizeAggregationImpl extends MeasurementDrivenAggregationImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -117,7 +117,7 @@ public class VariableSizeAggregationImpl extends MeasurementDrivenAggregationImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -132,7 +132,7 @@ public class VariableSizeAggregationImpl extends MeasurementDrivenAggregationImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

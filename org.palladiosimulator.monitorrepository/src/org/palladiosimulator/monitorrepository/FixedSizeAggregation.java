@@ -29,7 +29,7 @@ public interface FixedSizeAggregation extends MeasurementDrivenAggregation {
      * value is <code>"10"</code>. <!-- begin-user-doc --> <!-- end-user-doc --> <!--
      * begin-model-doc --> This positive int value determines the number of measurements that shall
      * be aggregated. By default, this value is set to 10. <!-- end-model-doc -->
-     * 
+     *
      * @return the value of the '<em>Number Of Measurements</em>' attribute.
      * @see #setNumberOfMeasurements(int)
      * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getFixedSizeAggregation_NumberOfMeasurements()
@@ -42,7 +42,7 @@ public interface FixedSizeAggregation extends MeasurementDrivenAggregation {
      * Sets the value of the '
      * {@link org.palladiosimulator.monitorrepository.FixedSizeAggregation#getNumberOfMeasurements
      * <em>Number Of Measurements</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Number Of Measurements</em>' attribute.
      * @see #getNumberOfMeasurements()

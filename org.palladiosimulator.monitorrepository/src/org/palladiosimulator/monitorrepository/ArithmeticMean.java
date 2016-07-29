@@ -9,6 +9,9 @@ import org.palladiosimulator.monitorrepository.statisticalcharacterization.Stati
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Arithmetic Mean</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc --> The StatisticalCharacterization 'ArithmeticMean' which computes the
+ * arithmetic mean of a sequence of measurements. <!-- end-model-doc -->
+ *
  *
  * @see org.palladiosimulator.monitorrepository.MonitorRepositoryPackage#getArithmeticMean()
  * @model
@@ -17,7 +20,7 @@ import org.palladiosimulator.monitorrepository.statisticalcharacterization.Stati
 public interface ArithmeticMean extends StatisticalCharacterization {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @model dataType=
      *        "org.palladiosimulator.monitorrepository.util.StatisticalCharacterizationAggregator"
      *        annotation=

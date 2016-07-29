@@ -17,7 +17,7 @@ import org.palladiosimulator.monitorrepository.statisticalcharacterization.Stati
 public class HarmonicMeanImpl extends StatisticalCharacterizationImpl implements HarmonicMean {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected HarmonicMeanImpl() {
@@ -26,7 +26,7 @@ public class HarmonicMeanImpl extends StatisticalCharacterizationImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -36,7 +36,7 @@ public class HarmonicMeanImpl extends StatisticalCharacterizationImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
