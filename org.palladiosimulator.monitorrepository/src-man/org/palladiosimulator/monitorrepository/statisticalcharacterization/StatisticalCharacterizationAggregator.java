@@ -33,6 +33,8 @@ public abstract class StatisticalCharacterizationAggregator {
     private Amount<Duration> intervalLength;
     private Amount<Duration> intervalRightBound;
 
+    private static final Amount<Duration> ZERO_DURATION = Amount.valueOf(0, Duration.UNIT);
+
     /**
      * Initializes a new instance of the {@link StatisticalCharacterizationAggregator} class with
      * the given parameter.
@@ -89,6 +91,8 @@ public abstract class StatisticalCharacterizationAggregator {
      * @return A {@link MeasuringValue} representing the result of the aggregation.
      * @throws NullPointerException
      *             If any of the parameters is {@code null}.
+     * @throws IllegalArgumentException
+     *             If any of the given {@link Amounts} represents a negative value.
      * @see #getDataMetric()
      */
     public final MeasuringValue aggregateData(Iterable<MeasuringValue> data, Amount<Duration> intervalLeftBound,
@@ -100,6 +104,8 @@ public abstract class StatisticalCharacterizationAggregator {
         this.intervalRightBound = Objects.requireNonNull(intervalRightBound);
         this.intervalLength = Objects.requireNonNull(intervalLength)
                 .orElse(this.intervalRightBound.minus(this.intervalLeftBound));
+
+        ensureDurationAmountsNonNegative();
 
         Measure<Double, Quantity> result = null;
         switch (this.dataMetric.getScopeOfValidity()) {
@@ -113,6 +119,18 @@ public abstract class StatisticalCharacterizationAggregator {
             throw new AssertionError();
         }
         return new BasicMeasurement<Double, Quantity>(result, this.dataMetric);
+    }
+
+    private void ensureDurationAmountsNonNegative() {
+        if (this.intervalLeftBound.isLessThan(ZERO_DURATION)) {
+            throw new IllegalArgumentException("Interval left bound must not be negative.");
+        }
+        if (this.intervalRightBound.isLessThan(ZERO_DURATION)) {
+            throw new IllegalArgumentException("Interval right bound must not be negative.");
+        }
+        if (this.intervalLength.isLessThan(ZERO_DURATION)) {
+            throw new IllegalArgumentException("Interval length must not be negative.");
+        }
     }
 
     private Measure<Double, Quantity> obtainDataFromMeasurementAsMeasure(MeasuringValue measurement) {
