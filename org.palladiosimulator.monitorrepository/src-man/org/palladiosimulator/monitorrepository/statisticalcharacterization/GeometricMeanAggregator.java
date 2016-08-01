@@ -33,13 +33,13 @@ import org.palladiosimulator.monitorrepository.GeometricMean;
  */
 public class GeometricMeanAggregator extends StatisticalCharacterizationAggregator {
 
-    public GeometricMeanAggregator(NumericalBaseMetricDescription expectedWindowMetric) {
+    public GeometricMeanAggregator(final NumericalBaseMetricDescription expectedWindowMetric) {
         super(expectedWindowMetric);
     }
 
     @Override
     protected Measure<Double, Quantity> calculateStatisticalCharaterizationDiscrete(
-            Iterable<MeasuringValue> windowData) {
+            final Iterable<MeasuringValue> windowData) {
         double meanOfLogs = StreamSupport.stream(windowData.spliterator(), false)
                 .collect(Collectors.averagingDouble(m -> Math.log(this.obtainDataValueFromMeasurement(m))));
         double geometricMean = Double.compare(meanOfLogs, 0d) == 0 || !Double.isFinite(meanOfLogs) ? 0d
@@ -50,7 +50,7 @@ public class GeometricMeanAggregator extends StatisticalCharacterizationAggregat
 
     @Override
     protected Measure<Double, Quantity> calculateStatisticalCharacterizationContinuous(
-            Iterable<MeasuringValue> windowData) {
+            final Iterable<MeasuringValue> windowData) {
 
         Measure<Double, Quantity> geometricMean = Measure.valueOf(0d, super.getDataDefaultUnit());
         Iterator<MeasuringValue> iterator = windowData.iterator();

@@ -35,13 +35,13 @@ import org.palladiosimulator.monitorrepository.HarmonicMean;
  */
 public class HarmonicMeanAggregator extends StatisticalCharacterizationAggregator {
 
-    public HarmonicMeanAggregator(NumericalBaseMetricDescription expectedWindowMetric) {
+    public HarmonicMeanAggregator(final NumericalBaseMetricDescription expectedWindowMetric) {
         super(expectedWindowMetric);
     }
 
     @Override
     protected Measure<Double, Quantity> calculateStatisticalCharaterizationDiscrete(
-            Iterable<MeasuringValue> windowData) {
+            final Iterable<MeasuringValue> windowData) {
         // harmonic mean is not defined in case that any of the elements equals
         // zero, this implementation will then return 0
         double arithmeticMeanOfInverses = StreamSupport.stream(windowData.spliterator(), false).collect(
@@ -54,7 +54,7 @@ public class HarmonicMeanAggregator extends StatisticalCharacterizationAggregato
 
     @Override
     protected Measure<Double, Quantity> calculateStatisticalCharacterizationContinuous(
-            Iterable<MeasuringValue> windowData) {
+            final Iterable<MeasuringValue> windowData) {
 
         Measure<Double, Quantity> harmonicMean = Measure.valueOf(0d, super.getDataDefaultUnit());
         Iterator<MeasuringValue> iterator = windowData.iterator();

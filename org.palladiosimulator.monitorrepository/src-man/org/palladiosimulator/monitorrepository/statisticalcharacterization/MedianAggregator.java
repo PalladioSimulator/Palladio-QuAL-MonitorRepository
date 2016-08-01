@@ -27,13 +27,13 @@ import org.palladiosimulator.monitorrepository.Median;
  */
 public class MedianAggregator extends StatisticalCharacterizationAggregator {
 
-    public MedianAggregator(NumericalBaseMetricDescription expectedWindowMetric) {
+    public MedianAggregator(final NumericalBaseMetricDescription expectedWindowMetric) {
         super(expectedWindowMetric);
     }
 
     @Override
     protected Measure<Double, Quantity> calculateStatisticalCharaterizationDiscrete(
-            Iterable<MeasuringValue> windowData) {
+            final Iterable<MeasuringValue> windowData) {
         Double[] sortedData = StreamSupport.stream(windowData.spliterator(), false)
                 .map(this::obtainDataValueFromMeasurement).sorted().toArray(Double[]::new);
         double median = 0d;
@@ -50,7 +50,7 @@ public class MedianAggregator extends StatisticalCharacterizationAggregator {
 
     @Override
     protected Measure<Double, Quantity> calculateStatisticalCharacterizationContinuous(
-            Iterable<MeasuringValue> windowData) {
+            final Iterable<MeasuringValue> windowData) {
 
         Measure<Double, Quantity> median = Measure.valueOf(0d, getDataDefaultUnit());
         Iterator<MeasuringValue> iterator = windowData.iterator();
@@ -98,7 +98,7 @@ public class MedianAggregator extends StatisticalCharacterizationAggregator {
         private final Amount<Duration> length;
         private final Amount<Quantity> value;
 
-        private Interval(Amount<Duration> length, Amount<Quantity> value) {
+        private Interval(final Amount<Duration> length, final Amount<Quantity> value) {
             assert length != null && value != null;
 
             this.length = length;
@@ -106,7 +106,7 @@ public class MedianAggregator extends StatisticalCharacterizationAggregator {
         }
 
         @Override
-        public int compareTo(Interval o) {
+        public int compareTo(final Interval o) {
             // only use value for comparison
             return this.value.compareTo(o.value);
         }

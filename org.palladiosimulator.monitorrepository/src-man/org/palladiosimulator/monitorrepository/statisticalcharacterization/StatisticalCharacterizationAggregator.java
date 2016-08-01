@@ -45,7 +45,7 @@ public abstract class StatisticalCharacterizationAggregator {
      * @throws NullPointerException
      *             In case {@code expectedWindowMetric == null}.
      */
-    public StatisticalCharacterizationAggregator(NumericalBaseMetricDescription expectedDataMetric) {
+    public StatisticalCharacterizationAggregator(final NumericalBaseMetricDescription expectedDataMetric) {
         super();
         this.dataMetric = Objects.requireNonNull(expectedDataMetric);
         this.dataDefaultUnit = dataMetric.getDefaultUnit();
@@ -95,8 +95,9 @@ public abstract class StatisticalCharacterizationAggregator {
      *             If any of the given {@link Amounts} represents a negative value.
      * @see #getDataMetric()
      */
-    public final MeasuringValue aggregateData(Iterable<MeasuringValue> data, Amount<Duration> intervalLeftBound,
-            Amount<Duration> intervalRightBound, Optional<Amount<Duration>> intervalLength) {
+    public final MeasuringValue aggregateData(final Iterable<MeasuringValue> data,
+            final Amount<Duration> intervalLeftBound, final Amount<Duration> intervalRightBound,
+            final Optional<Amount<Duration>> intervalLength) {
 
         Objects.requireNonNull(data);
 
@@ -133,7 +134,7 @@ public abstract class StatisticalCharacterizationAggregator {
         }
     }
 
-    private Measure<Double, Quantity> obtainDataFromMeasurementAsMeasure(MeasuringValue measurement) {
+    private Measure<Double, Quantity> obtainDataFromMeasurementAsMeasure(final MeasuringValue measurement) {
         return measurement.getMeasureForMetric(this.dataMetric);
     }
 
@@ -157,7 +158,7 @@ public abstract class StatisticalCharacterizationAggregator {
      * @see #obtainDataValueFromMeasurement(MeasuringValue)
      * @see NumericalBaseMetricDescription#getDefaultUnit()
      */
-    protected final Amount<Quantity> obtainDataFromMeasurement(MeasuringValue measurement) {
+    protected final Amount<Quantity> obtainDataFromMeasurement(final MeasuringValue measurement) {
         Measure<Double, Quantity> measure = obtainDataFromMeasurementAsMeasure(measurement);
         return Amount.valueOf(measure.getValue(), measure.getUnit());
     }
@@ -174,17 +175,41 @@ public abstract class StatisticalCharacterizationAggregator {
      * @see NumericalBaseMetricDescription#getDefaultUnit()
      * @see #obtainDataFromMeasurement(MeasuringValue)
      */
-    protected final double obtainDataValueFromMeasurement(MeasuringValue measurement) {
+    protected final double obtainDataValueFromMeasurement(final MeasuringValue measurement) {
         return obtainDataFromMeasurementAsMeasure(measurement).doubleValue(this.dataDefaultUnit);
     }
 
+    /**
+     * Method to be implemented by each subclass to calculate the statistical characterization of a
+     * sequence of measurements with a discrete scope of validity (i.e., to aggregate them).<br>
+     * This method is invoked within {@link #aggregateData(Iterable, Amount, Amount, Optional)}.
+     * 
+     * @param dataToAggregate
+     *            The sequence of data/measurements to be aggregated, expressed as an
+     *            {@link Iterable} of {@link MeasuringValue}s.
+     * @return A {@link Measure} representing the result of the aggregation.
+     * @see #getDataMetric()
+     * @see NumericalBaseMetricDescription#getScopeOfValidity()
+     */
     protected abstract Measure<Double, Quantity> calculateStatisticalCharaterizationDiscrete(
             Iterable<MeasuringValue> dataToAggregate);
 
+    /**
+     * Method to be implemented by each subclass to calculate the statistical characterization of a
+     * sequence of measurements with a continuous scope of validity (i.e., to aggregate them).<br>
+     * This method is invoked within {@link #aggregateData(Iterable, Amount, Amount, Optional)}.
+     * 
+     * @param dataToAggregate
+     *            The sequence of data/measurements to be aggregated, expressed as an
+     *            {@link Iterable} of {@link MeasuringValue}s.
+     * @return A {@link Measure} representing the result of the aggregation.
+     * @see #getDataMetric()
+     * @see NumericalBaseMetricDescription#getScopeOfValidity()
+     */
     protected abstract Measure<Double, Quantity> calculateStatisticalCharacterizationContinuous(
             Iterable<MeasuringValue> dataToAggregate);
 
-    private static Amount<Duration> getPointInTimeOfMeasurement(MeasuringValue measurement) {
+    private static Amount<Duration> getPointInTimeOfMeasurement(final MeasuringValue measurement) {
         assert measurement != null;
 
         Measure<Double, Duration> pointInTimeMeasure = measurement
@@ -193,8 +218,30 @@ public abstract class StatisticalCharacterizationAggregator {
         return Amount.valueOf(pointInTimeMeasure.doubleValue(SI.SECOND), SI.SECOND);
     }
 
-    protected final Amount<Duration> obtainCurrentMeasurementValidityScope(MeasuringValue currentMeasurement,
-            Optional<MeasuringValue> nextMeasurement) {
+    /**
+     * Gets how "long" the value of a certain measurement (with a continuous scope of validity) is
+     * valid which is the difference between the point in time the next measurement was taken and
+     * that of the given measurement (or the left bound of the current interval if the latter is
+     * "larger").<br>
+     * In case no succeeding measurement is present, the right bound of the interval all data lie in
+     * is used instead.
+     * 
+     * @param currentMeasurement
+     *            The {@link MeasuringValue} whose validity "length" is to be determined.
+     * @param nextMeasurement
+     *            An {@link Optional} containing the directly succeeding {@link MeasuringValue}, or
+     *            an empty {@link Optional} in case none is at hand.
+     * @return The validity "length" of the measurement, expressed in terms of a {@link Duration}
+     *         {@link Amount}.
+     * @throws IllegalStateException
+     *             If the {@link ScopeOfValidity} of the underlying metric is not
+     *             {@link ScopeOfValidity#CONTINUOUS}.
+     * @see #aggregateData(Iterable, Amount, Amount, Optional)
+     * @see #getDataMetric()
+     * @see NumericalBaseMetricDescription#getScopeOfValidity()
+     */
+    protected final Amount<Duration> obtainCurrentMeasurementValidityScope(final MeasuringValue currentMeasurement,
+            final Optional<MeasuringValue> nextMeasurement) {
         if (this.dataMetric.getScopeOfValidity() != ScopeOfValidity.CONTINUOUS) {
             throw new IllegalStateException("Method is only reasonable for metrics with continuous scope of validity!");
         }

@@ -33,13 +33,13 @@ import org.palladiosimulator.monitorrepository.ArithmeticMean;
  */
 public class ArithmeticMeanAggregator extends StatisticalCharacterizationAggregator {
 
-    public ArithmeticMeanAggregator(NumericalBaseMetricDescription expectedWindowMetric) {
+    public ArithmeticMeanAggregator(final NumericalBaseMetricDescription expectedWindowMetric) {
         super(expectedWindowMetric);
     }
 
     @Override
     protected Measure<Double, Quantity> calculateStatisticalCharaterizationDiscrete(
-            Iterable<MeasuringValue> windowData) {
+            final Iterable<MeasuringValue> windowData) {
         double arithmeticMean = StreamSupport.stream(windowData.spliterator(), false)
                 .collect(Collectors.averagingDouble(this::obtainDataValueFromMeasurement));
 
@@ -48,7 +48,7 @@ public class ArithmeticMeanAggregator extends StatisticalCharacterizationAggrega
 
     @Override
     protected Measure<Double, Quantity> calculateStatisticalCharacterizationContinuous(
-            Iterable<MeasuringValue> windowData) {
+            final Iterable<MeasuringValue> windowData) {
 
         Amount<? extends Quantity> area = Amount.valueOf(0d, getDataDefaultUnit().times(SI.SECOND));
         Iterator<MeasuringValue> iterator = windowData.iterator();
