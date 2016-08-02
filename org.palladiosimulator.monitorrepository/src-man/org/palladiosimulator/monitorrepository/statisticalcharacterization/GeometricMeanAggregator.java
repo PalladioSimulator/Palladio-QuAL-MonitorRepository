@@ -17,15 +17,16 @@ import org.palladiosimulator.monitorrepository.GeometricMean;
  * {@link StatisticalCharacterizationAggregator} corresponding to the {@link GeometricMean} model
  * class which computes the geometric mean of a sequence of measurements (discrete case) or a
  * (positive) function with respect to an interval (continuous case): <br>
- * In the discrete case this is simply <code> GM=(x<sub>1</sub> * x<sub>2</sub> * ... * x
- * <sub>n</sub>) ^ 1/n</code> with {@code n} being the number of measurements. <br>
+ * In the discrete case this is simply
+ * <code> GM=(x<sub>1</sub> * x<sub>2</sub> * ... * x<sub>n</sub>) ^ 1/n</code> with {@code n} being
+ * the number of measurements. <br>
  * Note that it is not defined if any of the measurements is negative or exactly 0. In such a case
  * this implementation returns 0.<br>
  * <br>
  * In the continuous case, this aggregator approximates the integral </code>
  * GM=e^(&#8747;log(f(x))dx &frasl; (b-a))</code> where {@code a} and {@code b} are upper and lower
  * interval bound and the integration is carried out from a to b, and the (positive) function
- * {@code f} is given by a finite set of samples (i.e., measurements).
+ * {@code f} is interpolated from a given (finite) set of samples (i.e., measurements).
  * 
  * @author Florian Rosenthal
  * @see <a href=https://en.wikipedia.org/wiki/Mean_of_a_function>https://en.wikipedia.org/wiki/

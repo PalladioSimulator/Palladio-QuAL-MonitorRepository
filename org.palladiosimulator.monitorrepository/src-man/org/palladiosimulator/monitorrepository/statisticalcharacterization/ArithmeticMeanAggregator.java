@@ -24,8 +24,8 @@ import org.palladiosimulator.monitorrepository.ArithmeticMean;
  * <br>
  * In the continuous case, this aggregator approximates the integral </code> AM=&#8747;f(x)dx
  * &frasl; (b-a)</code> where {@code a} and {@code b} are upper and lower interval bound and the
- * integration is carried out from a to b, and the function {@code f} is given by a finite set of
- * samples (i.e., measurements).
+ * integration is carried out from a to b, and the (positive) function {@code f} is interpolated
+ * from a given (finite) set of samples (i.e., measurements).
  * 
  * @author Florian Rosenthal
  * @see <a href=https://en.wikipedia.org/wiki/Mean_of_a_function>https://en.wikipedia.org/wiki/
