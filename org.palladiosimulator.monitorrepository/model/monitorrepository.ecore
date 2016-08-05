@@ -32,17 +32,13 @@
         eType="ecore:EClass platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//measuringpoint/MeasuringPoint"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="monitorRepository" lowerBound="1"
         eType="#//MonitorRepository" eOpposite="#//MonitorRepository/monitors"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activated" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MeasurementSpecification" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="A measurement specification for a pcm element including the performance metric and the statistical charaterization."/>
+      <details key="documentation" value="A measurement specification for a pcm element including the performance metric and the processing type."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="temporalRestriction" eType="#//TemporalCharacterization"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statisticalCharacterization"
-        lowerBound="1" eType="#//StatisticalCharacterizationEnum" defaultValueLiteral="None"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="metricDescription" lowerBound="1"
         eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//MetricDescription"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="monitor" lowerBound="1"
@@ -50,47 +46,216 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         volatile="true" defaultValueLiteral="" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="derivation" value="if self.temporalRestriction->notEmpty() then self.monitor.entityName + ': ' + self.statisticalCharacterization.toString() + ' of ' + self.temporalRestriction.oclAsType(ecore::EObject).eClass().name else self.monitor.entityName + ': ' + self.statisticalCharacterization.toString() endif"/>
+        <details key="derivation" value="if self.processingType.oclIsKindOf(Aggregation) then self.monitor.entityName + ':' +self.processingType.toString()+'(' + self.processingType.oclAsType(Aggregation).statisticalCharacterization.toString() +')' else self.monitor.entityName + ': ' + self.processingType.toString() endif"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processingType" lowerBound="1"
+        eType="#//ProcessingType" containment="true" eOpposite="#//ProcessingType/measurementSpecification">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This attribute specifies in what way measurements shall be further processed or aggregated (besides or before being recorded) upon reception."/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="triggersSelfAdaptations"
-        eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
-        defaultValueLiteral="true"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TemporalCharacterization" abstract="true"
-      eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+  <eClassifiers xsi:type="ecore:EClass" name="StatisticalCharacterization" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Abstract base class for the intervall of the measurement specification."/>
+      <details key="documentation" value="A {@link StatisticalCharacterization} defines the way a sequence of measurements is to be aggregated."/>
+    </eAnnotations>
+    <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Gets the {@link org.palladiosimulator.monitorrepository.statisticalcharacterization.StatisticalCharacterizationAggregator} performing the measurement aggregation defined by this instance."/>
+      </eAnnotations>
+      <eParameters name="expectedDataMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArithmeticMean" eSuperTypes="#//StatisticalCharacterization">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The StatisticalCharacterization 'ArithmeticMean' which computes the arithmetic mean of a sequence of measurements."/>
+    </eAnnotations>
+    <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.ArithmeticMeanAggregator(expectedDataMetric);"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="suppressedSetVisibility" value="true"/>
+      </eAnnotations>
+      <eParameters name="expectedDataMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HarmonicMean" eSuperTypes="#//StatisticalCharacterization">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The StatisticalCharacterization 'HarmonicMean' which computes the harmonic mean of a sequence of measurements."/>
+    </eAnnotations>
+    <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.HarmonicMeanAggregator(expectedDataMetric);"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="suppressedSetVisibility" value="true"/>
+      </eAnnotations>
+      <eParameters name="expectedDataMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GeometricMean" eSuperTypes="#//StatisticalCharacterization">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The StatisticalCharacterization 'GeometricMean' which computes the geometric mean of a sequence of measurements."/>
+    </eAnnotations>
+    <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.GeometricMeanAggregator(expectedDataMetric);"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="suppressedSetVisibility" value="true"/>
+      </eAnnotations>
+      <eParameters name="expectedDataMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Median" eSuperTypes="#//StatisticalCharacterization">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The StatisticalCharacterization 'Median' which computes the median value of a sequence of measurements."/>
+    </eAnnotations>
+    <eOperations name="getAggregator" eType="#//util/StatisticalCharacterizationAggregator">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.MedianAggregator(expectedDataMetric);"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="suppressedSetVisibility" value="true"/>
+      </eAnnotations>
+      <eParameters name="expectedDataMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessingType" abstract="true" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A ProcessingType specifies in what way measurements shall be further processed or aggregated (besides or before being recorded) upon reception."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="measurementSpecification"
+        lowerBound="1" eType="#//MeasurementSpecification" eOpposite="#//MeasurementSpecification/processingType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Aggregation" abstract="true" eSuperTypes="#//ProcessingType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Base class of all kinds of ProcessingTypes which define some manner of (statistical) aggregation of consecutive measurements."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statisticalCharacterization"
+        lowerBound="1" eType="#//StatisticalCharacterization" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MeasurementDrivenAggregation" abstract="true"
+      eSuperTypes="#//Aggregation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="frequency" value="self.frequency > 0"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="ProcessingType that defines a measurement-driven way of aggregation, i.e., aggregation is triggered upon reception of a new measurement."/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="frequency"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequency" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This positive int value indicates the frequency of aggregation.&#xD;&#xA;That is, a value of 'n' indicates that the aggreation shall be done each n-th measurement.&#xD;&#xA;By default, this value is set to 1."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FixedSizeAggregation" eSuperTypes="#//MeasurementDrivenAggregation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="measNum" value="self.numberOfMeasurements > 0"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="measNum"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="ProcessingType which indicates that fixed-sized sequences of consecutive measurements shall be aggregated."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfMeasurements" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="10">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This positive int value determines the number of measurements that shall be aggregated.&#xD;&#xA;By default, this value is set to 10."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeDrivenAggregation" eSuperTypes="#//TimeDriven #//Aggregation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="ProcessingType that defines a time-driven (i.e., sliding window based) way of aggregation."/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Intervall" eSuperTypes="#//TemporalCharacterization">
+  <eClassifiers xsi:type="ecore:EClass" name="TimeDriven" eSuperTypes="#//ProcessingType">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Simple intervall."/>
+      <details key="documentation" value="ProcessingType suitable for measurement specifications that demand a sliding window (e.g., before being recorded) but are not based on statistical aggregation.&#xD;&#xA;Examples for such measurement specifications are the window-based utilization calculation or the power and energy calculation that bases thereof."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="intervall" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="0.0"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="windowLength" value="self.windowLength > 0.0"/>
+      <details key="windowIncrement" value="self.windowIncrement > 0.0"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="windowLength windowIncrement"/>
+    </eAnnotations>
+    <eOperations name="getWindowLengthAsMeasure">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value=" return Measure .valueOf(getWindowLength(),  javax.measure.unit.SI.SECOND);"/>
+        <details key="documentation" value=" Convenience method to retrieve the property 'windowLength' (interpreted as given in seconds) in terms of a  {@link javax.measure.Measure}."/>
+      </eAnnotations>
+      <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//ExperimentData/EJSMeasure">
+        <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+        <eTypeArguments eClassifier="#//util/Duration"/>
+      </eGenericType>
+    </eOperations>
+    <eOperations name="getWindowIncrementAsMeasure">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value=" return Measure .valueOf(getWindowIncrement(),  javax.measure.unit.SI.SECOND);"/>
+        <details key="documentation" value=" Convenience method to retrieve the property 'windowIncrement' (interpreted as given in seconds) in terms of a {@link javax.measure.Measure}."/>
+      </eAnnotations>
+      <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//ExperimentData/EJSMeasure">
+        <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+        <eTypeArguments eClassifier="#//util/Duration"/>
+      </eGenericType>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="windowLength" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        defaultValueLiteral="10.0">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The length of the sliding window, in seconds."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="windowIncrement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        defaultValueLiteral="10.0">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The increment of the sliding window, in seconds."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DelayedIntervall" eSuperTypes="#//Intervall">
+  <eClassifiers xsi:type="ecore:EClass" name="VariableSizeAggregation" eSuperTypes="#//MeasurementDrivenAggregation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="retroLength" value="self.retrospectionLength > 0.0"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="retroLength"/>
+    </eAnnotations>
+    <eOperations name="getRetrospectionLengthAsMeasure">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value=" return Measure .valueOf(getRetrospectionLength(),  javax.measure.unit.SI.SECOND);"/>
+        <details key="documentation" value=" Convenience method to retrieve the property 'retrospectionLength' (interpreted as given in seconds) in terms of a  {@link javax.measure.Measure}."/>
+      </eAnnotations>
+      <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//ExperimentData/EJSMeasure">
+        <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+        <eTypeArguments eClassifier="#//util/Duration"/>
+      </eGenericType>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="retrospectionLength" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="10.0">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This value (interpreted as seconds) determines the length of the retrospection interval.&#xD;&#xA;That is, it specifies which preceding measurements shall be included in the aggregation."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FeedThrough" eSuperTypes="#//ProcessingType">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Simple intervall starting after a specified delay."/>
+      <details key="documentation" value="ProcessingType suitable for measurement specifications that specify measurements which shall only be passed to a recorder.&#xD;&#xA;That is, no more processing or aggregation of any kind whatsover is done."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
-        defaultValueLiteral="0.0"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TimeFrame" eSuperTypes="#//TemporalCharacterization">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Interval representing a strict time intervall with start and end times."/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="start" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
-        defaultValueLiteral="0.0"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stop" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
-        defaultValueLiteral="0.0"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="StatisticalCharacterizationEnum">
-    <eLiterals name="None"/>
-    <eLiterals name="Median" value="1"/>
-    <eLiterals name="ArithmeticMean" value="2"/>
-    <eLiterals name="GeometricMean" value="3"/>
-    <eLiterals name="HarmonicMean" value="4"/>
-  </eClassifiers>
+  <eSubpackages name="util" nsURI="http://palladiosimulator.org/MonitorRepository/Util/1.0"
+      nsPrefix="monitorrepository">
+    <eClassifiers xsi:type="ecore:EDataType" name="Duration" instanceClassName="javax.measure.quantity.Duration"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="StatisticalCharacterizationAggregator"
+        instanceClassName="org.palladiosimulator.monitorrepository.statisticalcharacterization.StatisticalCharacterizationAggregator"/>
+  </eSubpackages>
 </ecore:EPackage>
