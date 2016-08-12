@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated map -->
+      <factory
+            uri="http://palladiosimulator.org/MonitorRepository/Map/1.0"
+            class="org.palladiosimulator.monitorrepository.map.provider.MapItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated map -->
+      <extender
+            uri="http://palladiosimulator.org/MonitorRepository/1.0"
+            class="org.palladiosimulator.monitorrepository.map.provider.MapItemProviderAdapterFactory$MonitorRepositoryChildCreationExtender"/>
+   </extension>
+
+</plugin>
