@@ -67,7 +67,7 @@ import org.palladiosimulator.monitorrepository.provider.MonitorrepositoryEditPlu
 public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
     /**
      * The supported extensions for created files. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final List<String> FILE_EXTENSIONS = Collections
@@ -77,7 +77,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
     /**
      * A formatted list of supported file extensions, suitable for display. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String FORMATTED_FILE_EXTENSIONS = MonitorrepositoryEditorPlugin.INSTANCE
@@ -85,14 +85,14 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
 
     /**
      * This caches an instance of the model package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected MonitorRepositoryPackage monitorRepositoryPackage = MonitorRepositoryPackage.eINSTANCE;
 
     /**
      * This caches an instance of the model factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected MonitorRepositoryFactory monitorRepositoryFactory = this.monitorRepositoryPackage
@@ -100,14 +100,14 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
 
     /**
      * This is the file creation page. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected MonitorRepositoryModelWizardNewFileCreationPage newFileCreationPage;
 
     /**
      * This is the initial object creation page. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected MonitorRepositoryModelWizardInitialObjectCreationPage initialObjectCreationPage;
@@ -122,7 +122,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
 
     /**
      * Remember the workbench during initialization. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected IWorkbench workbench;
@@ -130,14 +130,14 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
     /**
      * Caches the names of the types that can be created as the root object. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected List<String> initialObjectNames;
 
     /**
      * This just records the information. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -152,7 +152,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
     /**
      * Returns the names of the types that can be created as the root object. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected Collection<String> getInitialObjectNames() {
@@ -173,7 +173,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
 
     /**
      * Create a new model. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected EObject createInitialModel() {
@@ -185,7 +185,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
 
     /**
      * Do the work after everything is specified. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -272,13 +272,13 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
 
     /**
      * This is the one page of the wizard. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public class MonitorRepositoryModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
         /**
          * Pass in the selection. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         public MonitorRepositoryModelWizardNewFileCreationPage(final String pageId,
@@ -289,7 +289,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
         /**
          * The framework calls this to see if the file is correct. <!-- begin-user-doc --> <!--
          * end-user-doc -->
-         *
+         * 
          * @generated
          */
         @Override
@@ -310,7 +310,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         public IFile getModelFile() {
@@ -322,13 +322,13 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
     /**
      * This is the page where the type of object to create is selected. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public class MonitorRepositoryModelWizardInitialObjectCreationPage extends WizardPage {
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         protected Combo initialObjectField;
@@ -340,14 +340,14 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         protected Combo encodingField;
 
         /**
          * Pass in the selection. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         public MonitorRepositoryModelWizardInitialObjectCreationPage(final String pageId) {
@@ -356,7 +356,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         @Override
@@ -430,7 +430,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         protected ModifyListener validator = new ModifyListener() {
@@ -443,7 +443,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         protected boolean validatePage() {
@@ -452,7 +452,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         @Override
@@ -471,7 +471,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         public String getInitialObjectName() {
@@ -487,7 +487,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         public String getEncoding() {
@@ -511,7 +511,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         protected Collection<String> getEncodings() {
@@ -530,7 +530,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
     /**
      * The framework calls this to create the contents of the wizard. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -591,7 +591,7 @@ public class MonitorRepositoryModelWizard extends Wizard implements INewWizard {
 
     /**
      * Get the file from the page. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public IFile getModelFile() {

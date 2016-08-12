@@ -17,27 +17,27 @@ import de.uka.ipd.sdq.units.provider.UnitsEditPlugin;
 /**
  * This is the central singleton for the Monitorrepository editor plugin. <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public final class MonitorrepositoryEditorPlugin extends EMFPlugin {
     /**
      * Keep track of the singleton. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final MonitorrepositoryEditorPlugin INSTANCE = new MonitorrepositoryEditorPlugin();
 
     /**
      * Keep track of the singleton. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private static Implementation plugin;
 
     /**
      * Create the instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public MonitorrepositoryEditorPlugin() {
@@ -49,7 +49,7 @@ public final class MonitorrepositoryEditorPlugin extends EMFPlugin {
     /**
      * Returns the singleton instance of the Eclipse plugin. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @return the singleton instance.
      * @generated
      */
@@ -61,7 +61,7 @@ public final class MonitorrepositoryEditorPlugin extends EMFPlugin {
     /**
      * Returns the singleton instance of the Eclipse plugin. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @return the singleton instance.
      * @generated
      */
@@ -72,13 +72,13 @@ public final class MonitorrepositoryEditorPlugin extends EMFPlugin {
     /**
      * The actual implementation of the Eclipse <b>Plugin</b>. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static class Implementation extends EclipseUIPlugin {
         /**
          * Creates an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         public Implementation() {

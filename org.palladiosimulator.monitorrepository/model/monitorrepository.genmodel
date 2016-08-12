@@ -12,7 +12,7 @@
   <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
   <modelPluginVariables>OCL_ECORE=org.eclipse.ocl.ecore</modelPluginVariables>
   <genPackages prefix="MonitorRepository" basePackage="org.palladiosimulator" resource="XML"
-      disposableProviderFactory="true" childCreationExtenders="true" ecorePackage="monitorrepository.ecore#/">
+      disposableProviderFactory="true" extensibleProviderFactory="true" ecorePackage="monitorrepository.ecore#/">
     <genClasses ecoreClass="monitorrepository.ecore#//MonitorRepository" labelFeature="platform:/plugin/org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference monitorrepository.ecore#//MonitorRepository/monitors"/>
     </genClasses>
