@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="map" nsURI="http://palladiosimulator.org/MonitorRepository/Map/1.0"
+    nsPrefix="map">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="metricspec" value="../../../plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#/"/>
+    <details key="monitorrepository" value="../../../plugin/org.palladiosimulator.monitorrepository/model/monitorrepository.ecore#/"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Map" eSuperTypes="../../org.palladiosimulator.monitorrepository/model/monitorrepository.ecore#//ProcessingType ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A ProcessingType which specifies that a mapping (i.e., some sort of transformation function) shall be applied to every measurement."/>
+    </eAnnotations>
+    <eOperations name="apply" eType="#//util/MeasuringValue">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return this.getMapper().getMappingFunction().apply(newMeasurement);"/>
+        <details key="documentation" value="Applies the mapping function provided by the associated &lt;code>mapper&lt;/code> to the given measurement."/>
+      </eAnnotations>
+      <eParameters name="newMeasurement" eType="#//util/MeasuringValue"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputMetricDescription"
+        eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//MetricDescription"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mapper" eType="#//Mapper"
+        containment="true" eOpposite="#//Mapper/map"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mapper" abstract="true" eSuperTypes="../../de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eOperations name="getMappingFunction">
+      <eGenericType eClassifier="#//util/Func">
+        <eTypeArguments eClassifier="#//util/MeasuringValue"/>
+      </eGenericType>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="map" eType="#//Map" eOpposite="#//Map/mapper"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExponentialSmoothing" eSuperTypes="#//Mapper">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="alpha mapping"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="alpha" value="self.smoothingFactor >= 0 and self.smoothingFactor &lt;=1"/>
+      <details key="mapping" value="self.map.outputMetricDescription.id = self.map.measurementSpecification.metricDescription.id"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A special, stateful {@link Mapper} implementation  which performs a (first order) exponential smoothing of a sequence of measurements.&lt;br>&#xD;&#xA;That is, starting with an initial &lt;em>smoothed value&lt;/em>&lt;code> x&lt;sub>0&lt;/sub>&lt;/code> of zero, upon reception of a new measurement &lt;code>y&lt;sub>k&lt;/sub>&lt;/code> computes the weighted arithmetic mean &lt;code>x&lt;sub>k&lt;/sub>=&amp;alpha;y&lt;sub>k&lt;/sub>+(1-&amp;alpha;)x&lt;sub>k-1&lt;/sub>&lt;/code> with fixed &lt;em>smoothing factor &lt;/em>&lt;code>&amp;alpha;&lt;/code> in &lt;code>[0,1]&lt;/code>.&#xD;&#xA;"/>
+    </eAnnotations>
+    <eOperations name="getMappingFunction">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="suppressedSetVisibility" value="true"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return (input) -> {&#xD;&#xA;            org.palladiosimulator.metricspec.NumericalBaseMetricDescription expectedMetric = (org.palladiosimulator.metricspec.NumericalBaseMetricDescription) getMap()&#xD;&#xA;                    .getOutputMetricDescription();&#xD;&#xA;            javax.measure.unit.Unit&lt;Quantity> unit = expectedMetric.getDefaultUnit();&#xD;&#xA;            double value = input.getMeasureForMetric(expectedMetric).doubleValue(unit);&#xD;&#xA;            Measure&lt;?, javax.measure.quantity.Duration> time = input.getMeasureForMetric(&#xD;&#xA;                    org.palladiosimulator.metricspec.constants.MetricDescriptionConstants.POINT_IN_TIME_METRIC);&#xD;&#xA;            double oldValue = getSmoothedValue() == null ? 0d : getSmoothedValue().doubleValue(unit);&#xD;&#xA;            setSmoothedValue(&#xD;&#xA;                    Measure.valueOf(oldValue * (1 - getSmoothingFactor()) + value * getSmoothingFactor(), unit));&#xD;&#xA;            return new org.palladiosimulator.measurementframework.TupleMeasurement(&#xD;&#xA;                    (org.palladiosimulator.metricspec.MetricSetDescription) input.getMetricDesciption(), time,&#xD;&#xA;                    getSmoothedValue());&#xD;&#xA;        };"/>
+        <details key="documentation" value="Gets the mapping function which implements the (first order)  exponential smoothing."/>
+      </eAnnotations>
+      <eGenericType eClassifier="#//util/Func">
+        <eTypeArguments eClassifier="#//util/MeasuringValue"/>
+      </eGenericType>
+    </eOperations>
+    <eOperations name="isMetricNumericalBaseMetric" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Validator method to assert that the metric description of the associated measurement specification is a {@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription}."/>
+      </eAnnotations>
+      <eParameters name="chain" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments/>
+          <eTypeArguments/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="smoothingFactor" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="0.5"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="smoothedValue" defaultValueLiteral="">
+      <eGenericType eClassifier="ecore:EDataType ../../org.palladiosimulator.edp2/model/EDP2.ecore#//ExperimentData/EJSMeasure">
+        <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+        <eTypeArguments eClassifier="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//IJSQuantity"/>
+      </eGenericType>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eSubpackages name="util" nsURI="http://palladiosimulator.org/MonitorRepository/Map/Util/1.0"
+      nsPrefix="map">
+    <eClassifiers xsi:type="ecore:EDataType" name="MeasuringValue" instanceClassName="org.palladiosimulator.measurementframework.MeasuringValue"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="TupleMeasurement" instanceClassName="org.palladiosimulator.measurementframework.TupleMeasurement"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="Func" instanceClassName="java.util.function.UnaryOperator">
+      <eTypeParameters name="T"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

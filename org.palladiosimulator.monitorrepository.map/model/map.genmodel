@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.palladiosimulator.monitorrepository.map/src"
+    modelPluginID="org.palladiosimulator.monitorrepository.map" modelName="Map" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../org.palladiosimulator.edp2/model/EDP2.genmodel#//models ../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../org.palladiosimulator.metricspec/model/metricspec.genmodel#//metricspec ../../org.palladiosimulator.monitorrepository/model/monitorrepository.genmodel#//monitorrepository ../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm ../../de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction ../../de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex ../../de.uka.ipd.sdq.units/model/Units.genmodel#//units"
+    importOrganizing="true">
+  <foreignModel>map.ecore</foreignModel>
+  <genPackages prefix="Map" basePackage="org.palladiosimulator.monitorrepository"
+      disposableProviderFactory="true" childCreationExtenders="true" ecorePackage="map.ecore#/">
+    <genClasses ecoreClass="map.ecore#//Map">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference map.ecore#//Map/outputMetricDescription"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference map.ecore#//Map/mapper"/>
+      <genOperations ecoreOperation="map.ecore#//Map/apply">
+        <genParameters ecoreParameter="map.ecore#//Map/apply/newMeasurement"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="map.ecore#//Mapper">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference map.ecore#//Mapper/map"/>
+      <genOperations ecoreOperation="map.ecore#//Mapper/getMappingFunction"/>
+    </genClasses>
+    <genClasses ecoreClass="map.ecore#//ExponentialSmoothing">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute map.ecore#//ExponentialSmoothing/smoothingFactor"/>
+      <genFeatures property="None" notify="false" createChild="false" propertyCategory=""
+          propertyDescription="" ecoreFeature="ecore:EAttribute map.ecore#//ExponentialSmoothing/smoothedValue"/>
+      <genOperations ecoreOperation="map.ecore#//ExponentialSmoothing/getMappingFunction"/>
+      <genOperations ecoreOperation="map.ecore#//ExponentialSmoothing/isMetricNumericalBaseMetric">
+        <genParameters ecoreParameter="map.ecore#//ExponentialSmoothing/isMetricNumericalBaseMetric/chain"/>
+        <genParameters ecoreParameter="map.ecore#//ExponentialSmoothing/isMetricNumericalBaseMetric/context"/>
+      </genOperations>
+    </genClasses>
+    <nestedGenPackages prefix="Util" basePackage="org.palladiosimulator.monitorrepository.map"
+        disposableProviderFactory="true" ecorePackage="map.ecore#//util">
+      <genDataTypes ecoreDataType="map.ecore#//util/MeasuringValue"/>
+      <genDataTypes ecoreDataType="map.ecore#//util/TupleMeasurement"/>
+      <genDataTypes ecoreDataType="map.ecore#//util/Func">
+        <genTypeParameters ecoreTypeParameter="map.ecore#//util/Func/T"/>
+      </genDataTypes>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>
