@@ -75,14 +75,14 @@
          unpack="false"/>
 
    <plugin
-         id="org.palladiosimulator.simulizar.monitorrepository.map"
+         id="org.palladiosimulator.monitorrepository.map"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.palladiosimulator.simulizar.monitorrepository.map.tests"
+         id="org.palladiosimulator.monitorrepository.map.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
