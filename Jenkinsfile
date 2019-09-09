@@ -1,4 +1,3 @@
-palladioBuild {
-	webserverDir = 'monitorrepository'
-	updateSiteLocation = 'releng/org.palladiosimulator.monitorrepository.updatesite/target/repository'
+PalladioPipeline {
+    deployUpdatesite 'releng/org.palladiosimulator.monitorrepository.updatesite/target/repository'
 }
