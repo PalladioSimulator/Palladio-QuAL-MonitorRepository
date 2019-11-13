@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.monitorrepository.map.provider.MapEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.palladiosimulator.monitorrepository.map.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.monitorrepository.map;visibility:=reexport,
