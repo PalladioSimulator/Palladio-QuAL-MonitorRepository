@@ -12,6 +12,7 @@
 	<packaging>pom</packaging>
 	
 	<modules>
+		<module>org.palladiosimulator.monitorrepository.mwe2</module>
 		<module>org.palladiosimulator.monitorrepository.updatesite</module>
 	</modules>
 	
