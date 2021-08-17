@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.palladiosimulator.monitorrepository/src" editDirectory="/org.palladiosimulator.monitorrepository.edit/src"
-    editorDirectory="/org.palladiosimulator.monitorrepository.editor/src" modelPluginID="org.palladiosimulator.monitorrepository"
-    dynamicTemplates="true" modelName="Monitorrepository" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject"
-    rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl" codeFormatting="true"
-    importerID="org.eclipse.emf.importer.ecore" featureDelegation="Dynamic" complianceLevel="6.0"
-    copyrightFields="false" editPluginID="org.palladiosimulator.monitorrepository.edit"
-    editorPluginID="org.palladiosimulator.monitorrepository.editor" usedGenPackages="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel#//metricspec platform:/plugin/org.palladiosimulator.pcm/model/pcm.genmodel#//pcm platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units platform:/plugin/org.palladiosimulator.edp2/model/EDP2.genmodel#//models"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.palladiosimulator.monitorrepository/src-gen"
+    editDirectory="/org.palladiosimulator.monitorrepository.edit/src-gen" editorDirectory="/org.palladiosimulator.monitorrepository.editor/src-gen"
+    modelPluginID="org.palladiosimulator.monitorrepository" modelName="Monitorrepository"
+    rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" featureDelegation="Dynamic"
+    complianceLevel="7.0" copyrightFields="false" editPluginID="org.palladiosimulator.monitorrepository.edit"
+    editorPluginID="org.palladiosimulator.monitorrepository.editor" usedGenPackages="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel#//metricspec platform:/plugin/org.palladiosimulator.pcm/model/pcm.genmodel#//pcm platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units platform:/plugin/org.palladiosimulator.edp2/model/EDP2.genmodel#//models platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
     cleanup="true">
   <foreignModel>monitorrepository.ecore</foreignModel>
   <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
@@ -35,22 +35,26 @@
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//ArithmeticMean">
-      <genOperations ecoreOperation="monitorrepository.ecore#//ArithmeticMean/getAggregator">
+      <genOperations ecoreOperation="monitorrepository.ecore#//ArithmeticMean/getAggregator"
+          body="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.ArithmeticMeanAggregator(expectedDataMetric);">
         <genParameters ecoreParameter="monitorrepository.ecore#//ArithmeticMean/getAggregator/expectedDataMetric"/>
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//HarmonicMean">
-      <genOperations ecoreOperation="monitorrepository.ecore#//HarmonicMean/getAggregator">
+      <genOperations ecoreOperation="monitorrepository.ecore#//HarmonicMean/getAggregator"
+          body="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.HarmonicMeanAggregator(expectedDataMetric);">
         <genParameters ecoreParameter="monitorrepository.ecore#//HarmonicMean/getAggregator/expectedDataMetric"/>
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//GeometricMean">
-      <genOperations ecoreOperation="monitorrepository.ecore#//GeometricMean/getAggregator">
+      <genOperations ecoreOperation="monitorrepository.ecore#//GeometricMean/getAggregator"
+          body="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.GeometricMeanAggregator(expectedDataMetric);">
         <genParameters ecoreParameter="monitorrepository.ecore#//GeometricMean/getAggregator/expectedDataMetric"/>
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//Median">
-      <genOperations ecoreOperation="monitorrepository.ecore#//Median/getAggregator">
+      <genOperations ecoreOperation="monitorrepository.ecore#//Median/getAggregator"
+          body="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.MedianAggregator(expectedDataMetric);">
         <genParameters ecoreParameter="monitorrepository.ecore#//Median/getAggregator/expectedDataMetric"/>
       </genOperations>
     </genClasses>
@@ -70,12 +74,15 @@
     <genClasses ecoreClass="monitorrepository.ecore#//TimeDriven">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//TimeDriven/windowLength"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//TimeDriven/windowIncrement"/>
-      <genOperations ecoreOperation="monitorrepository.ecore#//TimeDriven/getWindowLengthAsMeasure"/>
-      <genOperations ecoreOperation="monitorrepository.ecore#//TimeDriven/getWindowIncrementAsMeasure"/>
+      <genOperations ecoreOperation="monitorrepository.ecore#//TimeDriven/getWindowLengthAsMeasure"
+          body=" return Measure .valueOf(getWindowLength(),  javax.measure.unit.SI.SECOND);"/>
+      <genOperations ecoreOperation="monitorrepository.ecore#//TimeDriven/getWindowIncrementAsMeasure"
+          body=" return Measure .valueOf(getWindowIncrement(),  javax.measure.unit.SI.SECOND);"/>
     </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//VariableSizeAggregation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute monitorrepository.ecore#//VariableSizeAggregation/retrospectionLength"/>
-      <genOperations ecoreOperation="monitorrepository.ecore#//VariableSizeAggregation/getRetrospectionLengthAsMeasure"/>
+      <genOperations ecoreOperation="monitorrepository.ecore#//VariableSizeAggregation/getRetrospectionLengthAsMeasure"
+          body=" return Measure .valueOf(getRetrospectionLength(),  javax.measure.unit.SI.SECOND);"/>
     </genClasses>
     <genClasses ecoreClass="monitorrepository.ecore#//FeedThrough"/>
     <nestedGenPackages prefix="Util" basePackage="org.palladiosimulator.monitorrepository"

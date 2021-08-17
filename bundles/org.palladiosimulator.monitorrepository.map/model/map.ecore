@@ -61,6 +61,7 @@
     <eOperations name="isMetricNumericalBaseMetric" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Validator method to assert that the metric description of the associated measurement specification is a {@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription}."/>
+        <details key="body" value="throw new UnsupportedOperationException();"/>
       </eAnnotations>
       <eParameters name="chain" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
       <eParameters name="context">
