@@ -22,7 +22,7 @@
         lowerBound="1" upperBound="-1" eType="#//MeasurementSpecification" containment="true"
         eOpposite="#//MeasurementSpecification/monitor"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="measuringPoint" lowerBound="1"
-        eType="ecore:EClass ../../org.palladiosimulator.edp2/model/EDP2.ecore#//measuringpoint/MeasuringPoint"/>
+        eType="ecore:EClass platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//measuringpoint/MeasuringPoint"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="monitorRepository" lowerBound="1"
         eType="#//MonitorRepository" eOpposite="#//MonitorRepository/monitors"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="activated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
@@ -33,7 +33,7 @@
       <details key="documentation" value="A measurement specification for a pcm element including the performance metric and the processing type."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="metricDescription" lowerBound="1"
-        eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//MetricDescription"/>
+        eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//MetricDescription"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="monitor" lowerBound="1"
         eType="#//Monitor" eOpposite="#//Monitor/measurementSpecifications"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -59,7 +59,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Gets the {@link org.palladiosimulator.monitorrepository.statisticalcharacterization.StatisticalCharacterizationAggregator} performing the measurement aggregation defined by this instance."/>
       </eAnnotations>
-      <eParameters name="expectedDataMetric" eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
+      <eParameters name="expectedDataMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArithmeticMean" eSuperTypes="#//StatisticalCharacterization">
@@ -70,7 +70,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.ArithmeticMeanAggregator(expectedDataMetric);"/>
       </eAnnotations>
-      <eParameters name="expectedDataMetric" eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
+      <eParameters name="expectedDataMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HarmonicMean" eSuperTypes="#//StatisticalCharacterization">
@@ -81,7 +81,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.HarmonicMeanAggregator(expectedDataMetric);"/>
       </eAnnotations>
-      <eParameters name="expectedDataMetric" eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
+      <eParameters name="expectedDataMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeometricMean" eSuperTypes="#//StatisticalCharacterization">
@@ -92,7 +92,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.GeometricMeanAggregator(expectedDataMetric);"/>
       </eAnnotations>
-      <eParameters name="expectedDataMetric" eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
+      <eParameters name="expectedDataMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Median" eSuperTypes="#//StatisticalCharacterization">
@@ -103,7 +103,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return new org.palladiosimulator.monitorrepository.statisticalcharacterization.MedianAggregator(expectedDataMetric);"/>
       </eAnnotations>
-      <eParameters name="expectedDataMetric" eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
+      <eParameters name="expectedDataMetric" eType="ecore:EClass platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#//NumericalBaseMetricDescription"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProcessingType" abstract="true" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
@@ -176,7 +176,7 @@
         <details key="body" value=" return Measure .valueOf(getWindowLength(),  javax.measure.unit.SI.SECOND);"/>
         <details key="documentation" value=" Convenience method to retrieve the property 'windowLength' (interpreted as given in seconds) in terms of a  {@link javax.measure.Measure}."/>
       </eAnnotations>
-      <eGenericType eClassifier="ecore:EDataType ../../org.palladiosimulator.edp2/model/EDP2.ecore#//ExperimentData/EJSMeasure">
+      <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//ExperimentData/EJSMeasure">
         <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
         <eTypeArguments eClassifier="#//util/Duration"/>
       </eGenericType>
@@ -186,7 +186,7 @@
         <details key="body" value=" return Measure .valueOf(getWindowIncrement(),  javax.measure.unit.SI.SECOND);"/>
         <details key="documentation" value=" Convenience method to retrieve the property 'windowIncrement' (interpreted as given in seconds) in terms of a {@link javax.measure.Measure}."/>
       </eAnnotations>
-      <eGenericType eClassifier="ecore:EDataType ../../org.palladiosimulator.edp2/model/EDP2.ecore#//ExperimentData/EJSMeasure">
+      <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//ExperimentData/EJSMeasure">
         <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
         <eTypeArguments eClassifier="#//util/Duration"/>
       </eGenericType>
@@ -216,7 +216,7 @@
         <details key="body" value=" return Measure .valueOf(getRetrospectionLength(),  javax.measure.unit.SI.SECOND);"/>
         <details key="documentation" value=" Convenience method to retrieve the property 'retrospectionLength' (interpreted as given in seconds) in terms of a  {@link javax.measure.Measure}."/>
       </eAnnotations>
-      <eGenericType eClassifier="ecore:EDataType ../../org.palladiosimulator.edp2/model/EDP2.ecore#//ExperimentData/EJSMeasure">
+      <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//ExperimentData/EJSMeasure">
         <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
         <eTypeArguments eClassifier="#//util/Duration"/>
       </eGenericType>
