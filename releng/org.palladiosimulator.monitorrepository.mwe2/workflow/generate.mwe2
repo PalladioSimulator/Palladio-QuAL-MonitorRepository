@@ -9,91 +9,83 @@ import tools.mdsd.ecoreworkflow.mwe2lib.component.GapPatternPostProcessor
 var workspaceRoot = "../../"
 
 Workflow {
-    
-    bean = EclipseRCPSupportingStandaloneSetup {
-        scanClassPath = true
-        platformUri = workspaceRoot
-        
-		uriMap = {
-			from = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
-			to = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
+	bean = EclipseRCPSupportingStandaloneSetup {
+		scanClassPath = true
+		platformUri = workspaceRoot
+
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
+			onStandalone = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
 		}
-		uriMap = {
-			from = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore"
-			to = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.ecore"
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore"
+			onStandalone = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.ecore"
 		}
-		uriMap = {
-			from = "platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel"
-			to = "platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel"
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel"
+			onStandalone = "platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel"
 		}
-		uriMap = {
-			from = "platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.ecore"
-			to = "platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.ecore"
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.ecore"
+			onStandalone = "platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.ecore"
 		}
-		uriMap = {
-			from = "platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel"
-			to = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.genmodel"
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel"
+			onStandalone = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.genmodel"
 		}
-		uriMap = {
-			from = "platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore"
-			to = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.ecore"
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore"
+			onStandalone = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.ecore"
 		}
-		uriMap = {
-			from = "platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel"
-			to = "platform:/resource/de.uka.ipd.sdq.units/model/Units.genmodel"
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel"
+			onStandalone = "platform:/resource/de.uka.ipd.sdq.units/model/Units.genmodel"
 		}
-		uriMap = {
-			from = "platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore"
-			to = "platform:/resource/de.uka.ipd.sdq.units/model/Units.ecore"
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore"
+			onStandalone = "platform:/resource/de.uka.ipd.sdq.units/model/Units.ecore"
 		}
-		uriMap = {
-			from = "platform:/plugin/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
-			to = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
+			onStandalone = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
 		}
-		uriMap = {
-			from = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel"
-			to = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel"
+			onStandalone = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
 		}
-		uriMap = {
-			from = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore"
-			to = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore"
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore"
+			onStandalone = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore"
 		}
-		uriMap = {
-			from = "platform:/plugin/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
-			to = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+			onStandalone = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+		}
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.palladiosimulator.pcm/model/pcm.genmodel"
+			onStandalone = "platform:/resource/org.palladiosimulator.pcm/model/pcm.genmodel"
+		}
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore"
+			onStandalone = "platform:/resource/org.palladiosimulator.pcm/model/pcm.ecore"
+		}
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.palladiosimulator.edp2/model/EDP2.genmodel"
+			onStandalone = "platform:/resource/org.palladiosimulator.edp2/model/EDP2.genmodel"
+		}
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore"
+			onStandalone = "platform:/resource/org.palladiosimulator.edp2/model/EDP2.ecore"
+		}
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel"
+			onStandalone = "platform:/resource/org.palladiosimulator.metricspec/model/metricspec.genmodel"
+		}
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore"
+			onStandalone = "platform:/resource/org.palladiosimulator.metricspec/model/metricspec.ecore"
 		}
 
-        uriMap = ContextDependentMapping {
-            onRunningPlatform = "platform:/plugin/org.palladiosimulator.pcm/model/pcm.genmodel"
-            onStandalone = "platform:/resource/org.palladiosimulator.pcm/model/pcm.genmodel"
-        }
-        
-        uriMap = ContextDependentMapping {
-            onRunningPlatform = "platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore"
-            onStandalone = "platform:/resource/org.palladiosimulator.pcm/model/pcm.ecore"
-        }
-        
-        uriMap = ContextDependentMapping {
-            onRunningPlatform = "platform:/plugin/org.palladiosimulator.edp2/model/EDP2.genmodel"
-            onStandalone = "platform:/resource/org.palladiosimulator.edp2/model/EDP2.genmodel"
-        }
-        
-        uriMap = ContextDependentMapping {
-            onRunningPlatform = "platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore"
-            onStandalone = "platform:/resource/org.palladiosimulator.edp2/model/EDP2.ecore"
-        }
-        
-        uriMap = ContextDependentMapping {
-            onRunningPlatform = "platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel"
-            onStandalone = "platform:/resource/org.palladiosimulator.metricspec/model/metricspec.genmodel"
-        }
-        
-        uriMap = ContextDependentMapping {
-            onRunningPlatform = "platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore"
-            onStandalone = "platform:/resource/org.palladiosimulator.metricspec/model/metricspec.ecore"
-        }
-        
-        
 		registerGenModelFile = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
 		registerGenModelFile = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
 		registerGenModelFile = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
@@ -102,66 +94,64 @@ Workflow {
 		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel"
 		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.genmodel"
 		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.units/model/Units.genmodel"
-        
-        registerGenModelFile = "platform:/resource/org.palladiosimulator.metricspec/model/metricspec.genmodel"
-        registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
-        registerGenModelFile = "platform:/resource/org.palladiosimulator.pcm/model/pcm.genmodel"
-        registerGenModelFile = "platform:/resource/org.palladiosimulator.edp2/model/EDP2.genmodel"
+		registerGenModelFile = "platform:/resource/org.palladiosimulator.metricspec/model/metricspec.genmodel"
+		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
+		registerGenModelFile = "platform:/resource/org.palladiosimulator.pcm/model/pcm.genmodel"
+		registerGenModelFile = "platform:/resource/org.palladiosimulator.edp2/model/EDP2.genmodel"
 
-        
-        logResourceUriMap = true
-    }
+		logResourceUriMap = true
+	}
 
-    component = EcoreGenerator {
-        generateCustomClasses = false
-        generateModel = true
-        generateEdit = true
-        generateEditor = true
-        genModel = "platform:/resource/org.palladiosimulator.monitorrepository/model/monitorrepository.genmodel"
-        srcPath = "platform:/resource/org.palladiosimulator.monitorrepository/src"
-        srcPath = "platform:/resource/org.palladiosimulator.monitorrepository/src-gen"
-        srcPath = "platform:/resource/org.palladiosimulator.monitorrepository.edit/src"
-        srcPath = "platform:/resource/org.palladiosimulator.monitorrepository.edit/src-gen"
-        srcPath = "platform:/resource/org.palladiosimulator.monitorrepository.editor/src"
-        srcPath = "platform:/resource/org.palladiosimulator.monitorrepository.editor/src-gen"
-    }
-    
-    component = GapPatternPostProcessor {
-        folders = {
-            gen = "platform:/resource/org.palladiosimulator.monitorrepository/src-gen"
-            src = "platform:/resource/org.palladiosimulator.monitorrepository/src"
-        }
-        
-        folders = {
-        	gen = "platform:/resource/org.palladiosimulator.monitorrepository.edit/src-gen"
-            src = "platform:/resource/org.palladiosimulator.monitorrepository.edit/src"
-        }
-        
-        folders = {
-        	gen = "platform:/resource/org.palladiosimulator.monitorrepository.editor/src-gen"
-            src = "platform:/resource/org.palladiosimulator.monitorrepository.editor/src"
-        }
-    }
-    
-    component = EcoreGenerator {
-        generateCustomClasses = false
-        generateModel = true
-        generateEdit = true
-        generateEditor = false
-        genModel = "platform:/resource/org.palladiosimulator.monitorrepository.map/model/map.genmodel"
-        srcPath = "platform:/resource/org.palladiosimulator.monitorrepository.map/src"
-        srcPath = "platform:/resource/org.palladiosimulator.monitorrepository.map/src-gen"
-    }
-    
-    component = GapPatternPostProcessor {
-        folders = {
-            gen = "platform:/resource/org.palladiosimulator.monitorrepository.map/src-gen"
-            src = "platform:/resource/org.palladiosimulator.monitorrepository.map/src"
-        }
-        
-        folders = {
-            gen = "platform:/resource/org.palladiosimulator.monitorrepository.map.edit/src-gen"
-            src = "platform:/resource/org.palladiosimulator.monitorrepository.map.edit/src"
-        }
-    }
+	component = EcoreGenerator {
+		generateCustomClasses = false
+		generateModel = true
+		generateEdit = true
+		generateEditor = true
+		genModel = "platform:/resource/org.palladiosimulator.monitorrepository/model/monitorrepository.genmodel"
+		srcPath = "platform:/resource/org.palladiosimulator.monitorrepository/src"
+		srcPath = "platform:/resource/org.palladiosimulator.monitorrepository/src-gen"
+		srcPath = "platform:/resource/org.palladiosimulator.monitorrepository.edit/src"
+		srcPath = "platform:/resource/org.palladiosimulator.monitorrepository.edit/src-gen"
+		srcPath = "platform:/resource/org.palladiosimulator.monitorrepository.editor/src"
+		srcPath = "platform:/resource/org.palladiosimulator.monitorrepository.editor/src-gen"
+	}
+	
+	component = GapPatternPostProcessor {
+		folders = {
+			gen = "platform:/resource/org.palladiosimulator.monitorrepository/src-gen"
+			src = "platform:/resource/org.palladiosimulator.monitorrepository/src"
+		}
+
+		folders = {
+			gen = "platform:/resource/org.palladiosimulator.monitorrepository.edit/src-gen"
+			src = "platform:/resource/org.palladiosimulator.monitorrepository.edit/src"
+		}
+
+		folders = {
+			gen = "platform:/resource/org.palladiosimulator.monitorrepository.editor/src-gen"
+			src = "platform:/resource/org.palladiosimulator.monitorrepository.editor/src"
+		}
+	}
+
+	component = EcoreGenerator {
+		generateCustomClasses = false
+		generateModel = true
+		generateEdit = true
+		generateEditor = false
+		genModel = "platform:/resource/org.palladiosimulator.monitorrepository.map/model/map.genmodel"
+		srcPath = "platform:/resource/org.palladiosimulator.monitorrepository.map/src"
+		srcPath = "platform:/resource/org.palladiosimulator.monitorrepository.map/src-gen"
+	}
+
+	component = GapPatternPostProcessor {
+		folders = {
+			gen = "platform:/resource/org.palladiosimulator.monitorrepository.map/src-gen"
+			src = "platform:/resource/org.palladiosimulator.monitorrepository.map/src"
+		}
+
+		folders = {
+			gen = "platform:/resource/org.palladiosimulator.monitorrepository.map.edit/src-gen"
+			src = "platform:/resource/org.palladiosimulator.monitorrepository.map.edit/src"
+		}
+	}
 }
