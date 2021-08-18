@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.palladiosimulator.metricspec.constants.MetricDescriptionConstants;
 
 /**
  * Customized version of {@link MonitorRepositoryEditorGen}.
@@ -15,7 +16,7 @@ public class MonitorRepositoryEditor extends MonitorRepositoryEditorGen {
 	@Override
 	public void createModel() {
 		super.createModel();
-		this.addExtraResource("pathmap://METRIC_SPEC_MODELS/models/commonMetrics.metricspec");
+		this.addExtraResource(MetricDescriptionConstants.PATHMAP_METRIC_SPEC_MODELS_COMMON_METRICS_METRICSPEC);
 	}
 	
     /**
