@@ -1,8 +1,10 @@
-# Palladio-QuAL-MonitorRepository
+[QualityAnalysisLab.pdf](https://github.com/user-attachments/files/15523614/QualityAnalysisLab.pdf)# Palladio-QuAL-MonitorRepository
 A monitor repository contains monitors that define which metrics should be monitored at which measuring point in a performance prediction.
 
 ## Documentation
-For comprehensive documentation, please visit our [wiki page](https://sdqweb.ipd.kit.edu/wiki/QuAL).
+For comprehensive documentation, please consult the [user manual](https://github.com/user-attachments/files/15523615/QualityAnalysisLab.pdf).
+
+
 
 ## Support
 For support
