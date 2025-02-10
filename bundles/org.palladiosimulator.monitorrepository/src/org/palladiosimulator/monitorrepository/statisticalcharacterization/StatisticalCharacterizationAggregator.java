@@ -3,11 +3,11 @@ package org.palladiosimulator.monitorrepository.statisticalcharacterization;
 import java.util.Objects;
 import java.util.Optional;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Duration;
-import javax.measure.quantity.Quantity;
-import javax.measure.unit.SI;
-import javax.measure.unit.Unit;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Duration;
+import jakarta.measure.quantity.Quantity;
+import jakarta.measure.unit.SI;
+import jakarta.measure.unit.Unit;
 
 import org.jscience.physics.amount.Amount;
 import org.palladiosimulator.measurementframework.BasicMeasurement;

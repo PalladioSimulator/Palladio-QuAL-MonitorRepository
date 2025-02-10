@@ -5,9 +5,9 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Duration;
-import javax.measure.quantity.Quantity;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Duration;
+import jakarta.measure.quantity.Quantity;
 
 import org.jscience.physics.amount.Amount;
 import org.palladiosimulator.measurementframework.MeasuringValue;

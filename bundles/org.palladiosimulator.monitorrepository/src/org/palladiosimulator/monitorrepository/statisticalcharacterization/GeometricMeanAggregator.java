@@ -5,9 +5,9 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Quantity;
-import javax.measure.unit.SI;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Quantity;
+import jakarta.measure.unit.SI;
 
 import org.palladiosimulator.measurementframework.MeasuringValue;
 import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
