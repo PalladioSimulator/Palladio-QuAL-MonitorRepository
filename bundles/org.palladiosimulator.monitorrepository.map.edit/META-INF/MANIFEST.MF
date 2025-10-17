@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.palladiosimulator.monitorrepository.map.edit;singleton:=true
 Automatic-Module-Name: org.palladiosimulator.monitorrepository.map.edit
-Bundle-Version: 5.2.2
+Bundle-Version: 6.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.monitorrepository.map.provider.MapEditPlugin$Implementation
 Bundle-Vendor: %providerName
